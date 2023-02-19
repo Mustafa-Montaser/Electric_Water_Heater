@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_i_c___private_8h_source" xml:lang="en-US">
+<title>IIC_Private.h</title>
+<indexterm><primary>Drivers/MCAL/IIC/IIC_Private.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DATA_MCAL_IIC_IIC_PRIVATE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DATA_MCAL_IIC_IIC_PRIVATE_H_</emphasis>
+25 
+26 
+27 
+28 <emphasis role="preprocessor">#define&#32;IIC_TWBR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x20)</emphasis>
+29 
+30 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR7&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+31 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR6&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+32 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR5&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+33 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+34 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+35 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+36 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+37 <emphasis role="preprocessor">#define&#32;IIC_TWBR_TWBR0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+38 
+39 
+40 <emphasis role="preprocessor">#define&#32;IIC_TWCR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x56)</emphasis>
+41 
+42 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWINT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+43 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWEA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+44 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWSTA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+45 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWSTO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+46 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWWC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+47 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWEN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+48 <emphasis role="preprocessor">#define&#32;IIC_TWCR_TWIE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+49 
+50 
+51 <emphasis role="preprocessor">#define&#32;IIC_TWSR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x21)</emphasis>
+52 
+53 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWS7&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+54 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWS6&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+55 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWS5&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+56 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWS4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+57 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWS3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+58 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWPS1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+59 <emphasis role="preprocessor">#define&#32;IIC_TWSR_TWPS0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+60 
+61 
+62 <emphasis role="preprocessor">#define&#32;IIC_TWDR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x23)</emphasis>
+63 
+64 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD7&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+65 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD6&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+66 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD5&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+67 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+68 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+69 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+70 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+71 <emphasis role="preprocessor">#define&#32;IIC_TWDR_TWD0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+72 
+73 
+74 <emphasis role="preprocessor">#define&#32;IIC_TWAR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x22)</emphasis>
+75 
+76 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA6&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+77 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA5&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+78 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+79 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4</emphasis>
+80 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+81 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+82 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWA0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+83 <emphasis role="preprocessor">#define&#32;IIC_TWAR_TWGCE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+84 
+85 
+86 
+87 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DATA_MCAL_IIC_IIC_PRIVATE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

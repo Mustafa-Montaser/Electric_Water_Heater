@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_i_o___program_8c" xml:lang="en-US">
+<title>Drivers/MCAL/DIO/DIO_Program.c File Reference</title>
+<indexterm><primary>Drivers/MCAL/DIO/DIO_Program.c</primary></indexterm>
+<para>
+
+<para>this file contains contains implementation for the DIO module </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;../../LIB/StdTypes.h&quot;<?linebreak?>#include &quot;../../LIB/BitMath.h&quot;<?linebreak?>#include &quot;DIO_Private.h&quot;<?linebreak?>#include &quot;DIO_Interface.h&quot;<?linebreak?></programlisting>Include dependency graph for DIO_Program.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a26c4c9ed8563f332f5926cf98bff4fd1">DIO_voidSetPortMode</link> (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId, <link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475">DIO_PortMode_t</link> Copy_u8PortMode)</para>
+
+<para>set port mode </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a0f2b38949b04e4b0ce387f965d66d3c1">DIO_voidWritePortValue</link> (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8PortValue)</para>
+
+<para>write value to all the port </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="__d_i_o___program_8c_1a4d424943b0596bba06199c04c66e9397">DIO_voidReadPortValue</link> (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId)</para>
+
+<para>get port value </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1ab6a8d1a16f401892c59c2414d3b725bc">DIO_voidSetPinMode</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin, <link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435">DIO_PinMode_t</link> Copy_u8PinMode)</para>
+
+<para>set pin mode </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a1fcd4ae41f925b9705d9819d6a44cf60">DIO_voidSetPinValue</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a652e0f9ac0f74e77a1328ed5397f994b">DIO_voidClearPinValue</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</para>
+
+<para>clear pin value to 0 </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a5e19c31b072b5610a5c66262e8b5f6ab">DIO_voidTogglePinValue</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</para>
+
+<para>toggle pin value </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_i_o___program_8c_1a0ee70689118e901ab1a41ebb558cca71">DIO_voidWritePinValue</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin, <link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link> Copy_u8Value)</para>
+
+<para>writing bit value </para>
+</listitem>
+            <listitem><para><link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link> <link linkend="__d_i_o___program_8c_1a3e31e1d896cfcd0b21df3217a902a4e8">DIO_u8GetPinValue</link> (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains contains implementation for the DIO module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__d_i_o___program_8c_1a3e31e1d896cfcd0b21df3217a902a4e8"/><section>
+    <title>DIO_u8GetPinValue()</title>
+<indexterm><primary>DIO_u8GetPinValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_u8GetPinValue</secondary></indexterm>
+<para><computeroutput><link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link> DIO_u8GetPinValue (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</computeroutput></para>
+<para>getting PIN (Bit) value 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>PIN value </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c_a3e31e1d896cfcd0b21df3217a902a4e8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a652e0f9ac0f74e77a1328ed5397f994b"/><section>
+    <title>DIO_voidClearPinValue()</title>
+<indexterm><primary>DIO_voidClearPinValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidClearPinValue</secondary></indexterm>
+<para><computeroutput>void DIO_voidClearPinValue (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</computeroutput></para><para>
+
+<para>clear pin value to 0 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c_a652e0f9ac0f74e77a1328ed5397f994b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a4d424943b0596bba06199c04c66e9397"/><section>
+    <title>DIO_voidReadPortValue()</title>
+<indexterm><primary>DIO_voidReadPortValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidReadPortValue</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> DIO_voidReadPortValue (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId)</computeroutput></para><para>
+
+<para>get port value </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8PortId</entry><entry>
+<para>port ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>port value </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1ab6a8d1a16f401892c59c2414d3b725bc"/><section>
+    <title>DIO_voidSetPinMode()</title>
+<indexterm><primary>DIO_voidSetPinMode</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidSetPinMode</secondary></indexterm>
+<para><computeroutput>void DIO_voidSetPinMode (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin, <link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435">DIO_PinMode_t</link> Copy_u8PinMode)</computeroutput></para><para>
+
+<para>set pin mode </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Copy_u8PinMode</entry><entry>
+<para>pin mode </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c_ab6a8d1a16f401892c59c2414d3b725bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a1fcd4ae41f925b9705d9819d6a44cf60"/><section>
+    <title>DIO_voidSetPinValue()</title>
+<indexterm><primary>DIO_voidSetPinValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidSetPinValue</secondary></indexterm>
+<para><computeroutput>void DIO_voidSetPinValue (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</computeroutput></para>
+<para>set pin value to 1 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c_a1fcd4ae41f925b9705d9819d6a44cf60_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a26c4c9ed8563f332f5926cf98bff4fd1"/><section>
+    <title>DIO_voidSetPortMode()</title>
+<indexterm><primary>DIO_voidSetPortMode</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidSetPortMode</secondary></indexterm>
+<para><computeroutput>void DIO_voidSetPortMode (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId, <link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475">DIO_PortMode_t</link> Copy_u8PortMode)</computeroutput></para><para>
+
+<para>set port mode </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8PortId</entry><entry>
+<para>port ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Copy_u8PortMode</entry><entry>
+<para>port mode </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a5e19c31b072b5610a5c66262e8b5f6ab"/><section>
+    <title>DIO_voidTogglePinValue()</title>
+<indexterm><primary>DIO_voidTogglePinValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidTogglePinValue</secondary></indexterm>
+<para><computeroutput>void DIO_voidTogglePinValue (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin)</computeroutput></para><para>
+
+<para>toggle pin value </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a0ee70689118e901ab1a41ebb558cca71"/><section>
+    <title>DIO_voidWritePinValue()</title>
+<indexterm><primary>DIO_voidWritePinValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidWritePinValue</secondary></indexterm>
+<para><computeroutput>void DIO_voidWritePinValue (<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link> Copy_u8Pin, <link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link> Copy_u8Value)</computeroutput></para><para>
+
+<para>writing bit value </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8Pin</entry><entry>
+<para>pin ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Copy_u8Value</entry><entry>
+<para>PIN (Bit) value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_i_o___program_8c_a0ee70689118e901ab1a41ebb558cca71_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_i_o___program_8c_1a0f2b38949b04e4b0ce387f965d66d3c1"/><section>
+    <title>DIO_voidWritePortValue()</title>
+<indexterm><primary>DIO_voidWritePortValue</primary><secondary>DIO_Program.c</secondary></indexterm>
+<indexterm><primary>DIO_Program.c</primary><secondary>DIO_voidWritePortValue</secondary></indexterm>
+<para><computeroutput>void DIO_voidWritePortValue (<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link> Copy_u8PortId, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8PortValue)</computeroutput></para><para>
+
+<para>write value to all the port </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8PortId</entry><entry>
+<para>port ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Copy_u8PortValue</entry><entry>
+<para>port value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

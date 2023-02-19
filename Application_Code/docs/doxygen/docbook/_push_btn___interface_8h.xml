@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__push_btn___interface_8h" xml:lang="en-US">
+<title>Drivers/HAL/PushButton/PushBtn_Interface.h File Reference</title>
+<indexterm><primary>Drivers/HAL/PushButton/PushBtn_Interface.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1a853684ef64e87717ad50c16989e52edc">PUSH_BTN_PULL_UP</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1a738314b02b0d4dc454834d4a92058a36">PUSH_BTN_PULL_DOWN</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1aecad2f3bbbd78bb47e4de8fcfda9fcc5">PUSH_BTN_PRESSED</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1a5204a706dd8b30b1d5b5aa889e5d7d25">PUSH_BTN_NOT_PRESSED</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1a84372eb5e67dee45ba32e2b8a8d51dac">PUSH_BTN_INTERRUPT_EN</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__push_btn___interface_8h_1a3528b2dcb9f40002585dea10191d99a8">PUSH_BTN_INTERRUPT_DIS</link>&#160;&#160;&#160;0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__push_btn___interface_8h_1ac4aaabbb33d812e8021c418ee1593075">PushBtn_voidInit</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8InterruptState, void(*ptr_callBack)(void))</para>
+
+<para>Initialise the push button. </para>
+</listitem>
+            <listitem><para>void <link linkend="__push_btn___interface_8h_1ad51f004ddf754bb6a591a9d45ec621a1">PushBtn_voidEnable</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</para>
+
+<para>enable push button </para>
+</listitem>
+            <listitem><para>void <link linkend="__push_btn___interface_8h_1aa445f6b89806ce70aad535dae51bf990">PushBtn_voidDisable</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</para>
+
+<para>disable push button </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="__push_btn___interface_8h_1a3aa5d6ae3aa12c030377864acc582378">PushBtn_voidGetStatus</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</para>
+
+<para>get push button status </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__push_btn___interface_8h_1a3528b2dcb9f40002585dea10191d99a8"/><section>
+    <title>PUSH_BTN_INTERRUPT_DIS</title>
+<indexterm><primary>PUSH_BTN_INTERRUPT_DIS</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_INTERRUPT_DIS</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_INTERRUPT_DIS&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__push_btn___interface_8h_1a84372eb5e67dee45ba32e2b8a8d51dac"/><section>
+    <title>PUSH_BTN_INTERRUPT_EN</title>
+<indexterm><primary>PUSH_BTN_INTERRUPT_EN</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_INTERRUPT_EN</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_INTERRUPT_EN&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__push_btn___interface_8h_1a5204a706dd8b30b1d5b5aa889e5d7d25"/><section>
+    <title>PUSH_BTN_NOT_PRESSED</title>
+<indexterm><primary>PUSH_BTN_NOT_PRESSED</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_NOT_PRESSED</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_NOT_PRESSED&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__push_btn___interface_8h_1aecad2f3bbbd78bb47e4de8fcfda9fcc5"/><section>
+    <title>PUSH_BTN_PRESSED</title>
+<indexterm><primary>PUSH_BTN_PRESSED</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_PRESSED</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_PRESSED&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__push_btn___interface_8h_1a738314b02b0d4dc454834d4a92058a36"/><section>
+    <title>PUSH_BTN_PULL_DOWN</title>
+<indexterm><primary>PUSH_BTN_PULL_DOWN</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_PULL_DOWN</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_PULL_DOWN&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__push_btn___interface_8h_1a853684ef64e87717ad50c16989e52edc"/><section>
+    <title>PUSH_BTN_PULL_UP</title>
+<indexterm><primary>PUSH_BTN_PULL_UP</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PUSH_BTN_PULL_UP</secondary></indexterm>
+<para><computeroutput>#define PUSH_BTN_PULL_UP&#160;&#160;&#160;1</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__push_btn___interface_8h_1aa445f6b89806ce70aad535dae51bf990"/><section>
+    <title>PushBtn_voidDisable()</title>
+<indexterm><primary>PushBtn_voidDisable</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PushBtn_voidDisable</secondary></indexterm>
+<para><computeroutput>void PushBtn_voidDisable (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</computeroutput></para><para>
+
+<para>disable push button </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PushBtnPin</entry><entry>
+<para>push button pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_aa445f6b89806ce70aad535dae51bf990_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_aa445f6b89806ce70aad535dae51bf990_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__push_btn___interface_8h_1ad51f004ddf754bb6a591a9d45ec621a1"/><section>
+    <title>PushBtn_voidEnable()</title>
+<indexterm><primary>PushBtn_voidEnable</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PushBtn_voidEnable</secondary></indexterm>
+<para><computeroutput>void PushBtn_voidEnable (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</computeroutput></para><para>
+
+<para>enable push button </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PushBtnPin</entry><entry>
+<para>push button pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_ad51f004ddf754bb6a591a9d45ec621a1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_ad51f004ddf754bb6a591a9d45ec621a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__push_btn___interface_8h_1a3aa5d6ae3aa12c030377864acc582378"/><section>
+    <title>PushBtn_voidGetStatus()</title>
+<indexterm><primary>PushBtn_voidGetStatus</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PushBtn_voidGetStatus</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> PushBtn_voidGetStatus (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin)</computeroutput></para><para>
+
+<para>get push button status </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PushBtnPin</entry><entry>
+<para>push button pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_a3aa5d6ae3aa12c030377864acc582378_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__push_btn___interface_8h_1ac4aaabbb33d812e8021c418ee1593075"/><section>
+    <title>PushBtn_voidInit()</title>
+<indexterm><primary>PushBtn_voidInit</primary><secondary>PushBtn_Interface.h</secondary></indexterm>
+<indexterm><primary>PushBtn_Interface.h</primary><secondary>PushBtn_voidInit</secondary></indexterm>
+<para><computeroutput>void PushBtn_voidInit (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PushBtnPin, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8InterruptState, void(*)(void) ptr_callBack)</computeroutput></para><para>
+
+<para>Initialise the push button. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PushBtnPin</entry><entry>
+<para>push button pin </para>
+</entry>
+                            </row>
+                            <row>
+<entry>local_u8InterruptState</entry><entry>
+<para>enable or disable interrupt { PUSH_BTN_INTERRUPT_EN, PUSH_BTN_INTERRUPT_DIS } </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ptr_callBack</entry><entry>
+<para>pointer to call back function in case interrupt is enable. If not, equal to NULL </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_ac4aaabbb33d812e8021c418ee1593075_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_push_btn___interface_8h_ac4aaabbb33d812e8021c418ee1593075_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_d_c___interface_8h" xml:lang="en-US">
+<title>Drivers/MCAL/ADC/ADC_Interface.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/ADC/ADC_Interface.h</primary></indexterm>
+<para>
+
+<para>this file contains function prototypes for the ADC module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a00978ca9e8220475258dcbbbb7d29129">ADC_RESOLUTION</link>&#160;&#160;&#160;1024</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a226a2320101ff1cc1e7d92935b03b2f7">ADC_VOLT_REF_EXTERNAL</link>&#160;&#160;&#160;0b00</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ad9938a1e7701e93859c8494cd8e81207">ADC_VOLT_REF_AVCC</link>&#160;&#160;&#160;0b01</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a4644965e2225146626e3b4f3955f7b41">ADC_VOLT_REF_INTERNAL_2V56</link>&#160;&#160;&#160;0b11</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a2d71a76ac15bb23ced9d330f6d288189">ADC_CH_ADC0</link>&#160;&#160;&#160;0b00000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1adc9061197abf445aa2fdabfe6ab70d6f">ADC_CH_ADC1</link>&#160;&#160;&#160;0b00001</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a2983118526a60d8131ea24b076734dc9">ADC_CH_ADC2</link>&#160;&#160;&#160;0b00010</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a0a668a769065eb671e703949ef772aa5">ADC_CH_ADC3</link>&#160;&#160;&#160;0b00011</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a76e4beb0d4488c7a2854257ce6ee5efb">ADC_CH_ADC4</link>&#160;&#160;&#160;0b00100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1af93d51a5c2da209e27f37ac2b26b1aa9">ADC_CH_ADC5</link>&#160;&#160;&#160;0b00101</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ab260b92f5b040618c82c09154eb2fa82">ADC_CH_ADC6</link>&#160;&#160;&#160;0b00110</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ab9748223968807824cc3d22300f21b8f">ADC_CH_ADC7</link>&#160;&#160;&#160;0b00111</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1aeaac601e7fb65dfbfa157c738fd3a1db">ADC_PRESCALER_2</link>&#160;&#160;&#160;0b001</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a7aec4350b204d9c8160ab7419e15d93e">ADC_PRESCALER_4</link>&#160;&#160;&#160;0b010</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ab30c91a0c1d57639fbb9aa2e13719d45">ADC_PRESCALER_8</link>&#160;&#160;&#160;0b011</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a56bf388f5fd18903f1d356dd654a9930">ADC_PRESCALER_16</link>&#160;&#160;&#160;0b100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1aaf5c1d488815feb1416a5c9d1710c2c8">ADC_PRESCALER_32</link>&#160;&#160;&#160;0b101</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a51e4e47f4ef2b5f25be89b958a4bb8a8">ADC_PRESCALER_64</link>&#160;&#160;&#160;0b110</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ac324413055383e702d8a76739dd01664">ADC_PRESCALER_128</link>&#160;&#160;&#160;0b111</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a1bb815b6f85db115f621e87f97410f50">ADC_AUTO_TRIGGER_ENABLE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a2f437b0ab600cf1c5431f436daf1973d">ADC_AUTO_TRIGGER_DISABLE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1afdee22be0beb0f681e2fc3dff9cf6523">ADC_TRIG_SRC_FREE_RUNNING</link>&#160;&#160;&#160;0b000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a6d7b272d6bc5c1adf34235ad0d3da23f">ADC_TRIG_SRC_ANALOD_COMP</link>&#160;&#160;&#160;0b001</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a7b790754ac386a3eed711fda2e2f68dd">ADC_TRIG_SRC_EXT_INT0</link>&#160;&#160;&#160;0b010</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a063a391876e53ea22e2d8fb1cbdf7152">ADC_TRIG_SRC_TIMER0_COM_MATCH</link>&#160;&#160;&#160;0b011</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a79a7ba4022bf70177162f1d188b3e4ef">ADC_TRIG_SRC_TIMER0_OVERFLOW</link>&#160;&#160;&#160;0b100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1aea60e6c6c2fff9fe921adeb9a628121e">ADC_TRIG_SRC_TIMER_COM_MATCH_B</link>&#160;&#160;&#160;0b101</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1ad011070eaf585a2597303ecd07d88230">ADC_TRIG_SRC_TIMER1_OVERFLOW</link>&#160;&#160;&#160;0b110</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1afc5dc1ce6d738d72a90a4b3655aec5a7">ADC_TRIG_SRC_TIMER1_CAP_EVENT</link>&#160;&#160;&#160;0b111</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1af09d61798cdc39018bdeaf5199c0002f">ADC_POLLING_MODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1abbcdf11288a9bc298f20ff1c9efd0e4d">ADC_INTERRUPT_MODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a1e33b83bfcf4433eb2e8c6e818b5dff8">ADC_CH0</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a7d351ed34ca3ff55d1681ee84a243090">ADC_CH1</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a2bb0c1b2de3aa355244417d9a42a8966">ADC_CH2</link>&#160;&#160;&#160;2</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a6ae98bab335f9d073a58d70e7ba4f844">ADC_CH3</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a3648bb19b5c3735452fee16c835afc43">ADC_CH4</link>&#160;&#160;&#160;4</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1a479d965dae60f80b698f0dd6a348e30a">ADC_CH5</link>&#160;&#160;&#160;5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1aec122320eeb7216887651ef5f1c73442">ADC_CH6</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___interface_8h_1aea897f597c4ee7b003920953fb213638">ADC_CH7</link>&#160;&#160;&#160;7</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_d_c___interface_8h_1a419a46f4e130d57ef4d0723c9076742a">ADC_voidInit</link> ()</para>
+
+<para>Initialise ADC. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> <link linkend="__a_d_c___interface_8h_1a5605783722042db661fa49329d7aaa66">ADC_u16Read</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</para>
+
+<para>reading ADC converted value (used only in case polling mode) </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_d_c___interface_8h_1a6edc9ee590e0851a834147608bb1c125">ADC_voidStartConversion</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</para>
+
+<para>starting conversion from analog to digital </para>
+</listitem>
+            <listitem><para>void <link linkend="__a_d_c___interface_8h_1a2e2eb8cef772c3bad36b4582d17ae494">ADC_voidSetCallBack</link> (void(*ptr)(void))</para>
+
+<para>call back function which is called after conversion interrupt </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> <link linkend="__a_d_c___interface_8h_1a4d09a6f8fd2393ced65b50e4bd91b929">ADC_u16GetValue</link> ()</para>
+
+<para>getting converted value (called only in case interrupt mode) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains function prototypes for the ADC module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__a_d_c___interface_8h_1a2f437b0ab600cf1c5431f436daf1973d"/><section>
+    <title>ADC_AUTO_TRIGGER_DISABLE</title>
+<indexterm><primary>ADC_AUTO_TRIGGER_DISABLE</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_AUTO_TRIGGER_DISABLE</secondary></indexterm>
+<para><computeroutput>#define ADC_AUTO_TRIGGER_DISABLE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a1bb815b6f85db115f621e87f97410f50"/><section>
+    <title>ADC_AUTO_TRIGGER_ENABLE</title>
+<indexterm><primary>ADC_AUTO_TRIGGER_ENABLE</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_AUTO_TRIGGER_ENABLE</secondary></indexterm>
+<para><computeroutput>#define ADC_AUTO_TRIGGER_ENABLE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a1e33b83bfcf4433eb2e8c6e818b5dff8"/><section>
+    <title>ADC_CH0</title>
+<indexterm><primary>ADC_CH0</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH0</secondary></indexterm>
+<para><computeroutput>#define ADC_CH0&#160;&#160;&#160;0</computeroutput></para>
+<para>ADC channel 0 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a7d351ed34ca3ff55d1681ee84a243090"/><section>
+    <title>ADC_CH1</title>
+<indexterm><primary>ADC_CH1</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH1</secondary></indexterm>
+<para><computeroutput>#define ADC_CH1&#160;&#160;&#160;1</computeroutput></para>
+<para>ADC channel 1 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a2bb0c1b2de3aa355244417d9a42a8966"/><section>
+    <title>ADC_CH2</title>
+<indexterm><primary>ADC_CH2</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH2</secondary></indexterm>
+<para><computeroutput>#define ADC_CH2&#160;&#160;&#160;2</computeroutput></para>
+<para>ADC channel 2 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a6ae98bab335f9d073a58d70e7ba4f844"/><section>
+    <title>ADC_CH3</title>
+<indexterm><primary>ADC_CH3</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH3</secondary></indexterm>
+<para><computeroutput>#define ADC_CH3&#160;&#160;&#160;3</computeroutput></para>
+<para>ADC channel 3 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a3648bb19b5c3735452fee16c835afc43"/><section>
+    <title>ADC_CH4</title>
+<indexterm><primary>ADC_CH4</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH4</secondary></indexterm>
+<para><computeroutput>#define ADC_CH4&#160;&#160;&#160;4</computeroutput></para>
+<para>ADC channel 4 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a479d965dae60f80b698f0dd6a348e30a"/><section>
+    <title>ADC_CH5</title>
+<indexterm><primary>ADC_CH5</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH5</secondary></indexterm>
+<para><computeroutput>#define ADC_CH5&#160;&#160;&#160;5</computeroutput></para>
+<para>ADC channel 5 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1aec122320eeb7216887651ef5f1c73442"/><section>
+    <title>ADC_CH6</title>
+<indexterm><primary>ADC_CH6</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH6</secondary></indexterm>
+<para><computeroutput>#define ADC_CH6&#160;&#160;&#160;6</computeroutput></para>
+<para>ADC channel 6 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1aea897f597c4ee7b003920953fb213638"/><section>
+    <title>ADC_CH7</title>
+<indexterm><primary>ADC_CH7</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH7</secondary></indexterm>
+<para><computeroutput>#define ADC_CH7&#160;&#160;&#160;7</computeroutput></para>
+<para>ADC channel 7 </para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a2d71a76ac15bb23ced9d330f6d288189"/><section>
+    <title>ADC_CH_ADC0</title>
+<indexterm><primary>ADC_CH_ADC0</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC0</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC0&#160;&#160;&#160;0b00000</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1adc9061197abf445aa2fdabfe6ab70d6f"/><section>
+    <title>ADC_CH_ADC1</title>
+<indexterm><primary>ADC_CH_ADC1</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC1</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC1&#160;&#160;&#160;0b00001</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a2983118526a60d8131ea24b076734dc9"/><section>
+    <title>ADC_CH_ADC2</title>
+<indexterm><primary>ADC_CH_ADC2</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC2</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC2&#160;&#160;&#160;0b00010</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a0a668a769065eb671e703949ef772aa5"/><section>
+    <title>ADC_CH_ADC3</title>
+<indexterm><primary>ADC_CH_ADC3</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC3</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC3&#160;&#160;&#160;0b00011</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a76e4beb0d4488c7a2854257ce6ee5efb"/><section>
+    <title>ADC_CH_ADC4</title>
+<indexterm><primary>ADC_CH_ADC4</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC4</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC4&#160;&#160;&#160;0b00100</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1af93d51a5c2da209e27f37ac2b26b1aa9"/><section>
+    <title>ADC_CH_ADC5</title>
+<indexterm><primary>ADC_CH_ADC5</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC5</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC5&#160;&#160;&#160;0b00101</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ab260b92f5b040618c82c09154eb2fa82"/><section>
+    <title>ADC_CH_ADC6</title>
+<indexterm><primary>ADC_CH_ADC6</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC6</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC6&#160;&#160;&#160;0b00110</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ab9748223968807824cc3d22300f21b8f"/><section>
+    <title>ADC_CH_ADC7</title>
+<indexterm><primary>ADC_CH_ADC7</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_CH_ADC7</secondary></indexterm>
+<para><computeroutput>#define ADC_CH_ADC7&#160;&#160;&#160;0b00111</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1abbcdf11288a9bc298f20ff1c9efd0e4d"/><section>
+    <title>ADC_INTERRUPT_MODE</title>
+<indexterm><primary>ADC_INTERRUPT_MODE</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_INTERRUPT_MODE</secondary></indexterm>
+<para><computeroutput>#define ADC_INTERRUPT_MODE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1af09d61798cdc39018bdeaf5199c0002f"/><section>
+    <title>ADC_POLLING_MODE</title>
+<indexterm><primary>ADC_POLLING_MODE</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_POLLING_MODE</secondary></indexterm>
+<para><computeroutput>#define ADC_POLLING_MODE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ac324413055383e702d8a76739dd01664"/><section>
+    <title>ADC_PRESCALER_128</title>
+<indexterm><primary>ADC_PRESCALER_128</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_128</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_128&#160;&#160;&#160;0b111</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a56bf388f5fd18903f1d356dd654a9930"/><section>
+    <title>ADC_PRESCALER_16</title>
+<indexterm><primary>ADC_PRESCALER_16</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_16</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_16&#160;&#160;&#160;0b100</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1aeaac601e7fb65dfbfa157c738fd3a1db"/><section>
+    <title>ADC_PRESCALER_2</title>
+<indexterm><primary>ADC_PRESCALER_2</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_2</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_2&#160;&#160;&#160;0b001</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1aaf5c1d488815feb1416a5c9d1710c2c8"/><section>
+    <title>ADC_PRESCALER_32</title>
+<indexterm><primary>ADC_PRESCALER_32</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_32</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_32&#160;&#160;&#160;0b101</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a7aec4350b204d9c8160ab7419e15d93e"/><section>
+    <title>ADC_PRESCALER_4</title>
+<indexterm><primary>ADC_PRESCALER_4</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_4</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_4&#160;&#160;&#160;0b010</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a51e4e47f4ef2b5f25be89b958a4bb8a8"/><section>
+    <title>ADC_PRESCALER_64</title>
+<indexterm><primary>ADC_PRESCALER_64</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_64</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_64&#160;&#160;&#160;0b110</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ab30c91a0c1d57639fbb9aa2e13719d45"/><section>
+    <title>ADC_PRESCALER_8</title>
+<indexterm><primary>ADC_PRESCALER_8</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_PRESCALER_8</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER_8&#160;&#160;&#160;0b011</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a00978ca9e8220475258dcbbbb7d29129"/><section>
+    <title>ADC_RESOLUTION</title>
+<indexterm><primary>ADC_RESOLUTION</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_RESOLUTION</secondary></indexterm>
+<para><computeroutput>#define ADC_RESOLUTION&#160;&#160;&#160;1024</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a6d7b272d6bc5c1adf34235ad0d3da23f"/><section>
+    <title>ADC_TRIG_SRC_ANALOD_COMP</title>
+<indexterm><primary>ADC_TRIG_SRC_ANALOD_COMP</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_ANALOD_COMP</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_ANALOD_COMP&#160;&#160;&#160;0b001</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a7b790754ac386a3eed711fda2e2f68dd"/><section>
+    <title>ADC_TRIG_SRC_EXT_INT0</title>
+<indexterm><primary>ADC_TRIG_SRC_EXT_INT0</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_EXT_INT0</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_EXT_INT0&#160;&#160;&#160;0b010</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1afdee22be0beb0f681e2fc3dff9cf6523"/><section>
+    <title>ADC_TRIG_SRC_FREE_RUNNING</title>
+<indexterm><primary>ADC_TRIG_SRC_FREE_RUNNING</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_FREE_RUNNING</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_FREE_RUNNING&#160;&#160;&#160;0b000</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a063a391876e53ea22e2d8fb1cbdf7152"/><section>
+    <title>ADC_TRIG_SRC_TIMER0_COM_MATCH</title>
+<indexterm><primary>ADC_TRIG_SRC_TIMER0_COM_MATCH</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_TIMER0_COM_MATCH</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_TIMER0_COM_MATCH&#160;&#160;&#160;0b011</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a79a7ba4022bf70177162f1d188b3e4ef"/><section>
+    <title>ADC_TRIG_SRC_TIMER0_OVERFLOW</title>
+<indexterm><primary>ADC_TRIG_SRC_TIMER0_OVERFLOW</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_TIMER0_OVERFLOW</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_TIMER0_OVERFLOW&#160;&#160;&#160;0b100</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1afc5dc1ce6d738d72a90a4b3655aec5a7"/><section>
+    <title>ADC_TRIG_SRC_TIMER1_CAP_EVENT</title>
+<indexterm><primary>ADC_TRIG_SRC_TIMER1_CAP_EVENT</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_TIMER1_CAP_EVENT</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_TIMER1_CAP_EVENT&#160;&#160;&#160;0b111</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ad011070eaf585a2597303ecd07d88230"/><section>
+    <title>ADC_TRIG_SRC_TIMER1_OVERFLOW</title>
+<indexterm><primary>ADC_TRIG_SRC_TIMER1_OVERFLOW</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_TIMER1_OVERFLOW</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_TIMER1_OVERFLOW&#160;&#160;&#160;0b110</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1aea60e6c6c2fff9fe921adeb9a628121e"/><section>
+    <title>ADC_TRIG_SRC_TIMER_COM_MATCH_B</title>
+<indexterm><primary>ADC_TRIG_SRC_TIMER_COM_MATCH_B</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_TRIG_SRC_TIMER_COM_MATCH_B</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC_TIMER_COM_MATCH_B&#160;&#160;&#160;0b101</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1ad9938a1e7701e93859c8494cd8e81207"/><section>
+    <title>ADC_VOLT_REF_AVCC</title>
+<indexterm><primary>ADC_VOLT_REF_AVCC</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_VOLT_REF_AVCC</secondary></indexterm>
+<para><computeroutput>#define ADC_VOLT_REF_AVCC&#160;&#160;&#160;0b01</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a226a2320101ff1cc1e7d92935b03b2f7"/><section>
+    <title>ADC_VOLT_REF_EXTERNAL</title>
+<indexterm><primary>ADC_VOLT_REF_EXTERNAL</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_VOLT_REF_EXTERNAL</secondary></indexterm>
+<para><computeroutput>#define ADC_VOLT_REF_EXTERNAL&#160;&#160;&#160;0b00</computeroutput></para></section>
+<anchor xml:id="__a_d_c___interface_8h_1a4644965e2225146626e3b4f3955f7b41"/><section>
+    <title>ADC_VOLT_REF_INTERNAL_2V56</title>
+<indexterm><primary>ADC_VOLT_REF_INTERNAL_2V56</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_VOLT_REF_INTERNAL_2V56</secondary></indexterm>
+<para><computeroutput>#define ADC_VOLT_REF_INTERNAL_2V56&#160;&#160;&#160;0b11</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_d_c___interface_8h_1a4d09a6f8fd2393ced65b50e4bd91b929"/><section>
+    <title>ADC_u16GetValue()</title>
+<indexterm><primary>ADC_u16GetValue</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_u16GetValue</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> ADC_u16GetValue ( )</computeroutput></para><para>
+
+<para>getting converted value (called only in case interrupt mode) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>converted value </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a5605783722042db661fa49329d7aaa66"/><section>
+    <title>ADC_u16Read()</title>
+<indexterm><primary>ADC_u16Read</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_u16Read</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> ADC_u16Read (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</computeroutput></para><para>
+
+<para>reading ADC converted value (used only in case polling mode) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8ChNumber</entry><entry>
+<para>channel number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>converted value </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___interface_8h_a5605783722042db661fa49329d7aaa66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a419a46f4e130d57ef4d0723c9076742a"/><section>
+    <title>ADC_voidInit()</title>
+<indexterm><primary>ADC_voidInit</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_voidInit</secondary></indexterm>
+<para><computeroutput>void ADC_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise ADC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___interface_8h_a419a46f4e130d57ef4d0723c9076742a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a2e2eb8cef772c3bad36b4582d17ae494"/><section>
+    <title>ADC_voidSetCallBack()</title>
+<indexterm><primary>ADC_voidSetCallBack</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_voidSetCallBack</secondary></indexterm>
+<para><computeroutput>void ADC_voidSetCallBack (void(*)(void) ptr)</computeroutput></para><para>
+
+<para>call back function which is called after conversion interrupt </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>pointer to function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__a_d_c___interface_8h_1a6edc9ee590e0851a834147608bb1c125"/><section>
+    <title>ADC_voidStartConversion()</title>
+<indexterm><primary>ADC_voidStartConversion</primary><secondary>ADC_Interface.h</secondary></indexterm>
+<indexterm><primary>ADC_Interface.h</primary><secondary>ADC_voidStartConversion</secondary></indexterm>
+<para><computeroutput>void ADC_voidStartConversion (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</computeroutput></para><para>
+
+<para>starting conversion from analog to digital </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8ChNumber</entry><entry>
+<para>channel number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

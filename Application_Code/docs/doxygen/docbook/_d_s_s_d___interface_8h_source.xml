@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_s_s_d___interface_8h_source" xml:lang="en-US">
+<title>DSSD_Interface.h</title>
+<indexterm><primary>Drivers/HAL/DSSD/DSSD_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DSSD_INTERFACE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DSSD_INTERFACE_H_</emphasis>
+25 
+26 
+28 <emphasis role="preprocessor">#define&#32;DSSD_BCD_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+29 <emphasis role="preprocessor">#define&#32;DSSD_NORMAL_MODE&#32;&#32;&#32;&#32;1</emphasis>
+30 
+31 
+33 <emphasis role="preprocessor">#define&#32;DSSD_DISPLAY_ONES&#32;&#32;&#32;0</emphasis>
+34 <emphasis role="preprocessor">#define&#32;DSSD_DISPLAY_TENS&#32;&#32;&#32;1</emphasis>
+35 
+36 
+38 <emphasis role="preprocessor">#define&#32;DSSD_ON&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+39 <emphasis role="preprocessor">#define&#32;DSSD_OFF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+40 
+41 
+42 
+43 <emphasis role="comment">/*&#32;APP&#32;Functions&#32;Declarations&#32;*/</emphasis>
+44 
+45 
+51 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_s_s_d___interface_8h_1ac86cddc8b27891ecd418fc9328a5fd07">DSSD_voidInit</link>();
+52 
+53 
+59 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_s_s_d___interface_8h_1aadd2690a78926ff0d1aa465aae833851">DSSD_voidEN1</link>();
+60 
+61 
+67 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_s_s_d___interface_8h_1a3bac1cbfe1873b477ef4cacc093532f6">DSSD_voidEN2</link>();
+68 
+69 
+75 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_s_s_d___interface_8h_1aa84ab82fe079b0c462b106311eb12001">DSSD_voidDisableAll</link>();
+76 
+77 
+84 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_s_s_d___interface_8h_1a3ff716dcf68a7e8b413932e87799fe2f">DSSD_voidDisplay</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8Num,&#32;<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;u8Digit);
+85 
+86 
+92 <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;<link linkend="__d_s_s_d___interface_8h_1aef9de12e0f6fad5af76aba8595cc2d80">DSSD_u8Status</link>();
+93 
+94 
+95 
+96 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DSSD_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

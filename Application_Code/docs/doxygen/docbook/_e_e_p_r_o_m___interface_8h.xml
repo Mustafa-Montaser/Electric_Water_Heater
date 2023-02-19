@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_e_p_r_o_m___interface_8h" xml:lang="en-US">
+<title>Drivers/HAL/EEPROM/EEPROM_Interface.h File Reference</title>
+<indexterm><primary>Drivers/HAL/EEPROM/EEPROM_Interface.h</primary></indexterm>
+<para>
+
+<para>this file contains function prototypes for the EEPROM module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__e_e_p_r_o_m___interface_8h_1a11ccaf0ab5a34b3348996d8ce03eff40">EEPROM_MSB_ADDRESS</link>&#160;&#160;&#160;0x50</para>
+
+<para>static MSB address for pages in EEPROM </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link> { <link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32a944f2334271a0565dbbf32a2a8212ec8">EEPROM_OK</link>
+, <link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32ae7f47e765f75bee1de1dbb82878dadb2">EEPROM_NOK</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__e_e_p_r_o_m___interface_8h_1ac3248a040030218bd91f2cf6b1fe5094">EEPROM_voidInit</link> ()</para>
+
+<para>Initialise EEPROM. </para>
+</listitem>
+            <listitem><para><link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link> <link linkend="__e_e_p_r_o_m___interface_8h_1abfb07ac9d31192be80ca5e2019a1842f">EEPROM_voidWriteByte</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8DataByte, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PageAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8ByteAddress)</para>
+
+<para>writing byte data into EEPROM </para>
+</listitem>
+            <listitem><para><link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link> <link linkend="__e_e_p_r_o_m___interface_8h_1acf373dcb5a1ab516ade1a1350aa388ce">EEPROM_u8ReadByte</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PageAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8ByteAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> *local_u8PtrReceivedData)</para>
+
+<para>reading byte from EEPROM </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains function prototypes for the EEPROM module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1a11ccaf0ab5a34b3348996d8ce03eff40"/><section>
+    <title>EEPROM_MSB_ADDRESS</title>
+<indexterm><primary>EEPROM_MSB_ADDRESS</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_MSB_ADDRESS</secondary></indexterm>
+<para><computeroutput>#define EEPROM_MSB_ADDRESS&#160;&#160;&#160;0x50</computeroutput></para><para>
+
+<para>static MSB address for pages in EEPROM </para>
+</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32"/><section>
+    <title>EEPROM_State_t</title>
+<indexterm><primary>EEPROM_State_t</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_State_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link></computeroutput></para>
+<para>Refer to EEPROM state after writing or receiving data </para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>EEPROM_OK</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_OK</secondary></indexterm>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32a944f2334271a0565dbbf32a2a8212ec8"/>EEPROM_OK</entry><entry>
+<para>data is written or read successfully </para>
+</entry></row><row><entry><indexterm><primary>EEPROM_NOK</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_NOK</secondary></indexterm>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32ae7f47e765f75bee1de1dbb82878dadb2"/>EEPROM_NOK</entry><entry>
+<para>error in reading from or writing into EEPROM </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1acf373dcb5a1ab516ade1a1350aa388ce"/><section>
+    <title>EEPROM_u8ReadByte()</title>
+<indexterm><primary>EEPROM_u8ReadByte</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_u8ReadByte</secondary></indexterm>
+<para><computeroutput><link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link> EEPROM_u8ReadByte (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PageAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8ByteAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> * local_u8PtrReceivedData)</computeroutput></para><para>
+
+<para>reading byte from EEPROM </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PageAddress</entry><entry>
+<para>page address inside EEPROM </para>
+</entry>
+                            </row>
+                            <row>
+<entry>local_u8ByteAddress</entry><entry>
+<para>byte address inside the selected page </para>
+</entry>
+                            </row>
+                            <row>
+<entry>local_u8PtrReceivedData</entry><entry>
+<para>pointer to buffer where data will be set into after reading </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>EEPROM_State_t </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_acf373dcb5a1ab516ade1a1350aa388ce_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_acf373dcb5a1ab516ade1a1350aa388ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1ac3248a040030218bd91f2cf6b1fe5094"/><section>
+    <title>EEPROM_voidInit()</title>
+<indexterm><primary>EEPROM_voidInit</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_voidInit</secondary></indexterm>
+<para><computeroutput>void EEPROM_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise EEPROM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_ac3248a040030218bd91f2cf6b1fe5094_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_ac3248a040030218bd91f2cf6b1fe5094_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__e_e_p_r_o_m___interface_8h_1abfb07ac9d31192be80ca5e2019a1842f"/><section>
+    <title>EEPROM_voidWriteByte()</title>
+<indexterm><primary>EEPROM_voidWriteByte</primary><secondary>EEPROM_Interface.h</secondary></indexterm>
+<indexterm><primary>EEPROM_Interface.h</primary><secondary>EEPROM_voidWriteByte</secondary></indexterm>
+<para><computeroutput><link linkend="__e_e_p_r_o_m___interface_8h_1a2099e8590800a0175b053fb94b61af32">EEPROM_State_t</link> EEPROM_voidWriteByte (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8DataByte, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8PageAddress, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8ByteAddress)</computeroutput></para><para>
+
+<para>writing byte data into EEPROM </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8DataByte</entry><entry>
+<para>byte data to be written into EEPROM </para>
+</entry>
+                            </row>
+                            <row>
+<entry>local_u8PageAddress</entry><entry>
+<para>page address inside EEPROM </para>
+</entry>
+                            </row>
+                            <row>
+<entry>local_u8ByteAddress</entry><entry>
+<para>byte address inside the selected page </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>EEPROM_State_t </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_abfb07ac9d31192be80ca5e2019a1842f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_e_p_r_o_m___interface_8h_abfb07ac9d31192be80ca5e2019a1842f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

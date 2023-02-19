@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer0___interface_8h_source" xml:lang="en-US">
+<title>Timer0_Interface.h</title>
+<indexterm><primary>Drivers/MCAL/Timer0/Timer0_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+24 <emphasis role="preprocessor">#ifndef&#32;TIMER0_INTERFACE_H_</emphasis>
+25 <emphasis role="preprocessor">#define&#32;TIMER0_INTERFACE_H_</emphasis>
+26 
+27 <emphasis role="comment">/*&#32;MACROS&#32;*/</emphasis>
+28 
+29 <emphasis role="preprocessor">#define&#32;TIMER0_WAVEFORM_NORMAL_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+30 <emphasis role="preprocessor">#define&#32;TIMER0_WAVEFORM_CTC_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+31 <emphasis role="preprocessor">#define&#32;TIMER0_WAVEFORM_FAST_PWM_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+32 <emphasis role="preprocessor">#define&#32;TIMER0_WAVEFORM_PHASE_CORRECT_MODE&#32;&#32;3</emphasis>
+33 
+34 <emphasis role="preprocessor">#define&#32;TIMER0_STOP_PRESCALER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b000</emphasis>
+35 <emphasis role="preprocessor">#define&#32;TIMER0_NO_PRESCALER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b001</emphasis>
+36 <emphasis role="preprocessor">#define&#32;TIMER0_PRESCALER_8&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b010</emphasis>
+37 <emphasis role="preprocessor">#define&#32;TIMER0_PRESCALER_64&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b011</emphasis>
+38 <emphasis role="preprocessor">#define&#32;TIMER0_PRESCALER_256&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b100</emphasis>
+39 <emphasis role="preprocessor">#define&#32;TIMER0_PRESCALER_1024&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b101</emphasis>
+40 <emphasis role="preprocessor">#define&#32;TIMER0_EXT_CLK_FALLING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b110</emphasis>
+41 <emphasis role="preprocessor">#define&#32;TIMER0_EXT_CLK_RISING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b111</emphasis>
+42 
+43 <emphasis role="preprocessor">#define&#32;TIMER0_FAST_PWM_NON_INVERTING_MODE&#32;&#32;0</emphasis>
+44 <emphasis role="preprocessor">#define&#32;TIMER0_FAST_PWM_INVERTING_MODE&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+45 
+46 
+47 
+48 <emphasis role="comment">/*&#32;fucntions&#32;declaration&#32;*/</emphasis>
+49 
+50 
+56 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1abab6eaf710130b793f21caa7222f43ec">Timer0_voidInit</link>();
+57 
+63 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1a4f4ed06f8e0c67870ed2dd4f9504babd">Timer0_voidSetTime</link>(<link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link>&#32;copy_u8Time);
+64 
+70 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1a64940e18b7cf67a59bbd49acc3906d7a">Timer0_voidStart</link>();
+71 
+77 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1ae8616a7fa3e2e96becdfbe23b216808e">Timer0_voidStop</link>();
+78 
+84 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1a325c493c0cb16106d2c141d885810767">Timer0_voidSetCallBack</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*ptr)&#32;(<emphasis role="keywordtype">void</emphasis>));
+85 
+91 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1a19ac6b0f008d701ccc801f2a82c4f21f">Timer0_voidPwmInit</link>();
+92 
+98 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1ab9ac88b284225f13025f21fd686b6797">Timer0_voidSetPwmDutyCycle</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8DuctyCycle);
+99 
+105 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1a2bf9fa0c4f234bd83d23732591c8ba20">Timer0_voidStartPwm</link>();
+106 
+112 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__timer0___interface_8h_1ab7b7acbcb22fdd43a42a563b23a8499a">Timer0_voidStopPwm</link>();
+113 
+114 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;TIMER0_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+115 
+</programlisting></section>

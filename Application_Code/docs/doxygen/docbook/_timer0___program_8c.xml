@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer0___program_8c" xml:lang="en-US">
+<title>Drivers/MCAL/Timer0/Timer0_Program.c File Reference</title>
+<indexterm><primary>Drivers/MCAL/Timer0/Timer0_Program.c</primary></indexterm>
+<para>
+
+<para>this file contains contains implementation for the Timer0 module </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;../../LIB/StdTypes.h&quot;<?linebreak?>#include &quot;../../LIB/BitMath.h&quot;<?linebreak?>#include &quot;../DIO/DIO_Interface.h&quot;<?linebreak?>#include &lt;avr/interrupt.h&gt;<?linebreak?>#include &quot;Timer0_Config.h&quot;<?linebreak?>#include &quot;Timer0_Interface.h&quot;<?linebreak?>#include &quot;Timer0_Private.h&quot;<?linebreak?></programlisting>Include dependency graph for Timer0_Program.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__timer0___program_8c_1abab6eaf710130b793f21caa7222f43ec">Timer0_voidInit</link> ()</para>
+
+<para>Initialise timer0. </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___program_8c_1a4f4ed06f8e0c67870ed2dd4f9504babd">Timer0_voidSetTime</link> (<link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> copy_u8Time)</para>
+
+<para>setting time </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___program_8c_1a64940e18b7cf67a59bbd49acc3906d7a">Timer0_voidStart</link> ()</para>
+
+<para>start timing </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___program_8c_1ae8616a7fa3e2e96becdfbe23b216808e">Timer0_voidStop</link> ()</para>
+
+<para>stop time </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___program_8c_1a325c493c0cb16106d2c141d885810767">Timer0_voidSetCallBack</link> (void(*ptr)(void))</para>
+
+<para>callback function when timer is interrupt </para>
+</listitem>
+            <listitem><para><link linkend="__timer0___program_8c_1add2d7cdddfb682dcc0391e60cf42c7d6">ISR</link> (TIMER0_OVF_vect)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> <link linkend="__timer0___program_8c_1a2b17806d1d995f065c8bf931ed8db208">Timer0_u32NumOfOverflows</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="__timer0___program_8c_1a082acee9184fd62dc20bc5337dbe498e">Timer0_u8NumOfReminderTicks</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> <link linkend="__timer0___program_8c_1a6e30c9f9fb620cf097847f0751551e81">Timer0_u32IntCounter</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> <link linkend="__timer0___program_8c_1ae95e48619aba61dbff3e2dfe699804b8">Timer0_u8NumOfCompMatch</link> = 0</para>
+</listitem>
+            <listitem><para>void(* <link linkend="__timer0___program_8c_1a3dab4e0b296106c584df50827e6d7ad8">Timer0CallBack</link> )(void) = <link linkend="__std_types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains contains implementation for the Timer0 module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__timer0___program_8c_1add2d7cdddfb682dcc0391e60cf42c7d6"/><section>
+    <title>ISR()</title>
+<indexterm><primary>ISR</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>ISR (TIMER0_OVF_vect )</computeroutput></para></section>
+<anchor xml:id="__timer0___program_8c_1abab6eaf710130b793f21caa7222f43ec"/><section>
+    <title>Timer0_voidInit()</title>
+<indexterm><primary>Timer0_voidInit</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_voidInit</secondary></indexterm>
+<para><computeroutput>void Timer0_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise timer0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c_abab6eaf710130b793f21caa7222f43ec_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___program_8c_1a325c493c0cb16106d2c141d885810767"/><section>
+    <title>Timer0_voidSetCallBack()</title>
+<indexterm><primary>Timer0_voidSetCallBack</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_voidSetCallBack</secondary></indexterm>
+<para><computeroutput>void Timer0_voidSetCallBack (void(*)(void) ptr)</computeroutput></para><para>
+
+<para>callback function when timer is interrupt </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>pointer to function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c_a325c493c0cb16106d2c141d885810767_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___program_8c_1a4f4ed06f8e0c67870ed2dd4f9504babd"/><section>
+    <title>Timer0_voidSetTime()</title>
+<indexterm><primary>Timer0_voidSetTime</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_voidSetTime</secondary></indexterm>
+<para><computeroutput>void Timer0_voidSetTime (<link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> copy_u8Time)</computeroutput></para><para>
+
+<para>setting time </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>copy_u8Time</entry><entry>
+<para>time in msec </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c_a4f4ed06f8e0c67870ed2dd4f9504babd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___program_8c_1a64940e18b7cf67a59bbd49acc3906d7a"/><section>
+    <title>Timer0_voidStart()</title>
+<indexterm><primary>Timer0_voidStart</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_voidStart</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStart ( )</computeroutput></para><para>
+
+<para>start timing </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c_a64940e18b7cf67a59bbd49acc3906d7a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___program_8c_1ae8616a7fa3e2e96becdfbe23b216808e"/><section>
+    <title>Timer0_voidStop()</title>
+<indexterm><primary>Timer0_voidStop</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_voidStop</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStop ( )</computeroutput></para><para>
+
+<para>stop time </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___program_8c_ae8616a7fa3e2e96becdfbe23b216808e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__timer0___program_8c_1a6e30c9f9fb620cf097847f0751551e81"/><section>
+    <title>Timer0_u32IntCounter</title>
+<indexterm><primary>Timer0_u32IntCounter</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_u32IntCounter</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> Timer0_u32IntCounter = 0</computeroutput></para></section>
+<anchor xml:id="__timer0___program_8c_1a2b17806d1d995f065c8bf931ed8db208"/><section>
+    <title>Timer0_u32NumOfOverflows</title>
+<indexterm><primary>Timer0_u32NumOfOverflows</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_u32NumOfOverflows</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> Timer0_u32NumOfOverflows = 0</computeroutput></para></section>
+<anchor xml:id="__timer0___program_8c_1ae95e48619aba61dbff3e2dfe699804b8"/><section>
+    <title>Timer0_u8NumOfCompMatch</title>
+<indexterm><primary>Timer0_u8NumOfCompMatch</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_u8NumOfCompMatch</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> Timer0_u8NumOfCompMatch = 0</computeroutput></para></section>
+<anchor xml:id="__timer0___program_8c_1a082acee9184fd62dc20bc5337dbe498e"/><section>
+    <title>Timer0_u8NumOfReminderTicks</title>
+<indexterm><primary>Timer0_u8NumOfReminderTicks</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0_u8NumOfReminderTicks</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Timer0_u8NumOfReminderTicks = 0</computeroutput></para></section>
+<anchor xml:id="__timer0___program_8c_1a3dab4e0b296106c584df50827e6d7ad8"/><section>
+    <title>Timer0CallBack</title>
+<indexterm><primary>Timer0CallBack</primary><secondary>Timer0_Program.c</secondary></indexterm>
+<indexterm><primary>Timer0_Program.c</primary><secondary>Timer0CallBack</secondary></indexterm>
+<para><computeroutput>void(* Timer0CallBack) (void) (void ) = <link linkend="__std_types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link></computeroutput></para></section>
+</section>
+</section>

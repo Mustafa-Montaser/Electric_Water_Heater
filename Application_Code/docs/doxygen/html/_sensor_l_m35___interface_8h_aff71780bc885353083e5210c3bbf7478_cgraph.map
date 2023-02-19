@@ -1,0 +1,4 @@
+<map id="SensorLM35_u16ReadTemp" name="SensorLM35_u16ReadTemp">
+<area shape="rect" id="node1" title="read current temperature" alt="" coords="5,5,191,31"/>
+<area shape="rect" id="node2" href="$_a_d_c___program_8c.html#a5605783722042db661fa49329d7aaa66" title="reading ADC converted value (used only in case polling mode)" alt="" coords="239,5,345,31"/>
+</map>

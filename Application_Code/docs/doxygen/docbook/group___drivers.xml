@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___drivers" xml:lang="en-US">
+<title>Drivers</title>
+<indexterm><primary>Drivers</primary></indexterm>
+Collaboration diagram for Drivers:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___drivers.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___h_a_l">HAL</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___l_i_bs">LIBs</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___m_c_a_l">MCAL</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This group contain HAL and MCAL drivers. And necessary libraries </para>
+</section>
+</section>

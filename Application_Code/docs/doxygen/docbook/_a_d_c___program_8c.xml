@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_d_c___program_8c" xml:lang="en-US">
+<title>Drivers/MCAL/ADC/ADC_Program.c File Reference</title>
+<indexterm><primary>Drivers/MCAL/ADC/ADC_Program.c</primary></indexterm>
+<para>
+
+<para>this file contains contains implementation for the ADC module </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;../../LIB/StdTypes.h&quot;<?linebreak?>#include &quot;../../LIB/BitMath.h&quot;<?linebreak?>#include &lt;avr/interrupt.h&gt;<?linebreak?>#include &quot;ADC_Config.h&quot;<?linebreak?>#include &quot;ADC_Interface.h&quot;<?linebreak?>#include &quot;ADC_Private.h&quot;<?linebreak?></programlisting>Include dependency graph for ADC_Program.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___program_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__a_d_c___program_8c_1a419a46f4e130d57ef4d0723c9076742a">ADC_voidInit</link> ()</para>
+
+<para>Initialise ADC. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> <link linkend="__a_d_c___program_8c_1a5605783722042db661fa49329d7aaa66">ADC_u16Read</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</para>
+
+<para>reading ADC converted value (used only in case polling mode) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains contains implementation for the ADC module </para>
+
+<para>this file contains contains implementation for the External_Interrupt module</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__a_d_c___program_8c_1a5605783722042db661fa49329d7aaa66"/><section>
+    <title>ADC_u16Read()</title>
+<indexterm><primary>ADC_u16Read</primary><secondary>ADC_Program.c</secondary></indexterm>
+<indexterm><primary>ADC_Program.c</primary><secondary>ADC_u16Read</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> ADC_u16Read (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> Copy_u8ChNumber)</computeroutput></para><para>
+
+<para>reading ADC converted value (used only in case polling mode) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Copy_u8ChNumber</entry><entry>
+<para>channel number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>converted value </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___program_8c_a5605783722042db661fa49329d7aaa66_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__a_d_c___program_8c_1a419a46f4e130d57ef4d0723c9076742a"/><section>
+    <title>ADC_voidInit()</title>
+<indexterm><primary>ADC_voidInit</primary><secondary>ADC_Program.c</secondary></indexterm>
+<indexterm><primary>ADC_Program.c</primary><secondary>ADC_voidInit</secondary></indexterm>
+<para><computeroutput>void ADC_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise ADC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___program_8c_a419a46f4e130d57ef4d0723c9076742a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

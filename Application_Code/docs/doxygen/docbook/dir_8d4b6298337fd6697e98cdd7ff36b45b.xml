@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8d4b6298337fd6697e98cdd7ff36b45b" xml:lang="en-US">
+<title>Drivers/HAL/SensorLM35 Directory Reference</title>
+<indexterm><primary>Drivers/HAL/SensorLM35 Directory Reference</primary></indexterm>
+Directory dependency graph for SensorLM35:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8d4b6298337fd6697e98cdd7ff36b45b_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__sensor_l_m35___interface_8h">SensorLM35_Interface.h</link></para>
+
+<para>this file contains function prototypes for the SensorLM35 module </para>
+</listitem>
+            <listitem><para>file <link linkend="__sensor_l_m35___program_8c">SensorLM35_Program.c</link></para>
+
+<para>this file contains contains implementation for the SensorLM35 module </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

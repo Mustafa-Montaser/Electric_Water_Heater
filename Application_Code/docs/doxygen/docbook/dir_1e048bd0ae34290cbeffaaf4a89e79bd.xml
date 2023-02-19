@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1e048bd0ae34290cbeffaaf4a89e79bd" xml:lang="en-US">
+<title>Drivers/LIB Directory Reference</title>
+<indexterm><primary>Drivers/LIB Directory Reference</primary></indexterm>
+Directory dependency graph for LIB:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_1e048bd0ae34290cbeffaaf4a89e79bd_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__bit_math_8h">BitMath.h</link></para>
+
+<para>this file contains macros function for bits operation </para>
+</listitem>
+            <listitem><para>file <link linkend="__std_types_8h">StdTypes.h</link></para>
+
+<para>this file contains standard types </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

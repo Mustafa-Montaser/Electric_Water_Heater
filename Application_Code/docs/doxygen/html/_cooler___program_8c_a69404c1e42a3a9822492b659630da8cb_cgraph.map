@@ -1,0 +1,4 @@
+<map id="Cooler_voidTurnOff" name="Cooler_voidTurnOff">
+<area shape="rect" id="node1" title="Turn OFF the Cooler." alt="" coords="5,5,135,31"/>
+<area shape="rect" id="node2" href="$_d_i_o___program_8c.html#a652e0f9ac0f74e77a1328ed5397f994b" title="clear pin value to 0" alt="" coords="183,5,337,31"/>
+</map>

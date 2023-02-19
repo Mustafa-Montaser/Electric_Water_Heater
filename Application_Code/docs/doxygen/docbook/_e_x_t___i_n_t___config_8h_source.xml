@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_x_t___i_n_t___config_8h_source" xml:lang="en-US">
+<title>EXT_INT_Config.h</title>
+<indexterm><primary>Drivers/MCAL/ExtInt/EXT_INT_Config.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;EXT_INT_CONFIG_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;EXT_INT_CONFIG_H_</emphasis>
+25 
+26 
+34 <emphasis role="preprocessor">#define&#32;EXT_INT0_STATE&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_ENABLE</emphasis>
+35 
+43 <emphasis role="preprocessor">#define&#32;EXT_INT1_STATE&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_ENABLE</emphasis>
+44 
+53 <emphasis role="preprocessor">#define&#32;EXT_INT2_STATE&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_ENABLE</emphasis>
+54 
+55 
+56 
+57 <emphasis role="comment">/*&#32;sense&#32;control&#32;</emphasis>
+58 <emphasis role="comment">&#32;&#32;&#32;&#32;values&#32;=&#32;{</emphasis>
+59 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_LOW_LEVEL,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&gt;&#32;Int0,&#32;1</emphasis>
+60 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_ANY_CHANGE,&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&gt;&#32;Int0,&#32;1</emphasis>
+61 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_FALLING_EDGE,&#32;&#32;&#32;&#32;&#32;=&gt;&#32;Int0,&#32;1,&#32;2</emphasis>
+62 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_RISING_EDGE&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&gt;&#32;Int0,&#32;1,&#32;2</emphasis>
+63 <emphasis role="comment">&#32;&#32;&#32;&#32;}</emphasis>
+64 <emphasis role="comment">*/</emphasis>
+65 
+66 
+67 <emphasis role="preprocessor">#if&#32;EXT_INT0_STATE&#32;==&#32;EXT_INT_ENABLE</emphasis>
+78 <emphasis role="preprocessor">#define&#32;EXT_INT0_SENSE_CTRL&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_FALLING_EDGE</emphasis>
+79 <emphasis role="preprocessor">#endif</emphasis>
+80 
+81 <emphasis role="preprocessor">#if&#32;EXT_INT1_STATE&#32;==&#32;EXT_INT_ENABLE</emphasis>
+92 <emphasis role="preprocessor">#define&#32;EXT_INT1_SENSE_CTRL&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_FALLING_EDGE</emphasis>
+93 <emphasis role="preprocessor">#endif</emphasis>
+94 
+95 <emphasis role="preprocessor">#if&#32;EXT_INT2_STATE&#32;==&#32;EXT_INT_ENABLE</emphasis>
+104 <emphasis role="preprocessor">#define&#32;EXT_INT2_SENSE_CTRL&#32;&#32;&#32;&#32;&#32;EXT_INT_SENSE_CONTROL_FALLING_EDGE</emphasis>
+105 <emphasis role="preprocessor">#endif</emphasis>
+106 
+107 
+108 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;EXT_INT_CONFIG_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

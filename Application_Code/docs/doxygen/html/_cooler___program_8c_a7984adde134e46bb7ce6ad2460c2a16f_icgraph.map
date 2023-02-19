@@ -1,0 +1,6 @@
+<map id="Cooler_voidTurnOn" name="Cooler_voidTurnOn">
+<area shape="rect" id="node1" title="Turn ON the Cooler." alt="" coords="451,5,581,31"/>
+<area shape="rect" id="node2" href="$main_8c.html#a3d4a0ad81b3c47e7e83363f7309348e3" title="call back function to be called every timer period" alt="" coords="267,5,403,31"/>
+<area shape="rect" id="node3" href="$main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,5,56,31"/>
+</map>

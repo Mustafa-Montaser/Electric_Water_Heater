@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__a_d_c___config_8h" xml:lang="en-US">
+<title>Drivers/MCAL/ADC/ADC_Config.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/ADC/ADC_Config.h</primary></indexterm>
+<para>
+
+<para>this file contains macros configuration for the ADC module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_a_d_c___config_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1aaf379d88e2900ff2d120406522f54e75">ADC_INPUT_FREQ</link>&#160;&#160;&#160;16000000UL</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1a165fe85ac49568041a6595b5ad7d46c5">ADC_VOLT_REF</link>&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1a226a2320101ff1cc1e7d92935b03b2f7">ADC_VOLT_REF_EXTERNAL</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1a9fb4e4bf1e424cbc6b67044d4f96d403">ADC_VOLT_REF_VALUE</link>&#160;&#160;&#160;5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1ab1d0703f6d84b37cbaa587a1a4515dd4">ADC_PRESCALER</link>&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1ac324413055383e702d8a76739dd01664">ADC_PRESCALER_128</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1ad9941b077e7fde9669238fba0227fc60">ADC_AUTO_TRIGGER_STATE</link>&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1a2f437b0ab600cf1c5431f436daf1973d">ADC_AUTO_TRIGGER_DISABLE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1a77d8ef2e5c0bde2af6d67f22c2b8a382">ADC_TRIG_SRC</link>&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1afdee22be0beb0f681e2fc3dff9cf6523">ADC_TRIG_SRC_FREE_RUNNING</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__a_d_c___config_8h_1a32d360c931c5132c89b073445e7e87f9">ADC_MODE</link>&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1af09d61798cdc39018bdeaf5199c0002f">ADC_POLLING_MODE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains macros configuration for the ADC module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__a_d_c___config_8h_1ad9941b077e7fde9669238fba0227fc60"/><section>
+    <title>ADC_AUTO_TRIGGER_STATE</title>
+<indexterm><primary>ADC_AUTO_TRIGGER_STATE</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_AUTO_TRIGGER_STATE</secondary></indexterm>
+<para><computeroutput>#define ADC_AUTO_TRIGGER_STATE&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1a2f437b0ab600cf1c5431f436daf1973d">ADC_AUTO_TRIGGER_DISABLE</link></computeroutput></para>
+<para>values { ADC_AUTO_TRIGGER_ENABLE ADC_AUTO_TRIGGER_DISABLE } </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1aaf379d88e2900ff2d120406522f54e75"/><section>
+    <title>ADC_INPUT_FREQ</title>
+<indexterm><primary>ADC_INPUT_FREQ</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_INPUT_FREQ</secondary></indexterm>
+<para><computeroutput>#define ADC_INPUT_FREQ&#160;&#160;&#160;16000000UL</computeroutput></para>
+<para>Input Frequency for ADC </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1a32d360c931c5132c89b073445e7e87f9"/><section>
+    <title>ADC_MODE</title>
+<indexterm><primary>ADC_MODE</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_MODE</secondary></indexterm>
+<para><computeroutput>#define ADC_MODE&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1af09d61798cdc39018bdeaf5199c0002f">ADC_POLLING_MODE</link></computeroutput></para>
+<para>ADC mode values { ADC_POLLING_MODE ADC_INTERRUPT_MODE } </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1ab1d0703f6d84b37cbaa587a1a4515dd4"/><section>
+    <title>ADC_PRESCALER</title>
+<indexterm><primary>ADC_PRESCALER</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define ADC_PRESCALER&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1ac324413055383e702d8a76739dd01664">ADC_PRESCALER_128</link></computeroutput></para>
+<para>Prescaler value { ADC_PRESCALER_2 , ADC_PRESCALER_4 , ADC_PRESCALER_8 , ADC_PRESCALER_16 , ADC_PRESCALER_32 , ADC_PRESCALER_64 , ADC_PRESCALER_128 } </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1a77d8ef2e5c0bde2af6d67f22c2b8a382"/><section>
+    <title>ADC_TRIG_SRC</title>
+<indexterm><primary>ADC_TRIG_SRC</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_TRIG_SRC</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIG_SRC&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1afdee22be0beb0f681e2fc3dff9cf6523">ADC_TRIG_SRC_FREE_RUNNING</link></computeroutput></para>
+<para>ADC source trigger values { ADC_TRIG_SRC_FREE_RUNNING ADC_TRIG_SRC_ANALOD_COMP ADC_TRIG_SRC_EXT_INT0 ADC_TRIG_SRC_TIMER0_COM_MATCH ADC_TRIG_SRC_TIMER0_OVERFLOW ADC_TRIG_SRC_TIMER_COM_MATCH_B ADC_TRIG_SRC_TIMER1_OVERFLOW ADC_TRIG_SRC_TIMER1_CAP_EVENT } </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1a165fe85ac49568041a6595b5ad7d46c5"/><section>
+    <title>ADC_VOLT_REF</title>
+<indexterm><primary>ADC_VOLT_REF</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_VOLT_REF</secondary></indexterm>
+<para><computeroutput>#define ADC_VOLT_REF&#160;&#160;&#160;<link linkend="__a_d_c___interface_8h_1a226a2320101ff1cc1e7d92935b03b2f7">ADC_VOLT_REF_EXTERNAL</link></computeroutput></para>
+<para>ADC reference voltage values { ADC_VOLT_REF_EXTERNAL, ADC_VOLT_REF_AVCC, ADC_VOLT_REF_INTERNAL_2V56 } </para>
+</section>
+<anchor xml:id="__a_d_c___config_8h_1a9fb4e4bf1e424cbc6b67044d4f96d403"/><section>
+    <title>ADC_VOLT_REF_VALUE</title>
+<indexterm><primary>ADC_VOLT_REF_VALUE</primary><secondary>ADC_Config.h</secondary></indexterm>
+<indexterm><primary>ADC_Config.h</primary><secondary>ADC_VOLT_REF_VALUE</secondary></indexterm>
+<para><computeroutput>#define ADC_VOLT_REF_VALUE&#160;&#160;&#160;5</computeroutput></para>
+<para>reference voltage value </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_i_c___config_8h" xml:lang="en-US">
+<title>Drivers/MCAL/IIC/IIC_Config.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/IIC/IIC_Config.h</primary></indexterm>
+<para>
+
+<para>this file contains macros configuration for the IIC module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___config_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__i_i_c___config_8h_1a436cd4b10c6e53ed34ce2853d0d2eda3">F_OSC_HZ</link>&#160;&#160;&#160;16000000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___config_8h_1a06138dd9d879a23cd11983e9cb61735b">IIC_F_SCL_HZ</link>&#160;&#160;&#160;400000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___config_8h_1a7f689be1799011edd5f489aac3e9153e">IIC_SLAVE_ADDRESS</link>&#160;&#160;&#160;0x05</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___config_8h_1a73b027764df7a1a8ba67fec3bc3d60db">IIC_OPERATION_MODE</link>&#160;&#160;&#160;<link linkend="__i_i_c___interface_8h_1af35103f191d5a643c34ccd862031a6ba">IIC_MASTER_MODE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___config_8h_1aa67a4e5d10ebb25494f703759fc6f4d7">IIC_LISTEN_GENERAL_CALL</link>&#160;&#160;&#160;<link linkend="__i_i_c___interface_8h_1a922f594e8d519c0a3f6c6c4bffc990be">IIC_LISTEN_GENERAL_CALL_ENABLE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains macros configuration for the IIC module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__i_i_c___config_8h_1a436cd4b10c6e53ed34ce2853d0d2eda3"/><section>
+    <title>F_OSC_HZ</title>
+<indexterm><primary>F_OSC_HZ</primary><secondary>IIC_Config.h</secondary></indexterm>
+<indexterm><primary>IIC_Config.h</primary><secondary>F_OSC_HZ</secondary></indexterm>
+<para><computeroutput>#define F_OSC_HZ&#160;&#160;&#160;16000000</computeroutput></para>
+<para>CPU frequency in Hz </para>
+</section>
+<anchor xml:id="__i_i_c___config_8h_1a06138dd9d879a23cd11983e9cb61735b"/><section>
+    <title>IIC_F_SCL_HZ</title>
+<indexterm><primary>IIC_F_SCL_HZ</primary><secondary>IIC_Config.h</secondary></indexterm>
+<indexterm><primary>IIC_Config.h</primary><secondary>IIC_F_SCL_HZ</secondary></indexterm>
+<para><computeroutput>#define IIC_F_SCL_HZ&#160;&#160;&#160;400000</computeroutput></para>
+<para>SCL frequency in Hz </para>
+</section>
+<anchor xml:id="__i_i_c___config_8h_1aa67a4e5d10ebb25494f703759fc6f4d7"/><section>
+    <title>IIC_LISTEN_GENERAL_CALL</title>
+<indexterm><primary>IIC_LISTEN_GENERAL_CALL</primary><secondary>IIC_Config.h</secondary></indexterm>
+<indexterm><primary>IIC_Config.h</primary><secondary>IIC_LISTEN_GENERAL_CALL</secondary></indexterm>
+<para><computeroutput>#define IIC_LISTEN_GENERAL_CALL&#160;&#160;&#160;<link linkend="__i_i_c___interface_8h_1a922f594e8d519c0a3f6c6c4bffc990be">IIC_LISTEN_GENERAL_CALL_ENABLE</link></computeroutput></para>
+<para>general call setting values { IIC_LISTEN_GENERAL_CALL_ENABLE IIC_LISTEN_GENERAL_CALL_DISABLE } </para>
+</section>
+<anchor xml:id="__i_i_c___config_8h_1a73b027764df7a1a8ba67fec3bc3d60db"/><section>
+    <title>IIC_OPERATION_MODE</title>
+<indexterm><primary>IIC_OPERATION_MODE</primary><secondary>IIC_Config.h</secondary></indexterm>
+<indexterm><primary>IIC_Config.h</primary><secondary>IIC_OPERATION_MODE</secondary></indexterm>
+<para><computeroutput>#define IIC_OPERATION_MODE&#160;&#160;&#160;<link linkend="__i_i_c___interface_8h_1af35103f191d5a643c34ccd862031a6ba">IIC_MASTER_MODE</link></computeroutput></para>
+<para>mode of operation values { IIC_MASTER_MODE IIC_SLAVE_MODE } </para>
+</section>
+<anchor xml:id="__i_i_c___config_8h_1a7f689be1799011edd5f489aac3e9153e"/><section>
+    <title>IIC_SLAVE_ADDRESS</title>
+<indexterm><primary>IIC_SLAVE_ADDRESS</primary><secondary>IIC_Config.h</secondary></indexterm>
+<indexterm><primary>IIC_Config.h</primary><secondary>IIC_SLAVE_ADDRESS</secondary></indexterm>
+<para><computeroutput>#define IIC_SLAVE_ADDRESS&#160;&#160;&#160;0x05</computeroutput></para>
+<para>device slave address (when be a slave in network) </para>
+</section>
+</section>
+</section>

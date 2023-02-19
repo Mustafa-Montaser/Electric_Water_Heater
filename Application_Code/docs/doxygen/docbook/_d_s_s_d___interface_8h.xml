@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_s_s_d___interface_8h" xml:lang="en-US">
+<title>Drivers/HAL/DSSD/DSSD_Interface.h File Reference</title>
+<indexterm><primary>Drivers/HAL/DSSD/DSSD_Interface.h</primary></indexterm>
+<para>
+
+<para>this file contains function prototypes for the DSSD module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1a934f3d5caab478fee95658159e22e418">DSSD_BCD_MODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1ab4afd9fb8074bbe19b95efd0ee4dabda">DSSD_NORMAL_MODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1a2a325357087ba8c486f82ba9e1f25351">DSSD_DISPLAY_ONES</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1a705be9a5c7fa16d9f2c07dba971aaea7">DSSD_DISPLAY_TENS</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1a8fd50cee6ecc6178cd4d9871a7d14a82">DSSD_ON</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__d_s_s_d___interface_8h_1a5b7ebc1aff6a111c1c2e6b338ff3176b">DSSD_OFF</link>&#160;&#160;&#160;0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__d_s_s_d___interface_8h_1ac86cddc8b27891ecd418fc9328a5fd07">DSSD_voidInit</link> ()</para>
+
+<para>Initialise the DSSD. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___interface_8h_1aadd2690a78926ff0d1aa465aae833851">DSSD_voidEN1</link> ()</para>
+
+<para>Enable EN1 to display the right digit. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___interface_8h_1a3bac1cbfe1873b477ef4cacc093532f6">DSSD_voidEN2</link> ()</para>
+
+<para>Enable EN2 to display the left digit. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___interface_8h_1aa84ab82fe079b0c462b106311eb12001">DSSD_voidDisableAll</link> ()</para>
+
+<para>Disable DSSD [act as turn it OFF]. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___interface_8h_1a3ff716dcf68a7e8b413932e87799fe2f">DSSD_voidDisplay</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Num, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> u8Digit)</para>
+
+<para>Display Number from 2 digits. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="__d_s_s_d___interface_8h_1aef9de12e0f6fad5af76aba8595cc2d80">DSSD_u8Status</link> ()</para>
+
+<para>get current state [ON, OFF] </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains function prototypes for the DSSD module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__d_s_s_d___interface_8h_1a934f3d5caab478fee95658159e22e418"/><section>
+    <title>DSSD_BCD_MODE</title>
+<indexterm><primary>DSSD_BCD_MODE</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_BCD_MODE</secondary></indexterm>
+<para><computeroutput>#define DSSD_BCD_MODE&#160;&#160;&#160;0</computeroutput></para>
+<para>DSSD operation modes { BCD, normal } </para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a2a325357087ba8c486f82ba9e1f25351"/><section>
+    <title>DSSD_DISPLAY_ONES</title>
+<indexterm><primary>DSSD_DISPLAY_ONES</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_DISPLAY_ONES</secondary></indexterm>
+<para><computeroutput>#define DSSD_DISPLAY_ONES&#160;&#160;&#160;0</computeroutput></para>
+<para>DSSD digits { ones, tens } </para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a705be9a5c7fa16d9f2c07dba971aaea7"/><section>
+    <title>DSSD_DISPLAY_TENS</title>
+<indexterm><primary>DSSD_DISPLAY_TENS</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_DISPLAY_TENS</secondary></indexterm>
+<para><computeroutput>#define DSSD_DISPLAY_TENS&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__d_s_s_d___interface_8h_1ab4afd9fb8074bbe19b95efd0ee4dabda"/><section>
+    <title>DSSD_NORMAL_MODE</title>
+<indexterm><primary>DSSD_NORMAL_MODE</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_NORMAL_MODE</secondary></indexterm>
+<para><computeroutput>#define DSSD_NORMAL_MODE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a5b7ebc1aff6a111c1c2e6b338ff3176b"/><section>
+    <title>DSSD_OFF</title>
+<indexterm><primary>DSSD_OFF</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_OFF</secondary></indexterm>
+<para><computeroutput>#define DSSD_OFF&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a8fd50cee6ecc6178cd4d9871a7d14a82"/><section>
+    <title>DSSD_ON</title>
+<indexterm><primary>DSSD_ON</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_ON</secondary></indexterm>
+<para><computeroutput>#define DSSD_ON&#160;&#160;&#160;1</computeroutput></para>
+<para>DSSD state { on, off } </para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__d_s_s_d___interface_8h_1aef9de12e0f6fad5af76aba8595cc2d80"/><section>
+    <title>DSSD_u8Status()</title>
+<indexterm><primary>DSSD_u8Status</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_u8Status</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> DSSD_u8Status ( )</computeroutput></para><para>
+
+<para>get current state [ON, OFF] </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>local_u8state state </para>
+</formalpara>
+</para>
+
+<para>if EN1 and EN2 are low then, DSSD is OFF. Otherwise, it is ON</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_aef9de12e0f6fad5af76aba8595cc2d80_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1aa84ab82fe079b0c462b106311eb12001"/><section>
+    <title>DSSD_voidDisableAll()</title>
+<indexterm><primary>DSSD_voidDisableAll</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_voidDisableAll</secondary></indexterm>
+<para><computeroutput>void DSSD_voidDisableAll ( )</computeroutput></para><para>
+
+<para>Disable DSSD [act as turn it OFF]. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>disable EN1 and EN2</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_aa84ab82fe079b0c462b106311eb12001_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_aa84ab82fe079b0c462b106311eb12001_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a3ff716dcf68a7e8b413932e87799fe2f"/><section>
+    <title>DSSD_voidDisplay()</title>
+<indexterm><primary>DSSD_voidDisplay</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_voidDisplay</secondary></indexterm>
+<para><computeroutput>void DSSD_voidDisplay (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Num, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> u8Digit)</computeroutput></para><para>
+
+<para>Display Number from 2 digits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8Num</entry><entry>
+<para>the desired number to be printed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>u8Digit</entry><entry>
+<para>desired digit to be displayed [DSSD_DISPLAY_ONES, DSSD_DISPLAY_TENS] </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>according to desired digit, display it</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_a3ff716dcf68a7e8b413932e87799fe2f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1aadd2690a78926ff0d1aa465aae833851"/><section>
+    <title>DSSD_voidEN1()</title>
+<indexterm><primary>DSSD_voidEN1</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_voidEN1</secondary></indexterm>
+<para><computeroutput>void DSSD_voidEN1 ( )</computeroutput></para><para>
+
+<para>Enable EN1 to display the right digit. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>enable EN1</para>
+
+<para>disable EN2</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_aadd2690a78926ff0d1aa465aae833851_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_aadd2690a78926ff0d1aa465aae833851_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1a3bac1cbfe1873b477ef4cacc093532f6"/><section>
+    <title>DSSD_voidEN2()</title>
+<indexterm><primary>DSSD_voidEN2</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_voidEN2</secondary></indexterm>
+<para><computeroutput>void DSSD_voidEN2 ( )</computeroutput></para><para>
+
+<para>Enable EN2 to display the left digit. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>enable EN2</para>
+
+<para>disable EN1</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_a3bac1cbfe1873b477ef4cacc093532f6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___interface_8h_1ac86cddc8b27891ecd418fc9328a5fd07"/><section>
+    <title>DSSD_voidInit()</title>
+<indexterm><primary>DSSD_voidInit</primary><secondary>DSSD_Interface.h</secondary></indexterm>
+<indexterm><primary>DSSD_Interface.h</primary><secondary>DSSD_voidInit</secondary></indexterm>
+<para><computeroutput>void DSSD_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise the DSSD. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>drive data and control pins as a outputs</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_ac86cddc8b27891ecd418fc9328a5fd07_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___interface_8h_ac86cddc8b27891ecd418fc9328a5fd07_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

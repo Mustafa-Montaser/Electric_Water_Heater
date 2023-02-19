@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___heater" xml:lang="en-US">
+<title>Heater</title>
+<indexterm><primary>Heater</primary></indexterm>
+Collaboration diagram for Heater:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___heater.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__cooler___program_8c">Cooler_Program.c</link></para>
+
+<para>this file contains contains implementation for the cooler module </para>
+</listitem>
+            <listitem><para>file <link linkend="__cooler___interface_8h">Cooler_Interface.h</link></para>
+
+<para>this file contains function prototypes for the Cooler module </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Heater module driver </para>
+</section>
+</section>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___external___interrupt" xml:lang="en-US">
+<title>External_Interrupt</title>
+<indexterm><primary>External_Interrupt</primary></indexterm>
+Collaboration diagram for External_Interrupt:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___external___interrupt.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__e_x_t___i_n_t___config_8h">EXT_INT_Config.h</link></para>
+
+<para>this file contains macros configuration for the External Interrupt module </para>
+</listitem>
+            <listitem><para>file <link linkend="__e_x_t___i_n_t___interface_8h">EXT_INT_Interface.h</link></para>
+
+<para>this file contains function prototypes for the External_Interrupt module </para>
+</listitem>
+            <listitem><para>file <link linkend="__a_d_c___private_8h">ADC_Private.h</link></para>
+
+<para>this file contains contains registers addresses for the ADC module </para>
+</listitem>
+            <listitem><para>file <link linkend="__a_d_c___program_8c">ADC_Program.c</link></para>
+
+<para>this file contains contains implementation for the ADC module </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>External_Interrupt module driver </para>
+</section>
+</section>

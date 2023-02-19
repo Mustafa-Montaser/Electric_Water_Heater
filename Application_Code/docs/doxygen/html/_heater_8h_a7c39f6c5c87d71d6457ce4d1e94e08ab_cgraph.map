@@ -1,0 +1,4 @@
+<map id="Heater_voidTurnOff" name="Heater_voidTurnOff">
+<area shape="rect" id="node1" title="Heater turn OFF." alt="" coords="5,5,136,31"/>
+<area shape="rect" id="node2" href="$_d_i_o___program_8c.html#a652e0f9ac0f74e77a1328ed5397f994b" title="clear pin value to 0" alt="" coords="184,5,339,31"/>
+</map>

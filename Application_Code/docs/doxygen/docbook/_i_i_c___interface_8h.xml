@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_i_c___interface_8h" xml:lang="en-US">
+<title>Drivers/MCAL/IIC/IIC_Interface.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/IIC/IIC_Interface.h</primary></indexterm>
+<para>
+
+<para>this file contains function prototypes for the IIC module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1ae0a7c79a1a76b63bcdb21980c01b242c">IIC_BIT_RATE_PRESCALER_1</link>&#160;&#160;&#160;0b00</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1a117ebb5d36de4d4b44229334bac9db43">IIC_BIT_RATE_PRESCALER_4</link>&#160;&#160;&#160;0b01</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1aa804e28d3d49baa28c986ccb2dc2a0e0">IIC_BIT_RATE_PRESCALER_16</link>&#160;&#160;&#160;0b10</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1ad683311490e5a897646be95a99046276">IIC_BIT_RATE_PRESCALER_64</link>&#160;&#160;&#160;0b11</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1af35103f191d5a643c34ccd862031a6ba">IIC_MASTER_MODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1aefb1d4b41aafa96456485e5ae41052e0">IIC_SLAVE_MODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1a922f594e8d519c0a3f6c6c4bffc990be">IIC_LISTEN_GENERAL_CALL_ENABLE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1aad8ab1ebde45beae9e8b7b9186ef121f">IIC_LISTEN_GENERAL_CALL_DISABLE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__i_i_c___interface_8h_1ae9bf256de7a341ea03a8659c3be169a6">IIC_TIMEOUT</link>&#160;&#160;&#160;16000000UL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> { <?linebreak?><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a72741f871c74584815830bc569e63a5c">IIC_OK</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2ede14f8e8f0812cc4c2674c51a6de42">IIC_NOK</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a71cf3683831f4a716598232049677ff7">IIC_START_COND_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a440d6c75bbe037a9c47615c17ced8df2">IIC_RE_START_ERR</link>
+, <?linebreak?><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076acc56e623f0c2a8e1ecca7f910f9d8378">IIC_STOP_COND_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ac3a391e50448d012de5dc9e7910f50a0">IIC_SLA_ADD_WRT_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a96ef8eede8be18f25b131744ba081dc0">IIC_SLA_ADD_WRT_NACK</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076aa8d44ecd12d01bb3da0567f28ee229d1">IIC_ARBITRATION_LOST</link>
+, <?linebreak?><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a4a57949036080e994ff546d458b793e7">IIC_SLA_ADD_READ_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a73a7c44ec951beb6d88b7ebe4d3ac16d">IIC_SLA_ADD_READ_NACK</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a9fc0b527ddcb4906360d0ba6dfe0199f">IIC_M_SEND_BYTE_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a89a1474882fa99c769717fcdfd97bc39">IIC_M_SEND_BYTE_NACK</link>
+, <?linebreak?><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a12e6d45a32128e8a80d77ddbc68e6331">IIC_M_RECEIVE_BYTE_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a899f290b09be5274681fc2f29a1c3fab">IIC_M_RECEIVE_BYTE_NACK</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a45832a8b88d8c8e944794b9007e6158f">IIC_S_SEND_BYTE_ERR</link>
+, <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ad2811931ba20c485bfa8fce35e58ff52">IIC_S_RECEIVE_BYTE_ERR</link>
+, <?linebreak?><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2028b9865e6c04aafc5d7bf847383112">IIC_TIMEOUT_ERR</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__i_i_c___interface_8h_1aa015af0f91fc272ebe58e0785fe1b85a">IIC_voidInit</link> (void)</para>
+
+<para>Initialise IIC module. </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1aa10eb50a9482d4f229805fc5a308249d">IIC_enumStartCondition</link> (void)</para>
+
+<para>starting condition </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1a2400c8e626ccee4a498005ecbdfa443b">IIC_enumStopCondition</link> (void)</para>
+
+<para>stop condition </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1aa97244d3999bcd7287ed3f3f86b0b52a">IIC_enumSendSlaveAddressWithWrite</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8SlaveAddress)</para>
+
+<para>sending slave address with write operation </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1a6c608fffae5b0888b7ce034a36d22cb6">IIC_enumSendSlaveAddressWithRead</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8SlaveAddress)</para>
+
+<para>sending slave address with read operation </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1ae1668128d1e8336a336d75a485557176">IIC_enumSendByte</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Data)</para>
+
+<para>sending byte of data </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1a8bab5f403849c6d6a7e567b1e4ba905f">IIC_enumReceiveByte</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> *local_u8PtrReceivedByte)</para>
+
+<para>receiving byte of data </para>
+</listitem>
+            <listitem><para><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> <link linkend="__i_i_c___interface_8h_1aa4716282e429cbb4891a95af58a1f4de">IIC_enumRepeatStart</link> (void)</para>
+
+<para>repeat start </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains function prototypes for the IIC module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__i_i_c___interface_8h_1ae0a7c79a1a76b63bcdb21980c01b242c"/><section>
+    <title>IIC_BIT_RATE_PRESCALER_1</title>
+<indexterm><primary>IIC_BIT_RATE_PRESCALER_1</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_BIT_RATE_PRESCALER_1</secondary></indexterm>
+<para><computeroutput>#define IIC_BIT_RATE_PRESCALER_1&#160;&#160;&#160;0b00</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1aa804e28d3d49baa28c986ccb2dc2a0e0"/><section>
+    <title>IIC_BIT_RATE_PRESCALER_16</title>
+<indexterm><primary>IIC_BIT_RATE_PRESCALER_16</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_BIT_RATE_PRESCALER_16</secondary></indexterm>
+<para><computeroutput>#define IIC_BIT_RATE_PRESCALER_16&#160;&#160;&#160;0b10</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1a117ebb5d36de4d4b44229334bac9db43"/><section>
+    <title>IIC_BIT_RATE_PRESCALER_4</title>
+<indexterm><primary>IIC_BIT_RATE_PRESCALER_4</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_BIT_RATE_PRESCALER_4</secondary></indexterm>
+<para><computeroutput>#define IIC_BIT_RATE_PRESCALER_4&#160;&#160;&#160;0b01</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1ad683311490e5a897646be95a99046276"/><section>
+    <title>IIC_BIT_RATE_PRESCALER_64</title>
+<indexterm><primary>IIC_BIT_RATE_PRESCALER_64</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_BIT_RATE_PRESCALER_64</secondary></indexterm>
+<para><computeroutput>#define IIC_BIT_RATE_PRESCALER_64&#160;&#160;&#160;0b11</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1aad8ab1ebde45beae9e8b7b9186ef121f"/><section>
+    <title>IIC_LISTEN_GENERAL_CALL_DISABLE</title>
+<indexterm><primary>IIC_LISTEN_GENERAL_CALL_DISABLE</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_LISTEN_GENERAL_CALL_DISABLE</secondary></indexterm>
+<para><computeroutput>#define IIC_LISTEN_GENERAL_CALL_DISABLE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1a922f594e8d519c0a3f6c6c4bffc990be"/><section>
+    <title>IIC_LISTEN_GENERAL_CALL_ENABLE</title>
+<indexterm><primary>IIC_LISTEN_GENERAL_CALL_ENABLE</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_LISTEN_GENERAL_CALL_ENABLE</secondary></indexterm>
+<para><computeroutput>#define IIC_LISTEN_GENERAL_CALL_ENABLE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1af35103f191d5a643c34ccd862031a6ba"/><section>
+    <title>IIC_MASTER_MODE</title>
+<indexterm><primary>IIC_MASTER_MODE</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_MASTER_MODE</secondary></indexterm>
+<para><computeroutput>#define IIC_MASTER_MODE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1aefb1d4b41aafa96456485e5ae41052e0"/><section>
+    <title>IIC_SLAVE_MODE</title>
+<indexterm><primary>IIC_SLAVE_MODE</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_SLAVE_MODE</secondary></indexterm>
+<para><computeroutput>#define IIC_SLAVE_MODE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__i_i_c___interface_8h_1ae9bf256de7a341ea03a8659c3be169a6"/><section>
+    <title>IIC_TIMEOUT</title>
+<indexterm><primary>IIC_TIMEOUT</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define IIC_TIMEOUT&#160;&#160;&#160;16000000UL</computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076"/><section>
+    <title>IIC_State_t</title>
+<indexterm><primary>IIC_State_t</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_State_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link></computeroutput></para>
+<para>refer to IIC error states in each step of the communication </para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>IIC_OK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_OK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a72741f871c74584815830bc569e63a5c"/>IIC_OK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_NOK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_NOK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2ede14f8e8f0812cc4c2674c51a6de42"/>IIC_NOK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_START_COND_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_START_COND_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a71cf3683831f4a716598232049677ff7"/>IIC_START_COND_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_RE_START_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_RE_START_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a440d6c75bbe037a9c47615c17ced8df2"/>IIC_RE_START_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_STOP_COND_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_STOP_COND_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076acc56e623f0c2a8e1ecca7f910f9d8378"/>IIC_STOP_COND_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_SLA_ADD_WRT_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_SLA_ADD_WRT_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ac3a391e50448d012de5dc9e7910f50a0"/>IIC_SLA_ADD_WRT_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_SLA_ADD_WRT_NACK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_SLA_ADD_WRT_NACK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a96ef8eede8be18f25b131744ba081dc0"/>IIC_SLA_ADD_WRT_NACK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_ARBITRATION_LOST</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_ARBITRATION_LOST</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076aa8d44ecd12d01bb3da0567f28ee229d1"/>IIC_ARBITRATION_LOST</entry><entry></entry></row><row><entry><indexterm><primary>IIC_SLA_ADD_READ_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_SLA_ADD_READ_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a4a57949036080e994ff546d458b793e7"/>IIC_SLA_ADD_READ_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_SLA_ADD_READ_NACK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_SLA_ADD_READ_NACK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a73a7c44ec951beb6d88b7ebe4d3ac16d"/>IIC_SLA_ADD_READ_NACK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_M_SEND_BYTE_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_M_SEND_BYTE_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a9fc0b527ddcb4906360d0ba6dfe0199f"/>IIC_M_SEND_BYTE_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_M_SEND_BYTE_NACK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_M_SEND_BYTE_NACK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a89a1474882fa99c769717fcdfd97bc39"/>IIC_M_SEND_BYTE_NACK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_M_RECEIVE_BYTE_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_M_RECEIVE_BYTE_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a12e6d45a32128e8a80d77ddbc68e6331"/>IIC_M_RECEIVE_BYTE_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_M_RECEIVE_BYTE_NACK</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_M_RECEIVE_BYTE_NACK</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a899f290b09be5274681fc2f29a1c3fab"/>IIC_M_RECEIVE_BYTE_NACK</entry><entry></entry></row><row><entry><indexterm><primary>IIC_S_SEND_BYTE_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_S_SEND_BYTE_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a45832a8b88d8c8e944794b9007e6158f"/>IIC_S_SEND_BYTE_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_S_RECEIVE_BYTE_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_S_RECEIVE_BYTE_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ad2811931ba20c485bfa8fce35e58ff52"/>IIC_S_RECEIVE_BYTE_ERR</entry><entry></entry></row><row><entry><indexterm><primary>IIC_TIMEOUT_ERR</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_TIMEOUT_ERR</secondary></indexterm>
+<anchor xml:id="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2028b9865e6c04aafc5d7bf847383112"/>IIC_TIMEOUT_ERR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__i_i_c___interface_8h_1a8bab5f403849c6d6a7e567b1e4ba905f"/><section>
+    <title>IIC_enumReceiveByte()</title>
+<indexterm><primary>IIC_enumReceiveByte</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumReceiveByte</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumReceiveByte (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> * local_u8PtrReceivedByte)</computeroutput></para><para>
+
+<para>receiving byte of data </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8PtrReceivedByte</entry><entry>
+<para>pointer to data buffer where to receive data </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_a8bab5f403849c6d6a7e567b1e4ba905f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1aa4716282e429cbb4891a95af58a1f4de"/><section>
+    <title>IIC_enumRepeatStart()</title>
+<indexterm><primary>IIC_enumRepeatStart</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumRepeatStart</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumRepeatStart (void )</computeroutput></para><para>
+
+<para>repeat start </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_aa4716282e429cbb4891a95af58a1f4de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1ae1668128d1e8336a336d75a485557176"/><section>
+    <title>IIC_enumSendByte()</title>
+<indexterm><primary>IIC_enumSendByte</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumSendByte</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumSendByte (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Data)</computeroutput></para><para>
+
+<para>sending byte of data </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8Data</entry><entry>
+<para>data to be sent </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_ae1668128d1e8336a336d75a485557176_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1a6c608fffae5b0888b7ce034a36d22cb6"/><section>
+    <title>IIC_enumSendSlaveAddressWithRead()</title>
+<indexterm><primary>IIC_enumSendSlaveAddressWithRead</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumSendSlaveAddressWithRead</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumSendSlaveAddressWithRead (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8SlaveAddress)</computeroutput></para><para>
+
+<para>sending slave address with read operation </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8SlaveAddress</entry><entry>
+<para>slave address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_a6c608fffae5b0888b7ce034a36d22cb6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1aa97244d3999bcd7287ed3f3f86b0b52a"/><section>
+    <title>IIC_enumSendSlaveAddressWithWrite()</title>
+<indexterm><primary>IIC_enumSendSlaveAddressWithWrite</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumSendSlaveAddressWithWrite</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumSendSlaveAddressWithWrite (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8SlaveAddress)</computeroutput></para><para>
+
+<para>sending slave address with write operation </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8SlaveAddress</entry><entry>
+<para>slave address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_aa97244d3999bcd7287ed3f3f86b0b52a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1aa10eb50a9482d4f229805fc5a308249d"/><section>
+    <title>IIC_enumStartCondition()</title>
+<indexterm><primary>IIC_enumStartCondition</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumStartCondition</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumStartCondition (void )</computeroutput></para><para>
+
+<para>starting condition </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_aa10eb50a9482d4f229805fc5a308249d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1a2400c8e626ccee4a498005ecbdfa443b"/><section>
+    <title>IIC_enumStopCondition()</title>
+<indexterm><primary>IIC_enumStopCondition</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_enumStopCondition</secondary></indexterm>
+<para><computeroutput><link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link> IIC_enumStopCondition (void )</computeroutput></para><para>
+
+<para>stop condition </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>error state </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_a2400c8e626ccee4a498005ecbdfa443b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__i_i_c___interface_8h_1aa015af0f91fc272ebe58e0785fe1b85a"/><section>
+    <title>IIC_voidInit()</title>
+<indexterm><primary>IIC_voidInit</primary><secondary>IIC_Interface.h</secondary></indexterm>
+<indexterm><primary>IIC_Interface.h</primary><secondary>IIC_voidInit</secondary></indexterm>
+<para><computeroutput>void IIC_voidInit (void )</computeroutput></para><para>
+
+<para>Initialise IIC module. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i_i_c___interface_8h_aa015af0f91fc272ebe58e0785fe1b85a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

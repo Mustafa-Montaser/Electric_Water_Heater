@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_i_c___interface_8h_source" xml:lang="en-US">
+<title>IIC_Interface.h</title>
+<indexterm><primary>Drivers/MCAL/IIC/IIC_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+24 <emphasis role="preprocessor">#ifndef&#32;DATA_MCAL_IIC_IIC_INTERFACE_H_</emphasis>
+25 <emphasis role="preprocessor">#define&#32;DATA_MCAL_IIC_IIC_INTERFACE_H_</emphasis>
+26 
+27 
+28 
+29 <emphasis role="comment">/*&#32;Macros&#32;*/</emphasis>
+30 
+31 <emphasis role="preprocessor">#define&#32;IIC_BIT_RATE_PRESCALER_1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b00</emphasis>
+32 <emphasis role="preprocessor">#define&#32;IIC_BIT_RATE_PRESCALER_4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b01</emphasis>
+33 <emphasis role="preprocessor">#define&#32;IIC_BIT_RATE_PRESCALER_16&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b10</emphasis>
+34 <emphasis role="preprocessor">#define&#32;IIC_BIT_RATE_PRESCALER_64&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0b11</emphasis>
+35 
+36 <emphasis role="preprocessor">#define&#32;IIC_MASTER_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+37 <emphasis role="preprocessor">#define&#32;IIC_SLAVE_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+38 
+39 <emphasis role="preprocessor">#define&#32;IIC_LISTEN_GENERAL_CALL_ENABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+40 <emphasis role="preprocessor">#define&#32;IIC_LISTEN_GENERAL_CALL_DISABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+41 
+42 <emphasis role="preprocessor">#define&#32;IIC_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;16000000UL</emphasis>
+43 
+44 
+49 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+50 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a72741f871c74584815830bc569e63a5c">IIC_OK</link>,
+51 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2ede14f8e8f0812cc4c2674c51a6de42">IIC_NOK</link>,
+52 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a71cf3683831f4a716598232049677ff7">IIC_START_COND_ERR</link>,
+53 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a440d6c75bbe037a9c47615c17ced8df2">IIC_RE_START_ERR</link>,
+54 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076acc56e623f0c2a8e1ecca7f910f9d8378">IIC_STOP_COND_ERR</link>,
+55 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ac3a391e50448d012de5dc9e7910f50a0">IIC_SLA_ADD_WRT_ERR</link>,
+56 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a96ef8eede8be18f25b131744ba081dc0">IIC_SLA_ADD_WRT_NACK</link>,
+57 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076aa8d44ecd12d01bb3da0567f28ee229d1">IIC_ARBITRATION_LOST</link>,
+58 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a4a57949036080e994ff546d458b793e7">IIC_SLA_ADD_READ_ERR</link>,
+59 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a73a7c44ec951beb6d88b7ebe4d3ac16d">IIC_SLA_ADD_READ_NACK</link>,
+60 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a9fc0b527ddcb4906360d0ba6dfe0199f">IIC_M_SEND_BYTE_ERR</link>,
+61 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a89a1474882fa99c769717fcdfd97bc39">IIC_M_SEND_BYTE_NACK</link>,
+62 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a12e6d45a32128e8a80d77ddbc68e6331">IIC_M_RECEIVE_BYTE_ERR</link>,
+63 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a899f290b09be5274681fc2f29a1c3fab">IIC_M_RECEIVE_BYTE_NACK</link>,
+64 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a45832a8b88d8c8e944794b9007e6158f">IIC_S_SEND_BYTE_ERR</link>,
+65 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076ad2811931ba20c485bfa8fce35e58ff52">IIC_S_RECEIVE_BYTE_ERR</link>,
+66 &#32;&#32;&#32;&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076a2028b9865e6c04aafc5d7bf847383112">IIC_TIMEOUT_ERR</link>
+67 }&#32;<link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>;
+68 
+69 
+70 
+71 <emphasis role="comment">/*&#32;functions&#32;declaration&#32;*/</emphasis>
+72 
+73 
+79 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__i_i_c___interface_8h_1aa015af0f91fc272ebe58e0785fe1b85a">IIC_voidInit</link>(<emphasis role="keywordtype">void</emphasis>);
+80 
+86 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1aa10eb50a9482d4f229805fc5a308249d">IIC_enumStartCondition</link>(<emphasis role="keywordtype">void</emphasis>);
+87 
+93 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1a2400c8e626ccee4a498005ecbdfa443b">IIC_enumStopCondition</link>(<emphasis role="keywordtype">void</emphasis>);
+94 
+100 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1aa97244d3999bcd7287ed3f3f86b0b52a">IIC_enumSendSlaveAddressWithWrite</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8SlaveAddress);
+101 
+107 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1a6c608fffae5b0888b7ce034a36d22cb6">IIC_enumSendSlaveAddressWithRead</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8SlaveAddress);
+108 
+114 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1ae1668128d1e8336a336d75a485557176">IIC_enumSendByte</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8Data);
+115 
+121 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1a8bab5f403849c6d6a7e567b1e4ba905f">IIC_enumReceiveByte</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;*local_u8PtrReceivedByte);
+122 
+128 <link linkend="__i_i_c___interface_8h_1ae4508a614c59c84eb0c76b5e9b406076">IIC_State_t</link>&#32;<link linkend="__i_i_c___interface_8h_1aa4716282e429cbb4891a95af58a1f4de">IIC_enumRepeatStart</link>(<emphasis role="keywordtype">void</emphasis>);
+129 
+130 
+131 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DATA_MCAL_IIC_IIC_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+132 
+133 
+134 
+135 
+136 
+137 
+138 
+139 
+140 
+141 
+142 
+143 
+144 
+145 
+146 
+</programlisting></section>

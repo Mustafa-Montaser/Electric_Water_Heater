@@ -1,0 +1,20 @@
+<map id="App_TimerCallBack" name="App_TimerCallBack">
+<area shape="rect" id="node1" title="call back function to be called every timer period" alt="" coords="5,228,141,253"/>
+<area shape="rect" id="node2" href="$_cooler___program_8c.html#a69404c1e42a3a9822492b659630da8cb" title="Turn OFF the Cooler." alt="" coords="217,351,347,376"/>
+<area shape="rect" id="node4" href="$_cooler___program_8c.html#a7984adde134e46bb7ce6ad2460c2a16f" title="Turn ON the Cooler." alt="" coords="217,55,347,80"/>
+<area shape="rect" id="node6" href="$_d_s_s_d___program_8c.html#aef9de12e0f6fad5af76aba8595cc2d80" title="get current state [ON, OFF]" alt="" coords="223,104,341,129"/>
+<area shape="rect" id="node7" href="$_d_s_s_d___program_8c.html#aa84ab82fe079b0c462b106311eb12001" title="Disable DSSD [act as turn it OFF]." alt="" coords="209,153,355,179"/>
+<area shape="rect" id="node8" href="$_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f" title="Display Number from 2 digits." alt="" coords="217,203,347,228"/>
+<area shape="rect" id="node9" href="$_d_s_s_d___program_8c.html#aadd2690a78926ff0d1aa465aae833851" title="Enable EN1 to display the right digit." alt="" coords="226,252,338,277"/>
+<area shape="rect" id="node10" href="$_e_e_p_r_o_m___program_8c.html#abfb07ac9d31192be80ca5e2019a1842f" title="writing byte data into EEPROM" alt="" coords="199,400,365,425"/>
+<area shape="rect" id="node15" href="$_heater_8c.html#a7c39f6c5c87d71d6457ce4d1e94e08ab" title="Heater turn OFF." alt="" coords="217,301,347,327"/>
+<area shape="rect" id="node16" href="$_heater_8c.html#a3998eb30bd3c850c4aae6b57e7db9040" title="Heater turn ON." alt="" coords="217,5,347,31"/>
+<area shape="rect" id="node17" href="$_sensor_l_m35___program_8c.html#ae5da270459d968d5689172b1f75e7e1c" title="read current temperature" alt="" coords="189,481,375,507"/>
+<area shape="rect" id="node3" href="$_d_i_o___program_8c.html#a652e0f9ac0f74e77a1328ed5397f994b" title="clear pin value to 0" alt="" coords="438,268,593,293"/>
+<area shape="rect" id="node5" href="$_d_i_o___program_8c.html#a1fcd4ae41f925b9705d9819d6a44cf60" title=" " alt="" coords="443,104,588,129"/>
+<area shape="rect" id="node11" href="$_i_i_c___program_8c.html#ae1668128d1e8336a336d75a485557176" title="sending byte of data" alt="" coords="449,481,582,507"/>
+<area shape="rect" id="node12" href="$_i_i_c___program_8c.html#aa97244d3999bcd7287ed3f3f86b0b52a" title="sending slave address with write operation" alt="" coords="423,318,608,358"/>
+<area shape="rect" id="node13" href="$_i_i_c___program_8c.html#aa10eb50a9482d4f229805fc5a308249d" title="starting condition" alt="" coords="436,383,595,408"/>
+<area shape="rect" id="node14" href="$_i_i_c___program_8c.html#a2400c8e626ccee4a498005ecbdfa443b" title="stop condition" alt="" coords="437,432,594,457"/>
+<area shape="rect" id="node18" href="$_a_d_c___program_8c.html#a5605783722042db661fa49329d7aaa66" title="reading ADC converted value (used only in case polling mode)" alt="" coords="462,531,569,556"/>
+</map>

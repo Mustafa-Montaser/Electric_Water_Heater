@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_s_s_d" xml:lang="en-US">
+<title>DSSD</title>
+<indexterm><primary>DSSD</primary></indexterm>
+Collaboration diagram for DSSD:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___d_s_s_d.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__d_s_s_d___config_8h">DSSD_Config.h</link></para>
+
+<para>this file contains configuration macros for the DSSD module </para>
+</listitem>
+            <listitem><para>file <link linkend="__d_s_s_d___interface_8h">DSSD_Interface.h</link></para>
+
+<para>this file contains function prototypes for the DSSD module </para>
+</listitem>
+            <listitem><para>file <link linkend="__d_s_s_d___program_8c">DSSD_Program.c</link></para>
+
+<para>this file contains contains implementation for the cooler module </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Decoded seven segment display module driver </para>
+</section>
+</section>

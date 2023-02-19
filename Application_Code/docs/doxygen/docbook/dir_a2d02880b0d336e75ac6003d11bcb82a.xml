@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_a2d02880b0d336e75ac6003d11bcb82a" xml:lang="en-US">
+<title>Drivers/MCAL Directory Reference</title>
+<indexterm><primary>Drivers/MCAL Directory Reference</primary></indexterm>
+Directory dependency graph for MCAL:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_a2d02880b0d336e75ac6003d11bcb82a_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_4dbdf2851f9e23f3c8e294d57cd81e56">ADC</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_720ba19c30a194485a879dd1652b3275">DIO</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f6e9eb2dffb412c596ecc84b0f00d74b">ExtInt</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_07b9f936328449fd7304e9c104d10b96">GIE</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b5fc435e08075d7ab02f88a46c994f39">IIC</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_58f00c34ca985005f1166d00e0ed3545">Timer0</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

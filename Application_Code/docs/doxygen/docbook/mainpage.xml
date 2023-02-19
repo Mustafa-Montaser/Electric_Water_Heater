@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser</para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>19-Feb-2023</para>
+</formalpara>
+<informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+<section xml:id="_index_1autotoc_md0">
+<title>Role of the project</title>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ The project idea in simple points:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Control water temperature using heater and cooler.</para>
+</listitem><listitem>
+<para>Getting water temperature value using LM35 sensor.</para>
+</listitem><listitem>
+<para>Depend on the last 10 readings, cooler or heater is turned ON/OFF.</para>
+</listitem><listitem>
+<para>Also current temperature is displayed using 7 Segments 2 digits display.</para>
+</listitem><listitem>
+<para>There are two push buttons to control temperature set point and a push button to turn system ON or OFF.</para>
+</listitem><listitem>
+<para>An EEPROM is used to store the last temperature set point which set by the user so that when system is turned on after off the last temperature set point is still in the system operation.</para>
+</listitem><listitem>
+<para>A LED is used to dedicate the state of cooler or heater. When it is turned on, that means the heater is on. When it blinks, that means the cooler is on.</para>
+</listitem></itemizedlist>
+</para>
+
+<para><blockquote>
+<para>&#8205;This project depend on AVR timer for operation and external interrupt for push buttons. </para>
+</blockquote><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<section xml:id="_index_1autotoc_md1">
+<title>Specifications for each hardware module:</title>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+<section xml:id="_index_1autotoc_md2">
+<title>1. Temperature Setting:</title>
+
+<para><itemizedlist>
+<listitem>
+<para>The <emphasis role="bold">UP</emphasis> or <emphasis role="bold">DOWN</emphasis> buttons are used to change the required water temperature (set temperature).</para>
+</listitem><listitem>
+<para>The first <emphasis role="bold">UPp</emphasis> or <emphasis role="bold">DOWN</emphasis> button press, enters the temperature setting mode.</para>
+</listitem><listitem>
+<para>After entering temperature setting mode, a single <emphasis role="bold">UP</emphasis> button press increase the set temperature by 5 degrees.</para>
+</listitem><listitem>
+<para>After entering temperature setting mode, a single <emphasis role="bold">DOWN</emphasis> button press decrease the set temperature by 5 degrees.</para>
+</listitem><listitem>
+<para>The minimum possible set temperature is 35 degrees.</para>
+</listitem><listitem>
+<para>The maximum possible set temperature is 75 degrees.</para>
+</listitem><listitem>
+<para>The <emphasis role="bold">External EEPROM</emphasis> should save the set temperature once set.</para>
+</listitem><listitem>
+<para>If the electric water heater is turned OFF then ON, the stored set temperature should be retrieved from the <emphasis role="bold">External EEPROM</emphasis>.</para>
+</listitem><listitem>
+<para>The initial temperature is 60 degrees.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md3">
+<title>2. ON/OFF Behavior:</title>
+
+<para><itemizedlist>
+<listitem>
+<para>If power is connected to the heater,the electric water heater is in OFF state.</para>
+</listitem><listitem>
+<para>If the <emphasis role="bold">ON/OFF</emphasis> button is released and the electric water heater is in OFF state, the electric water heater goes to ON state.</para>
+</listitem><listitem>
+<para>If the <emphasis role="bold">ON/OFF</emphasis> button is released and the electric water heater is in ON state, the electric water heater goes to OFF state.</para>
+</listitem><listitem>
+<para>In the OFF state, all display should be turned OFF</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>3. Temperature Sensing</title>
+
+<para><itemizedlist>
+<listitem>
+<para>The temperature sensor measures the water temperature.</para>
+</listitem><listitem>
+<para>The water temperature should increase, if the <emphasis role="bold">Heating Element</emphasis> is ON.</para>
+</listitem><listitem>
+<para>The water temperature should decrease, if the <emphasis role="bold">Cooling Element</emphasis> is ON.</para>
+</listitem><listitem>
+<para>Temperature should be sensed once every 100 ms.</para>
+</listitem><listitem>
+<para>The decision to turn ON or OFF either the <emphasis role="bold">Heating Element</emphasis> or the <emphasis role="bold">Cooling Element</emphasis> based on the average of the last 10 temperature readings.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md5">
+<title>4. Heating/Cooling Elements</title>
+
+<para><itemizedlist>
+<listitem>
+<para>The <emphasis role="bold">Heating Element</emphasis> should be turned ON, if the current water temperature is less than the set temperature by 5 degrees.</para>
+</listitem><listitem>
+<para>The <emphasis role="bold">Cooling Element</emphasis> should be turned OFF, if the current water temperature is less than the set temperature by 5 degrees.</para>
+</listitem><listitem>
+<para>The <emphasis role="bold">Heating Element</emphasis> should be turned OFF, if the current water temperature is greater than the set temperature by 5 degrees.</para>
+</listitem><listitem>
+<para>The <emphasis role="bold">Cooling Element</emphasis> should be turned ON, if the current water temperature is greater than the set temperature by 5 degrees.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>5. Seven Segments</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Seven segment by default show the current water temperature or the set temperature.</para>
+</listitem><listitem>
+<para>By default, the 2 seven segment display are show the current water temperature.</para>
+</listitem><listitem>
+<para>If the electric water heater is in the temperature setting mode, the 2 seven segment displays should blink every 1 second and show the set temperature.</para>
+</listitem><listitem>
+<para>In the temperature setting mode, every change in the set temperature should be reflected on the 2 seven segment displays.</para>
+</listitem><listitem>
+<para>The 2 seven segment display should exit the temperature setting mode, if the</para>
+</listitem><listitem>
+<para><emphasis role="bold">UP</emphasis> and <emphasis role="bold">DOWN</emphasis> buttons are not pressed for 5 seconds</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md7">
+<title>6. Heating Element Led</title>
+
+<para><itemizedlist>
+<listitem>
+<para>If the <emphasis role="bold">Heating Element</emphasis> is ON, the <emphasis role="bold">Heating Element Led</emphasis> should blink every 1 second.</para>
+</listitem><listitem>
+<para>If the <emphasis role="bold">Cooling Element</emphasis> is ON, the <emphasis role="bold">Heating Element Led</emphasis> should be ON. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+</chapter>

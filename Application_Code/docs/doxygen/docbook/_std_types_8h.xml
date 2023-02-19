@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__std_types_8h" xml:lang="en-US">
+<title>Drivers/LIB/StdTypes.h File Reference</title>
+<indexterm><primary>Drivers/LIB/StdTypes.h</primary></indexterm>
+<para>
+
+<para>this file contains standard types </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_std_types_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__std_types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>&#160;&#160;&#160;( (void *) 0x00)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef unsigned char <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link></para>
+</listitem>
+            <listitem><para>typedef unsigned short int <link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link></para>
+</listitem>
+            <listitem><para>typedef unsigned long int <link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link></para>
+</listitem>
+            <listitem><para>typedef signed char <link linkend="__std_types_8h_1a151f780fb455885061d3b77ec1c90c03">s8</link></para>
+</listitem>
+            <listitem><para>typedef signed short int <link linkend="__std_types_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b">s16</link></para>
+</listitem>
+            <listitem><para>typedef signed long int <link linkend="__std_types_8h_1aba045a0b8c912badb14f00167aae5417">s32</link></para>
+</listitem>
+            <listitem><para>typedef float <link linkend="__std_types_8h_1a5f6906312a689f27d70e9d086649d3fd">f32</link></para>
+</listitem>
+            <listitem><para>typedef double <link linkend="__std_types_8h_1a94dab5770726ccbef8c7d026cfbdf8e5">f64</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains standard types </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__std_types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4"/><section>
+    <title>NULL</title>
+<indexterm><primary>NULL</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>NULL</secondary></indexterm>
+<para><computeroutput>#define NULL&#160;&#160;&#160;( (void *) 0x00)</computeroutput></para></section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="__std_types_8h_1a5f6906312a689f27d70e9d086649d3fd"/><section>
+    <title>f32</title>
+<indexterm><primary>f32</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>f32</secondary></indexterm>
+<para><computeroutput>typedef float <link linkend="__std_types_8h_1a5f6906312a689f27d70e9d086649d3fd">f32</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1a94dab5770726ccbef8c7d026cfbdf8e5"/><section>
+    <title>f64</title>
+<indexterm><primary>f64</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>f64</secondary></indexterm>
+<para><computeroutput>typedef double <link linkend="__std_types_8h_1a94dab5770726ccbef8c7d026cfbdf8e5">f64</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b"/><section>
+    <title>s16</title>
+<indexterm><primary>s16</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>s16</secondary></indexterm>
+<para><computeroutput>typedef signed short int <link linkend="__std_types_8h_1a4cb19f4a3324cfe0938ddfbfabaa825b">s16</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1aba045a0b8c912badb14f00167aae5417"/><section>
+    <title>s32</title>
+<indexterm><primary>s32</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>s32</secondary></indexterm>
+<para><computeroutput>typedef signed long int <link linkend="__std_types_8h_1aba045a0b8c912badb14f00167aae5417">s32</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1a151f780fb455885061d3b77ec1c90c03"/><section>
+    <title>s8</title>
+<indexterm><primary>s8</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>s8</secondary></indexterm>
+<para><computeroutput>typedef signed char <link linkend="__std_types_8h_1a151f780fb455885061d3b77ec1c90c03">s8</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e"/><section>
+    <title>u16</title>
+<indexterm><primary>u16</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>u16</secondary></indexterm>
+<para><computeroutput>typedef unsigned short int <link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea"/><section>
+    <title>u32</title>
+<indexterm><primary>u32</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>u32</secondary></indexterm>
+<para><computeroutput>typedef unsigned long int <link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link></computeroutput></para></section>
+<anchor xml:id="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de"/><section>
+    <title>u8</title>
+<indexterm><primary>u8</primary><secondary>StdTypes.h</secondary></indexterm>
+<indexterm><primary>StdTypes.h</primary><secondary>u8</secondary></indexterm>
+<para><computeroutput>typedef unsigned char <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link></computeroutput></para></section>
+</section>
+</section>

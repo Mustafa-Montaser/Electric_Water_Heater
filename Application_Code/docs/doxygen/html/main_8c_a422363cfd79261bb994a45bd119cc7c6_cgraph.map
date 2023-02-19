@@ -1,0 +1,6 @@
+<map id="App_TimerInit" name="App_TimerInit">
+<area shape="rect" id="node1" title="Initialise system timer." alt="" coords="5,55,107,80"/>
+<area shape="rect" id="node2" href="$_timer0___program_8c.html#abab6eaf710130b793f21caa7222f43ec" title="Initialise timer0." alt="" coords="183,5,289,31"/>
+<area shape="rect" id="node3" href="$_timer0___program_8c.html#a325c493c0cb16106d2c141d885810767" title="callback function when timer is interrupt" alt="" coords="155,55,317,80"/>
+<area shape="rect" id="node4" href="$_timer0___program_8c.html#a4f4ed06f8e0c67870ed2dd4f9504babd" title="setting time" alt="" coords="167,104,305,129"/>
+</map>

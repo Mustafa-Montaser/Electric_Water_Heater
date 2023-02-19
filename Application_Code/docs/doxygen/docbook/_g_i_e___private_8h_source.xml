@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__g_i_e___private_8h_source" xml:lang="en-US">
+<title>GIE_Private.h</title>
+<indexterm><primary>Drivers/MCAL/GIE/GIE_Private.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;GIE_PRIVATE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;GIE_PRIVATE_H_</emphasis>
+25 
+26 
+28 <emphasis role="preprocessor">#define&#32;GIE_SREG&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x5F)</emphasis>
+29 
+30 
+32 <emphasis role="preprocessor">#define&#32;GIE_SREG_I&#32;&#32;7</emphasis>
+33 
+34 
+35 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;GIE_PRIVATE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

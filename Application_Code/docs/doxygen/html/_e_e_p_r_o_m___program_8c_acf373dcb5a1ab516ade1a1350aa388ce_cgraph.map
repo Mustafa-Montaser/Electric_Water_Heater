@@ -1,0 +1,10 @@
+<map id="EEPROM_u8ReadByte" name="EEPROM_u8ReadByte">
+<area shape="rect" id="node1" title="reading byte from EEPROM" alt="" coords="5,161,163,187"/>
+<area shape="rect" id="node2" href="$_i_i_c___program_8c.html#a8bab5f403849c6d6a7e567b1e4ba905f" title="receiving byte of data" alt="" coords="229,5,377,31"/>
+<area shape="rect" id="node3" href="$_i_i_c___program_8c.html#aa4716282e429cbb4891a95af58a1f4de" title="repeat start" alt="" coords="231,55,376,80"/>
+<area shape="rect" id="node4" href="$_i_i_c___program_8c.html#ae1668128d1e8336a336d75a485557176" title="sending byte of data" alt="" coords="237,104,370,129"/>
+<area shape="rect" id="node5" href="$_i_i_c___program_8c.html#a6c608fffae5b0888b7ce034a36d22cb6" title="sending slave address with read operation" alt="" coords="211,154,396,194"/>
+<area shape="rect" id="node6" href="$_i_i_c___program_8c.html#aa97244d3999bcd7287ed3f3f86b0b52a" title="sending slave address with write operation" alt="" coords="211,218,396,258"/>
+<area shape="rect" id="node7" href="$_i_i_c___program_8c.html#aa10eb50a9482d4f229805fc5a308249d" title="starting condition" alt="" coords="224,283,383,308"/>
+<area shape="rect" id="node8" href="$_i_i_c___program_8c.html#a2400c8e626ccee4a498005ecbdfa443b" title="stop condition" alt="" coords="225,332,382,357"/>
+</map>

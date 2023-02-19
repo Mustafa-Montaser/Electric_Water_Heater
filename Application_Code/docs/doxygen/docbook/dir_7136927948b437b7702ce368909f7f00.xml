@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_7136927948b437b7702ce368909f7f00" xml:lang="en-US">
+<title>Drivers/HAL Directory Reference</title>
+<indexterm><primary>Drivers/HAL Directory Reference</primary></indexterm>
+Directory dependency graph for HAL:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_7136927948b437b7702ce368909f7f00_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_bd6ebc92e42a84692f81a55157f03205">Cooler</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_4a27d3b04263cffa8639fb3d69362fc3">DSSD</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_c4aeb56d20a7f99b304a81e402ecec8a">EEPROM</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_36d6524cc03787c8688ad153143c94fc">Heater</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_f553ff30e5a3f43fddafa64dc33a81ae">PushButton</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_8d4b6298337fd6697e98cdd7ff36b45b">SensorLM35</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

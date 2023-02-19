@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__macros_8h" xml:lang="en-US">
+<title>Macros.h File Reference</title>
+<indexterm><primary>Macros.h</primary></indexterm>
+<para>
+
+<para>Macros for main application. </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_macros_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__macros_8h_1a6661d7866c12ca73daca76bceec7e5e1">BTN_ON_OFF</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a95a9d013969310c2d6547c034f1f9159">DIO_PB2</link></para>
+
+<para>ON/OFF system button pin. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a5de04c6da5886baf783850c1a10b1b33">BTN_UP_CTRL</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a442e7c50376e677035bb772fea8f2fc3">DIO_PD2</link></para>
+
+<para>set point increasing button pin </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1ad197dbfcc172202277acb2e5a9caa2b2">BTN_DOWN_CTRL</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a2995d9b5208f23e0f42898b905ce0221">DIO_PD3</link></para>
+
+<para>set point decreasing button pin </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a161f69c79f2d849c555c4454111a65eb">LED_C_H</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1aa3ea0535c48ebf91d405d718bdce2a0a">DIO_PC4</link></para>
+
+<para>LED pin. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1ae50b5ed108e64c31df844042ad2b89f1">HEATER_RELAY_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a8b0709bd655fa5202ff1b84ec1ed355d">DIO_PC3</link></para>
+
+<para>Relay pin of the heater. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1ac8ab95daaa565eff658950db284201be">COOLER_RELAY_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a10d7d3ea7b61d616ff435e126e9dadcb">DIO_PC5</link></para>
+
+<para>Relay pin of the cooler. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a34317ea05aee5575d2ab6c7998ca83d1">LM35_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ab64595f661d9ee8459027eb479a0075d">DIO_PA7</link></para>
+
+<para>Sensor LM35 pin. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a196d268216b260679e017c7786beb40b">TIMER_PERIOD_MSEC</link>&#160;&#160;&#160;10</para>
+
+<para>System timer period in msec. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a4e01cd6ef2afa93293738d07f79a6b7b">TEMP_MIN_SET_POINT</link>&#160;&#160;&#160;35</para>
+
+<para>Minimum allowable set point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a87be565eb2a36e80161c8e508275f73c">TEMP_MAX_SET_POINT</link>&#160;&#160;&#160;75</para>
+
+<para>Maximum allowable set point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1adc181c66467629ac25d510591e8ce211">TEMP_INITIAL_SET_POINT</link>&#160;&#160;&#160;60</para>
+
+<para>Initial system set point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a0081687f6e2a8ca326b0b3cdaa4cc33c">TEMP_ON_CHANGE_VALUE</link>&#160;&#160;&#160;5</para>
+
+<para>On change value for set point when press UP or DOWN buttons. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a68c53babc653f7a5ed3cffda2fb15e4d">TEMP_TOLERANCE</link>&#160;&#160;&#160;5</para>
+
+<para>Temperature tolerance when current temperature reach the set point. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a8e80b7d22b22dcf2b456ea7080a702f2">SYSTEM_RUNNING</link>&#160;&#160;&#160;1</para>
+
+<para>Indicate that system is ON. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a885648827fabd9b8b9480b2be3ecdfd2">SYSTEM_STOPPED</link>&#160;&#160;&#160;0</para>
+
+<para>Indicate that system is OFF. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1af75d3c467a418eb7b72d5923ae35a04f">SETTING_MODE_EN</link>&#160;&#160;&#160;1</para>
+
+<para>Mode setting is enabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__macros_8h_1a2afbc7f186e3ce4c29f2cb94a8a7d299">SETTING_MODE_DIS</link>&#160;&#160;&#160;0</para>
+
+<para>Mode setting is disabled. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Macros for main application. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v2.4.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__macros_8h_1ad197dbfcc172202277acb2e5a9caa2b2"/><section>
+    <title>BTN_DOWN_CTRL</title>
+<indexterm><primary>BTN_DOWN_CTRL</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>BTN_DOWN_CTRL</secondary></indexterm>
+<para><computeroutput>#define BTN_DOWN_CTRL&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a2995d9b5208f23e0f42898b905ce0221">DIO_PD3</link></computeroutput></para><para>
+
+<para>set point decreasing button pin </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a6661d7866c12ca73daca76bceec7e5e1"/><section>
+    <title>BTN_ON_OFF</title>
+<indexterm><primary>BTN_ON_OFF</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>BTN_ON_OFF</secondary></indexterm>
+<para><computeroutput>#define BTN_ON_OFF&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a95a9d013969310c2d6547c034f1f9159">DIO_PB2</link></computeroutput></para><para>
+
+<para>ON/OFF system button pin. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a5de04c6da5886baf783850c1a10b1b33"/><section>
+    <title>BTN_UP_CTRL</title>
+<indexterm><primary>BTN_UP_CTRL</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>BTN_UP_CTRL</secondary></indexterm>
+<para><computeroutput>#define BTN_UP_CTRL&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a442e7c50376e677035bb772fea8f2fc3">DIO_PD2</link></computeroutput></para><para>
+
+<para>set point increasing button pin </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1ac8ab95daaa565eff658950db284201be"/><section>
+    <title>COOLER_RELAY_PIN</title>
+<indexterm><primary>COOLER_RELAY_PIN</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>COOLER_RELAY_PIN</secondary></indexterm>
+<para><computeroutput>#define COOLER_RELAY_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a10d7d3ea7b61d616ff435e126e9dadcb">DIO_PC5</link></computeroutput></para><para>
+
+<para>Relay pin of the cooler. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1ae50b5ed108e64c31df844042ad2b89f1"/><section>
+    <title>HEATER_RELAY_PIN</title>
+<indexterm><primary>HEATER_RELAY_PIN</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>HEATER_RELAY_PIN</secondary></indexterm>
+<para><computeroutput>#define HEATER_RELAY_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a8b0709bd655fa5202ff1b84ec1ed355d">DIO_PC3</link></computeroutput></para><para>
+
+<para>Relay pin of the heater. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a161f69c79f2d849c555c4454111a65eb"/><section>
+    <title>LED_C_H</title>
+<indexterm><primary>LED_C_H</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>LED_C_H</secondary></indexterm>
+<para><computeroutput>#define LED_C_H&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1aa3ea0535c48ebf91d405d718bdce2a0a">DIO_PC4</link></computeroutput></para><para>
+
+<para>LED pin. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a34317ea05aee5575d2ab6c7998ca83d1"/><section>
+    <title>LM35_PIN</title>
+<indexterm><primary>LM35_PIN</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>LM35_PIN</secondary></indexterm>
+<para><computeroutput>#define LM35_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ab64595f661d9ee8459027eb479a0075d">DIO_PA7</link></computeroutput></para><para>
+
+<para>Sensor LM35 pin. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a2afbc7f186e3ce4c29f2cb94a8a7d299"/><section>
+    <title>SETTING_MODE_DIS</title>
+<indexterm><primary>SETTING_MODE_DIS</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>SETTING_MODE_DIS</secondary></indexterm>
+<para><computeroutput>#define SETTING_MODE_DIS&#160;&#160;&#160;0</computeroutput></para><para>
+
+<para>Mode setting is disabled. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1af75d3c467a418eb7b72d5923ae35a04f"/><section>
+    <title>SETTING_MODE_EN</title>
+<indexterm><primary>SETTING_MODE_EN</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>SETTING_MODE_EN</secondary></indexterm>
+<para><computeroutput>#define SETTING_MODE_EN&#160;&#160;&#160;1</computeroutput></para><para>
+
+<para>Mode setting is enabled. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a8e80b7d22b22dcf2b456ea7080a702f2"/><section>
+    <title>SYSTEM_RUNNING</title>
+<indexterm><primary>SYSTEM_RUNNING</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>SYSTEM_RUNNING</secondary></indexterm>
+<para><computeroutput>#define SYSTEM_RUNNING&#160;&#160;&#160;1</computeroutput></para><para>
+
+<para>Indicate that system is ON. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a885648827fabd9b8b9480b2be3ecdfd2"/><section>
+    <title>SYSTEM_STOPPED</title>
+<indexterm><primary>SYSTEM_STOPPED</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>SYSTEM_STOPPED</secondary></indexterm>
+<para><computeroutput>#define SYSTEM_STOPPED&#160;&#160;&#160;0</computeroutput></para><para>
+
+<para>Indicate that system is OFF. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1adc181c66467629ac25d510591e8ce211"/><section>
+    <title>TEMP_INITIAL_SET_POINT</title>
+<indexterm><primary>TEMP_INITIAL_SET_POINT</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TEMP_INITIAL_SET_POINT</secondary></indexterm>
+<para><computeroutput>#define TEMP_INITIAL_SET_POINT&#160;&#160;&#160;60</computeroutput></para><para>
+
+<para>Initial system set point. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a87be565eb2a36e80161c8e508275f73c"/><section>
+    <title>TEMP_MAX_SET_POINT</title>
+<indexterm><primary>TEMP_MAX_SET_POINT</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TEMP_MAX_SET_POINT</secondary></indexterm>
+<para><computeroutput>#define TEMP_MAX_SET_POINT&#160;&#160;&#160;75</computeroutput></para><para>
+
+<para>Maximum allowable set point. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a4e01cd6ef2afa93293738d07f79a6b7b"/><section>
+    <title>TEMP_MIN_SET_POINT</title>
+<indexterm><primary>TEMP_MIN_SET_POINT</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TEMP_MIN_SET_POINT</secondary></indexterm>
+<para><computeroutput>#define TEMP_MIN_SET_POINT&#160;&#160;&#160;35</computeroutput></para><para>
+
+<para>Minimum allowable set point. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a0081687f6e2a8ca326b0b3cdaa4cc33c"/><section>
+    <title>TEMP_ON_CHANGE_VALUE</title>
+<indexterm><primary>TEMP_ON_CHANGE_VALUE</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TEMP_ON_CHANGE_VALUE</secondary></indexterm>
+<para><computeroutput>#define TEMP_ON_CHANGE_VALUE&#160;&#160;&#160;5</computeroutput></para><para>
+
+<para>On change value for set point when press UP or DOWN buttons. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a68c53babc653f7a5ed3cffda2fb15e4d"/><section>
+    <title>TEMP_TOLERANCE</title>
+<indexterm><primary>TEMP_TOLERANCE</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TEMP_TOLERANCE</secondary></indexterm>
+<para><computeroutput>#define TEMP_TOLERANCE&#160;&#160;&#160;5</computeroutput></para><para>
+
+<para>Temperature tolerance when current temperature reach the set point. </para>
+</para>
+</section>
+<anchor xml:id="__macros_8h_1a196d268216b260679e017c7786beb40b"/><section>
+    <title>TIMER_PERIOD_MSEC</title>
+<indexterm><primary>TIMER_PERIOD_MSEC</primary><secondary>Macros.h</secondary></indexterm>
+<indexterm><primary>Macros.h</primary><secondary>TIMER_PERIOD_MSEC</secondary></indexterm>
+<para><computeroutput>#define TIMER_PERIOD_MSEC&#160;&#160;&#160;10</computeroutput></para><para>
+
+<para>System timer period in msec. </para>
+</para>
+</section>
+</section>
+</section>

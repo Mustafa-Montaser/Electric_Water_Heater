@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__heater_8h" xml:lang="en-US">
+<title>Drivers/HAL/Heater/Heater.h File Reference</title>
+<indexterm><primary>Drivers/HAL/Heater/Heater.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__heater_8h_1afcbc3ccf5b145b3aa4502622526653fa">Heater_voidInit</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</para>
+
+<para>Heater initialisation. </para>
+</listitem>
+            <listitem><para>void <link linkend="__heater_8h_1a3998eb30bd3c850c4aae6b57e7db9040">Heater_voidTurnOn</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</para>
+
+<para>Heater turn ON. </para>
+</listitem>
+            <listitem><para>void <link linkend="__heater_8h_1a7c39f6c5c87d71d6457ce4d1e94e08ab">Heater_voidTurnOff</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</para>
+
+<para>Heater turn OFF. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__heater_8h_1afcbc3ccf5b145b3aa4502622526653fa"/><section>
+    <title>Heater_voidInit()</title>
+<indexterm><primary>Heater_voidInit</primary><secondary>Heater.h</secondary></indexterm>
+<indexterm><primary>Heater.h</primary><secondary>Heater_voidInit</secondary></indexterm>
+<para><computeroutput>void Heater_voidInit (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</computeroutput></para><para>
+
+<para>Heater initialisation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8HeaterPin</entry><entry>
+<para>heater pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_afcbc3ccf5b145b3aa4502622526653fa_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_afcbc3ccf5b145b3aa4502622526653fa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__heater_8h_1a7c39f6c5c87d71d6457ce4d1e94e08ab"/><section>
+    <title>Heater_voidTurnOff()</title>
+<indexterm><primary>Heater_voidTurnOff</primary><secondary>Heater.h</secondary></indexterm>
+<indexterm><primary>Heater.h</primary><secondary>Heater_voidTurnOff</secondary></indexterm>
+<para><computeroutput>void Heater_voidTurnOff (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</computeroutput></para><para>
+
+<para>Heater turn OFF. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8HeaterPin</entry><entry>
+<para>heater pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_a7c39f6c5c87d71d6457ce4d1e94e08ab_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_a7c39f6c5c87d71d6457ce4d1e94e08ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__heater_8h_1a3998eb30bd3c850c4aae6b57e7db9040"/><section>
+    <title>Heater_voidTurnOn()</title>
+<indexterm><primary>Heater_voidTurnOn</primary><secondary>Heater.h</secondary></indexterm>
+<indexterm><primary>Heater.h</primary><secondary>Heater_voidTurnOn</secondary></indexterm>
+<para><computeroutput>void Heater_voidTurnOn (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8HeaterPin)</computeroutput></para><para>
+
+<para>Heater turn ON. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8HeaterPin</entry><entry>
+<para>heater pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_a3998eb30bd3c850c4aae6b57e7db9040_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_heater_8h_a3998eb30bd3c850c4aae6b57e7db9040_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

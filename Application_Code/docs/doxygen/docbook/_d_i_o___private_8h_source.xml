@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_i_o___private_8h_source" xml:lang="en-US">
+<title>DIO_Private.h</title>
+<indexterm><primary>Drivers/MCAL/DIO/DIO_Private.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DIO_PRIVATE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DIO_PRIVATE_H_</emphasis>
+25 
+26 
+27 <emphasis role="comment">/*&#32;&#32;Port&#32;A&#32;registers&#32;&#32;&#32;&#32;*/</emphasis>
+28 <emphasis role="preprocessor">#define&#32;DIO_DDRA&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x3A)</emphasis>
+29 <emphasis role="preprocessor">#define&#32;DIO_PORTA&#32;&#32;&#32;*((volatile&#32;u8*)0x3B)</emphasis>
+30 <emphasis role="preprocessor">#define&#32;DIO_PINA&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x39)</emphasis>
+31 
+32 
+33 <emphasis role="comment">/*&#32;&#32;Port&#32;B&#32;registers&#32;&#32;&#32;&#32;*/</emphasis>
+34 <emphasis role="preprocessor">#define&#32;DIO_DDRB&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x37)</emphasis>
+35 <emphasis role="preprocessor">#define&#32;DIO_PORTB&#32;&#32;&#32;*((volatile&#32;u8*)0x38)</emphasis>
+36 <emphasis role="preprocessor">#define&#32;DIO_PINB&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x36)</emphasis>
+37 
+38 
+39 <emphasis role="comment">/*&#32;&#32;Port&#32;C&#32;registers&#32;&#32;&#32;&#32;*/</emphasis>
+40 <emphasis role="preprocessor">#define&#32;DIO_DDRC&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x34)</emphasis>
+41 <emphasis role="preprocessor">#define&#32;DIO_PORTC&#32;&#32;&#32;*((volatile&#32;u8*)0x35)</emphasis>
+42 <emphasis role="preprocessor">#define&#32;DIO_PINC&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x33)</emphasis>
+43 
+44 
+45 <emphasis role="comment">/*&#32;&#32;Port&#32;D&#32;registers&#32;&#32;&#32;&#32;*/</emphasis>
+46 <emphasis role="preprocessor">#define&#32;DIO_DDRD&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x31)</emphasis>
+47 <emphasis role="preprocessor">#define&#32;DIO_PORTD&#32;&#32;&#32;*((volatile&#32;u8*)0x32)</emphasis>
+48 <emphasis role="preprocessor">#define&#32;DIO_PIND&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x30)</emphasis>
+49 
+50 
+51 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DIO_PRIVATE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

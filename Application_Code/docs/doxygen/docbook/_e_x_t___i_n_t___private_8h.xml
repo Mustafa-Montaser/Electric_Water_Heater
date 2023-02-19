@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_x_t___i_n_t___private_8h" xml:lang="en-US">
+<title>Drivers/MCAL/ExtInt/EXT_INT_Private.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/ExtInt/EXT_INT_Private.h</primary></indexterm>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_x_t___i_n_t___private_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a59e3e5be73a97b078264857867492e6b">EXTINT_MCUCR</link>&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x55) /* sense for INT0, 1 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a7bf93637ac5036cf426ef66cc01e21d7">EXTINT_MCUCSR</link>&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x54) /* sense for INT2 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a21d0e501426f54b2dfdf466de148b8d1">EXTINT_GICR</link>&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x5B) /* PIE enable */</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1ad200cfab7a7710a3eb05a53a95388072">EXTINT_GIFR</link>&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x5A) /* INT flag */</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a849f6dbf256e6486835d8fb5fe47ee0f">EXT_INT0_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a442e7c50376e677035bb772fea8f2fc3">DIO_PD2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a2e8047bbeea65abdbf1407012232b9d4">EXT_INT1_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a2995d9b5208f23e0f42898b905ce0221">DIO_PD3</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a671d9e2f8277a71a3637e1fe3393467e">EXT_INT2_PIN</link>&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a95a9d013969310c2d6547c034f1f9159">DIO_PB2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1ae4120f0c734b86c06b9e35911acbd1a6">EXTINT_MCUCR_ISC00</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1abd7ef50456737b004bfc4f50c3922a87">EXTINT_MCUCR_ISC01</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a076cb371506d798c5132f4ec59c12097">EXTINT_MCUCR_ISC10</link>&#160;&#160;&#160;2</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a2c6816655ff5e055e9d8dd9f5728560d">EXTINT_MCUCR_ISC11</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1af3694291903ae1e315a728bd6e245d83">EXTINT_MCUCSR_ISC2</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1aa2fcf9c2be52e8263fbdd190bf8e1f32">EXTINT_GICR_INT0</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a7ec64b47c6b4d5ec72766dec76f0f7da">EXTINT_GICR_INT1</link>&#160;&#160;&#160;7</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1ac4fc6f6866bc432e45bbb61267504a42">EXTINT_GICR_INT2</link>&#160;&#160;&#160;5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a4dab2971ad2891fb987ac624fc4978b6">EXTINT_GIFR_INTF0</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a601c3b1b0573db9b96da933cecbb843b">EXTINT_GIFR_INTF1</link>&#160;&#160;&#160;7</para>
+</listitem>
+            <listitem><para>#define <link linkend="__e_x_t___i_n_t___private_8h_1a0d57ea014ef25c53cfce877f22a85782">EXTINT_GIFR_INTF2</link>&#160;&#160;&#160;5</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a849f6dbf256e6486835d8fb5fe47ee0f"/><section>
+    <title>EXT_INT0_PIN</title>
+<indexterm><primary>EXT_INT0_PIN</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXT_INT0_PIN</secondary></indexterm>
+<para><computeroutput>#define EXT_INT0_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a442e7c50376e677035bb772fea8f2fc3">DIO_PD2</link></computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a2e8047bbeea65abdbf1407012232b9d4"/><section>
+    <title>EXT_INT1_PIN</title>
+<indexterm><primary>EXT_INT1_PIN</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXT_INT1_PIN</secondary></indexterm>
+<para><computeroutput>#define EXT_INT1_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a2995d9b5208f23e0f42898b905ce0221">DIO_PD3</link></computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a671d9e2f8277a71a3637e1fe3393467e"/><section>
+    <title>EXT_INT2_PIN</title>
+<indexterm><primary>EXT_INT2_PIN</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXT_INT2_PIN</secondary></indexterm>
+<para><computeroutput>#define EXT_INT2_PIN&#160;&#160;&#160;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a95a9d013969310c2d6547c034f1f9159">DIO_PB2</link></computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a21d0e501426f54b2dfdf466de148b8d1"/><section>
+    <title>EXTINT_GICR</title>
+<indexterm><primary>EXTINT_GICR</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GICR</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GICR&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x5B) /* PIE enable */</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1aa2fcf9c2be52e8263fbdd190bf8e1f32"/><section>
+    <title>EXTINT_GICR_INT0</title>
+<indexterm><primary>EXTINT_GICR_INT0</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GICR_INT0</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GICR_INT0&#160;&#160;&#160;6</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a7ec64b47c6b4d5ec72766dec76f0f7da"/><section>
+    <title>EXTINT_GICR_INT1</title>
+<indexterm><primary>EXTINT_GICR_INT1</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GICR_INT1</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GICR_INT1&#160;&#160;&#160;7</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1ac4fc6f6866bc432e45bbb61267504a42"/><section>
+    <title>EXTINT_GICR_INT2</title>
+<indexterm><primary>EXTINT_GICR_INT2</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GICR_INT2</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GICR_INT2&#160;&#160;&#160;5</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1ad200cfab7a7710a3eb05a53a95388072"/><section>
+    <title>EXTINT_GIFR</title>
+<indexterm><primary>EXTINT_GIFR</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GIFR</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GIFR&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x5A) /* INT flag */</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a4dab2971ad2891fb987ac624fc4978b6"/><section>
+    <title>EXTINT_GIFR_INTF0</title>
+<indexterm><primary>EXTINT_GIFR_INTF0</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GIFR_INTF0</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GIFR_INTF0&#160;&#160;&#160;6</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a601c3b1b0573db9b96da933cecbb843b"/><section>
+    <title>EXTINT_GIFR_INTF1</title>
+<indexterm><primary>EXTINT_GIFR_INTF1</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GIFR_INTF1</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GIFR_INTF1&#160;&#160;&#160;7</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a0d57ea014ef25c53cfce877f22a85782"/><section>
+    <title>EXTINT_GIFR_INTF2</title>
+<indexterm><primary>EXTINT_GIFR_INTF2</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_GIFR_INTF2</secondary></indexterm>
+<para><computeroutput>#define EXTINT_GIFR_INTF2&#160;&#160;&#160;5</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a59e3e5be73a97b078264857867492e6b"/><section>
+    <title>EXTINT_MCUCR</title>
+<indexterm><primary>EXTINT_MCUCR</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCR</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCR&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x55) /* sense for INT0, 1 */</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1ae4120f0c734b86c06b9e35911acbd1a6"/><section>
+    <title>EXTINT_MCUCR_ISC00</title>
+<indexterm><primary>EXTINT_MCUCR_ISC00</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCR_ISC00</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCR_ISC00&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1abd7ef50456737b004bfc4f50c3922a87"/><section>
+    <title>EXTINT_MCUCR_ISC01</title>
+<indexterm><primary>EXTINT_MCUCR_ISC01</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCR_ISC01</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCR_ISC01&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a076cb371506d798c5132f4ec59c12097"/><section>
+    <title>EXTINT_MCUCR_ISC10</title>
+<indexterm><primary>EXTINT_MCUCR_ISC10</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCR_ISC10</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCR_ISC10&#160;&#160;&#160;2</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a2c6816655ff5e055e9d8dd9f5728560d"/><section>
+    <title>EXTINT_MCUCR_ISC11</title>
+<indexterm><primary>EXTINT_MCUCR_ISC11</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCR_ISC11</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCR_ISC11&#160;&#160;&#160;3</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1a7bf93637ac5036cf426ef66cc01e21d7"/><section>
+    <title>EXTINT_MCUCSR</title>
+<indexterm><primary>EXTINT_MCUCSR</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCSR</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCSR&#160;&#160;&#160;*((volatile <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>*)0x54) /* sense for INT2 */</computeroutput></para></section>
+<anchor xml:id="__e_x_t___i_n_t___private_8h_1af3694291903ae1e315a728bd6e245d83"/><section>
+    <title>EXTINT_MCUCSR_ISC2</title>
+<indexterm><primary>EXTINT_MCUCSR_ISC2</primary><secondary>EXT_INT_Private.h</secondary></indexterm>
+<indexterm><primary>EXT_INT_Private.h</primary><secondary>EXTINT_MCUCSR_ISC2</secondary></indexterm>
+<para><computeroutput>#define EXTINT_MCUCSR_ISC2&#160;&#160;&#160;6</computeroutput></para></section>
+</section>
+</section>

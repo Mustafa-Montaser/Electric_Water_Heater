@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sensor_l_m35___interface_8h_source" xml:lang="en-US">
+<title>SensorLM35_Interface.h</title>
+<indexterm><primary>Drivers/HAL/SensorLM35/SensorLM35_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DRIVERS_HAL_SENSORLM35_SENSORLM35_INTERFACE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DRIVERS_HAL_SENSORLM35_SENSORLM35_INTERFACE_H_</emphasis>
+25 
+26 <emphasis role="comment">/*&#32;Functions&#32;Declarations&#32;*/</emphasis>
+27 
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__sensor_l_m35___interface_8h_1aa0159aededf3b52df21b72af73716a22">SensorLM35_voidInit</link>();
+34 
+40 <link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link>&#32;<link linkend="__sensor_l_m35___interface_8h_1aff71780bc885353083e5210c3bbf7478">SensorLM35_u16ReadTemp</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8Pin);
+41 
+42 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DRIVERS_HAL_SENSORLM35_SENSORLM35_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

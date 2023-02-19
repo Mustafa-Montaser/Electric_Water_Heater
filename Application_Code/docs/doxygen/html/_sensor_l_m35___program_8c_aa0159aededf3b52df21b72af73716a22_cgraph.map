@@ -1,0 +1,4 @@
+<map id="SensorLM35_voidInit" name="SensorLM35_voidInit">
+<area shape="rect" id="node1" title="Initialise LM35 sensor." alt="" coords="5,5,147,31"/>
+<area shape="rect" id="node2" href="$_a_d_c___program_8c.html#a419a46f4e130d57ef4d0723c9076742a" title="Initialise ADC." alt="" coords="195,5,289,31"/>
+</map>

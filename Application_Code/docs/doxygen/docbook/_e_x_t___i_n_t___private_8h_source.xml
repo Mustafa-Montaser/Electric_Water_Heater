@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_x_t___i_n_t___private_8h_source" xml:lang="en-US">
+<title>EXT_INT_Private.h</title>
+<indexterm><primary>Drivers/MCAL/ExtInt/EXT_INT_Private.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;EXT_INT_PRIVATE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;EXT_INT_PRIVATE_H_</emphasis>
+25 
+26 
+27 <emphasis role="comment">/*&#32;EXT&#32;INT&#32;REGISTERS&#32;*/</emphasis>
+28 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCR&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x55)&#32;</emphasis><emphasis role="comment">/*&#32;sense&#32;for&#32;INT0,&#32;1&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+29 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCSR&#32;&#32;&#32;*((volatile&#32;u8*)0x54)&#32;</emphasis><emphasis role="comment">/*&#32;sense&#32;for&#32;INT2&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+30 <emphasis role="preprocessor">#define&#32;EXTINT_GICR&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x5B)&#32;</emphasis><emphasis role="comment">/*&#32;PIE&#32;enable&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+31 <emphasis role="preprocessor">#define&#32;EXTINT_GIFR&#32;&#32;&#32;&#32;&#32;*((volatile&#32;u8*)0x5A)&#32;</emphasis><emphasis role="comment">/*&#32;INT&#32;flag&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+32 
+33 <emphasis role="comment">/*&#32;Ext&#32;Int.&#32;Pins&#32;*/</emphasis>
+34 <emphasis role="preprocessor">#define&#32;EXT_INT0_PIN&#32;&#32;&#32;&#32;DIO_PD2</emphasis>
+35 <emphasis role="preprocessor">#define&#32;EXT_INT1_PIN&#32;&#32;&#32;&#32;DIO_PD3</emphasis>
+36 <emphasis role="preprocessor">#define&#32;EXT_INT2_PIN&#32;&#32;&#32;&#32;DIO_PB2</emphasis>
+37 
+38 
+39 <emphasis role="comment">/*&#32;EXT&#32;INT&#32;BITS&#32;IN&#32;REGISTERS&#32;*/</emphasis>
+40 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCR_ISC00&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+41 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCR_ISC01&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+42 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCR_ISC10&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+43 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCR_ISC11&#32;&#32;&#32;&#32;&#32;&#32;3</emphasis>
+44 
+45 <emphasis role="preprocessor">#define&#32;EXTINT_MCUCSR_ISC2&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+46 
+47 <emphasis role="preprocessor">#define&#32;EXTINT_GICR_INT0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+48 <emphasis role="preprocessor">#define&#32;EXTINT_GICR_INT1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+49 <emphasis role="preprocessor">#define&#32;EXTINT_GICR_INT2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+50 
+51 <emphasis role="preprocessor">#define&#32;EXTINT_GIFR_INTF0&#32;&#32;&#32;&#32;&#32;&#32;&#32;6</emphasis>
+52 <emphasis role="preprocessor">#define&#32;EXTINT_GIFR_INTF1&#32;&#32;&#32;&#32;&#32;&#32;&#32;7</emphasis>
+53 <emphasis role="preprocessor">#define&#32;EXTINT_GIFR_INTF2&#32;&#32;&#32;&#32;&#32;&#32;&#32;5</emphasis>
+54 
+55 
+56 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;EXT_INT_PRIVATE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

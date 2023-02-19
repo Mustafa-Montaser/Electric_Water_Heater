@@ -1,0 +1,823 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c" xml:lang="en-US">
+<title>main.c File Reference</title>
+<indexterm><primary>main.c</primary></indexterm>
+<para>
+
+<para>main application </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;Drivers/LIB/StdTypes.h&quot;<?linebreak?>#include &quot;Drivers/LIB/BitMath.h&quot;<?linebreak?>#include &quot;Drivers/MCAL/DIO/DIO_Interface.h&quot;<?linebreak?>#include &quot;Drivers/MCAL/GIE/GIE_Interface.h&quot;<?linebreak?>#include &quot;Drivers/MCAL/Timer0/Timer0_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAl/Cooler/Cooler_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAL/DSSD/DSSD_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAL/EEPROM/EEPROM_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAL/Heater/Heater.h&quot;<?linebreak?>#include &quot;Drivers/HAL/LED/LED_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAL/PushButton/PushBtn_Interface.h&quot;<?linebreak?>#include &quot;Drivers/HAL/SensorLM35/SensorLM35_Interface.h&quot;<?linebreak?>#include &lt;util/delay.h&gt;<?linebreak?>#include &quot;Macros.h&quot;<?linebreak?></programlisting>Include dependency graph for main.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_main_8c_1a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</link>&#160;&#160;&#160;16000000UL</para>
+
+<para>CPU Frequency. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_main_8c_1aa2da75d369de1aee331c7a5bb56a6bfd">App_SystemInit</link> ()</para>
+
+<para>Initialise the system and all peripherals. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1ad0ab1ce4a48ae0399f4eb2091153f77f">App_IncreaseTempSetPoint</link> ()</para>
+
+<para>Increase temperate set point. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a8f3939e1342819943d98594bba5366f7">App_DecreaseTempSetPoint</link> ()</para>
+
+<para>Decrease temperate set point. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a332ac54434aa0332b8d0f036331fbe9d">App_SysOnOff</link> ()</para>
+
+<para>Turn system ON or OFF. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a422363cfd79261bb994a45bd119cc7c6">App_TimerInit</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Timer, void(*ptr_callBack)(void))</para>
+
+<para>Initialise system timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a7f63480ae0f80ec5666d2a7bd364a6e0">App_TimerBegin</link> ()</para>
+
+<para>start system timer </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a89fb7949964d8972b6b0956308644d2d">App_TimerStop</link> ()</para>
+
+<para>stop system timer </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a3d4a0ad81b3c47e7e83363f7309348e3">App_TimerCallBack</link> ()</para>
+
+<para>call back function to be called every timer period </para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>main function </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1af4051fde2d52b0f9c662219caab028a8">app_u8TempSetPoint</link> = <link linkend="__macros_8h_1adc181c66467629ac25d510591e8ce211">TEMP_INITIAL_SET_POINT</link></para>
+
+<para>Temperature set point. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1a8f99fccb07106e10d6a4151081e22c4d">app_u8CurrentTemp</link> = 0</para>
+
+<para>Current temperature. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1a470d5c28d675ec38ff3904a94511e065">app_u8TempAverage</link> [10] = { 0 }</para>
+
+<para>Array of the last 10 temperature readings. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> <link linkend="_main_8c_1a23950dbd8ddeb44a06dad65e95819af6">app_u16TempAverageCalc</link> = 0</para>
+
+<para>For average of the last 10 temperature readings. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1a8bf755ec192aac36bd7e76bc61eec4c4">app_u8SystemState</link> = <link linkend="__macros_8h_1a885648827fabd9b8b9480b2be3ecdfd2">SYSTEM_STOPPED</link></para>
+
+<para>System state [running, stopped]. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1a44e6836e552cd57111ecb1c6b143efdf">app_u8SevenSegDigit</link> = <link linkend="__d_s_s_d___interface_8h_1a2a325357087ba8c486f82ba9e1f25351">DSSD_DISPLAY_ONES</link></para>
+
+<para>7 segment current digit to display required value [ones, tens] </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1aca4b0c6377bbf40785800529fed29c35">app_u8SettingModeState</link> = <link linkend="__macros_8h_1a2afbc7f186e3ce4c29f2cb94a8a7d299">SETTING_MODE_DIS</link></para>
+
+<para>setting mode on or off [enable, disable] </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="_main_8c_1af679d0ff98f860b9a87cf30782ae5df3">app_u8TempTimerCounter</link> = 0</para>
+
+<para>timer counter for temperature reading to be used with sensor </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> <link linkend="_main_8c_1afd301dc223710081cac3448022a3eb61">app_u16SetModeTimerCounter</link> = 0</para>
+
+<para>timer counter for setting mode </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>main application </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v2.4.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_main_8c_1a43bafb28b29491ec7f871319b5a3b2f8"/><section>
+    <title>F_CPU</title>
+<indexterm><primary>F_CPU</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>F_CPU</secondary></indexterm>
+<para><computeroutput>#define F_CPU&#160;&#160;&#160;16000000UL</computeroutput></para><para>
+
+<para>CPU Frequency. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8c_1a8f3939e1342819943d98594bba5366f7"/><section>
+    <title>App_DecreaseTempSetPoint()</title>
+<indexterm><primary>App_DecreaseTempSetPoint</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_DecreaseTempSetPoint</secondary></indexterm>
+<para><computeroutput>void App_DecreaseTempSetPoint ( )</computeroutput></para><para>
+
+<para>Decrease temperate set point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>make sure that set point is still greater than minimum allowable set point</para>
+
+<para>If OK then, Decrease temperature set point by 5</para>
+
+<para>Disable push buttons to make sure value of set point is written into EEPROM to be not interrupted</para>
+
+<para>Writing into EEPROM the current set point value in page 0 in address 0</para>
+
+<para>Enable buttons again after writing into EEPROM</para>
+
+<para>Enabling setting mode and clear its timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a8f3939e1342819943d98594bba5366f7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a8f3939e1342819943d98594bba5366f7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1ad0ab1ce4a48ae0399f4eb2091153f77f"/><section>
+    <title>App_IncreaseTempSetPoint()</title>
+<indexterm><primary>App_IncreaseTempSetPoint</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_IncreaseTempSetPoint</secondary></indexterm>
+<para><computeroutput>void App_IncreaseTempSetPoint ( )</computeroutput></para><para>
+
+<para>Increase temperate set point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>make sure that set point is still lower than maximum allowable set point</para>
+
+<para>If OK then, Increase temperature set point by 5</para>
+
+<para>Disable push buttons to make sure that value of set point is written into EEPROM and not interrupted</para>
+
+<para>Writing into EEPROM the current set point value in page 0 in address 0</para>
+
+<para>Enable buttons again after writing into EEPROM</para>
+
+<para>Enabling setting mode and clear its timer</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_ad0ab1ce4a48ae0399f4eb2091153f77f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_ad0ab1ce4a48ae0399f4eb2091153f77f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a332ac54434aa0332b8d0f036331fbe9d"/><section>
+    <title>App_SysOnOff()</title>
+<indexterm><primary>App_SysOnOff</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_SysOnOff</secondary></indexterm>
+<para><computeroutput>void App_SysOnOff ( )</computeroutput></para><para>
+
+<para>Turn system ON or OFF. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>If ON/OFF button is released and system is running then, stop system and disable all</para>
+
+<para>Stop the system</para>
+
+<para>Disable setting mode</para>
+
+<para>clear timer counter for temperature and setting mode</para>
+
+<para>stop system timer</para>
+
+<para>disable 7segment display</para>
+
+<para>turn off heater, cooler and LED</para>
+
+<para>disable UP and DOWN buttons</para>
+
+<para>If ON/OFF button is released and system is stopped then, run the system</para>
+
+<para>run the system</para>
+
+<para>start system timer</para>
+
+<para>enable UP and DOWN buttons</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a332ac54434aa0332b8d0f036331fbe9d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a332ac54434aa0332b8d0f036331fbe9d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1aa2da75d369de1aee331c7a5bb56a6bfd"/><section>
+    <title>App_SystemInit()</title>
+<indexterm><primary>App_SystemInit</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_SystemInit</secondary></indexterm>
+<para><computeroutput>void App_SystemInit ( )</computeroutput></para><para>
+
+<para>Initialise the system and all peripherals. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>Global Interrupt Init</para>
+
+<para>Push Buttons Init [UP, DOWN, On/OFF]</para>
+
+<para>Timer Init with 10 msec timer period</para>
+
+<para>DSSD Init</para>
+
+<para>Sensor LM35 Init</para>
+
+<para>Fill the array of last 10 temperature readings with current reading at the beginning</para>
+
+<para>Heater Init</para>
+
+<para>LED Init</para>
+
+<para>cooler Init</para>
+
+<para>EEPROM Init and getting temperature set point value</para>
+
+<para>Check if EEPROM is used for the first time or not. If yes, write into it the initial temperature set point</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_aa2da75d369de1aee331c7a5bb56a6bfd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_aa2da75d369de1aee331c7a5bb56a6bfd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a7f63480ae0f80ec5666d2a7bd364a6e0"/><section>
+    <title>App_TimerBegin()</title>
+<indexterm><primary>App_TimerBegin</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_TimerBegin</secondary></indexterm>
+<para><computeroutput>void App_TimerBegin ( )</computeroutput></para><para>
+
+<para>start system timer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>start timer 0</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a7f63480ae0f80ec5666d2a7bd364a6e0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a7f63480ae0f80ec5666d2a7bd364a6e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a3d4a0ad81b3c47e7e83363f7309348e3"/><section>
+    <title>App_TimerCallBack()</title>
+<indexterm><primary>App_TimerCallBack</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_TimerCallBack</secondary></indexterm>
+<para><computeroutput>void App_TimerCallBack ( )</computeroutput></para><para>
+
+<para>call back function to be called every timer period </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>Temperature setting</para>
+
+<para>Get temperature value each 100 msec and assign it into array of the last 10 readings</para>
+
+<para>Get the average of the last 10 readings</para>
+
+<para>Check if the average is greater than temperature set point plus tolerance 5 degrees</para>
+
+<para>If greater, turn on the cooler, turn off the heater and turn on the LED</para>
+
+<para>Check if else the average is lower than temperature set point minus tolerance 5 degrees</para>
+
+<para>If lower, turn of the cooler, turn on the heater and blink the LED each 1 sec</para>
+
+<para>otherwise, turn off cooler, heater and LED</para>
+
+<para>clear the temperature average buffer</para>
+
+<para>clear temperature timer counter each 10 cycles</para>
+
+<para>7 segment display setting In case setting mode is ON</para>
+
+<para>check DSSD state each 1 sec to be blinked</para>
+
+<para>in case DSSD in ON, display current set point</para>
+
+<para>If Up or DOWN buttons not pressed for 5 sec</para>
+
+<para>then, disable setting mode</para>
+
+<para>clear setting mode timer counter</para>
+
+<para>write set point value into EEPROM</para>
+
+<para>In case setting mode is OFF</para>
+
+<para>Display current temperature value</para>
+
+<para>Change the desired digit of the 7seg for the next timer period</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a3d4a0ad81b3c47e7e83363f7309348e3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a3d4a0ad81b3c47e7e83363f7309348e3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a422363cfd79261bb994a45bd119cc7c6"/><section>
+    <title>App_TimerInit()</title>
+<indexterm><primary>App_TimerInit</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_TimerInit</secondary></indexterm>
+<para><computeroutput>void App_TimerInit (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Timer, void(*)(void) ptr_callBack)</computeroutput></para><para>
+
+<para>Initialise system timer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8Timer</entry><entry>
+<para>timer period in m seconds </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ptr_callBack</entry><entry>
+<para>pointer to call back function which is called each timer period </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>timer 0 Init</para>
+
+<para>setting timer period</para>
+
+<para>setting timer call back</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a422363cfd79261bb994a45bd119cc7c6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a422363cfd79261bb994a45bd119cc7c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a89fb7949964d8972b6b0956308644d2d"/><section>
+    <title>App_TimerStop()</title>
+<indexterm><primary>App_TimerStop</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>App_TimerStop</secondary></indexterm>
+<para><computeroutput>void App_TimerStop ( )</computeroutput></para><para>
+
+<para>stop system timer </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>None </para>
+</formalpara>
+</para>
+
+<para>stop timer 0</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a89fb7949964d8972b6b0956308644d2d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a89fb7949964d8972b6b0956308644d2d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>main function </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 </para>
+</formalpara>
+</para>
+
+<para>System Initialise</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_main_8c_1afd301dc223710081cac3448022a3eb61"/><section>
+    <title>app_u16SetModeTimerCounter</title>
+<indexterm><primary>app_u16SetModeTimerCounter</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u16SetModeTimerCounter</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> app_u16SetModeTimerCounter = 0</computeroutput></para><para>
+
+<para>timer counter for setting mode </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a23950dbd8ddeb44a06dad65e95819af6"/><section>
+    <title>app_u16TempAverageCalc</title>
+<indexterm><primary>app_u16TempAverageCalc</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u16TempAverageCalc</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aa0b167025ed1eead1300bc4dbdfb230e">u16</link> app_u16TempAverageCalc = 0</computeroutput></para><para>
+
+<para>For average of the last 10 temperature readings. </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a8f99fccb07106e10d6a4151081e22c4d"/><section>
+    <title>app_u8CurrentTemp</title>
+<indexterm><primary>app_u8CurrentTemp</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8CurrentTemp</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8CurrentTemp = 0</computeroutput></para><para>
+
+<para>Current temperature. </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1aca4b0c6377bbf40785800529fed29c35"/><section>
+    <title>app_u8SettingModeState</title>
+<indexterm><primary>app_u8SettingModeState</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8SettingModeState</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8SettingModeState = <link linkend="__macros_8h_1a2afbc7f186e3ce4c29f2cb94a8a7d299">SETTING_MODE_DIS</link></computeroutput></para><para>
+
+<para>setting mode on or off [enable, disable] </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a44e6836e552cd57111ecb1c6b143efdf"/><section>
+    <title>app_u8SevenSegDigit</title>
+<indexterm><primary>app_u8SevenSegDigit</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8SevenSegDigit</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8SevenSegDigit = <link linkend="__d_s_s_d___interface_8h_1a2a325357087ba8c486f82ba9e1f25351">DSSD_DISPLAY_ONES</link></computeroutput></para><para>
+
+<para>7 segment current digit to display required value [ones, tens] </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a8bf755ec192aac36bd7e76bc61eec4c4"/><section>
+    <title>app_u8SystemState</title>
+<indexterm><primary>app_u8SystemState</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8SystemState</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8SystemState = <link linkend="__macros_8h_1a885648827fabd9b8b9480b2be3ecdfd2">SYSTEM_STOPPED</link></computeroutput></para><para>
+
+<para>System state [running, stopped]. </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a470d5c28d675ec38ff3904a94511e065"/><section>
+    <title>app_u8TempAverage</title>
+<indexterm><primary>app_u8TempAverage</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8TempAverage</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8TempAverage[10] = { 0 }</computeroutput></para><para>
+
+<para>Array of the last 10 temperature readings. </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1af4051fde2d52b0f9c662219caab028a8"/><section>
+    <title>app_u8TempSetPoint</title>
+<indexterm><primary>app_u8TempSetPoint</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8TempSetPoint</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8TempSetPoint = <link linkend="__macros_8h_1adc181c66467629ac25d510591e8ce211">TEMP_INITIAL_SET_POINT</link></computeroutput></para><para>
+
+<para>Temperature set point. </para>
+</para>
+</section>
+<anchor xml:id="_main_8c_1af679d0ff98f860b9a87cf30782ae5df3"/><section>
+    <title>app_u8TempTimerCounter</title>
+<indexterm><primary>app_u8TempTimerCounter</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>app_u8TempTimerCounter</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> app_u8TempTimerCounter = 0</computeroutput></para><para>
+
+<para>timer counter for temperature reading to be used with sensor </para>
+</para>
+</section>
+</section>
+</section>

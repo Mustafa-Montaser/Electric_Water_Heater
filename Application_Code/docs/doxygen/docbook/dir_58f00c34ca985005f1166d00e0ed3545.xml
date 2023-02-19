@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_58f00c34ca985005f1166d00e0ed3545" xml:lang="en-US">
+<title>Drivers/MCAL/Timer0 Directory Reference</title>
+<indexterm><primary>Drivers/MCAL/Timer0 Directory Reference</primary></indexterm>
+Directory dependency graph for Timer0:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_58f00c34ca985005f1166d00e0ed3545_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__timer0___config_8h">Timer0_Config.h</link></para>
+
+<para>this file contains macros configuration for the Timer0 module </para>
+</listitem>
+            <listitem><para>file <link linkend="__timer0___interface_8h">Timer0_Interface.h</link></para>
+
+<para>this file contains function prototypes for the Timer0 module </para>
+</listitem>
+            <listitem><para>file <link linkend="__timer0___private_8h">Timer0_Private.h</link></para>
+
+<para>this file contains contains registers addresses for the Timer0 module </para>
+</listitem>
+            <listitem><para>file <link linkend="__timer0___program_8c">Timer0_Program.c</link></para>
+
+<para>this file contains contains implementation for the Timer0 module </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

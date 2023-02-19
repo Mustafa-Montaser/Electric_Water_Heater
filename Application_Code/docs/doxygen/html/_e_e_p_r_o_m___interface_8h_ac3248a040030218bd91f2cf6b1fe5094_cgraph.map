@@ -1,0 +1,4 @@
+<map id="EEPROM_voidInit" name="EEPROM_voidInit">
+<area shape="rect" id="node1" title="Initialise EEPROM." alt="" coords="5,5,131,31"/>
+<area shape="rect" id="node2" href="$_i_i_c___program_8c.html#aa015af0f91fc272ebe58e0785fe1b85a" title="Initialise IIC module." alt="" coords="179,5,261,31"/>
+</map>

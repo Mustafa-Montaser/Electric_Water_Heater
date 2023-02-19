@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer0___config_8h" xml:lang="en-US">
+<title>Drivers/MCAL/Timer0/Timer0_Config.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/Timer0/Timer0_Config.h</primary></indexterm>
+<para>
+
+<para>this file contains macros configuration for the Timer0 module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___config_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__timer0___config_8h_1ada7c458823a3dcc4196b30bcc9671fd2">TIMER0_WAVEFORM_MODE</link>&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a58fc65c5527c56a253b7c1d24058507d">TIMER0_WAVEFORM_NORMAL_MODE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___config_8h_1a747c4d9ce46cbb1df94436ed5e5bb749">TIMER0_PRESCALER</link>&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a97ca3a16c951c0d82b619226edea60a0">TIMER0_PRESCALER_1024</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___config_8h_1ae4aaee8ca4b34ec13b6a9481363c2f59">TIMER0_F_OSC</link>&#160;&#160;&#160;16</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___config_8h_1a8cb2dc5de6b2e965fb950cf1fe3fafbc">TIMER0_FAST_PWM_MODE</link>&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a12f79b30366acc5a50e058a95fcac985">TIMER0_FAST_PWM_NON_INVERTING_MODE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains macros configuration for the Timer0 module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__timer0___config_8h_1ae4aaee8ca4b34ec13b6a9481363c2f59"/><section>
+    <title>TIMER0_F_OSC</title>
+<indexterm><primary>TIMER0_F_OSC</primary><secondary>Timer0_Config.h</secondary></indexterm>
+<indexterm><primary>Timer0_Config.h</primary><secondary>TIMER0_F_OSC</secondary></indexterm>
+<para><computeroutput>#define TIMER0_F_OSC&#160;&#160;&#160;16</computeroutput></para>
+<para>Timer0 input frequency in MHz (before prescaler) </para>
+</section>
+<anchor xml:id="__timer0___config_8h_1a8cb2dc5de6b2e965fb950cf1fe3fafbc"/><section>
+    <title>TIMER0_FAST_PWM_MODE</title>
+<indexterm><primary>TIMER0_FAST_PWM_MODE</primary><secondary>Timer0_Config.h</secondary></indexterm>
+<indexterm><primary>Timer0_Config.h</primary><secondary>TIMER0_FAST_PWM_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_FAST_PWM_MODE&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a12f79b30366acc5a50e058a95fcac985">TIMER0_FAST_PWM_NON_INVERTING_MODE</link></computeroutput></para>
+<para>PWM modes values { TIMER0_FAST_PWM_NON_INVERTING_MODE TIMER0_FAST_PWM_INVERTING_MODE } </para>
+</section>
+<anchor xml:id="__timer0___config_8h_1a747c4d9ce46cbb1df94436ed5e5bb749"/><section>
+    <title>TIMER0_PRESCALER</title>
+<indexterm><primary>TIMER0_PRESCALER</primary><secondary>Timer0_Config.h</secondary></indexterm>
+<indexterm><primary>Timer0_Config.h</primary><secondary>TIMER0_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define TIMER0_PRESCALER&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a97ca3a16c951c0d82b619226edea60a0">TIMER0_PRESCALER_1024</link></computeroutput></para>
+<para>timer_0 prescaler values { TIMER0_STOP_PRESCALER TIMER0_NO_PRESCALER TIMER0_PRESCALER_8 TIMER0_PRESCALER_64 TIMER0_PRESCALER_256 TIMER0_PRESCALER_1024 TIMER0_EXT_CLK_FALLING TIMER0_EXT_CLK_RISING } </para>
+</section>
+<anchor xml:id="__timer0___config_8h_1ada7c458823a3dcc4196b30bcc9671fd2"/><section>
+    <title>TIMER0_WAVEFORM_MODE</title>
+<indexterm><primary>TIMER0_WAVEFORM_MODE</primary><secondary>Timer0_Config.h</secondary></indexterm>
+<indexterm><primary>Timer0_Config.h</primary><secondary>TIMER0_WAVEFORM_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_WAVEFORM_MODE&#160;&#160;&#160;<link linkend="__timer0___interface_8h_1a58fc65c5527c56a253b7c1d24058507d">TIMER0_WAVEFORM_NORMAL_MODE</link></computeroutput></para>
+<para>mode of waveform values { TIMER0_WAVEFORM_NORMAL_MODE TIMER0_WAVEFORM_PHASE_CORRECT_MODE TIMER0_WAVEFORM_CTC_MODE TIMER0_WAVEFORM_FAST_PWM_MODE } </para>
+</section>
+</section>
+</section>

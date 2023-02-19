@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f553ff30e5a3f43fddafa64dc33a81ae" xml:lang="en-US">
+<title>Drivers/HAL/PushButton Directory Reference</title>
+<indexterm><primary>Drivers/HAL/PushButton Directory Reference</primary></indexterm>
+Directory dependency graph for PushButton:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_f553ff30e5a3f43fddafa64dc33a81ae_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__push_btn___config_8h">PushBtn_Config.h</link></para>
+
+<para>this file contains configuration macros for the PushButton module </para>
+</listitem>
+            <listitem><para>file <link linkend="__push_btn___interface_8h">PushBtn_Interface.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__push_btn___program_8c">PushBtn_Program.c</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

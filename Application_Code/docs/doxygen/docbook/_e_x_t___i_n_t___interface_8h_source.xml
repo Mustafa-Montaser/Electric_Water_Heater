@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_x_t___i_n_t___interface_8h_source" xml:lang="en-US">
+<title>EXT_INT_Interface.h</title>
+<indexterm><primary>Drivers/MCAL/ExtInt/EXT_INT_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+24 <emphasis role="preprocessor">#ifndef&#32;EXT_INT_INTERFACE_H_</emphasis>
+25 <emphasis role="preprocessor">#define&#32;EXT_INT_INTERFACE_H_</emphasis>
+26 
+27 <emphasis role="comment">/*&#32;Macros&#32;*/</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;EXT&#32;INT&#32;state&#32;*/</emphasis>
+30 <emphasis role="preprocessor">#define&#32;EXT_INT_ENABLE&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+31 <emphasis role="preprocessor">#define&#32;EXT_INT_DISABLE&#32;&#32;&#32;&#32;&#32;0</emphasis>
+32 
+33 <emphasis role="comment">/*&#32;Sense&#32;control&#32;*/</emphasis>
+34 <emphasis role="preprocessor">#define&#32;EXT_INT_SENSE_CONTROL_LOW_LEVEL&#32;&#32;&#32;&#32;&#32;0b00</emphasis>
+35 <emphasis role="preprocessor">#define&#32;EXT_INT_SENSE_CONTROL_ANY_CHANGE&#32;&#32;&#32;&#32;0b01</emphasis>
+36 <emphasis role="preprocessor">#define&#32;EXT_INT_SENSE_CONTROL_FALLING_EDGE&#32;&#32;0b10</emphasis>
+37 <emphasis role="preprocessor">#define&#32;EXT_INT_SENSE_CONTROL_RISING_EDGE&#32;&#32;&#32;0b11</emphasis>
+38 
+39 
+40 <emphasis role="comment">/*&#32;functions&#32;declaration&#32;*/</emphasis>
+41 
+47 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a18ac477f14abb08086ff886ef726e75e">ExtInt_voidInit</link>();
+48 
+54 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1ade306a0f1cd6097df0a7230d96d7b277">ExtInt_voidDisableInt0</link>();
+55 
+61 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1af813ec757fea39dc90e32e0ed5a01b30">ExtInt_voidDisableInt1</link>();
+62 
+68 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a48bfcafc0d641282f9f10328088a8bc8">ExtInt_voidDisableInt2</link>();
+69 
+75 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a788a635c2ab19e99f702fbda7c80d225">ExtInt_voidEnableInt0</link>();
+76 
+82 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a07fb699abd32f8c902e6dbab10d582a7">ExtInt_voidEnableInt1</link>();
+83 
+89 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a6955746190e588a795d5a642bb5e336d">ExtInt_voidEnableInt2</link>();
+90 
+96 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a8ff1aaef92b773a52b647602643d2421">ExtInt_SetCallBack0</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*ptr)&#32;(<emphasis role="keywordtype">void</emphasis>));
+97 
+103 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a4f5f43bb2f668e22e928f8212d0c6c57">ExtInt_SetCallBack1</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*ptr)&#32;(<emphasis role="keywordtype">void</emphasis>));
+104 
+110 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__e_x_t___i_n_t___interface_8h_1a76f9cd99d70405d6c6bb72a83964a33b">ExtInt_SetCallBack2</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*ptr)&#32;(<emphasis role="keywordtype">void</emphasis>));
+111 
+112 
+113 
+114 
+115 
+116 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;EXT_INT_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

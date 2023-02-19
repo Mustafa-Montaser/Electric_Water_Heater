@@ -1,0 +1,7 @@
+<map id="EEPROM_voidWriteByte" name="EEPROM_voidWriteByte">
+<area shape="rect" id="node1" title="writing byte data into EEPROM" alt="" coords="5,92,172,117"/>
+<area shape="rect" id="node2" href="$_i_i_c___program_8c.html#ae1668128d1e8336a336d75a485557176" title="sending byte of data" alt="" coords="246,5,379,31"/>
+<area shape="rect" id="node3" href="$_i_i_c___program_8c.html#aa97244d3999bcd7287ed3f3f86b0b52a" title="sending slave address with write operation" alt="" coords="220,55,405,95"/>
+<area shape="rect" id="node4" href="$_i_i_c___program_8c.html#aa10eb50a9482d4f229805fc5a308249d" title="starting condition" alt="" coords="233,120,392,145"/>
+<area shape="rect" id="node5" href="$_i_i_c___program_8c.html#a2400c8e626ccee4a498005ecbdfa443b" title="stop condition" alt="" coords="234,169,391,195"/>
+</map>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__g_i_e___interface_8h_source" xml:lang="en-US">
+<title>GIE_Interface.h</title>
+<indexterm><primary>Drivers/MCAL/GIE/GIE_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;GIE_INTERFACE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;GIE_INTERFACE_H_</emphasis>
+25 
+26 <emphasis role="comment">/*&#32;function&#32;declaration&#32;*/</emphasis>
+27 
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__g_i_e___interface_8h_1a9a9c603e15ae48a1c30eae3d4f89511f">GIE_voidEnableGlobalINT</link>();
+34 
+40 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__g_i_e___interface_8h_1a586310bd11f48a5c5c4540e4f8300887">GIE_voidDisableGlobalINT</link>();
+41 
+42 
+43 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;GIE_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

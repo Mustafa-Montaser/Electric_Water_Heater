@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__cooler___interface_8h_source" xml:lang="en-US">
+<title>Cooler_Interface.h</title>
+<indexterm><primary>Drivers/HAL/Cooler/Cooler_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DRIVERS_HAL_COOLER_COOLER_INTERFACE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DRIVERS_HAL_COOLER_COOLER_INTERFACE_H_</emphasis>
+25 
+26 <emphasis role="comment">/*&#32;Functions&#32;Declarations&#32;*/</emphasis>
+27 
+33 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__cooler___interface_8h_1a6d47646876ee460cd660008b286ad201">Cooler_voidInit</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8CoolerPin);
+34 
+35 
+41 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__cooler___interface_8h_1a7984adde134e46bb7ce6ad2460c2a16f">Cooler_voidTurnOn</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8CoolerPin);
+42 
+43 
+49 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__cooler___interface_8h_1a69404c1e42a3a9822492b659630da8cb">Cooler_voidTurnOff</link>(<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;local_u8CoolerPin);
+50 
+51 
+52 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DRIVERS_HAL_COOLER_COOLER_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_s_s_d___program_8c" xml:lang="en-US">
+<title>Drivers/HAL/DSSD/DSSD_Program.c File Reference</title>
+<indexterm><primary>Drivers/HAL/DSSD/DSSD_Program.c</primary></indexterm>
+<para>
+
+<para>this file contains contains implementation for the cooler module </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;../../LIB/StdTypes.h&quot;<?linebreak?>#include &quot;../../LIB/BitMath.h&quot;<?linebreak?>#include &quot;../../MCAL/DIO/DIO_Private.h&quot;<?linebreak?>#include &quot;../../MCAL/DIO/DIO_Interface.h&quot;<?linebreak?>#include &quot;DSSD_Config.h&quot;<?linebreak?>#include &quot;DSSD_Interface.h&quot;<?linebreak?></programlisting>Include dependency graph for DSSD_Program.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__d_s_s_d___program_8c_1ac86cddc8b27891ecd418fc9328a5fd07">DSSD_voidInit</link> ()</para>
+
+<para>Initialise the DSSD. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___program_8c_1aadd2690a78926ff0d1aa465aae833851">DSSD_voidEN1</link> ()</para>
+
+<para>Enable EN1 to display the right digit. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___program_8c_1a3bac1cbfe1873b477ef4cacc093532f6">DSSD_voidEN2</link> ()</para>
+
+<para>Enable EN2 to display the left digit. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___program_8c_1aa84ab82fe079b0c462b106311eb12001">DSSD_voidDisableAll</link> ()</para>
+
+<para>Disable DSSD [act as turn it OFF]. </para>
+</listitem>
+            <listitem><para>void <link linkend="__d_s_s_d___program_8c_1a3ff716dcf68a7e8b413932e87799fe2f">DSSD_voidDisplay</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Num, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> u8Digit)</para>
+
+<para>Display Number from 2 digits. </para>
+</listitem>
+            <listitem><para><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> <link linkend="__d_s_s_d___program_8c_1aef9de12e0f6fad5af76aba8595cc2d80">DSSD_u8Status</link> ()</para>
+
+<para>get current state [ON, OFF] </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains contains implementation for the cooler module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__d_s_s_d___program_8c_1aef9de12e0f6fad5af76aba8595cc2d80"/><section>
+    <title>DSSD_u8Status()</title>
+<indexterm><primary>DSSD_u8Status</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_u8Status</secondary></indexterm>
+<para><computeroutput><link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> DSSD_u8Status ( )</computeroutput></para><para>
+
+<para>get current state [ON, OFF] </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>local_u8state state </para>
+</formalpara>
+</para>
+
+<para>if EN1 and EN2 are low then, DSSD is OFF. Otherwise, it is ON</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_aef9de12e0f6fad5af76aba8595cc2d80_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___program_8c_1aa84ab82fe079b0c462b106311eb12001"/><section>
+    <title>DSSD_voidDisableAll()</title>
+<indexterm><primary>DSSD_voidDisableAll</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_voidDisableAll</secondary></indexterm>
+<para><computeroutput>void DSSD_voidDisableAll ( )</computeroutput></para><para>
+
+<para>Disable DSSD [act as turn it OFF]. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>disable EN1 and EN2</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_aa84ab82fe079b0c462b106311eb12001_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_aa84ab82fe079b0c462b106311eb12001_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___program_8c_1a3ff716dcf68a7e8b413932e87799fe2f"/><section>
+    <title>DSSD_voidDisplay()</title>
+<indexterm><primary>DSSD_voidDisplay</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_voidDisplay</secondary></indexterm>
+<para><computeroutput>void DSSD_voidDisplay (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8Num, <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> u8Digit)</computeroutput></para><para>
+
+<para>Display Number from 2 digits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8Num</entry><entry>
+<para>the desired number to be printed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>u8Digit</entry><entry>
+<para>desired digit to be displayed [DSSD_DISPLAY_ONES, DSSD_DISPLAY_TENS] </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>according to desired digit, display it</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_a3ff716dcf68a7e8b413932e87799fe2f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___program_8c_1aadd2690a78926ff0d1aa465aae833851"/><section>
+    <title>DSSD_voidEN1()</title>
+<indexterm><primary>DSSD_voidEN1</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_voidEN1</secondary></indexterm>
+<para><computeroutput>void DSSD_voidEN1 ( )</computeroutput></para><para>
+
+<para>Enable EN1 to display the right digit. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>enable EN1</para>
+
+<para>disable EN2</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_aadd2690a78926ff0d1aa465aae833851_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_aadd2690a78926ff0d1aa465aae833851_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___program_8c_1a3bac1cbfe1873b477ef4cacc093532f6"/><section>
+    <title>DSSD_voidEN2()</title>
+<indexterm><primary>DSSD_voidEN2</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_voidEN2</secondary></indexterm>
+<para><computeroutput>void DSSD_voidEN2 ( )</computeroutput></para><para>
+
+<para>Enable EN2 to display the left digit. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>enable EN2</para>
+
+<para>disable EN1</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_a3bac1cbfe1873b477ef4cacc093532f6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__d_s_s_d___program_8c_1ac86cddc8b27891ecd418fc9328a5fd07"/><section>
+    <title>DSSD_voidInit()</title>
+<indexterm><primary>DSSD_voidInit</primary><secondary>DSSD_Program.c</secondary></indexterm>
+<indexterm><primary>DSSD_Program.c</primary><secondary>DSSD_voidInit</secondary></indexterm>
+<para><computeroutput>void DSSD_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise the DSSD. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+
+<para>drive data and control pins as a outputs</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_ac86cddc8b27891ecd418fc9328a5fd07_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_d_s_s_d___program_8c_ac86cddc8b27891ecd418fc9328a5fd07_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

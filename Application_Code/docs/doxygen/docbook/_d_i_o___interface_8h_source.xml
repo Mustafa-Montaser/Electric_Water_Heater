@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_i_o___interface_8h_source" xml:lang="en-US">
+<title>DIO_Interface.h</title>
+<indexterm><primary>Drivers/MCAL/DIO/DIO_Interface.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+23 <emphasis role="preprocessor">#ifndef&#32;DIO_INTERFACE_H_</emphasis>
+24 <emphasis role="preprocessor">#define&#32;DIO_INTERFACE_H_</emphasis>
+25 
+26 
+27 <emphasis role="comment">/*&#32;special&#32;types&#32;*/</emphasis>
+28 
+41 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+42 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1ca9a6bdb4104cab12701e9c9f94fc099d9">DIO_PORT_A</link>,
+43 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1ca874a63cee35e0d91f5ad455f401e690f">DIO_PORT_B</link>,
+44 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1ca3709276a0d50e6173151e20c6ea123f0">DIO_PORT_C</link>,
+45 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1ca7d35e9df573b206bd025595fb5a63a99">DIO_PORT_D</link>
+46 }&#32;<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link>;
+47 
+48 
+49 
+70 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+71 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07fa83c8eaf46a3465c85a9d3b61653fc574">DIO_PIN0</link>,
+72 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07fae7e57f35418e978eae22e82ff5caed0c">DIO_PIN1</link>,
+73 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07fa2a3e9ef1e0c436129606a432ab249713">DIO_PIN2</link>,
+74 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07fa57d6348898d84d79238473c53504d639">DIO_PIN3</link>,
+75 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07fa252e15e8bc081622b0bef4e437438fb5">DIO_PIN4</link>,
+76 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07faa83818085f018d73c090f88fd40768e8">DIO_PIN5</link>,
+77 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07faef68c0bcde1687f125c47a89a5c8161d">DIO_PIN6</link>,
+78 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07faa59c4bb64ff968bd46b427712180ca2a">DIO_PIN7</link>
+79 }&#32;<link linkend="__d_i_o___interface_8h_1a96bb65b113786f23d4cd92880227c07f">DIO_PinId_t</link>;
+80 
+81 
+82 
+87 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+88 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1af807cd7c83c25e764706da288187854b">DIO_PA0</link>&#32;=&#32;10,
+89 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ad00fe9478d40d9afd26a446032739be0">DIO_PA1</link>,
+90 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1aa18a7444b6d919dbf637de2ad438c34e">DIO_PA2</link>,
+91 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1aadd606b3c2efbe2991f2d7adc46c1b3f">DIO_PA3</link>,
+92 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a272105777833b00a8c62e95f3c46951d">DIO_PA4</link>,
+93 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1abb0375c0a73b8254ab3ccf2ee2cabdc6">DIO_PA5</link>,
+94 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a571175d91104776aad0b7b4106f8d805">DIO_PA6</link>,
+95 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ab64595f661d9ee8459027eb479a0075d">DIO_PA7</link>,
+96 
+97 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a3c8504d755565b5dfc47067622dc7039">DIO_PB0</link>&#32;=&#32;20,
+98 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ac29e03eba3ae55e343ca3e59363b35e7">DIO_PB1</link>,
+99 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a95a9d013969310c2d6547c034f1f9159">DIO_PB2</link>,
+100 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a9f931f65a4455996bfb6fdc7d37117ab">DIO_PB3</link>,
+101 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a766354d436929af862678636ab9b2a33">DIO_PB4</link>,
+102 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1af3dc6c663f805d43f72c1b9eb49f3d16">DIO_PB5</link>,
+103 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a43b83cbb15df781642867fc446a938c4">DIO_PB6</link>,
+104 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ae550c6960818726ac225a54123606212">DIO_PB7</link>,
+105 
+106 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a070e5f507d5832ffe20d03cda24c53cd">DIO_PC0</link>&#32;=&#32;30,
+107 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a42841c1d3fb29489f7fe9c7fc9e3d51c">DIO_PC1</link>,
+108 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a81f962a1e91576cf9ce48aadec1f22bf">DIO_PC2</link>,
+109 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a8b0709bd655fa5202ff1b84ec1ed355d">DIO_PC3</link>,
+110 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1aa3ea0535c48ebf91d405d718bdce2a0a">DIO_PC4</link>,
+111 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a10d7d3ea7b61d616ff435e126e9dadcb">DIO_PC5</link>,
+112 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a63b05a89f26914740f1c9978a0b961b3">DIO_PC6</link>,
+113 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ad8bceed160f6ecc8984387f5b5a9b071">DIO_PC7</link>,
+114 
+115 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a37447ba5dcfdde7ee307246e1ac6b961">DIO_PD0</link>&#32;=&#32;40,
+116 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ad5dcef0e537bad5328825093158794b0">DIO_PD1</link>,
+117 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a442e7c50376e677035bb772fea8f2fc3">DIO_PD2</link>,
+118 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a2995d9b5208f23e0f42898b905ce0221">DIO_PD3</link>,
+119 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a0f1e7b67cc5ba914938c9fb178c19932">DIO_PD4</link>,
+120 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1afaad69ef8d3f207ff8b9e60fc683f2ef">DIO_PD5</link>,
+121 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1a370241decc0ef291af0473587976d9ba">DIO_PD6</link>,
+122 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1ac8798d6c67ed51e214709191f0e5c112">DIO_PD7</link>
+123 }&#32;<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>;
+124 
+125 
+126 
+135 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+136 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435a54cd93c8dbb632bd10140e6c2ad55e9f">DIO_PIN_INPUT</link>,
+137 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435aaac066fade3fb015b0325a3c058f5f07">DIO_PIN_OUTPUT</link>
+138 }&#32;<link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435">DIO_PinMode_t</link>;
+139 
+140 
+141 
+150 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+151 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475afa4c541f45f5b1aa19360a1ab2f3419a">DIO_PORT_INPUT</link>,
+152 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475ac55082144b2b2d21c8794ec2c1025425">DIO_PORT_OUTPUT</link>&#32;=&#32;0xFF
+153 }&#32;<link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475">DIO_PortMode_t</link>;
+154 
+155 
+156 
+165 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+166 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381a7224d182ece2debcc472bac2814a1af6">DIO_PIN_LOW</link>,
+167 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381a08a694517368036228bbb7d83dc93325">DIO_PIN_HIGH</link>
+168 }&#32;<link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link>;
+169 
+170 
+171 
+180 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+181 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ae9cc1144b6f3dab0142d24a23dad217ca9bb9e37cfe72b45f5ce8e9d4609f8b53">DIO_PORT_LOW</link>,
+182 &#32;&#32;&#32;&#32;<link linkend="__d_i_o___interface_8h_1ae9cc1144b6f3dab0142d24a23dad217cadbc26b95c048dec8024123608332c0f8">DIO_PORT_HIGH</link>&#32;=&#32;0XFF
+183 }&#32;<link linkend="__d_i_o___interface_8h_1ae9cc1144b6f3dab0142d24a23dad217c">DIO_PortValue_t</link>;
+184 
+185 
+186 
+187 <emphasis role="comment">/*&#32;function&#32;declaration&#32;*/</emphasis>
+188 
+189 
+196 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a26c4c9ed8563f332f5926cf98bff4fd1">DIO_voidSetPortMode</link>(<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link>&#32;Copy_u8PortId,&#32;<link linkend="__d_i_o___interface_8h_1af4e5cac4a03ddeba5e991d42e7517475">DIO_PortMode_t</link>&#32;Copy_u8PortMode);
+197 
+204 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a0f2b38949b04e4b0ce387f965d66d3c1">DIO_voidWritePortValue</link>(<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link>&#32;Copy_u8PortId,&#32;<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;Copy_u8PortValue);
+205 
+211 <link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link>&#32;<link linkend="__d_i_o___interface_8h_1a4d424943b0596bba06199c04c66e9397">DIO_voidReadPortValue</link>(<link linkend="__d_i_o___interface_8h_1ab9c760a8f55624e6dae0b566d6d99f1c">DIO_PortId_t</link>&#32;Copy_u8PortId);
+212 
+213 
+220 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1ab6a8d1a16f401892c59c2414d3b725bc">DIO_voidSetPinMode</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin,&#32;<link linkend="__d_i_o___interface_8h_1a7cf275ad96ba72ee0b423d727401f435">DIO_PinMode_t</link>&#32;Copy_u8PinMode);
+221 
+227 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a1fcd4ae41f925b9705d9819d6a44cf60">DIO_voidSetPinValue</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin);
+228 
+234 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a652e0f9ac0f74e77a1328ed5397f994b">DIO_voidClearPinValue</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin);
+235 
+241 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a5e19c31b072b5610a5c66262e8b5f6ab">DIO_voidTogglePinValue</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin);
+242 
+249 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__d_i_o___interface_8h_1a0ee70689118e901ab1a41ebb558cca71">DIO_voidWritePinValue</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin,&#32;<link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link>&#32;Copy_u8Value);
+250 
+256 <link linkend="__d_i_o___interface_8h_1a37ea2c73bc3a13edf1fc9fd5498cc381">DIO_PinValue_t</link>&#32;<link linkend="__d_i_o___interface_8h_1a3e31e1d896cfcd0b21df3217a902a4e8">DIO_u8GetPinValue</link>(<link linkend="__d_i_o___interface_8h_1aeed2e52002b5f0aee4cf9d04210b54a1">DIO_Pin_t</link>&#32;Copy_u8Pin);
+257 
+258 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;DIO_INTERFACE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+259 
+260 
+261 
+262 
+263 
+264 
+265 
+266 
+267 
+268 
+269 
+270 
+271 
+272 
+</programlisting></section>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer0___config_8h_source" xml:lang="en-US">
+<title>Timer0_Config.h</title>
+<indexterm><primary>Drivers/MCAL/Timer0/Timer0_Config.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+24 <emphasis role="preprocessor">#ifndef&#32;TIMER0_CONFIG_H_</emphasis>
+25 <emphasis role="preprocessor">#define&#32;TIMER0_CONFIG_H_</emphasis>
+26 
+37 <emphasis role="preprocessor">#define&#32;TIMER0_WAVEFORM_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TIMER0_WAVEFORM_NORMAL_MODE</emphasis>
+38 
+39 
+54 <emphasis role="preprocessor">#define&#32;TIMER0_PRESCALER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TIMER0_PRESCALER_1024</emphasis>
+55 
+56 
+57 
+61 <emphasis role="preprocessor">#define&#32;TIMER0_F_OSC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;16</emphasis>
+62 
+63 
+72 <emphasis role="preprocessor">#define&#32;TIMER0_FAST_PWM_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TIMER0_FAST_PWM_NON_INVERTING_MODE</emphasis>
+73 
+74 
+75 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;TIMER0_CONFIG_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

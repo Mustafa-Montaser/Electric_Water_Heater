@@ -1,0 +1,5 @@
+<map id="App_SysOnOff" name="App_SysOnOff">
+<area shape="rect" id="node1" title="Turn system ON or OFF." alt="" coords="5,31,113,56"/>
+<area shape="rect" id="node2" href="$group___a_p_p.html#ga7f63480ae0f80ec5666d2a7bd364a6e0" title="start system timer" alt="" coords="161,5,279,31"/>
+<area shape="rect" id="node3" href="$group___a_p_p.html#ga89fb7949964d8972b6b0956308644d2d" title="stop system timer" alt="" coords="165,55,275,80"/>
+</map>

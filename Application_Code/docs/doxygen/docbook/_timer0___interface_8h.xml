@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__timer0___interface_8h" xml:lang="en-US">
+<title>Drivers/MCAL/Timer0/Timer0_Interface.h File Reference</title>
+<indexterm><primary>Drivers/MCAL/Timer0/Timer0_Interface.h</primary></indexterm>
+<para>
+
+<para>this file contains function prototypes for the Timer0 module </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a58fc65c5527c56a253b7c1d24058507d">TIMER0_WAVEFORM_NORMAL_MODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a8fbb4b793e02469a1ee6c96946e5115f">TIMER0_WAVEFORM_CTC_MODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a189ab0413bed5654b85843ff4092bba3">TIMER0_WAVEFORM_FAST_PWM_MODE</link>&#160;&#160;&#160;2</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a16fa04c26e4d2e5178c02641800cb698">TIMER0_WAVEFORM_PHASE_CORRECT_MODE</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a820e83bac23e0dac769d7305e7864c8b">TIMER0_STOP_PRESCALER</link>&#160;&#160;&#160;0b000</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1adf941ee31e5171fe44728afbf1edf383">TIMER0_NO_PRESCALER</link>&#160;&#160;&#160;0b001</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a16f09f261cd7e31a0a6b88e60bf25285">TIMER0_PRESCALER_8</link>&#160;&#160;&#160;0b010</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a81c4a294fe41a22e7caa330e0c9b823c">TIMER0_PRESCALER_64</link>&#160;&#160;&#160;0b011</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a450269564823db9e1c28912879046e4d">TIMER0_PRESCALER_256</link>&#160;&#160;&#160;0b100</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a97ca3a16c951c0d82b619226edea60a0">TIMER0_PRESCALER_1024</link>&#160;&#160;&#160;0b101</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1ad32f7cce224be507243ddcc31eb1f358">TIMER0_EXT_CLK_FALLING</link>&#160;&#160;&#160;0b110</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1afbf5b608d15726ec8478af43aa9c52f3">TIMER0_EXT_CLK_RISING</link>&#160;&#160;&#160;0b111</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a12f79b30366acc5a50e058a95fcac985">TIMER0_FAST_PWM_NON_INVERTING_MODE</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__timer0___interface_8h_1a1ca8976515c713d74645067df50056f1">TIMER0_FAST_PWM_INVERTING_MODE</link>&#160;&#160;&#160;1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1abab6eaf710130b793f21caa7222f43ec">Timer0_voidInit</link> ()</para>
+
+<para>Initialise timer0. </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1a4f4ed06f8e0c67870ed2dd4f9504babd">Timer0_voidSetTime</link> (<link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> copy_u8Time)</para>
+
+<para>setting time </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1a64940e18b7cf67a59bbd49acc3906d7a">Timer0_voidStart</link> ()</para>
+
+<para>start timing </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1ae8616a7fa3e2e96becdfbe23b216808e">Timer0_voidStop</link> ()</para>
+
+<para>stop time </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1a325c493c0cb16106d2c141d885810767">Timer0_voidSetCallBack</link> (void(*ptr)(void))</para>
+
+<para>callback function when timer is interrupt </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1a19ac6b0f008d701ccc801f2a82c4f21f">Timer0_voidPwmInit</link> ()</para>
+
+<para>PWM Initialise. </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1ab9ac88b284225f13025f21fd686b6797">Timer0_voidSetPwmDutyCycle</link> (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8DuctyCycle)</para>
+
+<para>duty cycle setting for PWM </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1a2bf9fa0c4f234bd83d23732591c8ba20">Timer0_voidStartPwm</link> ()</para>
+
+<para>start PWM </para>
+</listitem>
+            <listitem><para>void <link linkend="__timer0___interface_8h_1ab7b7acbcb22fdd43a42a563b23a8499a">Timer0_voidStopPwm</link> ()</para>
+
+<para>stop PWM </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>this file contains function prototypes for the Timer0 module </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Mustafa M.Montaser </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>v1.0.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>17-Feb-2023 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__timer0___interface_8h_1ad32f7cce224be507243ddcc31eb1f358"/><section>
+    <title>TIMER0_EXT_CLK_FALLING</title>
+<indexterm><primary>TIMER0_EXT_CLK_FALLING</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_EXT_CLK_FALLING</secondary></indexterm>
+<para><computeroutput>#define TIMER0_EXT_CLK_FALLING&#160;&#160;&#160;0b110</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1afbf5b608d15726ec8478af43aa9c52f3"/><section>
+    <title>TIMER0_EXT_CLK_RISING</title>
+<indexterm><primary>TIMER0_EXT_CLK_RISING</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_EXT_CLK_RISING</secondary></indexterm>
+<para><computeroutput>#define TIMER0_EXT_CLK_RISING&#160;&#160;&#160;0b111</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a1ca8976515c713d74645067df50056f1"/><section>
+    <title>TIMER0_FAST_PWM_INVERTING_MODE</title>
+<indexterm><primary>TIMER0_FAST_PWM_INVERTING_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_FAST_PWM_INVERTING_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_FAST_PWM_INVERTING_MODE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a12f79b30366acc5a50e058a95fcac985"/><section>
+    <title>TIMER0_FAST_PWM_NON_INVERTING_MODE</title>
+<indexterm><primary>TIMER0_FAST_PWM_NON_INVERTING_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_FAST_PWM_NON_INVERTING_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_FAST_PWM_NON_INVERTING_MODE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1adf941ee31e5171fe44728afbf1edf383"/><section>
+    <title>TIMER0_NO_PRESCALER</title>
+<indexterm><primary>TIMER0_NO_PRESCALER</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_NO_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define TIMER0_NO_PRESCALER&#160;&#160;&#160;0b001</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a97ca3a16c951c0d82b619226edea60a0"/><section>
+    <title>TIMER0_PRESCALER_1024</title>
+<indexterm><primary>TIMER0_PRESCALER_1024</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_PRESCALER_1024</secondary></indexterm>
+<para><computeroutput>#define TIMER0_PRESCALER_1024&#160;&#160;&#160;0b101</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a450269564823db9e1c28912879046e4d"/><section>
+    <title>TIMER0_PRESCALER_256</title>
+<indexterm><primary>TIMER0_PRESCALER_256</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_PRESCALER_256</secondary></indexterm>
+<para><computeroutput>#define TIMER0_PRESCALER_256&#160;&#160;&#160;0b100</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a81c4a294fe41a22e7caa330e0c9b823c"/><section>
+    <title>TIMER0_PRESCALER_64</title>
+<indexterm><primary>TIMER0_PRESCALER_64</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_PRESCALER_64</secondary></indexterm>
+<para><computeroutput>#define TIMER0_PRESCALER_64&#160;&#160;&#160;0b011</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a16f09f261cd7e31a0a6b88e60bf25285"/><section>
+    <title>TIMER0_PRESCALER_8</title>
+<indexterm><primary>TIMER0_PRESCALER_8</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_PRESCALER_8</secondary></indexterm>
+<para><computeroutput>#define TIMER0_PRESCALER_8&#160;&#160;&#160;0b010</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a820e83bac23e0dac769d7305e7864c8b"/><section>
+    <title>TIMER0_STOP_PRESCALER</title>
+<indexterm><primary>TIMER0_STOP_PRESCALER</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_STOP_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define TIMER0_STOP_PRESCALER&#160;&#160;&#160;0b000</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a8fbb4b793e02469a1ee6c96946e5115f"/><section>
+    <title>TIMER0_WAVEFORM_CTC_MODE</title>
+<indexterm><primary>TIMER0_WAVEFORM_CTC_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_WAVEFORM_CTC_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_WAVEFORM_CTC_MODE&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a189ab0413bed5654b85843ff4092bba3"/><section>
+    <title>TIMER0_WAVEFORM_FAST_PWM_MODE</title>
+<indexterm><primary>TIMER0_WAVEFORM_FAST_PWM_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_WAVEFORM_FAST_PWM_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_WAVEFORM_FAST_PWM_MODE&#160;&#160;&#160;2</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a58fc65c5527c56a253b7c1d24058507d"/><section>
+    <title>TIMER0_WAVEFORM_NORMAL_MODE</title>
+<indexterm><primary>TIMER0_WAVEFORM_NORMAL_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_WAVEFORM_NORMAL_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_WAVEFORM_NORMAL_MODE&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__timer0___interface_8h_1a16fa04c26e4d2e5178c02641800cb698"/><section>
+    <title>TIMER0_WAVEFORM_PHASE_CORRECT_MODE</title>
+<indexterm><primary>TIMER0_WAVEFORM_PHASE_CORRECT_MODE</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>TIMER0_WAVEFORM_PHASE_CORRECT_MODE</secondary></indexterm>
+<para><computeroutput>#define TIMER0_WAVEFORM_PHASE_CORRECT_MODE&#160;&#160;&#160;3</computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__timer0___interface_8h_1abab6eaf710130b793f21caa7222f43ec"/><section>
+    <title>Timer0_voidInit()</title>
+<indexterm><primary>Timer0_voidInit</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidInit</secondary></indexterm>
+<para><computeroutput>void Timer0_voidInit ( )</computeroutput></para><para>
+
+<para>Initialise timer0. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h_abab6eaf710130b793f21caa7222f43ec_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1a19ac6b0f008d701ccc801f2a82c4f21f"/><section>
+    <title>Timer0_voidPwmInit()</title>
+<indexterm><primary>Timer0_voidPwmInit</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidPwmInit</secondary></indexterm>
+<para><computeroutput>void Timer0_voidPwmInit ( )</computeroutput></para><para>
+
+<para>PWM Initialise. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1a325c493c0cb16106d2c141d885810767"/><section>
+    <title>Timer0_voidSetCallBack()</title>
+<indexterm><primary>Timer0_voidSetCallBack</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidSetCallBack</secondary></indexterm>
+<para><computeroutput>void Timer0_voidSetCallBack (void(*)(void) ptr)</computeroutput></para><para>
+
+<para>callback function when timer is interrupt </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>pointer to function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h_a325c493c0cb16106d2c141d885810767_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1ab9ac88b284225f13025f21fd686b6797"/><section>
+    <title>Timer0_voidSetPwmDutyCycle()</title>
+<indexterm><primary>Timer0_voidSetPwmDutyCycle</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidSetPwmDutyCycle</secondary></indexterm>
+<para><computeroutput>void Timer0_voidSetPwmDutyCycle (<link linkend="__std_types_8h_1aed742c436da53c1080638ce6ef7d13de">u8</link> local_u8DuctyCycle)</computeroutput></para><para>
+
+<para>duty cycle setting for PWM </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>local_u8DuctyCycle</entry><entry>
+<para>duty cycle value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1a4f4ed06f8e0c67870ed2dd4f9504babd"/><section>
+    <title>Timer0_voidSetTime()</title>
+<indexterm><primary>Timer0_voidSetTime</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidSetTime</secondary></indexterm>
+<para><computeroutput>void Timer0_voidSetTime (<link linkend="__std_types_8h_1a0ceed739f3b2b55ee8d4d2a79a82cdea">u32</link> copy_u8Time)</computeroutput></para><para>
+
+<para>setting time </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>copy_u8Time</entry><entry>
+<para>time in msec </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h_a4f4ed06f8e0c67870ed2dd4f9504babd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1a64940e18b7cf67a59bbd49acc3906d7a"/><section>
+    <title>Timer0_voidStart()</title>
+<indexterm><primary>Timer0_voidStart</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidStart</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStart ( )</computeroutput></para><para>
+
+<para>start timing </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h_a64940e18b7cf67a59bbd49acc3906d7a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1a2bf9fa0c4f234bd83d23732591c8ba20"/><section>
+    <title>Timer0_voidStartPwm()</title>
+<indexterm><primary>Timer0_voidStartPwm</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidStartPwm</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStartPwm ( )</computeroutput></para><para>
+
+<para>start PWM </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1ae8616a7fa3e2e96becdfbe23b216808e"/><section>
+    <title>Timer0_voidStop()</title>
+<indexterm><primary>Timer0_voidStop</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidStop</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStop ( )</computeroutput></para><para>
+
+<para>stop time </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_timer0___interface_8h_ae8616a7fa3e2e96becdfbe23b216808e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__timer0___interface_8h_1ab7b7acbcb22fdd43a42a563b23a8499a"/><section>
+    <title>Timer0_voidStopPwm()</title>
+<indexterm><primary>Timer0_voidStopPwm</primary><secondary>Timer0_Interface.h</secondary></indexterm>
+<indexterm><primary>Timer0_Interface.h</primary><secondary>Timer0_voidStopPwm</secondary></indexterm>
+<para><computeroutput>void Timer0_voidStopPwm ( )</computeroutput></para><para>
+
+<para>stop PWM </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>void</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

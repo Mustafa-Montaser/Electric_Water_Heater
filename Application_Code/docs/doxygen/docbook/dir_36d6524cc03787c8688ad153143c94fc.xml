@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_36d6524cc03787c8688ad153143c94fc" xml:lang="en-US">
+<title>Drivers/HAL/Heater Directory Reference</title>
+<indexterm><primary>Drivers/HAL/Heater Directory Reference</primary></indexterm>
+Directory dependency graph for Heater:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_36d6524cc03787c8688ad153143c94fc_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__heater_8c">Heater.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__heater_8h">Heater.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

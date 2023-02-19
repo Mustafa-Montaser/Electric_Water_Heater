@@ -1,0 +1,9 @@
+<map id="Drivers/MCAL/ADC/ADC_Program.c" name="Drivers/MCAL/ADC/ADC_Program.c">
+<area shape="rect" id="node1" title="this file contains contains implementation for the ADC module" alt="" coords="346,5,509,45"/>
+<area shape="rect" id="node2" href="$_std_types_8h.html" title="this file contains standard types" alt="" coords="5,93,140,119"/>
+<area shape="rect" id="node3" href="$_bit_math_8h.html" title="this file contains macros function for bits operation" alt="" coords="165,93,290,119"/>
+<area shape="rect" id="node4" title=" " alt="" coords="315,93,415,119"/>
+<area shape="rect" id="node5" href="$_a_d_c___config_8h.html" title="this file contains macros configuration for the ADC module" alt="" coords="439,93,541,119"/>
+<area shape="rect" id="node6" href="$_a_d_c___interface_8h.html" title="this file contains function prototypes for the ADC module" alt="" coords="565,93,681,119"/>
+<area shape="rect" id="node7" href="$_a_d_c___private_8h.html" title="this file contains contains registers addresses for the ADC module" alt="" coords="706,93,813,119"/>
+</map>
