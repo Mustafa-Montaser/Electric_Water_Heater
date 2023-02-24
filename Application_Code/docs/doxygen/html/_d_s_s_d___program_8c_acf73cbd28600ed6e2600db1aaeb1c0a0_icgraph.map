@@ -1,0 +1,10 @@
+<map id="display_1" name="display_1">
+<area shape="rect" id="node1" title="display number 1" alt="" coords="1033,31,1111,56"/>
+<area shape="rect" id="node2" href="$_d_s_s_d___program_8c.html#a5584e115679b24daf6b3003acf317977" title="display the selected number" alt="" coords="871,31,985,56"/>
+<area shape="rect" id="node3" href="$_d_s_s_d___program_8c.html#ab9236c665116a4975175bedb257992bc" title="display right digit" alt="" coords="661,5,823,31"/>
+<area shape="rect" id="node8" href="$_d_s_s_d___program_8c.html#a142e619d95b2b6afebaaf1fc3a9c1880" title="display left digit" alt="" coords="663,55,821,80"/>
+<area shape="rect" id="node4" href="$_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f" title="Display Number from 2 digits." alt="" coords="483,31,613,56"/>
+<area shape="rect" id="node5" href="$_app_8c.html#ad4e9e0ff63dcbdbed5ae0de430a8554b" title="Default timer handler." alt="" coords="267,31,435,56"/>
+<area shape="rect" id="node6" href="$_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,31,219,56"/>
+<area shape="rect" id="node7" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,56,56"/>
+</map>

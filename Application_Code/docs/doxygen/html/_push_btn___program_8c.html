@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Electric Water Heater: Drivers/HAL/PushButton/PushBtn_Program.c File Reference</title>
+<title>Electric Water Heater: E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/PushButton/PushBtn_Program.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,6 @@
   <td id="projectalign">
    <div id="projectname">Electric Water Heater<span id="projectnumber">&#160;2.4.0</span>
    </div>
-   <div id="projectbrief">Control water temperature degree depend on LM35 sensor. And Cooler fan and heater</div>
   </td>
  </tr>
  </tbody>
@@ -92,9 +91,12 @@ $(document).ready(function(){initNavTree('_push_btn___program_8c.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">PushBtn_Program.c File Reference</div></div>
+  <div class="headertitle"><div class="title">PushBtn_Program.c File Reference<div class="ingroups"><a class="el" href="group___drivers.html">Drivers</a> &raquo; <a class="el" href="group___h_a_l.html">HAL</a> &raquo; <a class="el" href="group___push_button.html">PushButton</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>this file contains contains implementation for the PushButton module  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_std_types_8h_source.html">../../LIB/StdTypes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_bit_math_8h_source.html">../../LIB/BitMath.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_d_i_o___interface_8h_source.html">../../MCAL/DIO/DIO_Interface.h</a>&quot;</code><br />
@@ -104,15 +106,15 @@ $(document).ready(function(){initNavTree('_push_btn___program_8c.html',''); init
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PushBtn_Program.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="_push_btn___program_8c__incl.png" border="0" usemap="#a_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c" alt=""/></div>
-<map name="a_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c" id="a_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c">
-<area shape="rect" title=" " alt="" coords="383,5,546,45"/>
-<area shape="rect" href="_std_types_8h.html" title="this file contains standard types" alt="" coords="5,101,140,126"/>
-<area shape="rect" href="_bit_math_8h.html" title="this file contains macros function for bits operation" alt="" coords="165,101,290,126"/>
-<area shape="rect" href="_d_i_o___interface_8h.html" title="this file contains function prototypes for the DIO module" alt="" coords="315,93,449,133"/>
-<area shape="rect" href="_e_x_t___i_n_t___interface_8h.html" title="this file contains function prototypes for the External_Interrupt module" alt="" coords="474,93,621,133"/>
-<area shape="rect" href="_push_btn___config_8h.html" title="this file contains configuration macros for the PushButton module" alt="" coords="645,101,772,126"/>
-<area shape="rect" href="_push_btn___interface_8h.html" title=" " alt="" coords="797,101,935,126"/>
+<div class="center"><img src="_push_btn___program_8c__incl.png" border="0" usemap="#a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c" alt=""/></div>
+<map name="a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c" id="a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_drivers_2_h_a_l_2_push_button_2_push_btn___program_8c">
+<area shape="rect" title="this file contains contains implementation for the PushButton module" alt="" coords="359,5,570,89"/>
+<area shape="rect" href="_std_types_8h.html" title="this file contains standard types" alt="" coords="5,145,140,170"/>
+<area shape="rect" href="_bit_math_8h.html" title="this file contains macros function for bits operation" alt="" coords="165,145,290,170"/>
+<area shape="rect" href="_d_i_o___interface_8h.html" title="this file contains function prototypes for the DIO module" alt="" coords="315,137,449,177"/>
+<area shape="rect" href="_e_x_t___i_n_t___interface_8h.html" title="this file contains function prototypes for the External_Interrupt module" alt="" coords="474,137,621,177"/>
+<area shape="rect" href="_push_btn___config_8h.html" title="this file contains configuration macros for the PushButton module" alt="" coords="645,145,772,170"/>
+<area shape="rect" href="_push_btn___interface_8h.html" title="this file contains function prototypes for the PushButton module" alt="" coords="797,145,935,170"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -131,7 +133,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3aa5d6ae3aa12c030377864acc582378"><td class="mdescLeft">&#160;</td><td class="mdescRight">get push button status  <br /></td></tr>
 <tr class="separator:a3aa5d6ae3aa12c030377864acc582378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>this file contains contains implementation for the PushButton module </p>
+<dl class="section author"><dt>Author</dt><dd>Mustafa M.Montaser </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>v1.0.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>17-Feb-2023 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="aa445f6b89806ce70aad535dae51bf990" name="aa445f6b89806ce70aad535dae51bf990"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa445f6b89806ce70aad535dae51bf990">&#9670;&#160;</a></span>PushBtn_voidDisable()</h2>
 
@@ -172,12 +179,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_push_btn___program_8c_aa445f6b89806ce70aad535dae51bf990_icgraph.png" border="0" usemap="#a_push_btn___program_8c_aa445f6b89806ce70aad535dae51bf990_icgraph" alt=""/></div>
 <map name="a_push_btn___program_8c_aa445f6b89806ce70aad535dae51bf990_icgraph" id="a_push_btn___program_8c_aa445f6b89806ce70aad535dae51bf990_icgraph">
-<area shape="rect" title="disable push button" alt="" coords="504,55,648,80"/>
-<area shape="rect" href="main_8c.html#a8f3939e1342819943d98594bba5366f7" title="Decrease temperate set point." alt="" coords="267,5,456,31"/>
-<area shape="rect" href="main_8c.html#ad0ab1ce4a48ae0399f4eb2091153f77f" title="Increase temperate set point." alt="" coords="270,55,453,80"/>
-<area shape="rect" href="main_8c.html#a332ac54434aa0332b8d0f036331fbe9d" title="Turn system ON or OFF." alt="" coords="307,104,415,129"/>
-<area shape="rect" href="main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,55,219,80"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,55,56,80"/>
+<area shape="rect" title="disable push button" alt="" coords="504,5,648,31"/>
+<area shape="rect" href="_app_8c.html#a70e4319eee22e58ec0663f661fb5d771" title="Default ON/OFF button handler." alt="" coords="267,5,456,31"/>
+<area shape="rect" href="_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
@@ -223,12 +228,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="_push_btn___program_8c_ad51f004ddf754bb6a591a9d45ec621a1_icgraph.png" border="0" usemap="#a_push_btn___program_8c_ad51f004ddf754bb6a591a9d45ec621a1_icgraph" alt=""/></div>
 <map name="a_push_btn___program_8c_ad51f004ddf754bb6a591a9d45ec621a1_icgraph" id="a_push_btn___program_8c_ad51f004ddf754bb6a591a9d45ec621a1_icgraph">
-<area shape="rect" title="enable push button" alt="" coords="504,55,645,80"/>
-<area shape="rect" href="main_8c.html#a8f3939e1342819943d98594bba5366f7" title="Decrease temperate set point." alt="" coords="267,5,456,31"/>
-<area shape="rect" href="main_8c.html#ad0ab1ce4a48ae0399f4eb2091153f77f" title="Increase temperate set point." alt="" coords="270,55,453,80"/>
-<area shape="rect" href="main_8c.html#a332ac54434aa0332b8d0f036331fbe9d" title="Turn system ON or OFF." alt="" coords="307,104,415,129"/>
-<area shape="rect" href="main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,55,219,80"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,55,56,80"/>
+<area shape="rect" title="enable push button" alt="" coords="504,5,645,31"/>
+<area shape="rect" href="_app_8c.html#a70e4319eee22e58ec0663f661fb5d771" title="Default ON/OFF button handler." alt="" coords="267,5,456,31"/>
+<area shape="rect" href="_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 
@@ -336,8 +339,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="_push_btn___program_8c_ac4aaabbb33d812e8021c418ee1593075_icgraph.png" border="0" usemap="#a_push_btn___program_8c_ac4aaabbb33d812e8021c418ee1593075_icgraph" alt=""/></div>
 <map name="a_push_btn___program_8c_ac4aaabbb33d812e8021c418ee1593075_icgraph" id="a_push_btn___program_8c_ac4aaabbb33d812e8021c418ee1593075_icgraph">
 <area shape="rect" title="Initialise the push button." alt="" coords="267,5,385,31"/>
-<area shape="rect" href="main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
-<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,5,56,31"/>
+<area shape="rect" href="_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
 </map>
 </div>
 

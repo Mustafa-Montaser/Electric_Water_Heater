@@ -8,7 +8,7 @@
  * \addtogroup External_Interrupt
  * External_Interrupt module driver
  * @{
- * \file ADC_Private.h
+ * \file EXT_INT_Private.h
  * \brief this file contains contains registers addresses for the External_Interrupt module
  * \author Mustafa M.Montaser
  * \version v1.0.0

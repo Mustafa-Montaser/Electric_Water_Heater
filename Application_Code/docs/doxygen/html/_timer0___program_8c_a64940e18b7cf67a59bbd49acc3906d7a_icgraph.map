@@ -1,7 +1,7 @@
 <map id="Timer0_voidStart" name="Timer0_voidStart">
-<area shape="rect" id="node1" title="start timing" alt="" coords="588,5,707,31"/>
-<area shape="rect" id="node2" href="$main_8c.html#a7f63480ae0f80ec5666d2a7bd364a6e0" title="start system timer" alt="" coords="423,5,540,31"/>
-<area shape="rect" id="node3" href="$main_8c.html#a332ac54434aa0332b8d0f036331fbe9d" title="Turn system ON or OFF." alt="" coords="267,5,375,31"/>
-<area shape="rect" id="node4" href="$main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
-<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node1" title="start timing" alt="" coords="669,5,788,31"/>
+<area shape="rect" id="node2" href="$_app_8c.html#a0d56c96e8f032c3b7d8004721833c7a3" title="Start the system timer." alt="" coords="504,5,621,31"/>
+<area shape="rect" id="node3" href="$_app_8c.html#a70e4319eee22e58ec0663f661fb5d771" title="Default ON/OFF button handler." alt="" coords="267,5,456,31"/>
+<area shape="rect" id="node4" href="$_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
 </map>

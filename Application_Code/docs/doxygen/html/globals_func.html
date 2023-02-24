@@ -27,7 +27,6 @@
   <td id="projectalign">
    <div id="projectname">Electric Water Heater<span id="projectnumber">&#160;2.4.0</span>
    </div>
-   <div id="projectbrief">Control water temperature degree depend on LM35 sensor. And Cooler fan and heater</div>
   </td>
  </tr>
  </tbody>
@@ -98,14 +97,18 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>ADC_voidInit()&#160;:&#160;<a class="el" href="_a_d_c___interface_8h.html#a419a46f4e130d57ef4d0723c9076742a">ADC_Interface.h</a>, <a class="el" href="_a_d_c___program_8c.html#a419a46f4e130d57ef4d0723c9076742a">ADC_Program.c</a></li>
 <li>ADC_voidSetCallBack()&#160;:&#160;<a class="el" href="_a_d_c___interface_8h.html#a2e2eb8cef772c3bad36b4582d17ae494">ADC_Interface.h</a></li>
 <li>ADC_voidStartConversion()&#160;:&#160;<a class="el" href="_a_d_c___interface_8h.html#a6edc9ee590e0851a834147608bb1c125">ADC_Interface.h</a></li>
-<li>App_DecreaseTempSetPoint()&#160;:&#160;<a class="el" href="main_8c.html#a8f3939e1342819943d98594bba5366f7">main.c</a></li>
-<li>App_IncreaseTempSetPoint()&#160;:&#160;<a class="el" href="main_8c.html#ad0ab1ce4a48ae0399f4eb2091153f77f">main.c</a></li>
-<li>App_SysOnOff()&#160;:&#160;<a class="el" href="main_8c.html#a332ac54434aa0332b8d0f036331fbe9d">main.c</a></li>
-<li>App_SystemInit()&#160;:&#160;<a class="el" href="main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd">main.c</a></li>
-<li>App_TimerBegin()&#160;:&#160;<a class="el" href="main_8c.html#a7f63480ae0f80ec5666d2a7bd364a6e0">main.c</a></li>
-<li>App_TimerCallBack()&#160;:&#160;<a class="el" href="main_8c.html#a3d4a0ad81b3c47e7e83363f7309348e3">main.c</a></li>
-<li>App_TimerInit()&#160;:&#160;<a class="el" href="main_8c.html#a422363cfd79261bb994a45bd119cc7c6">main.c</a></li>
-<li>App_TimerStop()&#160;:&#160;<a class="el" href="main_8c.html#a89fb7949964d8972b6b0956308644d2d">main.c</a></li>
+<li>App_DefaultDownBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a6ef1950a895bf29157a3c21d3dc6c240">App.c</a></li>
+<li>App_DefaultOnOffBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a70e4319eee22e58ec0663f661fb5d771">App.c</a></li>
+<li>App_DefaultTimerHandler()&#160;:&#160;<a class="el" href="_app_8c.html#ad4e9e0ff63dcbdbed5ae0de430a8554b">App.c</a></li>
+<li>App_DefaultUpBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a2ce3e490c5f7d5a413ec2ba7dbd6e17a">App.c</a></li>
+<li>App_SetDownBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a90072bf9ed015c317bde5488689c3063">App.c</a>, <a class="el" href="_app_8h.html#a90072bf9ed015c317bde5488689c3063">App.h</a></li>
+<li>App_SetOnOffBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a86b94ce4e58fb370971abac004d978a2">App.c</a>, <a class="el" href="_app_8h.html#a86b94ce4e58fb370971abac004d978a2">App.h</a></li>
+<li>App_SetTimerHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a946e11b28d0994ba1a5ac277a04866d7">App.c</a>, <a class="el" href="_app_8h.html#a946e11b28d0994ba1a5ac277a04866d7">App.h</a></li>
+<li>App_SetUpBtnHandler()&#160;:&#160;<a class="el" href="_app_8c.html#a8977097266aad753028254394f4cc347">App.c</a>, <a class="el" href="_app_8h.html#a8977097266aad753028254394f4cc347">App.h</a></li>
+<li>App_SystemInit()&#160;:&#160;<a class="el" href="_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd">App.c</a>, <a class="el" href="_app_8h.html#a56447caf00c479a0d2b7dfb812bd43fd">App.h</a></li>
+<li>App_TimerBegin()&#160;:&#160;<a class="el" href="_app_8c.html#a0d56c96e8f032c3b7d8004721833c7a3">App.c</a></li>
+<li>App_TimerInit()&#160;:&#160;<a class="el" href="_app_8c.html#aa0d289ed10499845f51d76fb422c9d35">App.c</a></li>
+<li>App_TimerStop()&#160;:&#160;<a class="el" href="_app_8c.html#ada3ae620f4ef1514bb732d8b332fe6db">App.c</a></li>
 </ul>
 
 
@@ -126,9 +129,22 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>DIO_voidTogglePinValue()&#160;:&#160;<a class="el" href="_d_i_o___interface_8h.html#a5e19c31b072b5610a5c66262e8b5f6ab">DIO_Interface.h</a>, <a class="el" href="_d_i_o___program_8c.html#a5e19c31b072b5610a5c66262e8b5f6ab">DIO_Program.c</a></li>
 <li>DIO_voidWritePinValue()&#160;:&#160;<a class="el" href="_d_i_o___interface_8h.html#a0ee70689118e901ab1a41ebb558cca71">DIO_Interface.h</a>, <a class="el" href="_d_i_o___program_8c.html#a0ee70689118e901ab1a41ebb558cca71">DIO_Program.c</a></li>
 <li>DIO_voidWritePortValue()&#160;:&#160;<a class="el" href="_d_i_o___interface_8h.html#a0f2b38949b04e4b0ce387f965d66d3c1">DIO_Interface.h</a>, <a class="el" href="_d_i_o___program_8c.html#a0f2b38949b04e4b0ce387f965d66d3c1">DIO_Program.c</a></li>
+<li>display_0()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a9e1cba522b6192299fbcfcfb368f732b">DSSD_Program.c</a></li>
+<li>display_1()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#acf73cbd28600ed6e2600db1aaeb1c0a0">DSSD_Program.c</a></li>
+<li>display_2()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#ad7ac74f0a9684e065623f19170695b08">DSSD_Program.c</a></li>
+<li>display_3()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a1e919be8027737be50157a8bffa60da3">DSSD_Program.c</a></li>
+<li>display_4()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a3b107ea96d56aa292ff449ad47cad80c">DSSD_Program.c</a></li>
+<li>display_5()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#ac161e5dc79994e27c41dcceb69067aed">DSSD_Program.c</a></li>
+<li>display_6()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a52705e7a292d7d02664d62c2d0d24f6f">DSSD_Program.c</a></li>
+<li>display_7()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a7fcf68f106f6995f8cbba335d39f6593">DSSD_Program.c</a></li>
+<li>display_8()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#adbc8893a8ac6826fc18aaf0c7bafc03a">DSSD_Program.c</a></li>
+<li>display_9()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a130265ed0cbdeb69e8f9e9e538a22a59">DSSD_Program.c</a></li>
+<li>displaySelected()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a5584e115679b24daf6b3003acf317977">DSSD_Program.c</a></li>
 <li>DSSD_u8Status()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#aef9de12e0f6fad5af76aba8595cc2d80">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#aef9de12e0f6fad5af76aba8595cc2d80">DSSD_Program.c</a></li>
 <li>DSSD_voidDisableAll()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#aa84ab82fe079b0c462b106311eb12001">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#aa84ab82fe079b0c462b106311eb12001">DSSD_Program.c</a></li>
 <li>DSSD_voidDisplay()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#a3ff716dcf68a7e8b413932e87799fe2f">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f">DSSD_Program.c</a></li>
+<li>DSSD_voidDisplayOnes()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#ab9236c665116a4975175bedb257992bc">DSSD_Program.c</a></li>
+<li>DSSD_voidDisplayTens()&#160;:&#160;<a class="el" href="_d_s_s_d___program_8c.html#a142e619d95b2b6afebaaf1fc3a9c1880">DSSD_Program.c</a></li>
 <li>DSSD_voidEN1()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#aadd2690a78926ff0d1aa465aae833851">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#aadd2690a78926ff0d1aa465aae833851">DSSD_Program.c</a></li>
 <li>DSSD_voidEN2()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#a3bac1cbfe1873b477ef4cacc093532f6">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#a3bac1cbfe1873b477ef4cacc093532f6">DSSD_Program.c</a></li>
 <li>DSSD_voidInit()&#160;:&#160;<a class="el" href="_d_s_s_d___interface_8h.html#ac86cddc8b27891ecd418fc9328a5fd07">DSSD_Interface.h</a>, <a class="el" href="_d_s_s_d___program_8c.html#ac86cddc8b27891ecd418fc9328a5fd07">DSSD_Program.c</a></li>
@@ -175,6 +191,14 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 <li>IIC_enumStopCondition()&#160;:&#160;<a class="el" href="_i_i_c___interface_8h.html#a2400c8e626ccee4a498005ecbdfa443b">IIC_Interface.h</a>, <a class="el" href="_i_i_c___program_8c.html#a2400c8e626ccee4a498005ecbdfa443b">IIC_Program.c</a></li>
 <li>IIC_voidInit()&#160;:&#160;<a class="el" href="_i_i_c___interface_8h.html#aa015af0f91fc272ebe58e0785fe1b85a">IIC_Interface.h</a>, <a class="el" href="_i_i_c___program_8c.html#aa015af0f91fc272ebe58e0785fe1b85a">IIC_Program.c</a></li>
 <li>ISR()&#160;:&#160;<a class="el" href="_e_x_t___i_n_t___program_8c.html#afea150fcd685610cb9f7672fce361e53">EXT_INT_Program.c</a>, <a class="el" href="_timer0___program_8c.html#add2d7cdddfb682dcc0391e60cf42c7d6">Timer0_Program.c</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LED_voidInit()&#160;:&#160;<a class="el" href="_l_e_d___interface_8h.html#a448d30cf0e746258812b24f70758fab6">LED_Interface.h</a>, <a class="el" href="_l_e_d___program_8c.html#a448d30cf0e746258812b24f70758fab6">LED_Program.c</a></li>
+<li>LED_voidToggle()&#160;:&#160;<a class="el" href="_l_e_d___interface_8h.html#a059a35da0a51bf77a10a5218a25de2c3">LED_Interface.h</a>, <a class="el" href="_l_e_d___program_8c.html#a059a35da0a51bf77a10a5218a25de2c3">LED_Program.c</a></li>
+<li>LED_voidTurnOff()&#160;:&#160;<a class="el" href="_l_e_d___interface_8h.html#afcb83406ea051c90f5e4e3a2eea09445">LED_Interface.h</a>, <a class="el" href="_l_e_d___program_8c.html#afcb83406ea051c90f5e4e3a2eea09445">LED_Program.c</a></li>
+<li>LED_voidTurnOn()&#160;:&#160;<a class="el" href="_l_e_d___interface_8h.html#a71a8cea3c3f3524e71105d2a06644597">LED_Interface.h</a>, <a class="el" href="_l_e_d___program_8c.html#a71a8cea3c3f3524e71105d2a06644597">LED_Program.c</a></li>
 </ul>
 
 

@@ -8,7 +8,7 @@
  * \addtogroup PushButton
  * PushButton module driver
  * @{
- * \file BushBtn_Interface.h
+ * \file PushBtn_Interface.h
  * \brief this file contains function prototypes for the PushButton module
  * \author Mustafa M.Montaser
  * \version v1.0.0

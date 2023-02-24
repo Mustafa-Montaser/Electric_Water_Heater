@@ -1,0 +1,39 @@
+<map id="App_DefaultTimerHandler" name="App_DefaultTimerHandler">
+<area shape="rect" id="node1" title="Default timer handler." alt="" coords="5,651,173,676"/>
+<area shape="rect" id="node2" href="$_cooler___program_8c.html#a69404c1e42a3a9822492b659630da8cb" title="Turn OFF the Cooler." alt="" coords="696,399,825,424"/>
+<area shape="rect" id="node4" href="$_cooler___program_8c.html#a7984adde134e46bb7ce6ad2460c2a16f" title="Turn ON the Cooler." alt="" coords="695,751,826,776"/>
+<area shape="rect" id="node6" href="$_d_s_s_d___program_8c.html#aef9de12e0f6fad5af76aba8595cc2d80" title="get current state [ON, OFF]" alt="" coords="255,803,373,828"/>
+<area shape="rect" id="node7" href="$_d_s_s_d___program_8c.html#aa84ab82fe079b0c462b106311eb12001" title="Disable DSSD [act as turn it OFF]." alt="" coords="688,651,833,676"/>
+<area shape="rect" id="node8" href="$_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f" title="Display Number from 2 digits." alt="" coords="249,550,379,575"/>
+<area shape="rect" id="node22" href="$_d_s_s_d___program_8c.html#aadd2690a78926ff0d1aa465aae833851" title="Enable EN1 to display the right digit." alt="" coords="705,600,817,626"/>
+<area shape="rect" id="node25" href="$_e_e_p_r_o_m___program_8c.html#abfb07ac9d31192be80ca5e2019a1842f" title="writing byte data into EEPROM" alt="" coords="231,860,397,886"/>
+<area shape="rect" id="node30" href="$_heater_8c.html#a7c39f6c5c87d71d6457ce4d1e94e08ab" title="Heater turn OFF." alt="" coords="249,475,379,500"/>
+<area shape="rect" id="node31" href="$_heater_8c.html#a3998eb30bd3c850c4aae6b57e7db9040" title="Heater turn ON." alt="" coords="695,702,826,727"/>
+<area shape="rect" id="node32" href="$_l_e_d___program_8c.html#a059a35da0a51bf77a10a5218a25de2c3" title="toggle LED" alt="" coords="257,936,371,962"/>
+<area shape="rect" id="node34" href="$_l_e_d___program_8c.html#afcb83406ea051c90f5e4e3a2eea09445" title="turn off LED" alt="" coords="255,122,373,147"/>
+<area shape="rect" id="node35" href="$_l_e_d___program_8c.html#a71a8cea3c3f3524e71105d2a06644597" title="turn on LED" alt="" coords="701,239,820,264"/>
+<area shape="rect" id="node36" href="$_sensor_l_m35___program_8c.html#ae5da270459d968d5689172b1f75e7e1c" title="read current temperature" alt="" coords="221,1039,407,1064"/>
+<area shape="rect" id="node3" href="$_d_i_o___program_8c.html#a652e0f9ac0f74e77a1328ed5397f994b" title="clear pin value to 0" alt="" coords="881,599,1036,624"/>
+<area shape="rect" id="node5" href="$_d_i_o___program_8c.html#a1fcd4ae41f925b9705d9819d6a44cf60" title=" " alt="" coords="886,651,1031,676"/>
+<area shape="rect" id="node9" href="$_d_s_s_d___program_8c.html#ab9236c665116a4975175bedb257992bc" title="display right digit" alt="" coords="467,550,628,575"/>
+<area shape="rect" id="node23" href="$_d_s_s_d___program_8c.html#a142e619d95b2b6afebaaf1fc3a9c1880" title="display left digit" alt="" coords="468,500,627,526"/>
+<area shape="rect" id="node10" href="$_d_s_s_d___program_8c.html#a5584e115679b24daf6b3003acf317977" title="display the selected number" alt="" coords="703,350,818,375"/>
+<area shape="rect" id="node11" href="$_d_s_s_d___program_8c.html#a9e1cba522b6192299fbcfcfb368f732b" title="display number 0" alt="" coords="920,254,997,279"/>
+<area shape="rect" id="node13" href="$_d_s_s_d___program_8c.html#acf73cbd28600ed6e2600db1aaeb1c0a0" title="display number 1" alt="" coords="920,303,997,328"/>
+<area shape="rect" id="node14" href="$_d_s_s_d___program_8c.html#ad7ac74f0a9684e065623f19170695b08" title="display number 2" alt="" coords="920,352,997,378"/>
+<area shape="rect" id="node15" href="$_d_s_s_d___program_8c.html#a1e919be8027737be50157a8bffa60da3" title="display number 3" alt="" coords="920,402,997,427"/>
+<area shape="rect" id="node16" href="$_d_s_s_d___program_8c.html#a3b107ea96d56aa292ff449ad47cad80c" title="display number 4" alt="" coords="920,451,997,476"/>
+<area shape="rect" id="node17" href="$_d_s_s_d___program_8c.html#ac161e5dc79994e27c41dcceb69067aed" title="display number 5" alt="" coords="920,500,997,526"/>
+<area shape="rect" id="node18" href="$_d_s_s_d___program_8c.html#a52705e7a292d7d02664d62c2d0d24f6f" title="display number 6" alt="" coords="920,550,997,575"/>
+<area shape="rect" id="node19" href="$_d_s_s_d___program_8c.html#a7fcf68f106f6995f8cbba335d39f6593" title="display number 7" alt="" coords="920,106,997,131"/>
+<area shape="rect" id="node20" href="$_d_s_s_d___program_8c.html#adbc8893a8ac6826fc18aaf0c7bafc03a" title="display number 8" alt="" coords="920,155,997,180"/>
+<area shape="rect" id="node21" href="$_d_s_s_d___program_8c.html#a130265ed0cbdeb69e8f9e9e538a22a59" title="display number 9" alt="" coords="920,204,997,230"/>
+<area shape="rect" id="node12" href="$_d_i_o___program_8c.html#a0ee70689118e901ab1a41ebb558cca71" title="writing bit value" alt="" coords="1084,279,1240,304"/>
+<area shape="rect" id="node24" href="$_d_s_s_d___program_8c.html#a3bac1cbfe1873b477ef4cacc093532f6" title="Enable EN2 to display the left digit." alt="" coords="705,551,817,576"/>
+<area shape="rect" id="node26" href="$_i_i_c___program_8c.html#ae1668128d1e8336a336d75a485557176" title="sending byte of data" alt="" coords="481,803,614,828"/>
+<area shape="rect" id="node27" href="$_i_i_c___program_8c.html#aa97244d3999bcd7287ed3f3f86b0b52a" title="sending slave address with write operation" alt="" coords="455,853,640,893"/>
+<area shape="rect" id="node28" href="$_i_i_c___program_8c.html#aa10eb50a9482d4f229805fc5a308249d" title="starting condition" alt="" coords="468,918,627,943"/>
+<area shape="rect" id="node29" href="$_i_i_c___program_8c.html#a2400c8e626ccee4a498005ecbdfa443b" title="stop condition" alt="" coords="469,967,626,992"/>
+<area shape="rect" id="node33" href="$_d_i_o___program_8c.html#a5e19c31b072b5610a5c66262e8b5f6ab" title="toggle pin value" alt="" coords="466,1016,629,1042"/>
+<area shape="rect" id="node37" href="$_a_d_c___program_8c.html#a5605783722042db661fa49329d7aaa66" title="reading ADC converted value (used only in case polling mode)" alt="" coords="494,1066,601,1091"/>
+</map>

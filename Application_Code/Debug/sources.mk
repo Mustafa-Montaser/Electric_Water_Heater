@@ -20,6 +20,7 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+. \
 Drivers/HAL/Cooler \
 Drivers/HAL/DSSD \
 Drivers/HAL/EEPROM \
@@ -33,5 +34,4 @@ Drivers/MCAL/ExtInt \
 Drivers/MCAL/GIE \
 Drivers/MCAL/IIC \
 Drivers/MCAL/Timer0 \
-. \
 

@@ -1,0 +1,6 @@
+<map id="LED" name="LED">
+<area shape="rect" id="node1" href="$group___cooler.html" title=" " alt="" coords="302,13,361,38"/>
+<area shape="rect" id="node2" href="$group___h_a_l.html" title=" " alt="" coords="5,43,52,69"/>
+<area shape="rect" id="node4" title=" " alt="" coords="101,43,148,69"/>
+<area shape="rect" id="node3" href="$group___heater.html" title=" " alt="" coords="301,73,361,98"/>
+</map>

@@ -1,7 +1,25 @@
 <map id="DIO_voidWritePinValue" name="DIO_voidWritePinValue">
-<area shape="rect" id="node1" title="writing bit value" alt="" coords="584,5,740,31"/>
-<area shape="rect" id="node2" href="$_e_x_t___i_n_t___program_8c.html#a18ac477f14abb08086ff886ef726e75e" title="Initialise External_Interrupt." alt="" coords="433,5,536,31"/>
-<area shape="rect" id="node3" href="$_push_btn___program_8c.html#ac4aaabbb33d812e8021c418ee1593075" title="Initialise the push button." alt="" coords="267,5,385,31"/>
-<area shape="rect" id="node4" href="$main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
-<area shape="rect" id="node5" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node1" title="writing bit value" alt="" coords="1209,304,1365,329"/>
+<area shape="rect" id="node2" href="$_d_s_s_d___program_8c.html#a9e1cba522b6192299fbcfcfb368f732b" title="display number 0" alt="" coords="1071,156,1149,181"/>
+<area shape="rect" id="node10" href="$_d_s_s_d___program_8c.html#acf73cbd28600ed6e2600db1aaeb1c0a0" title="display number 1" alt="" coords="1071,205,1149,231"/>
+<area shape="rect" id="node11" href="$_d_s_s_d___program_8c.html#ad7ac74f0a9684e065623f19170695b08" title="display number 2" alt="" coords="1071,255,1149,280"/>
+<area shape="rect" id="node12" href="$_d_s_s_d___program_8c.html#a1e919be8027737be50157a8bffa60da3" title="display number 3" alt="" coords="1071,304,1149,329"/>
+<area shape="rect" id="node13" href="$_d_s_s_d___program_8c.html#a3b107ea96d56aa292ff449ad47cad80c" title="display number 4" alt="" coords="1071,353,1149,379"/>
+<area shape="rect" id="node14" href="$_d_s_s_d___program_8c.html#ac161e5dc79994e27c41dcceb69067aed" title="display number 5" alt="" coords="1071,403,1149,428"/>
+<area shape="rect" id="node15" href="$_d_s_s_d___program_8c.html#a52705e7a292d7d02664d62c2d0d24f6f" title="display number 6" alt="" coords="1071,452,1149,477"/>
+<area shape="rect" id="node16" href="$_d_s_s_d___program_8c.html#a7fcf68f106f6995f8cbba335d39f6593" title="display number 7" alt="" coords="1071,501,1149,527"/>
+<area shape="rect" id="node17" href="$_d_s_s_d___program_8c.html#adbc8893a8ac6826fc18aaf0c7bafc03a" title="display number 8" alt="" coords="1071,551,1149,576"/>
+<area shape="rect" id="node18" href="$_d_s_s_d___program_8c.html#a130265ed0cbdeb69e8f9e9e538a22a59" title="display number 9" alt="" coords="1071,107,1149,132"/>
+<area shape="rect" id="node19" href="$_e_x_t___i_n_t___program_8c.html#a18ac477f14abb08086ff886ef726e75e" title="Initialise External_Interrupt." alt="" coords="1059,5,1161,31"/>
+<area shape="rect" id="node21" href="$_l_e_d___program_8c.html#afcb83406ea051c90f5e4e3a2eea09445" title="turn off LED" alt="" coords="511,168,628,193"/>
+<area shape="rect" id="node23" href="$_l_e_d___program_8c.html#a71a8cea3c3f3524e71105d2a06644597" title="turn on LED" alt="" coords="892,539,1011,564"/>
+<area shape="rect" id="node3" href="$_d_s_s_d___program_8c.html#a5584e115679b24daf6b3003acf317977" title="display the selected number" alt="" coords="894,304,1009,329"/>
+<area shape="rect" id="node4" href="$_d_s_s_d___program_8c.html#ab9236c665116a4975175bedb257992bc" title="display right digit" alt="" coords="683,255,844,280"/>
+<area shape="rect" id="node9" href="$_d_s_s_d___program_8c.html#a142e619d95b2b6afebaaf1fc3a9c1880" title="display left digit" alt="" coords="684,304,843,329"/>
+<area shape="rect" id="node5" href="$_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f" title="Display Number from 2 digits." alt="" coords="504,255,635,280"/>
+<area shape="rect" id="node6" href="$_app_8c.html#ad4e9e0ff63dcbdbed5ae0de430a8554b" title="Default timer handler." alt="" coords="277,217,445,243"/>
+<area shape="rect" id="node7" href="$_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,168,219,193"/>
+<area shape="rect" id="node8" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,168,56,193"/>
+<area shape="rect" id="node20" href="$_push_btn___program_8c.html#ac4aaabbb33d812e8021c418ee1593075" title="Initialise the push button." alt="" coords="704,5,823,31"/>
+<area shape="rect" id="node22" href="$_app_8c.html#a70e4319eee22e58ec0663f661fb5d771" title="Default ON/OFF button handler." alt="" coords="267,168,456,193"/>
 </map>

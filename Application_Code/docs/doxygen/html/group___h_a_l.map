@@ -1,10 +1,11 @@
 <map id="HAL" name="HAL">
 <area shape="rect" id="node1" href="$group___cooler.html" title=" " alt="" coords="227,5,286,31"/>
 <area shape="rect" id="node2" href="$group___d_s_s_d.html" title=" " alt="" coords="227,55,286,80"/>
-<area shape="rect" id="node3" href="$group___drivers.html" title=" " alt="" coords="5,129,67,155"/>
-<area shape="rect" id="node5" title=" " alt="" coords="115,129,161,155"/>
+<area shape="rect" id="node3" href="$group___drivers.html" title=" " alt="" coords="5,153,67,179"/>
+<area shape="rect" id="node5" title=" " alt="" coords="115,153,161,179"/>
 <area shape="rect" id="node4" href="$group___e_e_p_r_o_m.html" title=" " alt="" coords="217,104,296,129"/>
 <area shape="rect" id="node6" href="$group___heater.html" title=" " alt="" coords="227,153,287,179"/>
-<area shape="rect" id="node7" href="$group___push_button.html" title=" " alt="" coords="211,203,302,228"/>
-<area shape="rect" id="node8" href="$group___sensor_l_m35.html" title=" " alt="" coords="209,252,304,277"/>
+<area shape="rect" id="node7" href="$group___l_e_d.html" title=" " alt="" coords="233,203,280,228"/>
+<area shape="rect" id="node8" href="$group___push_button.html" title=" " alt="" coords="211,252,302,277"/>
+<area shape="rect" id="node9" href="$group___sensor_l_m35.html" title=" " alt="" coords="209,301,304,327"/>
 </map>

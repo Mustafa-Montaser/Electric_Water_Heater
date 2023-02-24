@@ -54,7 +54,7 @@ PROJECT_NUMBER         = 2.4.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "Control water temperature degree depend on LM35 sensor. And Cooler fan and heater"
+PROJECT_BRIEF          =
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -68,7 +68,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/docs/doxygen
+OUTPUT_DIRECTORY       = E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/docs/doxygen
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -505,25 +505,25 @@ EXTRACT_ALL            = YES
 # be included in the documentation.
 # The default value is: NO.
 
-EXTRACT_PRIVATE        = NO
+EXTRACT_PRIVATE        = YES
 
 # If the EXTRACT_PRIV_VIRTUAL tag is set to YES, documented private virtual
 # methods of a class will be included in the documentation.
 # The default value is: NO.
 
-EXTRACT_PRIV_VIRTUAL   = NO
+EXTRACT_PRIV_VIRTUAL   = YES
 
 # If the EXTRACT_PACKAGE tag is set to YES, all members with package or internal
 # scope will be included in the documentation.
 # The default value is: NO.
 
-EXTRACT_PACKAGE        = NO
+EXTRACT_PACKAGE        = YES
 
 # If the EXTRACT_STATIC tag is set to YES, all static members of a file will be
 # included in the documentation.
 # The default value is: NO.
 
-EXTRACT_STATIC         = NO
+EXTRACT_STATIC         = YES
 
 # If the EXTRACT_LOCAL_CLASSES tag is set to YES, classes (and structs) defined
 # locally in source files will be included in the documentation. If set to NO,
@@ -539,7 +539,7 @@ EXTRACT_LOCAL_CLASSES  = YES
 # included.
 # The default value is: NO.
 
-EXTRACT_LOCAL_METHODS  = NO
+EXTRACT_LOCAL_METHODS  = YES
 
 # If this flag is set to YES, the members of anonymous namespaces will be
 # extracted and appear in the documentation as a namespace called
@@ -548,7 +548,7 @@ EXTRACT_LOCAL_METHODS  = NO
 # are hidden.
 # The default value is: NO.
 
-EXTRACT_ANON_NSPACES   = NO
+EXTRACT_ANON_NSPACES   = YES
 
 # If this flag is set to YES, the name of an unnamed parameter in a declaration
 # will be determined by the corresponding definition. By default unnamed
@@ -917,23 +917,50 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/Cooler \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/DSSD \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/EEPROM \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/Heater \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/PushButton \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/HAL/SensorLM35 \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/LIB \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/ADC \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/DIO \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/ExtInt \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/IIC \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/Timer0 \
-                         E:/1-ENGINEERING/PROJECTS/Electric_Water_Heater/Drivers/MCAL/GIE
+INPUT                  = E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/App.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/App.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Macros.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/main.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/Cooler/Cooler_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/Cooler/Cooler_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/DSSD/DSSD_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/DSSD/DSSD_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/DSSD/DSSD_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/EEPROM/EEPROM_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/EEPROM/EEPROM_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/Heater/Heater.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/Heater/Heater.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/LED/LED_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/LED/LED_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/PushButton/PushBtn_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/PushButton/PushBtn_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/PushButton/PushBtn_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/SensorLM35/SensorLM35_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/HAL/SensorLM35/SensorLM35_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/LIB/BitMath.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/LIB/StdTypes.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ADC/ADC_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ADC/ADC_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ADC/ADC_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ADC/ADC_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/DIO/DIO_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/DIO/DIO_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/DIO/DIO_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ExtInt/EXT_INT_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ExtInt/EXT_INT_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ExtInt/EXT_INT_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/ExtInt/EXT_INT_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/GIE/GIE_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/GIE/GIE_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/GIE/GIE_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/IIC/IIC_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/IIC/IIC_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/IIC/IIC_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/IIC/IIC_Program.c \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/Timer0/Timer0_Config.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/Timer0/Timer0_Interface.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/Timer0/Timer0_Private.h \
+                         E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/Timer0/Timer0_Program.c
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -974,51 +1001,7 @@ INPUT_FILE_ENCODING    =
 # *.vhdl, *.ucf, *.qsf and *.ice.
 
 FILE_PATTERNS          = *.c \
-                         *.cc \
-                         *.cxx \
-                         *.cpp \
-                         *.c++ \
-                         *.java \
-                         *.ii \
-                         *.ixx \
-                         *.ipp \
-                         *.i++ \
-                         *.inl \
-                         *.idl \
-                         *.ddl \
-                         *.odl \
-                         *.h \
-                         *.hh \
-                         *.hxx \
-                         *.hpp \
-                         *.h++ \
-                         *.l \
-                         *.cs \
-                         *.d \
-                         *.php \
-                         *.php4 \
-                         *.php5 \
-                         *.phtml \
-                         *.inc \
-                         *.m \
-                         *.markdown \
-                         *.md \
-                         *.mm \
-                         *.dox \
-                         *.py \
-                         *.pyw \
-                         *.f90 \
-                         *.f95 \
-                         *.f03 \
-                         *.f08 \
-                         *.f18 \
-                         *.f \
-                         *.for \
-                         *.vhd \
-                         *.vhdl \
-                         *.ucf \
-                         *.qsf \
-                         *.ice
+                         *.h
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
@@ -2268,7 +2251,7 @@ XML_NS_MEMB_FILE_SCOPE = NO
 # that can be used to generate PDF.
 # The default value is: NO.
 
-GENERATE_DOCBOOK       = YES
+GENERATE_DOCBOOK       = NO
 
 # The DOCBOOK_OUTPUT tag is used to specify where the Docbook pages will be put.
 # If a relative path is entered the value of OUTPUT_DIRECTORY will be put in

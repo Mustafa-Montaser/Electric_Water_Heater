@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__push_btn___config_8h_source" xml:lang="en-US">
-<title>PushBtn_Config.h</title>
-<indexterm><primary>Drivers/HAL/PushButton/PushBtn_Config.h</primary></indexterm>
-Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
-25 <emphasis role="preprocessor">#define&#32;PUSH_BTN_CONNECTION&#32;&#32;&#32;&#32;&#32;PUSH_BTN_PULL_DOWN</emphasis>
-</programlisting></section>

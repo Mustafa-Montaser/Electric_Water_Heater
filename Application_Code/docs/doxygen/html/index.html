@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Electric Water Heater: Electric Water Heater</title>
+<title>Electric Water Heater: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,6 @@
   <td id="projectalign">
    <div id="projectname">Electric Water Heater<span id="projectnumber">&#160;2.4.0</span>
    </div>
-   <div id="projectbrief">Control water temperature degree depend on LM35 sensor. And Cooler fan and heater</div>
   </td>
  </tr>
  </tbody>
@@ -89,88 +88,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Electric Water Heater </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">Electric Water Heater Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Mustafa M.Montaser</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>19-Feb-2023</dd></dl>
-<hr  />
- <h3><a class="anchor" id="autotoc_md0"></a>
-Role of the project</h3>
-<hr  />
-<p> The project idea in simple points:</p>
-<ul>
-<li>Control water temperature using heater and cooler.</li>
-<li>Getting water temperature value using LM35 sensor.</li>
-<li>Depend on the last 10 readings, cooler or heater is turned ON/OFF.</li>
-<li>Also current temperature is displayed using 7 Segments 2 digits display.</li>
-<li>There are two push buttons to control temperature set point and a push button to turn system ON or OFF.</li>
-<li>An EEPROM is used to store the last temperature set point which set by the user so that when system is turned on after off the last temperature set point is still in the system operation.</li>
-<li>A LED is used to dedicate the state of cooler or heater. When it is turned on, that means the heater is on. When it blinks, that means the cooler is on.</li>
-</ul>
-<blockquote class="doxtable">
-<p>&zwj;This project depend on AVR timer for operation and external interrupt for push buttons. </p>
-</blockquote>
-<hr  />
- <h3><a class="anchor" id="autotoc_md1"></a>
-Specifications for each hardware module:</h3>
-<hr  />
- <h4><a class="anchor" id="autotoc_md2"></a>
-1. Temperature Setting:</h4>
-<ul>
-<li>The <b>UP</b> or <b>DOWN</b> buttons are used to change the required water temperature (set temperature).</li>
-<li>The first <b>UPp</b> or <b>DOWN</b> button press, enters the temperature setting mode.</li>
-<li>After entering temperature setting mode, a single <b>UP</b> button press increase the set temperature by 5 degrees.</li>
-<li>After entering temperature setting mode, a single <b>DOWN</b> button press decrease the set temperature by 5 degrees.</li>
-<li>The minimum possible set temperature is 35 degrees.</li>
-<li>The maximum possible set temperature is 75 degrees.</li>
-<li>The <b>External EEPROM</b> should save the set temperature once set.</li>
-<li>If the electric water heater is turned OFF then ON, the stored set temperature should be retrieved from the <b>External EEPROM</b>.</li>
-<li>The initial temperature is 60 degrees.</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md3"></a>
-2. ON/OFF Behavior:</h4>
-<ul>
-<li>If power is connected to the heater,the electric water heater is in OFF state.</li>
-<li>If the <b>ON/OFF</b> button is released and the electric water heater is in OFF state, the electric water heater goes to ON state.</li>
-<li>If the <b>ON/OFF</b> button is released and the electric water heater is in ON state, the electric water heater goes to OFF state.</li>
-<li>In the OFF state, all display should be turned OFF</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md4"></a>
-3. Temperature Sensing</h4>
-<ul>
-<li>The temperature sensor measures the water temperature.</li>
-<li>The water temperature should increase, if the <b>Heating Element</b> is ON.</li>
-<li>The water temperature should decrease, if the <b>Cooling Element</b> is ON.</li>
-<li>Temperature should be sensed once every 100 ms.</li>
-<li>The decision to turn ON or OFF either the <b>Heating Element</b> or the <b>Cooling Element</b> based on the average of the last 10 temperature readings.</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md5"></a>
-4. Heating/Cooling Elements</h4>
-<ul>
-<li>The <b>Heating Element</b> should be turned ON, if the current water temperature is less than the set temperature by 5 degrees.</li>
-<li>The <b>Cooling Element</b> should be turned OFF, if the current water temperature is less than the set temperature by 5 degrees.</li>
-<li>The <b>Heating Element</b> should be turned OFF, if the current water temperature is greater than the set temperature by 5 degrees.</li>
-<li>The <b>Cooling Element</b> should be turned ON, if the current water temperature is greater than the set temperature by 5 degrees.</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md6"></a>
-5. Seven Segments</h4>
-<ul>
-<li>Seven segment by default show the current water temperature or the set temperature.</li>
-<li>By default, the 2 seven segment display are show the current water temperature.</li>
-<li>If the electric water heater is in the temperature setting mode, the 2 seven segment displays should blink every 1 second and show the set temperature.</li>
-<li>In the temperature setting mode, every change in the set temperature should be reflected on the 2 seven segment displays.</li>
-<li>The 2 seven segment display should exit the temperature setting mode, if the</li>
-<li><b>UP</b> and <b>DOWN</b> buttons are not pressed for 5 seconds</li>
-</ul>
-<h4><a class="anchor" id="autotoc_md7"></a>
-6. Heating Element Led</h4>
-<ul>
-<li>If the <b>Heating Element</b> is ON, the <b>Heating Element Led</b> should blink every 1 second.</li>
-<li>If the <b>Cooling Element</b> is ON, the <b>Heating Element Led</b> should be ON. </li>
-</ul>
-</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

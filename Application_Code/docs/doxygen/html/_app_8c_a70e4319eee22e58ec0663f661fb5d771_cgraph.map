@@ -1,0 +1,22 @@
+<map id="App_DefaultOnOffBtnHandler" name="App_DefaultOnOffBtnHandler">
+<area shape="rect" id="node1" title="Default ON/OFF button handler." alt="" coords="5,179,195,204"/>
+<area shape="rect" id="node2" href="$_app_8c.html#a0d56c96e8f032c3b7d8004721833c7a3" title="Start the system timer." alt="" coords="257,5,374,31"/>
+<area shape="rect" id="node4" href="$_app_8c.html#ada3ae620f4ef1514bb732d8b332fe6db" title="Stop the system timer." alt="" coords="260,55,371,80"/>
+<area shape="rect" id="node6" href="$_cooler___program_8c.html#a69404c1e42a3a9822492b659630da8cb" title="Turn OFF the Cooler." alt="" coords="251,104,380,129"/>
+<area shape="rect" id="node8" href="$_d_s_s_d___program_8c.html#aa84ab82fe079b0c462b106311eb12001" title="Disable DSSD [act as turn it OFF]." alt="" coords="243,203,388,228"/>
+<area shape="rect" id="node10" href="$_heater_8c.html#a7c39f6c5c87d71d6457ce4d1e94e08ab" title="Heater turn OFF." alt="" coords="250,153,381,179"/>
+<area shape="rect" id="node11" href="$_l_e_d___program_8c.html#afcb83406ea051c90f5e4e3a2eea09445" title="turn off LED" alt="" coords="257,252,374,277"/>
+<area shape="rect" id="node13" href="$_push_btn___program_8c.html#aa445f6b89806ce70aad535dae51bf990" title="disable push button" alt="" coords="243,301,387,327"/>
+<area shape="rect" id="node17" href="$_push_btn___program_8c.html#ad51f004ddf754bb6a591a9d45ec621a1" title="enable push button" alt="" coords="245,460,386,485"/>
+<area shape="rect" id="node3" href="$_timer0___program_8c.html#a64940e18b7cf67a59bbd49acc3906d7a" title="start timing" alt="" coords="455,5,573,31"/>
+<area shape="rect" id="node5" href="$_timer0___program_8c.html#ae8616a7fa3e2e96becdfbe23b216808e" title="stop time" alt="" coords="455,55,573,80"/>
+<area shape="rect" id="node7" href="$_d_i_o___program_8c.html#a652e0f9ac0f74e77a1328ed5397f994b" title="clear pin value to 0" alt="" coords="437,128,591,153"/>
+<area shape="rect" id="node9" href="$_d_i_o___program_8c.html#a1fcd4ae41f925b9705d9819d6a44cf60" title=" " alt="" coords="441,189,587,215"/>
+<area shape="rect" id="node12" href="$_d_i_o___program_8c.html#a0ee70689118e901ab1a41ebb558cca71" title="writing bit value" alt="" coords="436,239,592,264"/>
+<area shape="rect" id="node14" href="$_e_x_t___i_n_t___program_8c.html#ade306a0f1cd6097df0a7230d96d7b277" title="Disable external interrupt 0." alt="" coords="439,288,589,313"/>
+<area shape="rect" id="node15" href="$_e_x_t___i_n_t___program_8c.html#af813ec757fea39dc90e32e0ed5a01b30" title="Disable external interrupt 1." alt="" coords="439,337,589,363"/>
+<area shape="rect" id="node16" href="$_e_x_t___i_n_t___program_8c.html#a48bfcafc0d641282f9f10328088a8bc8" title="Disable external interrupt 2." alt="" coords="439,387,589,412"/>
+<area shape="rect" id="node18" href="$_e_x_t___i_n_t___program_8c.html#a788a635c2ab19e99f702fbda7c80d225" title="Enable external interrupt 0." alt="" coords="441,436,587,461"/>
+<area shape="rect" id="node19" href="$_e_x_t___i_n_t___program_8c.html#a07fb699abd32f8c902e6dbab10d582a7" title="Enable external interrupt1." alt="" coords="441,485,587,511"/>
+<area shape="rect" id="node20" href="$_e_x_t___i_n_t___program_8c.html#a6955746190e588a795d5a642bb5e336d" title="Enable external interrupt 2." alt="" coords="441,535,587,560"/>
+</map>

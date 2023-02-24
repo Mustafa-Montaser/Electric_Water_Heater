@@ -8,7 +8,7 @@
  * \addtogroup External_Interrupt
  * External_Interrupt module driver
  * @{
- * \file ADC_Program.c
+ * \file EXT_INT_Program.c
  * \brief this file contains contains implementation for the External_Interrupt module
  * \author Mustafa M.Montaser
  * \version v1.0.0

@@ -3,33 +3,33 @@ electric_water_heater.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000365c  00000000  00000000  00000094  2**1
+  0 .text         00003736  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         0000010a  00800060  0000365c  000036f0  2**0
+  1 .data         0000010a  00800060  00003736  000037ca  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          00000028  0080016a  0080016a  000037fa  2**0
+  2 .bss          00000030  0080016a  0080016a  000038d4  2**0
                   ALLOC
-  3 .stab         00004a7c  00000000  00000000  000037fc  2**2
+  3 .stab         00004c38  00000000  00000000  000038d4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  4 .stabstr      0000238d  00000000  00000000  00008278  2**0
+  4 .stabstr      000024ec  00000000  00000000  0000850c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_aranges 000001a0  00000000  00000000  0000a605  2**0
+  5 .debug_aranges 000001a0  00000000  00000000  0000a9f8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_pubnames 000001f5  00000000  00000000  0000a7a5  2**0
+  6 .debug_pubnames 000001f5  00000000  00000000  0000ab98  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_info   00002216  00000000  00000000  0000a99a  2**0
+  7 .debug_info   00002216  00000000  00000000  0000ad8d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000012b8  00000000  00000000  0000cbb0  2**0
+  8 .debug_abbrev 000012b8  00000000  00000000  0000cfa3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_line   00001136  00000000  00000000  0000de68  2**0
+  9 .debug_line   00001136  00000000  00000000  0000e25b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_frame  000001c0  00000000  00000000  0000efa0  2**2
+ 10 .debug_frame  000001c0  00000000  00000000  0000f394  2**2
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_str    000002d2  00000000  00000000  0000f160  2**0
+ 11 .debug_str    000002d2  00000000  00000000  0000f554  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    0000095a  00000000  00000000  0000f432  2**0
+ 12 .debug_loc    0000095a  00000000  00000000  0000f826  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000050  00000000  00000000  0000fd8c  2**0
+ 13 .debug_ranges 00000050  00000000  00000000  00010180  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -69,8 +69,8 @@ Disassembly of section .text:
       60:	11 e0       	ldi	r17, 0x01	; 1
       62:	a0 e6       	ldi	r26, 0x60	; 96
       64:	b0 e0       	ldi	r27, 0x00	; 0
-      66:	ec e5       	ldi	r30, 0x5C	; 92
-      68:	f6 e3       	ldi	r31, 0x36	; 54
+      66:	e6 e3       	ldi	r30, 0x36	; 54
+      68:	f7 e3       	ldi	r31, 0x37	; 55
       6a:	02 c0       	rjmp	.+4      	; 0x70 <.do_copy_data_start>
 
 0000006c <.do_copy_data_loop>:
@@ -92,11 +92,11 @@ Disassembly of section .text:
       7e:	1d 92       	st	X+, r1
 
 00000080 <.do_clear_bss_start>:
-      80:	a2 39       	cpi	r26, 0x92	; 146
+      80:	aa 39       	cpi	r26, 0x9A	; 154
       82:	b1 07       	cpc	r27, r17
       84:	e1 f7       	brne	.-8      	; 0x7e <.do_clear_bss_loop>
-      86:	0e 94 de 16 	call	0x2dbc	; 0x2dbc <main>
-      8a:	0c 94 2c 1b 	jmp	0x3658	; 0x3658 <_exit>
+      86:	0e 94 ea 1a 	call	0x35d4	; 0x35d4 <main>
+      8a:	0c 94 99 1b 	jmp	0x3732	; 0x3732 <_exit>
 
 0000008e <__bad_interrupt>:
       8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -148,7 +148,7 @@ Disassembly of section .text:
       ec:	b0 e0       	ldi	r27, 0x00	; 0
       ee:	eb e7       	ldi	r30, 0x7B	; 123
       f0:	f0 e0       	ldi	r31, 0x00	; 0
-      f2:	0c 94 f5 1a 	jmp	0x35ea	; 0x35ea <__prologue_saves__>
+      f2:	0c 94 62 1b 	jmp	0x36c4	; 0x36c4 <__prologue_saves__>
       f6:	dc 01       	movw	r26, r24
       f8:	2b 01       	movw	r4, r22
       fa:	fa 01       	movw	r30, r20
@@ -473,14 +473,14 @@ Disassembly of section .text:
      378:	cd b7       	in	r28, 0x3d	; 61
      37a:	de b7       	in	r29, 0x3e	; 62
      37c:	e2 e1       	ldi	r30, 0x12	; 18
-     37e:	0c 94 11 1b 	jmp	0x3622	; 0x3622 <__epilogue_restores__>
+     37e:	0c 94 7e 1b 	jmp	0x36fc	; 0x36fc <__epilogue_restores__>
 
 00000382 <__subsf3>:
      382:	a0 e2       	ldi	r26, 0x20	; 32
      384:	b0 e0       	ldi	r27, 0x00	; 0
      386:	e7 ec       	ldi	r30, 0xC7	; 199
      388:	f1 e0       	ldi	r31, 0x01	; 1
-     38a:	0c 94 01 1b 	jmp	0x3602	; 0x3602 <__prologue_saves__+0x18>
+     38a:	0c 94 6e 1b 	jmp	0x36dc	; 0x36dc <__prologue_saves__+0x18>
      38e:	69 83       	std	Y+1, r22	; 0x01
      390:	7a 83       	std	Y+2, r23	; 0x02
      392:	8b 83       	std	Y+3, r24	; 0x03
@@ -518,14 +518,14 @@ Disassembly of section .text:
      3d8:	0e 94 23 05 	call	0xa46	; 0xa46 <__pack_f>
      3dc:	a0 96       	adiw	r28, 0x20	; 32
      3de:	e6 e0       	ldi	r30, 0x06	; 6
-     3e0:	0c 94 1d 1b 	jmp	0x363a	; 0x363a <__epilogue_restores__+0x18>
+     3e0:	0c 94 8a 1b 	jmp	0x3714	; 0x3714 <__epilogue_restores__+0x18>
 
 000003e4 <__addsf3>:
      3e4:	a0 e2       	ldi	r26, 0x20	; 32
      3e6:	b0 e0       	ldi	r27, 0x00	; 0
      3e8:	e8 ef       	ldi	r30, 0xF8	; 248
      3ea:	f1 e0       	ldi	r31, 0x01	; 1
-     3ec:	0c 94 01 1b 	jmp	0x3602	; 0x3602 <__prologue_saves__+0x18>
+     3ec:	0c 94 6e 1b 	jmp	0x36dc	; 0x36dc <__prologue_saves__+0x18>
      3f0:	69 83       	std	Y+1, r22	; 0x01
      3f2:	7a 83       	std	Y+2, r23	; 0x02
      3f4:	8b 83       	std	Y+3, r24	; 0x03
@@ -559,14 +559,14 @@ Disassembly of section .text:
      432:	0e 94 23 05 	call	0xa46	; 0xa46 <__pack_f>
      436:	a0 96       	adiw	r28, 0x20	; 32
      438:	e6 e0       	ldi	r30, 0x06	; 6
-     43a:	0c 94 1d 1b 	jmp	0x363a	; 0x363a <__epilogue_restores__+0x18>
+     43a:	0c 94 8a 1b 	jmp	0x3714	; 0x3714 <__epilogue_restores__+0x18>
 
 0000043e <__mulsf3>:
      43e:	a0 e2       	ldi	r26, 0x20	; 32
      440:	b0 e0       	ldi	r27, 0x00	; 0
      442:	e5 e2       	ldi	r30, 0x25	; 37
      444:	f2 e0       	ldi	r31, 0x02	; 2
-     446:	0c 94 f5 1a 	jmp	0x35ea	; 0x35ea <__prologue_saves__>
+     446:	0c 94 62 1b 	jmp	0x36c4	; 0x36c4 <__prologue_saves__>
      44a:	69 83       	std	Y+1, r22	; 0x01
      44c:	7a 83       	std	Y+2, r23	; 0x02
      44e:	8b 83       	std	Y+3, r24	; 0x03
@@ -806,14 +806,14 @@ Disassembly of section .text:
      626:	0e 94 23 05 	call	0xa46	; 0xa46 <__pack_f>
      62a:	a0 96       	adiw	r28, 0x20	; 32
      62c:	e2 e1       	ldi	r30, 0x12	; 18
-     62e:	0c 94 11 1b 	jmp	0x3622	; 0x3622 <__epilogue_restores__>
+     62e:	0c 94 7e 1b 	jmp	0x36fc	; 0x36fc <__epilogue_restores__>
 
 00000632 <__gtsf2>:
      632:	a8 e1       	ldi	r26, 0x18	; 24
      634:	b0 e0       	ldi	r27, 0x00	; 0
      636:	ef e1       	ldi	r30, 0x1F	; 31
      638:	f3 e0       	ldi	r31, 0x03	; 3
-     63a:	0c 94 01 1b 	jmp	0x3602	; 0x3602 <__prologue_saves__+0x18>
+     63a:	0c 94 6e 1b 	jmp	0x36dc	; 0x36dc <__prologue_saves__+0x18>
      63e:	69 83       	std	Y+1, r22	; 0x01
      640:	7a 83       	std	Y+2, r23	; 0x02
      642:	8b 83       	std	Y+3, r24	; 0x03
@@ -851,14 +851,14 @@ Disassembly of section .text:
      688:	8f ef       	ldi	r24, 0xFF	; 255
      68a:	68 96       	adiw	r28, 0x18	; 24
      68c:	e6 e0       	ldi	r30, 0x06	; 6
-     68e:	0c 94 1d 1b 	jmp	0x363a	; 0x363a <__epilogue_restores__+0x18>
+     68e:	0c 94 8a 1b 	jmp	0x3714	; 0x3714 <__epilogue_restores__+0x18>
 
 00000692 <__gesf2>:
      692:	a8 e1       	ldi	r26, 0x18	; 24
      694:	b0 e0       	ldi	r27, 0x00	; 0
      696:	ef e4       	ldi	r30, 0x4F	; 79
      698:	f3 e0       	ldi	r31, 0x03	; 3
-     69a:	0c 94 01 1b 	jmp	0x3602	; 0x3602 <__prologue_saves__+0x18>
+     69a:	0c 94 6e 1b 	jmp	0x36dc	; 0x36dc <__prologue_saves__+0x18>
      69e:	69 83       	std	Y+1, r22	; 0x01
      6a0:	7a 83       	std	Y+2, r23	; 0x02
      6a2:	8b 83       	std	Y+3, r24	; 0x03
@@ -896,14 +896,14 @@ Disassembly of section .text:
      6e8:	8f ef       	ldi	r24, 0xFF	; 255
      6ea:	68 96       	adiw	r28, 0x18	; 24
      6ec:	e6 e0       	ldi	r30, 0x06	; 6
-     6ee:	0c 94 1d 1b 	jmp	0x363a	; 0x363a <__epilogue_restores__+0x18>
+     6ee:	0c 94 8a 1b 	jmp	0x3714	; 0x3714 <__epilogue_restores__+0x18>
 
 000006f2 <__ltsf2>:
      6f2:	a8 e1       	ldi	r26, 0x18	; 24
      6f4:	b0 e0       	ldi	r27, 0x00	; 0
      6f6:	ef e7       	ldi	r30, 0x7F	; 127
      6f8:	f3 e0       	ldi	r31, 0x03	; 3
-     6fa:	0c 94 01 1b 	jmp	0x3602	; 0x3602 <__prologue_saves__+0x18>
+     6fa:	0c 94 6e 1b 	jmp	0x36dc	; 0x36dc <__prologue_saves__+0x18>
      6fe:	69 83       	std	Y+1, r22	; 0x01
      700:	7a 83       	std	Y+2, r23	; 0x02
      702:	8b 83       	std	Y+3, r24	; 0x03
@@ -941,14 +941,14 @@ Disassembly of section .text:
      748:	81 e0       	ldi	r24, 0x01	; 1
      74a:	68 96       	adiw	r28, 0x18	; 24
      74c:	e6 e0       	ldi	r30, 0x06	; 6
-     74e:	0c 94 1d 1b 	jmp	0x363a	; 0x363a <__epilogue_restores__+0x18>
+     74e:	0c 94 8a 1b 	jmp	0x3714	; 0x3714 <__epilogue_restores__+0x18>
 
 00000752 <__floatsisf>:
      752:	a8 e0       	ldi	r26, 0x08	; 8
      754:	b0 e0       	ldi	r27, 0x00	; 0
      756:	ef ea       	ldi	r30, 0xAF	; 175
      758:	f3 e0       	ldi	r31, 0x03	; 3
-     75a:	0c 94 fe 1a 	jmp	0x35fc	; 0x35fc <__prologue_saves__+0x12>
+     75a:	0c 94 6b 1b 	jmp	0x36d6	; 0x36d6 <__prologue_saves__+0x12>
      75e:	9b 01       	movw	r18, r22
      760:	ac 01       	movw	r20, r24
      762:	83 e0       	ldi	r24, 0x03	; 3
@@ -1033,14 +1033,14 @@ Disassembly of section .text:
      802:	0e 94 23 05 	call	0xa46	; 0xa46 <__pack_f>
      806:	28 96       	adiw	r28, 0x08	; 8
      808:	e9 e0       	ldi	r30, 0x09	; 9
-     80a:	0c 94 1a 1b 	jmp	0x3634	; 0x3634 <__epilogue_restores__+0x12>
+     80a:	0c 94 87 1b 	jmp	0x370e	; 0x370e <__epilogue_restores__+0x12>
 
 0000080e <__fixsfsi>:
      80e:	ac e0       	ldi	r26, 0x0C	; 12
      810:	b0 e0       	ldi	r27, 0x00	; 0
      812:	ed e0       	ldi	r30, 0x0D	; 13
      814:	f4 e0       	ldi	r31, 0x04	; 4
-     816:	0c 94 05 1b 	jmp	0x360a	; 0x360a <__prologue_saves__+0x20>
+     816:	0c 94 72 1b 	jmp	0x36e4	; 0x36e4 <__prologue_saves__+0x20>
      81a:	69 83       	std	Y+1, r22	; 0x01
      81c:	7a 83       	std	Y+2, r23	; 0x02
      81e:	8b 83       	std	Y+3, r24	; 0x03
@@ -1116,14 +1116,14 @@ Disassembly of section .text:
      8ac:	ca 01       	movw	r24, r20
      8ae:	2c 96       	adiw	r28, 0x0c	; 12
      8b0:	e2 e0       	ldi	r30, 0x02	; 2
-     8b2:	0c 94 21 1b 	jmp	0x3642	; 0x3642 <__epilogue_restores__+0x20>
+     8b2:	0c 94 8e 1b 	jmp	0x371c	; 0x371c <__epilogue_restores__+0x20>
 
 000008b6 <__floatunsisf>:
      8b6:	a8 e0       	ldi	r26, 0x08	; 8
      8b8:	b0 e0       	ldi	r27, 0x00	; 0
      8ba:	e1 e6       	ldi	r30, 0x61	; 97
      8bc:	f4 e0       	ldi	r31, 0x04	; 4
-     8be:	0c 94 fd 1a 	jmp	0x35fa	; 0x35fa <__prologue_saves__+0x10>
+     8be:	0c 94 6a 1b 	jmp	0x36d4	; 0x36d4 <__prologue_saves__+0x10>
      8c2:	7b 01       	movw	r14, r22
      8c4:	8c 01       	movw	r16, r24
      8c6:	61 15       	cp	r22, r1
@@ -1235,7 +1235,7 @@ Disassembly of section .text:
      99c:	0e 94 23 05 	call	0xa46	; 0xa46 <__pack_f>
      9a0:	28 96       	adiw	r28, 0x08	; 8
      9a2:	ea e0       	ldi	r30, 0x0A	; 10
-     9a4:	0c 94 19 1b 	jmp	0x3632	; 0x3632 <__epilogue_restores__+0x10>
+     9a4:	0c 94 86 1b 	jmp	0x370c	; 0x370c <__epilogue_restores__+0x10>
 
 000009a8 <__clzsi2>:
      9a8:	ef 92       	push	r14
@@ -1849,7 +1849,7 @@ Disassembly of section .text:
      e0c:	50 e0       	ldi	r21, 0x00	; 0
      e0e:	bc 01       	movw	r22, r24
      e10:	cd 01       	movw	r24, r26
-     e12:	0e 94 94 1a 	call	0x3528	; 0x3528 <__mulsi3>
+     e12:	0e 94 01 1b 	call	0x3602	; 0x3602 <__mulsi3>
      e16:	dc 01       	movw	r26, r24
      e18:	cb 01       	movw	r24, r22
      e1a:	2d 81       	ldd	r18, Y+5	; 0x05
@@ -1858,7 +1858,7 @@ Disassembly of section .text:
      e20:	58 85       	ldd	r21, Y+8	; 0x08
      e22:	bc 01       	movw	r22, r24
      e24:	cd 01       	movw	r24, r26
-     e26:	0e 94 d3 1a 	call	0x35a6	; 0x35a6 <__udivmodsi4>
+     e26:	0e 94 40 1b 	call	0x3680	; 0x3680 <__udivmodsi4>
      e2a:	da 01       	movw	r26, r20
      e2c:	c9 01       	movw	r24, r18
      e2e:	89 83       	std	Y+1, r24	; 0x01
@@ -4024,14 +4024,14 @@ void DIO_voidSetPinMode(DIO_Pin_t Copy_u8Pin, DIO_PinMode_t Copy_u8PinMode) {
     1b0c:	8b 81       	ldd	r24, Y+3	; 0x03
     1b0e:	9a e0       	ldi	r25, 0x0A	; 10
     1b10:	69 2f       	mov	r22, r25
-    1b12:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1b12:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1b16:	89 2f       	mov	r24, r25
     1b18:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     1b1a:	8b 81       	ldd	r24, Y+3	; 0x03
     1b1c:	9a e0       	ldi	r25, 0x0A	; 10
     1b1e:	69 2f       	mov	r22, r25
-    1b20:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1b20:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1b24:	81 50       	subi	r24, 0x01	; 1
     1b26:	89 83       	std	Y+1, r24	; 0x01
 
@@ -4239,14 +4239,14 @@ void DIO_voidSetPinValue(DIO_Pin_t Copy_u8Pin) {
     1c9c:	8b 81       	ldd	r24, Y+3	; 0x03
     1c9e:	9a e0       	ldi	r25, 0x0A	; 10
     1ca0:	69 2f       	mov	r22, r25
-    1ca2:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1ca2:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1ca6:	89 2f       	mov	r24, r25
     1ca8:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     1caa:	8b 81       	ldd	r24, Y+3	; 0x03
     1cac:	9a e0       	ldi	r25, 0x0A	; 10
     1cae:	69 2f       	mov	r22, r25
-    1cb0:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1cb0:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1cb4:	81 50       	subi	r24, 0x01	; 1
     1cb6:	89 83       	std	Y+1, r24	; 0x01
 
@@ -4395,14 +4395,14 @@ void DIO_voidClearPinValue(DIO_Pin_t Copy_u8Pin) {
     1db4:	8b 81       	ldd	r24, Y+3	; 0x03
     1db6:	9a e0       	ldi	r25, 0x0A	; 10
     1db8:	69 2f       	mov	r22, r25
-    1dba:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1dba:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1dbe:	89 2f       	mov	r24, r25
     1dc0:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     1dc2:	8b 81       	ldd	r24, Y+3	; 0x03
     1dc4:	9a e0       	ldi	r25, 0x0A	; 10
     1dc6:	69 2f       	mov	r22, r25
-    1dc8:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1dc8:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1dcc:	81 50       	subi	r24, 0x01	; 1
     1dce:	89 83       	std	Y+1, r24	; 0x01
 
@@ -4555,14 +4555,14 @@ void DIO_voidTogglePinValue(DIO_Pin_t Copy_u8Pin) {
     1ed6:	8b 81       	ldd	r24, Y+3	; 0x03
     1ed8:	9a e0       	ldi	r25, 0x0A	; 10
     1eda:	69 2f       	mov	r22, r25
-    1edc:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1edc:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1ee0:	89 2f       	mov	r24, r25
     1ee2:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     1ee4:	8b 81       	ldd	r24, Y+3	; 0x03
     1ee6:	9a e0       	ldi	r25, 0x0A	; 10
     1ee8:	69 2f       	mov	r22, r25
-    1eea:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1eea:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1eee:	81 50       	subi	r24, 0x01	; 1
     1ef0:	89 83       	std	Y+1, r24	; 0x01
 
@@ -4711,14 +4711,14 @@ void DIO_voidWritePinValue(DIO_Pin_t Copy_u8Pin, DIO_PinValue_t Copy_u8Value) {
     1ff0:	8b 81       	ldd	r24, Y+3	; 0x03
     1ff2:	9a e0       	ldi	r25, 0x0A	; 10
     1ff4:	69 2f       	mov	r22, r25
-    1ff6:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    1ff6:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     1ffa:	89 2f       	mov	r24, r25
     1ffc:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     1ffe:	8b 81       	ldd	r24, Y+3	; 0x03
     2000:	9a e0       	ldi	r25, 0x0A	; 10
     2002:	69 2f       	mov	r22, r25
-    2004:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    2004:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     2008:	81 50       	subi	r24, 0x01	; 1
     200a:	89 83       	std	Y+1, r24	; 0x01
 
@@ -4926,14 +4926,14 @@ DIO_PinValue_t DIO_u8GetPinValue(DIO_Pin_t Copy_u8Pin) {
     2180:	8c 81       	ldd	r24, Y+4	; 0x04
     2182:	9a e0       	ldi	r25, 0x0A	; 10
     2184:	69 2f       	mov	r22, r25
-    2186:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    2186:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     218a:	89 2f       	mov	r24, r25
     218c:	8b 83       	std	Y+3, r24	; 0x03
 	u8 Local_u8PortId = (Copy_u8Pin / 10) - 1;
     218e:	8c 81       	ldd	r24, Y+4	; 0x04
     2190:	9a e0       	ldi	r25, 0x0A	; 10
     2192:	69 2f       	mov	r22, r25
-    2194:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    2194:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     2198:	81 50       	subi	r24, 0x01	; 1
     219a:	8a 83       	std	Y+2, r24	; 0x02
 	u8 Local_u8PinValue = 0;
@@ -5342,7 +5342,7 @@ u16 ADC_u16Read(u8 Copy_u8ChNumber) {
     2430:	50 e0       	ldi	r21, 0x00	; 0
     2432:	bc 01       	movw	r22, r24
     2434:	cd 01       	movw	r24, r26
-    2436:	0e 94 94 1a 	call	0x3528	; 0x3528 <__mulsi3>
+    2436:	0e 94 01 1b 	call	0x3602	; 0x3602 <__mulsi3>
     243a:	dc 01       	movw	r26, r24
     243c:	cb 01       	movw	r24, r22
     243e:	07 2e       	mov	r0, r23
@@ -5411,7 +5411,7 @@ u8 SensorLM35_u16ReadTemp(u8 local_u8Pin)
     2494:	2a e0       	ldi	r18, 0x0A	; 10
     2496:	30 e0       	ldi	r19, 0x00	; 0
     2498:	b9 01       	movw	r22, r18
-    249a:	0e 94 bf 1a 	call	0x357e	; 0x357e <__udivmodhi4>
+    249a:	0e 94 2c 1b 	call	0x3658	; 0x3658 <__udivmodhi4>
     249e:	cb 01       	movw	r24, r22
     24a0:	89 83       	std	Y+1, r24	; 0x01
 	}
@@ -6143,7 +6143,7 @@ void DSSD_voidDisplayOnes(u8 local_u8Num)
     28c8:	89 81       	ldd	r24, Y+1	; 0x01
     28ca:	9a e0       	ldi	r25, 0x0A	; 10
     28cc:	69 2f       	mov	r22, r25
-    28ce:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    28ce:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     28d2:	88 2f       	mov	r24, r24
     28d4:	90 e0       	ldi	r25, 0x00	; 0
     28d6:	9c 01       	movw	r18, r24
@@ -6186,7 +6186,7 @@ void DSSD_voidDisplayTens(u8 local_u8Num)
     2912:	89 81       	ldd	r24, Y+1	; 0x01
     2914:	9a e0       	ldi	r25, 0x0A	; 10
     2916:	69 2f       	mov	r22, r25
-    2918:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
+    2918:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
     291c:	0e 94 3f 16 	call	0x2c7e	; 0x2c7e <displaySelected>
 }
     2920:	0f 90       	pop	r0
@@ -6949,1404 +6949,1434 @@ void Cooler_voidTurnOff(u8 local_u8CoolerPin)
     2db8:	df 91       	pop	r29
     2dba:	08 95       	ret
 
-00002dbc <main>:
- * @brief main function
- * @param void
- * @return 0
- */
-int main()
+00002dbc <App_DefaultOnOffBtnHandler>:
+ * 		- start system timer
+ * 		- enable Up and DOWN buttons
+ *
+ * */
+static void App_DefaultOnOffBtnHandler(void)
 {
     2dbc:	df 93       	push	r29
     2dbe:	cf 93       	push	r28
     2dc0:	cd b7       	in	r28, 0x3d	; 61
     2dc2:	de b7       	in	r29, 0x3e	; 62
-	/// System Initialise
-	App_SystemInit();
-    2dc4:	0e 94 e5 16 	call	0x2dca	; 0x2dca <App_SystemInit>
-    2dc8:	ff cf       	rjmp	.-2      	; 0x2dc8 <main+0xc>
+	if(App_u8SystemState == SYSTEM_RUNNING)
+    2dc4:	80 91 8c 01 	lds	r24, 0x018C
+    2dc8:	81 30       	cpi	r24, 0x01	; 1
+    2dca:	f1 f4       	brne	.+60     	; 0x2e08 <App_DefaultOnOffBtnHandler+0x4c>
+	{
+		App_u8SystemState = SYSTEM_STOPPED;
+    2dcc:	10 92 8c 01 	sts	0x018C, r1
+		App_u8SettingModeState = SETTING_MODE_DIS;
+    2dd0:	10 92 8e 01 	sts	0x018E, r1
+		App_u16SetModeTimerCounter = 0;
+    2dd4:	10 92 91 01 	sts	0x0191, r1
+    2dd8:	10 92 90 01 	sts	0x0190, r1
+		App_u8TempTimerCounter = 0;
+    2ddc:	10 92 8f 01 	sts	0x018F, r1
+		App_TimerStop();
+    2de0:	0e 94 98 18 	call	0x3130	; 0x3130 <App_TimerStop>
+		DSSD_voidDisableAll();
+    2de4:	0e 94 4f 14 	call	0x289e	; 0x289e <DSSD_voidDisableAll>
+		Heater_voidTurnOff(HEATER_RELAY_PIN);
+    2de8:	81 e2       	ldi	r24, 0x21	; 33
+    2dea:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
+		Cooler_voidTurnOff(COOLER_RELAY_PIN);
+    2dee:	83 e2       	ldi	r24, 0x23	; 35
+    2df0:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
+		LED_voidTurnOff(LED_C_H);
+    2df4:	82 e2       	ldi	r24, 0x22	; 34
+    2df6:	0e 94 36 13 	call	0x266c	; 0x266c <LED_voidTurnOff>
+		PushBtn_voidDisable(BTN_UP_CTRL);
+    2dfa:	8a e2       	ldi	r24, 0x2A	; 42
+    2dfc:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
+		PushBtn_voidDisable(BTN_DOWN_CTRL);
+    2e00:	8b e2       	ldi	r24, 0x2B	; 43
+    2e02:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
+    2e06:	0b c0       	rjmp	.+22     	; 0x2e1e <App_DefaultOnOffBtnHandler+0x62>
+	}
+	else
+	{
+		App_u8SystemState = SYSTEM_RUNNING;
+    2e08:	81 e0       	ldi	r24, 0x01	; 1
+    2e0a:	80 93 8c 01 	sts	0x018C, r24
+		App_TimerBegin();
+    2e0e:	0e 94 8f 18 	call	0x311e	; 0x311e <App_TimerBegin>
+		PushBtn_voidEnable(BTN_UP_CTRL);
+    2e12:	8a e2       	ldi	r24, 0x2A	; 42
+    2e14:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
+		PushBtn_voidEnable(BTN_DOWN_CTRL);
+    2e18:	8b e2       	ldi	r24, 0x2B	; 43
+    2e1a:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
+	}
+}
+    2e1e:	cf 91       	pop	r28
+    2e20:	df 91       	pop	r29
+    2e22:	08 95       	ret
 
-00002dca <App_SystemInit>:
-
-
-/* Functions Definitions */
-
-void App_SystemInit()
+00002e24 <App_DefaultUpBtnHandler>:
+ * 	- If it lower, increment the temperature set point value by 5 degrees and write it into the EEPROM. If not, do nothing.
+ * 	- In addition that, enable setting mode and reset setting mode counter.
+ *
+ * */
+static void App_DefaultUpBtnHandler(void)
 {
-    2dca:	df 93       	push	r29
-    2dcc:	cf 93       	push	r28
-    2dce:	cd b7       	in	r28, 0x3d	; 61
-    2dd0:	de b7       	in	r29, 0x3e	; 62
-    2dd2:	ab 97       	sbiw	r28, 0x2b	; 43
-    2dd4:	0f b6       	in	r0, 0x3f	; 63
-    2dd6:	f8 94       	cli
-    2dd8:	de bf       	out	0x3e, r29	; 62
-    2dda:	0f be       	out	0x3f, r0	; 63
-    2ddc:	cd bf       	out	0x3d, r28	; 61
-	/// Global Interrupt Init
-	GIE_voidEnableGlobalINT();
-    2dde:	0e 94 41 0b 	call	0x1682	; 0x1682 <GIE_voidEnableGlobalINT>
-
-	/// Push Buttons Init [UP, DOWN, On/OFF]
-	PushBtn_voidInit(BTN_ON_OFF, PUSH_BTN_INTERRUPT_EN, App_SysOnOff);
-    2de2:	2a e0       	ldi	r18, 0x0A	; 10
-    2de4:	39 e1       	ldi	r19, 0x19	; 25
-    2de6:	86 e1       	ldi	r24, 0x16	; 22
-    2de8:	61 e0       	ldi	r22, 0x01	; 1
-    2dea:	a9 01       	movw	r20, r18
-    2dec:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
-	PushBtn_voidInit(BTN_UP_CTRL, PUSH_BTN_INTERRUPT_EN, App_IncreaseTempSetPoint);
-    2df0:	24 ea       	ldi	r18, 0xA4	; 164
-    2df2:	38 e1       	ldi	r19, 0x18	; 24
-    2df4:	8a e2       	ldi	r24, 0x2A	; 42
-    2df6:	61 e0       	ldi	r22, 0x01	; 1
-    2df8:	a9 01       	movw	r20, r18
-    2dfa:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
-	PushBtn_voidInit(BTN_DOWN_CTRL, PUSH_BTN_INTERRUPT_EN, App_DecreaseTempSetPoint);
-    2dfe:	27 ed       	ldi	r18, 0xD7	; 215
-    2e00:	38 e1       	ldi	r19, 0x18	; 24
-    2e02:	8b e2       	ldi	r24, 0x2B	; 43
-    2e04:	61 e0       	ldi	r22, 0x01	; 1
-    2e06:	a9 01       	movw	r20, r18
-    2e08:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
-
-	/// Timer Init with 10 msec timer period
-	App_TimerInit(TIMER_PERIOD_MSEC, App_TimerCallBack);
-    2e0c:	2e e6       	ldi	r18, 0x6E	; 110
-    2e0e:	39 e1       	ldi	r19, 0x19	; 25
-    2e10:	8a e0       	ldi	r24, 0x0A	; 10
-    2e12:	b9 01       	movw	r22, r18
-    2e14:	0e 94 3e 19 	call	0x327c	; 0x327c <App_TimerInit>
-
-	/// DSSD Init
-	DSSD_voidInit();
-    2e18:	0e 94 06 14 	call	0x280c	; 0x280c <DSSD_voidInit>
-
-	/// Sensor LM35 Init
-	SensorLM35_voidInit();
-    2e1c:	0e 94 34 12 	call	0x2468	; 0x2468 <SensorLM35_voidInit>
-
-	/// Fill the array of last 10 temperature readings with current reading at the beginning
-	app_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
-    2e20:	81 e1       	ldi	r24, 0x11	; 17
-    2e22:	0e 94 3d 12 	call	0x247a	; 0x247a <SensorLM35_u16ReadTemp>
-    2e26:	80 93 7f 01 	sts	0x017F, r24
-	for(u8 i = 0; i < 10; i++)
-    2e2a:	1b a6       	std	Y+43, r1	; 0x2b
-    2e2c:	0c c0       	rjmp	.+24     	; 0x2e46 <App_SystemInit+0x7c>
+    2e24:	df 93       	push	r29
+    2e26:	cf 93       	push	r28
+    2e28:	cd b7       	in	r28, 0x3d	; 61
+    2e2a:	de b7       	in	r29, 0x3e	; 62
+	if((App_u8TempSetPoint < TEMP_MAX_SET_POINT) && (App_u8SettingModeState == SETTING_MODE_EN))
+    2e2c:	80 91 68 01 	lds	r24, 0x0168
+    2e30:	8b 34       	cpi	r24, 0x4B	; 75
+    2e32:	78 f4       	brcc	.+30     	; 0x2e52 <App_DefaultUpBtnHandler+0x2e>
+    2e34:	80 91 8e 01 	lds	r24, 0x018E
+    2e38:	81 30       	cpi	r24, 0x01	; 1
+    2e3a:	59 f4       	brne	.+22     	; 0x2e52 <App_DefaultUpBtnHandler+0x2e>
 	{
-		app_u8TempAverage[i] = app_u8CurrentTemp;
-    2e2e:	8b a5       	ldd	r24, Y+43	; 0x2b
-    2e30:	88 2f       	mov	r24, r24
-    2e32:	90 e0       	ldi	r25, 0x00	; 0
-    2e34:	20 91 7f 01 	lds	r18, 0x017F
-    2e38:	fc 01       	movw	r30, r24
-    2e3a:	e0 58       	subi	r30, 0x80	; 128
-    2e3c:	fe 4f       	sbci	r31, 0xFE	; 254
-    2e3e:	20 83       	st	Z, r18
-	/// Sensor LM35 Init
-	SensorLM35_voidInit();
+		App_u8TempSetPoint += TEMP_ON_CHANGE_VALUE;
+    2e3c:	80 91 68 01 	lds	r24, 0x0168
+    2e40:	8b 5f       	subi	r24, 0xFB	; 251
+    2e42:	80 93 68 01 	sts	0x0168, r24
+		EEPROM_voidWriteByte(App_u8TempSetPoint, 0, 0);
+    2e46:	80 91 68 01 	lds	r24, 0x0168
+    2e4a:	60 e0       	ldi	r22, 0x00	; 0
+    2e4c:	40 e0       	ldi	r20, 0x00	; 0
+    2e4e:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
+	}
+	App_u8SettingModeState = SETTING_MODE_EN;
+    2e52:	81 e0       	ldi	r24, 0x01	; 1
+    2e54:	80 93 8e 01 	sts	0x018E, r24
+	App_u16SetModeTimerCounter = 0;
+    2e58:	10 92 91 01 	sts	0x0191, r1
+    2e5c:	10 92 90 01 	sts	0x0190, r1
+}
+    2e60:	cf 91       	pop	r28
+    2e62:	df 91       	pop	r29
+    2e64:	08 95       	ret
 
-	/// Fill the array of last 10 temperature readings with current reading at the beginning
-	app_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
-	for(u8 i = 0; i < 10; i++)
-    2e40:	8b a5       	ldd	r24, Y+43	; 0x2b
-    2e42:	8f 5f       	subi	r24, 0xFF	; 255
-    2e44:	8b a7       	std	Y+43, r24	; 0x2b
-    2e46:	8b a5       	ldd	r24, Y+43	; 0x2b
-    2e48:	8a 30       	cpi	r24, 0x0A	; 10
-    2e4a:	88 f3       	brcs	.-30     	; 0x2e2e <App_SystemInit+0x64>
+00002e66 <App_DefaultDownBtnHandler>:
+ *
+ * */
+/*=====================================================================================================================================*/
+
+static void App_DefaultDownBtnHandler(void)
+{
+    2e66:	df 93       	push	r29
+    2e68:	cf 93       	push	r28
+    2e6a:	cd b7       	in	r28, 0x3d	; 61
+    2e6c:	de b7       	in	r29, 0x3e	; 62
+	if((App_u8TempSetPoint > TEMP_MIN_SET_POINT) && (App_u8SettingModeState == SETTING_MODE_EN))
+    2e6e:	80 91 68 01 	lds	r24, 0x0168
+    2e72:	84 32       	cpi	r24, 0x24	; 36
+    2e74:	78 f0       	brcs	.+30     	; 0x2e94 <App_DefaultDownBtnHandler+0x2e>
+    2e76:	80 91 8e 01 	lds	r24, 0x018E
+    2e7a:	81 30       	cpi	r24, 0x01	; 1
+    2e7c:	59 f4       	brne	.+22     	; 0x2e94 <App_DefaultDownBtnHandler+0x2e>
 	{
-		app_u8TempAverage[i] = app_u8CurrentTemp;
+		App_u8TempSetPoint -= TEMP_ON_CHANGE_VALUE;
+    2e7e:	80 91 68 01 	lds	r24, 0x0168
+    2e82:	85 50       	subi	r24, 0x05	; 5
+    2e84:	80 93 68 01 	sts	0x0168, r24
+		EEPROM_voidWriteByte(App_u8TempSetPoint, 0, 0);
+    2e88:	80 91 68 01 	lds	r24, 0x0168
+    2e8c:	60 e0       	ldi	r22, 0x00	; 0
+    2e8e:	40 e0       	ldi	r20, 0x00	; 0
+    2e90:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
+	}
+	App_u8SettingModeState = SETTING_MODE_EN;
+    2e94:	81 e0       	ldi	r24, 0x01	; 1
+    2e96:	80 93 8e 01 	sts	0x018E, r24
+	App_u16SetModeTimerCounter = 0;
+    2e9a:	10 92 91 01 	sts	0x0191, r1
+    2e9e:	10 92 90 01 	sts	0x0190, r1
+}
+    2ea2:	cf 91       	pop	r28
+    2ea4:	df 91       	pop	r29
+    2ea6:	08 95       	ret
+
+00002ea8 <App_DefaultTimerHandler>:
+ *
+ *
+ * */
+
+static void App_DefaultTimerHandler(void)
+{
+    2ea8:	ef 92       	push	r14
+    2eaa:	ff 92       	push	r15
+    2eac:	0f 93       	push	r16
+    2eae:	1f 93       	push	r17
+    2eb0:	df 93       	push	r29
+    2eb2:	cf 93       	push	r28
+    2eb4:	00 d0       	rcall	.+0      	; 0x2eb6 <App_DefaultTimerHandler+0xe>
+    2eb6:	cd b7       	in	r28, 0x3d	; 61
+    2eb8:	de b7       	in	r29, 0x3e	; 62
+	App_u8TempTimerCounter++;
+    2eba:	80 91 8f 01 	lds	r24, 0x018F
+    2ebe:	8f 5f       	subi	r24, 0xFF	; 255
+    2ec0:	80 93 8f 01 	sts	0x018F, r24
+	if(App_u8TempTimerCounter % 10 == 0)
+    2ec4:	80 91 8f 01 	lds	r24, 0x018F
+    2ec8:	9a e0       	ldi	r25, 0x0A	; 10
+    2eca:	69 2f       	mov	r22, r25
+    2ecc:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
+    2ed0:	89 2f       	mov	r24, r25
+    2ed2:	88 23       	and	r24, r24
+    2ed4:	09 f0       	breq	.+2      	; 0x2ed8 <App_DefaultTimerHandler+0x30>
+    2ed6:	a4 c0       	rjmp	.+328    	; 0x3020 <App_DefaultTimerHandler+0x178>
+	{
+		App_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
+    2ed8:	81 e1       	ldi	r24, 0x11	; 17
+    2eda:	0e 94 3d 12 	call	0x247a	; 0x247a <SensorLM35_u16ReadTemp>
+    2ede:	80 93 7f 01 	sts	0x017F, r24
+		App_u8TempAverage[(App_u8TempTimerCounter / 10) - 1] = App_u8CurrentTemp;
+    2ee2:	80 91 8f 01 	lds	r24, 0x018F
+    2ee6:	9a e0       	ldi	r25, 0x0A	; 10
+    2ee8:	69 2f       	mov	r22, r25
+    2eea:	0e 94 20 1b 	call	0x3640	; 0x3640 <__udivmodqi4>
+    2eee:	88 2f       	mov	r24, r24
+    2ef0:	90 e0       	ldi	r25, 0x00	; 0
+    2ef2:	01 97       	sbiw	r24, 0x01	; 1
+    2ef4:	20 91 7f 01 	lds	r18, 0x017F
+    2ef8:	fc 01       	movw	r30, r24
+    2efa:	e0 58       	subi	r30, 0x80	; 128
+    2efc:	fe 4f       	sbci	r31, 0xFE	; 254
+    2efe:	20 83       	st	Z, r18
+		for(u8 i = 0; i < 10; i++)
+    2f00:	19 82       	std	Y+1, r1	; 0x01
+    2f02:	16 c0       	rjmp	.+44     	; 0x2f30 <App_DefaultTimerHandler+0x88>
+		{
+			App_u16TempAverageCalc += App_u8TempAverage[i];
+    2f04:	89 81       	ldd	r24, Y+1	; 0x01
+    2f06:	88 2f       	mov	r24, r24
+    2f08:	90 e0       	ldi	r25, 0x00	; 0
+    2f0a:	fc 01       	movw	r30, r24
+    2f0c:	e0 58       	subi	r30, 0x80	; 128
+    2f0e:	fe 4f       	sbci	r31, 0xFE	; 254
+    2f10:	80 81       	ld	r24, Z
+    2f12:	28 2f       	mov	r18, r24
+    2f14:	30 e0       	ldi	r19, 0x00	; 0
+    2f16:	80 91 8a 01 	lds	r24, 0x018A
+    2f1a:	90 91 8b 01 	lds	r25, 0x018B
+    2f1e:	82 0f       	add	r24, r18
+    2f20:	93 1f       	adc	r25, r19
+    2f22:	90 93 8b 01 	sts	0x018B, r25
+    2f26:	80 93 8a 01 	sts	0x018A, r24
+	App_u8TempTimerCounter++;
+	if(App_u8TempTimerCounter % 10 == 0)
+	{
+		App_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
+		App_u8TempAverage[(App_u8TempTimerCounter / 10) - 1] = App_u8CurrentTemp;
+		for(u8 i = 0; i < 10; i++)
+    2f2a:	89 81       	ldd	r24, Y+1	; 0x01
+    2f2c:	8f 5f       	subi	r24, 0xFF	; 255
+    2f2e:	89 83       	std	Y+1, r24	; 0x01
+    2f30:	89 81       	ldd	r24, Y+1	; 0x01
+    2f32:	8a 30       	cpi	r24, 0x0A	; 10
+    2f34:	38 f3       	brcs	.-50     	; 0x2f04 <App_DefaultTimerHandler+0x5c>
+		{
+			App_u16TempAverageCalc += App_u8TempAverage[i];
+		}
+		if(((f32)(App_u16TempAverageCalc / 10)) > ((f32)(App_u8TempSetPoint + TEMP_TOLERANCE)))
+    2f36:	80 91 8a 01 	lds	r24, 0x018A
+    2f3a:	90 91 8b 01 	lds	r25, 0x018B
+    2f3e:	2a e0       	ldi	r18, 0x0A	; 10
+    2f40:	30 e0       	ldi	r19, 0x00	; 0
+    2f42:	b9 01       	movw	r22, r18
+    2f44:	0e 94 2c 1b 	call	0x3658	; 0x3658 <__udivmodhi4>
+    2f48:	cb 01       	movw	r24, r22
+    2f4a:	cc 01       	movw	r24, r24
+    2f4c:	a0 e0       	ldi	r26, 0x00	; 0
+    2f4e:	b0 e0       	ldi	r27, 0x00	; 0
+    2f50:	bc 01       	movw	r22, r24
+    2f52:	cd 01       	movw	r24, r26
+    2f54:	0e 94 5b 04 	call	0x8b6	; 0x8b6 <__floatunsisf>
+    2f58:	7b 01       	movw	r14, r22
+    2f5a:	8c 01       	movw	r16, r24
+    2f5c:	80 91 68 01 	lds	r24, 0x0168
+    2f60:	88 2f       	mov	r24, r24
+    2f62:	90 e0       	ldi	r25, 0x00	; 0
+    2f64:	05 96       	adiw	r24, 0x05	; 5
+    2f66:	aa 27       	eor	r26, r26
+    2f68:	97 fd       	sbrc	r25, 7
+    2f6a:	a0 95       	com	r26
+    2f6c:	ba 2f       	mov	r27, r26
+    2f6e:	bc 01       	movw	r22, r24
+    2f70:	cd 01       	movw	r24, r26
+    2f72:	0e 94 a9 03 	call	0x752	; 0x752 <__floatsisf>
+    2f76:	9b 01       	movw	r18, r22
+    2f78:	ac 01       	movw	r20, r24
+    2f7a:	c8 01       	movw	r24, r16
+    2f7c:	b7 01       	movw	r22, r14
+    2f7e:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
+    2f82:	18 16       	cp	r1, r24
+    2f84:	54 f4       	brge	.+20     	; 0x2f9a <App_DefaultTimerHandler+0xf2>
+		{
+			Cooler_voidTurnOn(COOLER_RELAY_PIN);
+    2f86:	83 e2       	ldi	r24, 0x23	; 35
+    2f88:	0e 94 c4 16 	call	0x2d88	; 0x2d88 <Cooler_voidTurnOn>
+			Heater_voidTurnOff(HEATER_RELAY_PIN);
+    2f8c:	81 e2       	ldi	r24, 0x21	; 33
+    2f8e:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
+			LED_voidTurnOn(LED_C_H);
+    2f92:	82 e2       	ldi	r24, 0x22	; 34
+    2f94:	0e 94 28 13 	call	0x2650	; 0x2650 <LED_voidTurnOn>
+    2f98:	3f c0       	rjmp	.+126    	; 0x3018 <App_DefaultTimerHandler+0x170>
+		}
+		else if(((f32)(App_u16TempAverageCalc / 10)) < ((f32)(App_u8TempSetPoint - TEMP_TOLERANCE)))
+    2f9a:	80 91 8a 01 	lds	r24, 0x018A
+    2f9e:	90 91 8b 01 	lds	r25, 0x018B
+    2fa2:	2a e0       	ldi	r18, 0x0A	; 10
+    2fa4:	30 e0       	ldi	r19, 0x00	; 0
+    2fa6:	b9 01       	movw	r22, r18
+    2fa8:	0e 94 2c 1b 	call	0x3658	; 0x3658 <__udivmodhi4>
+    2fac:	cb 01       	movw	r24, r22
+    2fae:	cc 01       	movw	r24, r24
+    2fb0:	a0 e0       	ldi	r26, 0x00	; 0
+    2fb2:	b0 e0       	ldi	r27, 0x00	; 0
+    2fb4:	bc 01       	movw	r22, r24
+    2fb6:	cd 01       	movw	r24, r26
+    2fb8:	0e 94 5b 04 	call	0x8b6	; 0x8b6 <__floatunsisf>
+    2fbc:	7b 01       	movw	r14, r22
+    2fbe:	8c 01       	movw	r16, r24
+    2fc0:	80 91 68 01 	lds	r24, 0x0168
+    2fc4:	88 2f       	mov	r24, r24
+    2fc6:	90 e0       	ldi	r25, 0x00	; 0
+    2fc8:	05 97       	sbiw	r24, 0x05	; 5
+    2fca:	aa 27       	eor	r26, r26
+    2fcc:	97 fd       	sbrc	r25, 7
+    2fce:	a0 95       	com	r26
+    2fd0:	ba 2f       	mov	r27, r26
+    2fd2:	bc 01       	movw	r22, r24
+    2fd4:	cd 01       	movw	r24, r26
+    2fd6:	0e 94 a9 03 	call	0x752	; 0x752 <__floatsisf>
+    2fda:	9b 01       	movw	r18, r22
+    2fdc:	ac 01       	movw	r20, r24
+    2fde:	c8 01       	movw	r24, r16
+    2fe0:	b7 01       	movw	r22, r14
+    2fe2:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
+    2fe6:	88 23       	and	r24, r24
+    2fe8:	74 f4       	brge	.+28     	; 0x3006 <App_DefaultTimerHandler+0x15e>
+		{
+			Heater_voidTurnOn(HEATER_RELAY_PIN);
+    2fea:	81 e2       	ldi	r24, 0x21	; 33
+    2fec:	0e 94 5f 13 	call	0x26be	; 0x26be <Heater_voidTurnOn>
+			Cooler_voidTurnOff(COOLER_RELAY_PIN);
+    2ff0:	83 e2       	ldi	r24, 0x23	; 35
+    2ff2:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
+			if(App_u8TempTimerCounter >= 100) LED_voidToggle(LED_C_H);
+    2ff6:	80 91 8f 01 	lds	r24, 0x018F
+    2ffa:	84 36       	cpi	r24, 0x64	; 100
+    2ffc:	68 f0       	brcs	.+26     	; 0x3018 <App_DefaultTimerHandler+0x170>
+    2ffe:	82 e2       	ldi	r24, 0x22	; 34
+    3000:	0e 94 44 13 	call	0x2688	; 0x2688 <LED_voidToggle>
+    3004:	09 c0       	rjmp	.+18     	; 0x3018 <App_DefaultTimerHandler+0x170>
+		}
+		else
+		{
+			Heater_voidTurnOff(HEATER_RELAY_PIN);
+    3006:	81 e2       	ldi	r24, 0x21	; 33
+    3008:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
+			Cooler_voidTurnOff(COOLER_RELAY_PIN);
+    300c:	83 e2       	ldi	r24, 0x23	; 35
+    300e:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
+			LED_voidTurnOff(LED_C_H);
+    3012:	82 e2       	ldi	r24, 0x22	; 34
+    3014:	0e 94 36 13 	call	0x266c	; 0x266c <LED_voidTurnOff>
+		}
+		App_u16TempAverageCalc = 0;
+    3018:	10 92 8b 01 	sts	0x018B, r1
+    301c:	10 92 8a 01 	sts	0x018A, r1
+	}
+	if(App_u8TempTimerCounter >= 100)
+    3020:	80 91 8f 01 	lds	r24, 0x018F
+    3024:	84 36       	cpi	r24, 0x64	; 100
+    3026:	10 f0       	brcs	.+4      	; 0x302c <App_DefaultTimerHandler+0x184>
+	{
+		App_u8TempTimerCounter = 0;
+    3028:	10 92 8f 01 	sts	0x018F, r1
 	}
 
-	/// Heater Init
+	if(App_u8SettingModeState == SETTING_MODE_EN)
+    302c:	80 91 8e 01 	lds	r24, 0x018E
+    3030:	81 30       	cpi	r24, 0x01	; 1
+    3032:	09 f0       	breq	.+2      	; 0x3036 <App_DefaultTimerHandler+0x18e>
+    3034:	41 c0       	rjmp	.+130    	; 0x30b8 <App_DefaultTimerHandler+0x210>
+	{
+		App_u16SetModeTimerCounter++;
+    3036:	80 91 90 01 	lds	r24, 0x0190
+    303a:	90 91 91 01 	lds	r25, 0x0191
+    303e:	01 96       	adiw	r24, 0x01	; 1
+    3040:	90 93 91 01 	sts	0x0191, r25
+    3044:	80 93 90 01 	sts	0x0190, r24
+		if(App_u16SetModeTimerCounter % 100 == 0)
+    3048:	80 91 90 01 	lds	r24, 0x0190
+    304c:	90 91 91 01 	lds	r25, 0x0191
+    3050:	24 e6       	ldi	r18, 0x64	; 100
+    3052:	30 e0       	ldi	r19, 0x00	; 0
+    3054:	b9 01       	movw	r22, r18
+    3056:	0e 94 2c 1b 	call	0x3658	; 0x3658 <__udivmodhi4>
+    305a:	00 97       	sbiw	r24, 0x00	; 0
+    305c:	69 f4       	brne	.+26     	; 0x3078 <App_DefaultTimerHandler+0x1d0>
+		{
+			if(DSSD_u8Status() == DSSD_ON)
+    305e:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
+    3062:	81 30       	cpi	r24, 0x01	; 1
+    3064:	19 f4       	brne	.+6      	; 0x306c <App_DefaultTimerHandler+0x1c4>
+			{
+				DSSD_voidDisableAll();
+    3066:	0e 94 4f 14 	call	0x289e	; 0x289e <DSSD_voidDisableAll>
+    306a:	06 c0       	rjmp	.+12     	; 0x3078 <App_DefaultTimerHandler+0x1d0>
+			}
+
+			else if(DSSD_u8Status() == DSSD_OFF)
+    306c:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
+    3070:	88 23       	and	r24, r24
+    3072:	11 f4       	brne	.+4      	; 0x3078 <App_DefaultTimerHandler+0x1d0>
+			{
+				DSSD_voidEN1();
+    3074:	0e 94 35 14 	call	0x286a	; 0x286a <DSSD_voidEN1>
+			}
+		}
+		if(DSSD_u8Status() == DSSD_ON)
+    3078:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
+    307c:	81 30       	cpi	r24, 0x01	; 1
+    307e:	39 f4       	brne	.+14     	; 0x308e <App_DefaultTimerHandler+0x1e6>
+		{
+			DSSD_voidDisplay(App_u8TempSetPoint, App_u8SevenSegDigit);
+    3080:	80 91 68 01 	lds	r24, 0x0168
+    3084:	90 91 8d 01 	lds	r25, 0x018D
+    3088:	69 2f       	mov	r22, r25
+    308a:	0e 94 94 14 	call	0x2928	; 0x2928 <DSSD_voidDisplay>
+		}
+		if(App_u16SetModeTimerCounter >= 500)
+    308e:	80 91 90 01 	lds	r24, 0x0190
+    3092:	90 91 91 01 	lds	r25, 0x0191
+    3096:	21 e0       	ldi	r18, 0x01	; 1
+    3098:	84 3f       	cpi	r24, 0xF4	; 244
+    309a:	92 07       	cpc	r25, r18
+    309c:	c0 f0       	brcs	.+48     	; 0x30ce <App_DefaultTimerHandler+0x226>
+		{
+			App_u8SettingModeState = SETTING_MODE_DIS;
+    309e:	10 92 8e 01 	sts	0x018E, r1
+			App_u16SetModeTimerCounter = 0;
+    30a2:	10 92 91 01 	sts	0x0191, r1
+    30a6:	10 92 90 01 	sts	0x0190, r1
+			EEPROM_voidWriteByte(App_u8TempSetPoint, 0, 0);
+    30aa:	80 91 68 01 	lds	r24, 0x0168
+    30ae:	60 e0       	ldi	r22, 0x00	; 0
+    30b0:	40 e0       	ldi	r20, 0x00	; 0
+    30b2:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
+    30b6:	0b c0       	rjmp	.+22     	; 0x30ce <App_DefaultTimerHandler+0x226>
+		}
+	}
+	else if(App_u8SettingModeState == SETTING_MODE_DIS)
+    30b8:	80 91 8e 01 	lds	r24, 0x018E
+    30bc:	88 23       	and	r24, r24
+    30be:	39 f4       	brne	.+14     	; 0x30ce <App_DefaultTimerHandler+0x226>
+	{
+		DSSD_voidDisplay(App_u8CurrentTemp, App_u8SevenSegDigit);
+    30c0:	80 91 7f 01 	lds	r24, 0x017F
+    30c4:	90 91 8d 01 	lds	r25, 0x018D
+    30c8:	69 2f       	mov	r22, r25
+    30ca:	0e 94 94 14 	call	0x2928	; 0x2928 <DSSD_voidDisplay>
+	}
+	App_u8SevenSegDigit = App_u8SevenSegDigit == DSSD_DISPLAY_ONES ? DSSD_DISPLAY_TENS : DSSD_DISPLAY_ONES;
+    30ce:	80 91 8d 01 	lds	r24, 0x018D
+    30d2:	1a 82       	std	Y+2, r1	; 0x02
+    30d4:	88 23       	and	r24, r24
+    30d6:	11 f4       	brne	.+4      	; 0x30dc <App_DefaultTimerHandler+0x234>
+    30d8:	81 e0       	ldi	r24, 0x01	; 1
+    30da:	8a 83       	std	Y+2, r24	; 0x02
+    30dc:	2a 81       	ldd	r18, Y+2	; 0x02
+    30de:	20 93 8d 01 	sts	0x018D, r18
+}
+    30e2:	0f 90       	pop	r0
+    30e4:	0f 90       	pop	r0
+    30e6:	cf 91       	pop	r28
+    30e8:	df 91       	pop	r29
+    30ea:	1f 91       	pop	r17
+    30ec:	0f 91       	pop	r16
+    30ee:	ff 90       	pop	r15
+    30f0:	ef 90       	pop	r14
+    30f2:	08 95       	ret
+
+000030f4 <App_TimerInit>:
+ * 		- set the timer period
+ * 		- set call back handler for the timer
+ *
+ * */
+static void App_TimerInit(void)
+{
+    30f4:	df 93       	push	r29
+    30f6:	cf 93       	push	r28
+    30f8:	cd b7       	in	r28, 0x3d	; 61
+    30fa:	de b7       	in	r29, 0x3e	; 62
+	Timer0_voidInit();
+    30fc:	0e 94 c9 06 	call	0xd92	; 0xd92 <Timer0_voidInit>
+	Timer0_voidSetTime(TIMER_PERIOD_MSEC);
+    3100:	6a e0       	ldi	r22, 0x0A	; 10
+    3102:	70 e0       	ldi	r23, 0x00	; 0
+    3104:	80 e0       	ldi	r24, 0x00	; 0
+    3106:	90 e0       	ldi	r25, 0x00	; 0
+    3108:	0e 94 e5 06 	call	0xdca	; 0xdca <Timer0_voidSetTime>
+	Timer0_voidSetCallBack(App_ptrTimerHandler);
+    310c:	80 91 98 01 	lds	r24, 0x0198
+    3110:	90 91 99 01 	lds	r25, 0x0199
+    3114:	0e 94 71 07 	call	0xee2	; 0xee2 <Timer0_voidSetCallBack>
+}
+    3118:	cf 91       	pop	r28
+    311a:	df 91       	pop	r29
+    311c:	08 95       	ret
+
+0000311e <App_TimerBegin>:
+
+/*=====================================================================================================================================*/
+
+
+static void App_TimerBegin(void)
+{
+    311e:	df 93       	push	r29
+    3120:	cf 93       	push	r28
+    3122:	cd b7       	in	r28, 0x3d	; 61
+    3124:	de b7       	in	r29, 0x3e	; 62
+	Timer0_voidStart();
+    3126:	0e 94 54 07 	call	0xea8	; 0xea8 <Timer0_voidStart>
+}
+    312a:	cf 91       	pop	r28
+    312c:	df 91       	pop	r29
+    312e:	08 95       	ret
+
+00003130 <App_TimerStop>:
+/*=====================================================================================================================================*/
+
+/*=====================================================================================================================================*/
+
+static void App_TimerStop(void)
+{
+    3130:	df 93       	push	r29
+    3132:	cf 93       	push	r28
+    3134:	cd b7       	in	r28, 0x3d	; 61
+    3136:	de b7       	in	r29, 0x3e	; 62
+	Timer0_voidStop();
+    3138:	0e 94 63 07 	call	0xec6	; 0xec6 <Timer0_voidStop>
+}
+    313c:	cf 91       	pop	r28
+    313e:	df 91       	pop	r29
+    3140:	08 95       	ret
+
+00003142 <App_SystemInit>:
+ * 	- getting the the the temperature set point value which saved on EEPROM.
+ * 	  if EEPROM is used for first time, write into it the initial set point which configured in the macros file.
+ *
+ * */
+void App_SystemInit(void)
+{
+    3142:	df 93       	push	r29
+    3144:	cf 93       	push	r28
+    3146:	cd b7       	in	r28, 0x3d	; 61
+    3148:	de b7       	in	r29, 0x3e	; 62
+    314a:	ab 97       	sbiw	r28, 0x2b	; 43
+    314c:	0f b6       	in	r0, 0x3f	; 63
+    314e:	f8 94       	cli
+    3150:	de bf       	out	0x3e, r29	; 62
+    3152:	0f be       	out	0x3f, r0	; 63
+    3154:	cd bf       	out	0x3d, r28	; 61
+	GIE_voidEnableGlobalINT();
+    3156:	0e 94 41 0b 	call	0x1682	; 0x1682 <GIE_voidEnableGlobalINT>
+
+	if(App_ptrOnOffBtnHandler == NULL) 	App_ptrOnOffBtnHandler 	= App_DefaultOnOffBtnHandler;
+    315a:	80 91 92 01 	lds	r24, 0x0192
+    315e:	90 91 93 01 	lds	r25, 0x0193
+    3162:	00 97       	sbiw	r24, 0x00	; 0
+    3164:	31 f4       	brne	.+12     	; 0x3172 <App_SystemInit+0x30>
+    3166:	8e ed       	ldi	r24, 0xDE	; 222
+    3168:	96 e1       	ldi	r25, 0x16	; 22
+    316a:	90 93 93 01 	sts	0x0193, r25
+    316e:	80 93 92 01 	sts	0x0192, r24
+	if(App_ptrUpBtnHandler == NULL) 	App_ptrUpBtnHandler 	= App_DefaultUpBtnHandler;
+    3172:	80 91 94 01 	lds	r24, 0x0194
+    3176:	90 91 95 01 	lds	r25, 0x0195
+    317a:	00 97       	sbiw	r24, 0x00	; 0
+    317c:	31 f4       	brne	.+12     	; 0x318a <App_SystemInit+0x48>
+    317e:	82 e1       	ldi	r24, 0x12	; 18
+    3180:	97 e1       	ldi	r25, 0x17	; 23
+    3182:	90 93 95 01 	sts	0x0195, r25
+    3186:	80 93 94 01 	sts	0x0194, r24
+	if(App_ptrDownBtnHandler == NULL) 	App_ptrDownBtnHandler 	= App_DefaultDownBtnHandler;
+    318a:	80 91 96 01 	lds	r24, 0x0196
+    318e:	90 91 97 01 	lds	r25, 0x0197
+    3192:	00 97       	sbiw	r24, 0x00	; 0
+    3194:	31 f4       	brne	.+12     	; 0x31a2 <App_SystemInit+0x60>
+    3196:	83 e3       	ldi	r24, 0x33	; 51
+    3198:	97 e1       	ldi	r25, 0x17	; 23
+    319a:	90 93 97 01 	sts	0x0197, r25
+    319e:	80 93 96 01 	sts	0x0196, r24
+	if(App_ptrTimerHandler == NULL) 	App_ptrTimerHandler 	= App_DefaultTimerHandler;
+    31a2:	80 91 98 01 	lds	r24, 0x0198
+    31a6:	90 91 99 01 	lds	r25, 0x0199
+    31aa:	00 97       	sbiw	r24, 0x00	; 0
+    31ac:	31 f4       	brne	.+12     	; 0x31ba <App_SystemInit+0x78>
+    31ae:	84 e5       	ldi	r24, 0x54	; 84
+    31b0:	97 e1       	ldi	r25, 0x17	; 23
+    31b2:	90 93 99 01 	sts	0x0199, r25
+    31b6:	80 93 98 01 	sts	0x0198, r24
+
+	PushBtn_voidInit(BTN_ON_OFF, PUSH_BTN_INTERRUPT_EN, App_ptrOnOffBtnHandler);
+    31ba:	20 91 92 01 	lds	r18, 0x0192
+    31be:	30 91 93 01 	lds	r19, 0x0193
+    31c2:	86 e1       	ldi	r24, 0x16	; 22
+    31c4:	61 e0       	ldi	r22, 0x01	; 1
+    31c6:	a9 01       	movw	r20, r18
+    31c8:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
+	PushBtn_voidInit(BTN_UP_CTRL, PUSH_BTN_INTERRUPT_EN, App_ptrUpBtnHandler);
+    31cc:	20 91 94 01 	lds	r18, 0x0194
+    31d0:	30 91 95 01 	lds	r19, 0x0195
+    31d4:	8a e2       	ldi	r24, 0x2A	; 42
+    31d6:	61 e0       	ldi	r22, 0x01	; 1
+    31d8:	a9 01       	movw	r20, r18
+    31da:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
+	PushBtn_voidInit(BTN_DOWN_CTRL, PUSH_BTN_INTERRUPT_EN, App_ptrDownBtnHandler);
+    31de:	20 91 96 01 	lds	r18, 0x0196
+    31e2:	30 91 97 01 	lds	r19, 0x0197
+    31e6:	8b e2       	ldi	r24, 0x2B	; 43
+    31e8:	61 e0       	ldi	r22, 0x01	; 1
+    31ea:	a9 01       	movw	r20, r18
+    31ec:	0e 94 57 12 	call	0x24ae	; 0x24ae <PushBtn_voidInit>
+
+	App_TimerInit();
+    31f0:	0e 94 7a 18 	call	0x30f4	; 0x30f4 <App_TimerInit>
+	DSSD_voidInit();
+    31f4:	0e 94 06 14 	call	0x280c	; 0x280c <DSSD_voidInit>
+	SensorLM35_voidInit();
+    31f8:	0e 94 34 12 	call	0x2468	; 0x2468 <SensorLM35_voidInit>
+
+	App_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
+    31fc:	81 e1       	ldi	r24, 0x11	; 17
+    31fe:	0e 94 3d 12 	call	0x247a	; 0x247a <SensorLM35_u16ReadTemp>
+    3202:	80 93 7f 01 	sts	0x017F, r24
+	for(u8 i = 0; i < 10; i++)
+    3206:	1b a6       	std	Y+43, r1	; 0x2b
+    3208:	0c c0       	rjmp	.+24     	; 0x3222 <App_SystemInit+0xe0>
+	{
+		App_u8TempAverage[i] = App_u8CurrentTemp;
+    320a:	8b a5       	ldd	r24, Y+43	; 0x2b
+    320c:	88 2f       	mov	r24, r24
+    320e:	90 e0       	ldi	r25, 0x00	; 0
+    3210:	20 91 7f 01 	lds	r18, 0x017F
+    3214:	fc 01       	movw	r30, r24
+    3216:	e0 58       	subi	r30, 0x80	; 128
+    3218:	fe 4f       	sbci	r31, 0xFE	; 254
+    321a:	20 83       	st	Z, r18
+	App_TimerInit();
+	DSSD_voidInit();
+	SensorLM35_voidInit();
+
+	App_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
+	for(u8 i = 0; i < 10; i++)
+    321c:	8b a5       	ldd	r24, Y+43	; 0x2b
+    321e:	8f 5f       	subi	r24, 0xFF	; 255
+    3220:	8b a7       	std	Y+43, r24	; 0x2b
+    3222:	8b a5       	ldd	r24, Y+43	; 0x2b
+    3224:	8a 30       	cpi	r24, 0x0A	; 10
+    3226:	88 f3       	brcs	.-30     	; 0x320a <App_SystemInit+0xc8>
+	{
+		App_u8TempAverage[i] = App_u8CurrentTemp;
+	}
+
 	Heater_voidInit(HEATER_RELAY_PIN);
-    2e4c:	81 e2       	ldi	r24, 0x21	; 33
-    2e4e:	0e 94 51 13 	call	0x26a2	; 0x26a2 <Heater_voidInit>
-
-	/// LED Init
+    3228:	81 e2       	ldi	r24, 0x21	; 33
+    322a:	0e 94 51 13 	call	0x26a2	; 0x26a2 <Heater_voidInit>
 	LED_voidInit(LED_C_H);
-    2e52:	82 e2       	ldi	r24, 0x22	; 34
-    2e54:	0e 94 1a 13 	call	0x2634	; 0x2634 <LED_voidInit>
-
-	/// cooler Init
+    322e:	82 e2       	ldi	r24, 0x22	; 34
+    3230:	0e 94 1a 13 	call	0x2634	; 0x2634 <LED_voidInit>
 	Cooler_voidInit(COOLER_RELAY_PIN);
-    2e58:	83 e2       	ldi	r24, 0x23	; 35
-    2e5a:	0e 94 b6 16 	call	0x2d6c	; 0x2d6c <Cooler_voidInit>
-
-	/// EEPROM Init and getting temperature set point value
+    3234:	83 e2       	ldi	r24, 0x23	; 35
+    3236:	0e 94 b6 16 	call	0x2d6c	; 0x2d6c <Cooler_voidInit>
 	EEPROM_voidInit();
-    2e5e:	0e 94 79 13 	call	0x26f2	; 0x26f2 <EEPROM_voidInit>
-    2e62:	80 e0       	ldi	r24, 0x00	; 0
-    2e64:	90 e0       	ldi	r25, 0x00	; 0
-    2e66:	a0 e8       	ldi	r26, 0x80	; 128
-    2e68:	bf e3       	ldi	r27, 0x3F	; 63
-    2e6a:	8f a3       	std	Y+39, r24	; 0x27
-    2e6c:	98 a7       	std	Y+40, r25	; 0x28
-    2e6e:	a9 a7       	std	Y+41, r26	; 0x29
-    2e70:	ba a7       	std	Y+42, r27	; 0x2a
+    323a:	0e 94 79 13 	call	0x26f2	; 0x26f2 <EEPROM_voidInit>
+    323e:	80 e0       	ldi	r24, 0x00	; 0
+    3240:	90 e0       	ldi	r25, 0x00	; 0
+    3242:	a0 e8       	ldi	r26, 0x80	; 128
+    3244:	bf e3       	ldi	r27, 0x3F	; 63
+    3246:	8f a3       	std	Y+39, r24	; 0x27
+    3248:	98 a7       	std	Y+40, r25	; 0x28
+    324a:	a9 a7       	std	Y+41, r26	; 0x29
+    324c:	ba a7       	std	Y+42, r27	; 0x2a
  */
 void
 _delay_ms(double __ms)
 {
 	uint16_t __ticks;
 	double __tmp = ((F_CPU) / 4e3) * __ms;
-    2e72:	6f a1       	ldd	r22, Y+39	; 0x27
-    2e74:	78 a5       	ldd	r23, Y+40	; 0x28
-    2e76:	89 a5       	ldd	r24, Y+41	; 0x29
-    2e78:	9a a5       	ldd	r25, Y+42	; 0x2a
-    2e7a:	20 e0       	ldi	r18, 0x00	; 0
-    2e7c:	30 e0       	ldi	r19, 0x00	; 0
-    2e7e:	4a e7       	ldi	r20, 0x7A	; 122
-    2e80:	55 e4       	ldi	r21, 0x45	; 69
-    2e82:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    2e86:	dc 01       	movw	r26, r24
-    2e88:	cb 01       	movw	r24, r22
-    2e8a:	8b a3       	std	Y+35, r24	; 0x23
-    2e8c:	9c a3       	std	Y+36, r25	; 0x24
-    2e8e:	ad a3       	std	Y+37, r26	; 0x25
-    2e90:	be a3       	std	Y+38, r27	; 0x26
+    324e:	6f a1       	ldd	r22, Y+39	; 0x27
+    3250:	78 a5       	ldd	r23, Y+40	; 0x28
+    3252:	89 a5       	ldd	r24, Y+41	; 0x29
+    3254:	9a a5       	ldd	r25, Y+42	; 0x2a
+    3256:	20 e0       	ldi	r18, 0x00	; 0
+    3258:	30 e0       	ldi	r19, 0x00	; 0
+    325a:	4a e7       	ldi	r20, 0x7A	; 122
+    325c:	55 e4       	ldi	r21, 0x45	; 69
+    325e:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    3262:	dc 01       	movw	r26, r24
+    3264:	cb 01       	movw	r24, r22
+    3266:	8b a3       	std	Y+35, r24	; 0x23
+    3268:	9c a3       	std	Y+36, r25	; 0x24
+    326a:	ad a3       	std	Y+37, r26	; 0x25
+    326c:	be a3       	std	Y+38, r27	; 0x26
 	if (__tmp < 1.0)
-    2e92:	6b a1       	ldd	r22, Y+35	; 0x23
-    2e94:	7c a1       	ldd	r23, Y+36	; 0x24
-    2e96:	8d a1       	ldd	r24, Y+37	; 0x25
-    2e98:	9e a1       	ldd	r25, Y+38	; 0x26
-    2e9a:	20 e0       	ldi	r18, 0x00	; 0
-    2e9c:	30 e0       	ldi	r19, 0x00	; 0
-    2e9e:	40 e8       	ldi	r20, 0x80	; 128
-    2ea0:	5f e3       	ldi	r21, 0x3F	; 63
-    2ea2:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
-    2ea6:	88 23       	and	r24, r24
-    2ea8:	2c f4       	brge	.+10     	; 0x2eb4 <App_SystemInit+0xea>
+    326e:	6b a1       	ldd	r22, Y+35	; 0x23
+    3270:	7c a1       	ldd	r23, Y+36	; 0x24
+    3272:	8d a1       	ldd	r24, Y+37	; 0x25
+    3274:	9e a1       	ldd	r25, Y+38	; 0x26
+    3276:	20 e0       	ldi	r18, 0x00	; 0
+    3278:	30 e0       	ldi	r19, 0x00	; 0
+    327a:	40 e8       	ldi	r20, 0x80	; 128
+    327c:	5f e3       	ldi	r21, 0x3F	; 63
+    327e:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
+    3282:	88 23       	and	r24, r24
+    3284:	2c f4       	brge	.+10     	; 0x3290 <App_SystemInit+0x14e>
 		__ticks = 1;
-    2eaa:	81 e0       	ldi	r24, 0x01	; 1
-    2eac:	90 e0       	ldi	r25, 0x00	; 0
-    2eae:	9a a3       	std	Y+34, r25	; 0x22
-    2eb0:	89 a3       	std	Y+33, r24	; 0x21
-    2eb2:	3f c0       	rjmp	.+126    	; 0x2f32 <App_SystemInit+0x168>
+    3286:	81 e0       	ldi	r24, 0x01	; 1
+    3288:	90 e0       	ldi	r25, 0x00	; 0
+    328a:	9a a3       	std	Y+34, r25	; 0x22
+    328c:	89 a3       	std	Y+33, r24	; 0x21
+    328e:	3f c0       	rjmp	.+126    	; 0x330e <App_SystemInit+0x1cc>
 	else if (__tmp > 65535)
-    2eb4:	6b a1       	ldd	r22, Y+35	; 0x23
-    2eb6:	7c a1       	ldd	r23, Y+36	; 0x24
-    2eb8:	8d a1       	ldd	r24, Y+37	; 0x25
-    2eba:	9e a1       	ldd	r25, Y+38	; 0x26
-    2ebc:	20 e0       	ldi	r18, 0x00	; 0
-    2ebe:	3f ef       	ldi	r19, 0xFF	; 255
-    2ec0:	4f e7       	ldi	r20, 0x7F	; 127
-    2ec2:	57 e4       	ldi	r21, 0x47	; 71
-    2ec4:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
-    2ec8:	18 16       	cp	r1, r24
-    2eca:	4c f5       	brge	.+82     	; 0x2f1e <App_SystemInit+0x154>
+    3290:	6b a1       	ldd	r22, Y+35	; 0x23
+    3292:	7c a1       	ldd	r23, Y+36	; 0x24
+    3294:	8d a1       	ldd	r24, Y+37	; 0x25
+    3296:	9e a1       	ldd	r25, Y+38	; 0x26
+    3298:	20 e0       	ldi	r18, 0x00	; 0
+    329a:	3f ef       	ldi	r19, 0xFF	; 255
+    329c:	4f e7       	ldi	r20, 0x7F	; 127
+    329e:	57 e4       	ldi	r21, 0x47	; 71
+    32a0:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
+    32a4:	18 16       	cp	r1, r24
+    32a6:	4c f5       	brge	.+82     	; 0x32fa <App_SystemInit+0x1b8>
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
-    2ecc:	6f a1       	ldd	r22, Y+39	; 0x27
-    2ece:	78 a5       	ldd	r23, Y+40	; 0x28
-    2ed0:	89 a5       	ldd	r24, Y+41	; 0x29
-    2ed2:	9a a5       	ldd	r25, Y+42	; 0x2a
-    2ed4:	20 e0       	ldi	r18, 0x00	; 0
-    2ed6:	30 e0       	ldi	r19, 0x00	; 0
-    2ed8:	40 e2       	ldi	r20, 0x20	; 32
-    2eda:	51 e4       	ldi	r21, 0x41	; 65
-    2edc:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    2ee0:	dc 01       	movw	r26, r24
-    2ee2:	cb 01       	movw	r24, r22
-    2ee4:	bc 01       	movw	r22, r24
-    2ee6:	cd 01       	movw	r24, r26
-    2ee8:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    2eec:	dc 01       	movw	r26, r24
-    2eee:	cb 01       	movw	r24, r22
-    2ef0:	9a a3       	std	Y+34, r25	; 0x22
-    2ef2:	89 a3       	std	Y+33, r24	; 0x21
-    2ef4:	0f c0       	rjmp	.+30     	; 0x2f14 <App_SystemInit+0x14a>
-    2ef6:	80 e9       	ldi	r24, 0x90	; 144
-    2ef8:	91 e0       	ldi	r25, 0x01	; 1
-    2efa:	98 a3       	std	Y+32, r25	; 0x20
-    2efc:	8f 8f       	std	Y+31, r24	; 0x1f
+    32a8:	6f a1       	ldd	r22, Y+39	; 0x27
+    32aa:	78 a5       	ldd	r23, Y+40	; 0x28
+    32ac:	89 a5       	ldd	r24, Y+41	; 0x29
+    32ae:	9a a5       	ldd	r25, Y+42	; 0x2a
+    32b0:	20 e0       	ldi	r18, 0x00	; 0
+    32b2:	30 e0       	ldi	r19, 0x00	; 0
+    32b4:	40 e2       	ldi	r20, 0x20	; 32
+    32b6:	51 e4       	ldi	r21, 0x41	; 65
+    32b8:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    32bc:	dc 01       	movw	r26, r24
+    32be:	cb 01       	movw	r24, r22
+    32c0:	bc 01       	movw	r22, r24
+    32c2:	cd 01       	movw	r24, r26
+    32c4:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    32c8:	dc 01       	movw	r26, r24
+    32ca:	cb 01       	movw	r24, r22
+    32cc:	9a a3       	std	Y+34, r25	; 0x22
+    32ce:	89 a3       	std	Y+33, r24	; 0x21
+    32d0:	0f c0       	rjmp	.+30     	; 0x32f0 <App_SystemInit+0x1ae>
+    32d2:	80 e9       	ldi	r24, 0x90	; 144
+    32d4:	91 e0       	ldi	r25, 0x01	; 1
+    32d6:	98 a3       	std	Y+32, r25	; 0x20
+    32d8:	8f 8f       	std	Y+31, r24	; 0x1f
     milliseconds can be achieved.
  */
 void
 _delay_loop_2(uint16_t __count)
 {
 	__asm__ volatile (
-    2efe:	8f 8d       	ldd	r24, Y+31	; 0x1f
-    2f00:	98 a1       	ldd	r25, Y+32	; 0x20
-    2f02:	01 97       	sbiw	r24, 0x01	; 1
-    2f04:	f1 f7       	brne	.-4      	; 0x2f02 <App_SystemInit+0x138>
-    2f06:	98 a3       	std	Y+32, r25	; 0x20
-    2f08:	8f 8f       	std	Y+31, r24	; 0x1f
+    32da:	8f 8d       	ldd	r24, Y+31	; 0x1f
+    32dc:	98 a1       	ldd	r25, Y+32	; 0x20
+    32de:	01 97       	sbiw	r24, 0x01	; 1
+    32e0:	f1 f7       	brne	.-4      	; 0x32de <App_SystemInit+0x19c>
+    32e2:	98 a3       	std	Y+32, r25	; 0x20
+    32e4:	8f 8f       	std	Y+31, r24	; 0x1f
 		while(__ticks)
 		{
 			// wait 1/10 ms
 			_delay_loop_2(((F_CPU) / 4e3) / 10);
 			__ticks --;
-    2f0a:	89 a1       	ldd	r24, Y+33	; 0x21
-    2f0c:	9a a1       	ldd	r25, Y+34	; 0x22
-    2f0e:	01 97       	sbiw	r24, 0x01	; 1
-    2f10:	9a a3       	std	Y+34, r25	; 0x22
-    2f12:	89 a3       	std	Y+33, r24	; 0x21
+    32e6:	89 a1       	ldd	r24, Y+33	; 0x21
+    32e8:	9a a1       	ldd	r25, Y+34	; 0x22
+    32ea:	01 97       	sbiw	r24, 0x01	; 1
+    32ec:	9a a3       	std	Y+34, r25	; 0x22
+    32ee:	89 a3       	std	Y+33, r24	; 0x21
 		__ticks = 1;
 	else if (__tmp > 65535)
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
 		while(__ticks)
-    2f14:	89 a1       	ldd	r24, Y+33	; 0x21
-    2f16:	9a a1       	ldd	r25, Y+34	; 0x22
-    2f18:	00 97       	sbiw	r24, 0x00	; 0
-    2f1a:	69 f7       	brne	.-38     	; 0x2ef6 <App_SystemInit+0x12c>
-    2f1c:	14 c0       	rjmp	.+40     	; 0x2f46 <App_SystemInit+0x17c>
+    32f0:	89 a1       	ldd	r24, Y+33	; 0x21
+    32f2:	9a a1       	ldd	r25, Y+34	; 0x22
+    32f4:	00 97       	sbiw	r24, 0x00	; 0
+    32f6:	69 f7       	brne	.-38     	; 0x32d2 <App_SystemInit+0x190>
+    32f8:	14 c0       	rjmp	.+40     	; 0x3322 <App_SystemInit+0x1e0>
 			__ticks --;
 		}
 		return;
 	}
 	else
 		__ticks = (uint16_t)__tmp;
-    2f1e:	6b a1       	ldd	r22, Y+35	; 0x23
-    2f20:	7c a1       	ldd	r23, Y+36	; 0x24
-    2f22:	8d a1       	ldd	r24, Y+37	; 0x25
-    2f24:	9e a1       	ldd	r25, Y+38	; 0x26
-    2f26:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    2f2a:	dc 01       	movw	r26, r24
-    2f2c:	cb 01       	movw	r24, r22
-    2f2e:	9a a3       	std	Y+34, r25	; 0x22
-    2f30:	89 a3       	std	Y+33, r24	; 0x21
-    2f32:	89 a1       	ldd	r24, Y+33	; 0x21
-    2f34:	9a a1       	ldd	r25, Y+34	; 0x22
-    2f36:	9e 8f       	std	Y+30, r25	; 0x1e
-    2f38:	8d 8f       	std	Y+29, r24	; 0x1d
-    2f3a:	8d 8d       	ldd	r24, Y+29	; 0x1d
-    2f3c:	9e 8d       	ldd	r25, Y+30	; 0x1e
-    2f3e:	01 97       	sbiw	r24, 0x01	; 1
-    2f40:	f1 f7       	brne	.-4      	; 0x2f3e <App_SystemInit+0x174>
-    2f42:	9e 8f       	std	Y+30, r25	; 0x1e
-    2f44:	8d 8f       	std	Y+29, r24	; 0x1d
+    32fa:	6b a1       	ldd	r22, Y+35	; 0x23
+    32fc:	7c a1       	ldd	r23, Y+36	; 0x24
+    32fe:	8d a1       	ldd	r24, Y+37	; 0x25
+    3300:	9e a1       	ldd	r25, Y+38	; 0x26
+    3302:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    3306:	dc 01       	movw	r26, r24
+    3308:	cb 01       	movw	r24, r22
+    330a:	9a a3       	std	Y+34, r25	; 0x22
+    330c:	89 a3       	std	Y+33, r24	; 0x21
+    330e:	89 a1       	ldd	r24, Y+33	; 0x21
+    3310:	9a a1       	ldd	r25, Y+34	; 0x22
+    3312:	9e 8f       	std	Y+30, r25	; 0x1e
+    3314:	8d 8f       	std	Y+29, r24	; 0x1d
+    3316:	8d 8d       	ldd	r24, Y+29	; 0x1d
+    3318:	9e 8d       	ldd	r25, Y+30	; 0x1e
+    331a:	01 97       	sbiw	r24, 0x01	; 1
+    331c:	f1 f7       	brne	.-4      	; 0x331a <App_SystemInit+0x1d8>
+    331e:	9e 8f       	std	Y+30, r25	; 0x1e
+    3320:	8d 8f       	std	Y+29, r24	; 0x1d
 	_delay_ms(1);
 
-	/// Check if EEPROM is used for the first time or not. If yes, write into it the initial temperature set point
-	EEPROM_u8ReadByte(0, 0, &app_u8TempSetPoint);
-    2f46:	28 e6       	ldi	r18, 0x68	; 104
-    2f48:	31 e0       	ldi	r19, 0x01	; 1
-    2f4a:	80 e0       	ldi	r24, 0x00	; 0
-    2f4c:	60 e0       	ldi	r22, 0x00	; 0
-    2f4e:	a9 01       	movw	r20, r18
-    2f50:	0e 94 bb 13 	call	0x2776	; 0x2776 <EEPROM_u8ReadByte>
-    2f54:	80 e0       	ldi	r24, 0x00	; 0
-    2f56:	90 e0       	ldi	r25, 0x00	; 0
-    2f58:	a0 e8       	ldi	r26, 0x80	; 128
-    2f5a:	bf e3       	ldi	r27, 0x3F	; 63
-    2f5c:	89 8f       	std	Y+25, r24	; 0x19
-    2f5e:	9a 8f       	std	Y+26, r25	; 0x1a
-    2f60:	ab 8f       	std	Y+27, r26	; 0x1b
-    2f62:	bc 8f       	std	Y+28, r27	; 0x1c
+	EEPROM_u8ReadByte(0, 0, &App_u8TempSetPoint);
+    3322:	28 e6       	ldi	r18, 0x68	; 104
+    3324:	31 e0       	ldi	r19, 0x01	; 1
+    3326:	80 e0       	ldi	r24, 0x00	; 0
+    3328:	60 e0       	ldi	r22, 0x00	; 0
+    332a:	a9 01       	movw	r20, r18
+    332c:	0e 94 bb 13 	call	0x2776	; 0x2776 <EEPROM_u8ReadByte>
+    3330:	80 e0       	ldi	r24, 0x00	; 0
+    3332:	90 e0       	ldi	r25, 0x00	; 0
+    3334:	a0 e8       	ldi	r26, 0x80	; 128
+    3336:	bf e3       	ldi	r27, 0x3F	; 63
+    3338:	89 8f       	std	Y+25, r24	; 0x19
+    333a:	9a 8f       	std	Y+26, r25	; 0x1a
+    333c:	ab 8f       	std	Y+27, r26	; 0x1b
+    333e:	bc 8f       	std	Y+28, r27	; 0x1c
  */
 void
 _delay_ms(double __ms)
 {
 	uint16_t __ticks;
 	double __tmp = ((F_CPU) / 4e3) * __ms;
-    2f64:	69 8d       	ldd	r22, Y+25	; 0x19
-    2f66:	7a 8d       	ldd	r23, Y+26	; 0x1a
-    2f68:	8b 8d       	ldd	r24, Y+27	; 0x1b
-    2f6a:	9c 8d       	ldd	r25, Y+28	; 0x1c
-    2f6c:	20 e0       	ldi	r18, 0x00	; 0
-    2f6e:	30 e0       	ldi	r19, 0x00	; 0
-    2f70:	4a e7       	ldi	r20, 0x7A	; 122
-    2f72:	55 e4       	ldi	r21, 0x45	; 69
-    2f74:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    2f78:	dc 01       	movw	r26, r24
-    2f7a:	cb 01       	movw	r24, r22
-    2f7c:	8d 8b       	std	Y+21, r24	; 0x15
-    2f7e:	9e 8b       	std	Y+22, r25	; 0x16
-    2f80:	af 8b       	std	Y+23, r26	; 0x17
-    2f82:	b8 8f       	std	Y+24, r27	; 0x18
+    3340:	69 8d       	ldd	r22, Y+25	; 0x19
+    3342:	7a 8d       	ldd	r23, Y+26	; 0x1a
+    3344:	8b 8d       	ldd	r24, Y+27	; 0x1b
+    3346:	9c 8d       	ldd	r25, Y+28	; 0x1c
+    3348:	20 e0       	ldi	r18, 0x00	; 0
+    334a:	30 e0       	ldi	r19, 0x00	; 0
+    334c:	4a e7       	ldi	r20, 0x7A	; 122
+    334e:	55 e4       	ldi	r21, 0x45	; 69
+    3350:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    3354:	dc 01       	movw	r26, r24
+    3356:	cb 01       	movw	r24, r22
+    3358:	8d 8b       	std	Y+21, r24	; 0x15
+    335a:	9e 8b       	std	Y+22, r25	; 0x16
+    335c:	af 8b       	std	Y+23, r26	; 0x17
+    335e:	b8 8f       	std	Y+24, r27	; 0x18
 	if (__tmp < 1.0)
-    2f84:	6d 89       	ldd	r22, Y+21	; 0x15
-    2f86:	7e 89       	ldd	r23, Y+22	; 0x16
-    2f88:	8f 89       	ldd	r24, Y+23	; 0x17
-    2f8a:	98 8d       	ldd	r25, Y+24	; 0x18
-    2f8c:	20 e0       	ldi	r18, 0x00	; 0
-    2f8e:	30 e0       	ldi	r19, 0x00	; 0
-    2f90:	40 e8       	ldi	r20, 0x80	; 128
-    2f92:	5f e3       	ldi	r21, 0x3F	; 63
-    2f94:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
-    2f98:	88 23       	and	r24, r24
-    2f9a:	2c f4       	brge	.+10     	; 0x2fa6 <App_SystemInit+0x1dc>
+    3360:	6d 89       	ldd	r22, Y+21	; 0x15
+    3362:	7e 89       	ldd	r23, Y+22	; 0x16
+    3364:	8f 89       	ldd	r24, Y+23	; 0x17
+    3366:	98 8d       	ldd	r25, Y+24	; 0x18
+    3368:	20 e0       	ldi	r18, 0x00	; 0
+    336a:	30 e0       	ldi	r19, 0x00	; 0
+    336c:	40 e8       	ldi	r20, 0x80	; 128
+    336e:	5f e3       	ldi	r21, 0x3F	; 63
+    3370:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
+    3374:	88 23       	and	r24, r24
+    3376:	2c f4       	brge	.+10     	; 0x3382 <App_SystemInit+0x240>
 		__ticks = 1;
-    2f9c:	81 e0       	ldi	r24, 0x01	; 1
-    2f9e:	90 e0       	ldi	r25, 0x00	; 0
-    2fa0:	9c 8b       	std	Y+20, r25	; 0x14
-    2fa2:	8b 8b       	std	Y+19, r24	; 0x13
-    2fa4:	3f c0       	rjmp	.+126    	; 0x3024 <App_SystemInit+0x25a>
+    3378:	81 e0       	ldi	r24, 0x01	; 1
+    337a:	90 e0       	ldi	r25, 0x00	; 0
+    337c:	9c 8b       	std	Y+20, r25	; 0x14
+    337e:	8b 8b       	std	Y+19, r24	; 0x13
+    3380:	3f c0       	rjmp	.+126    	; 0x3400 <App_SystemInit+0x2be>
 	else if (__tmp > 65535)
-    2fa6:	6d 89       	ldd	r22, Y+21	; 0x15
-    2fa8:	7e 89       	ldd	r23, Y+22	; 0x16
-    2faa:	8f 89       	ldd	r24, Y+23	; 0x17
-    2fac:	98 8d       	ldd	r25, Y+24	; 0x18
-    2fae:	20 e0       	ldi	r18, 0x00	; 0
-    2fb0:	3f ef       	ldi	r19, 0xFF	; 255
-    2fb2:	4f e7       	ldi	r20, 0x7F	; 127
-    2fb4:	57 e4       	ldi	r21, 0x47	; 71
-    2fb6:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
-    2fba:	18 16       	cp	r1, r24
-    2fbc:	4c f5       	brge	.+82     	; 0x3010 <App_SystemInit+0x246>
+    3382:	6d 89       	ldd	r22, Y+21	; 0x15
+    3384:	7e 89       	ldd	r23, Y+22	; 0x16
+    3386:	8f 89       	ldd	r24, Y+23	; 0x17
+    3388:	98 8d       	ldd	r25, Y+24	; 0x18
+    338a:	20 e0       	ldi	r18, 0x00	; 0
+    338c:	3f ef       	ldi	r19, 0xFF	; 255
+    338e:	4f e7       	ldi	r20, 0x7F	; 127
+    3390:	57 e4       	ldi	r21, 0x47	; 71
+    3392:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
+    3396:	18 16       	cp	r1, r24
+    3398:	4c f5       	brge	.+82     	; 0x33ec <App_SystemInit+0x2aa>
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
-    2fbe:	69 8d       	ldd	r22, Y+25	; 0x19
-    2fc0:	7a 8d       	ldd	r23, Y+26	; 0x1a
-    2fc2:	8b 8d       	ldd	r24, Y+27	; 0x1b
-    2fc4:	9c 8d       	ldd	r25, Y+28	; 0x1c
-    2fc6:	20 e0       	ldi	r18, 0x00	; 0
-    2fc8:	30 e0       	ldi	r19, 0x00	; 0
-    2fca:	40 e2       	ldi	r20, 0x20	; 32
-    2fcc:	51 e4       	ldi	r21, 0x41	; 65
-    2fce:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    2fd2:	dc 01       	movw	r26, r24
-    2fd4:	cb 01       	movw	r24, r22
-    2fd6:	bc 01       	movw	r22, r24
-    2fd8:	cd 01       	movw	r24, r26
-    2fda:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    2fde:	dc 01       	movw	r26, r24
-    2fe0:	cb 01       	movw	r24, r22
-    2fe2:	9c 8b       	std	Y+20, r25	; 0x14
-    2fe4:	8b 8b       	std	Y+19, r24	; 0x13
-    2fe6:	0f c0       	rjmp	.+30     	; 0x3006 <App_SystemInit+0x23c>
-    2fe8:	80 e9       	ldi	r24, 0x90	; 144
-    2fea:	91 e0       	ldi	r25, 0x01	; 1
-    2fec:	9a 8b       	std	Y+18, r25	; 0x12
-    2fee:	89 8b       	std	Y+17, r24	; 0x11
-    2ff0:	89 89       	ldd	r24, Y+17	; 0x11
-    2ff2:	9a 89       	ldd	r25, Y+18	; 0x12
-    2ff4:	01 97       	sbiw	r24, 0x01	; 1
-    2ff6:	f1 f7       	brne	.-4      	; 0x2ff4 <App_SystemInit+0x22a>
-    2ff8:	9a 8b       	std	Y+18, r25	; 0x12
-    2ffa:	89 8b       	std	Y+17, r24	; 0x11
+    339a:	69 8d       	ldd	r22, Y+25	; 0x19
+    339c:	7a 8d       	ldd	r23, Y+26	; 0x1a
+    339e:	8b 8d       	ldd	r24, Y+27	; 0x1b
+    33a0:	9c 8d       	ldd	r25, Y+28	; 0x1c
+    33a2:	20 e0       	ldi	r18, 0x00	; 0
+    33a4:	30 e0       	ldi	r19, 0x00	; 0
+    33a6:	40 e2       	ldi	r20, 0x20	; 32
+    33a8:	51 e4       	ldi	r21, 0x41	; 65
+    33aa:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    33ae:	dc 01       	movw	r26, r24
+    33b0:	cb 01       	movw	r24, r22
+    33b2:	bc 01       	movw	r22, r24
+    33b4:	cd 01       	movw	r24, r26
+    33b6:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    33ba:	dc 01       	movw	r26, r24
+    33bc:	cb 01       	movw	r24, r22
+    33be:	9c 8b       	std	Y+20, r25	; 0x14
+    33c0:	8b 8b       	std	Y+19, r24	; 0x13
+    33c2:	0f c0       	rjmp	.+30     	; 0x33e2 <App_SystemInit+0x2a0>
+    33c4:	80 e9       	ldi	r24, 0x90	; 144
+    33c6:	91 e0       	ldi	r25, 0x01	; 1
+    33c8:	9a 8b       	std	Y+18, r25	; 0x12
+    33ca:	89 8b       	std	Y+17, r24	; 0x11
+    33cc:	89 89       	ldd	r24, Y+17	; 0x11
+    33ce:	9a 89       	ldd	r25, Y+18	; 0x12
+    33d0:	01 97       	sbiw	r24, 0x01	; 1
+    33d2:	f1 f7       	brne	.-4      	; 0x33d0 <App_SystemInit+0x28e>
+    33d4:	9a 8b       	std	Y+18, r25	; 0x12
+    33d6:	89 8b       	std	Y+17, r24	; 0x11
 		while(__ticks)
 		{
 			// wait 1/10 ms
 			_delay_loop_2(((F_CPU) / 4e3) / 10);
 			__ticks --;
-    2ffc:	8b 89       	ldd	r24, Y+19	; 0x13
-    2ffe:	9c 89       	ldd	r25, Y+20	; 0x14
-    3000:	01 97       	sbiw	r24, 0x01	; 1
-    3002:	9c 8b       	std	Y+20, r25	; 0x14
-    3004:	8b 8b       	std	Y+19, r24	; 0x13
+    33d8:	8b 89       	ldd	r24, Y+19	; 0x13
+    33da:	9c 89       	ldd	r25, Y+20	; 0x14
+    33dc:	01 97       	sbiw	r24, 0x01	; 1
+    33de:	9c 8b       	std	Y+20, r25	; 0x14
+    33e0:	8b 8b       	std	Y+19, r24	; 0x13
 		__ticks = 1;
 	else if (__tmp > 65535)
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
 		while(__ticks)
-    3006:	8b 89       	ldd	r24, Y+19	; 0x13
-    3008:	9c 89       	ldd	r25, Y+20	; 0x14
-    300a:	00 97       	sbiw	r24, 0x00	; 0
-    300c:	69 f7       	brne	.-38     	; 0x2fe8 <App_SystemInit+0x21e>
-    300e:	14 c0       	rjmp	.+40     	; 0x3038 <App_SystemInit+0x26e>
+    33e2:	8b 89       	ldd	r24, Y+19	; 0x13
+    33e4:	9c 89       	ldd	r25, Y+20	; 0x14
+    33e6:	00 97       	sbiw	r24, 0x00	; 0
+    33e8:	69 f7       	brne	.-38     	; 0x33c4 <App_SystemInit+0x282>
+    33ea:	14 c0       	rjmp	.+40     	; 0x3414 <App_SystemInit+0x2d2>
 			__ticks --;
 		}
 		return;
 	}
 	else
 		__ticks = (uint16_t)__tmp;
-    3010:	6d 89       	ldd	r22, Y+21	; 0x15
-    3012:	7e 89       	ldd	r23, Y+22	; 0x16
-    3014:	8f 89       	ldd	r24, Y+23	; 0x17
-    3016:	98 8d       	ldd	r25, Y+24	; 0x18
-    3018:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    301c:	dc 01       	movw	r26, r24
-    301e:	cb 01       	movw	r24, r22
-    3020:	9c 8b       	std	Y+20, r25	; 0x14
-    3022:	8b 8b       	std	Y+19, r24	; 0x13
-    3024:	8b 89       	ldd	r24, Y+19	; 0x13
-    3026:	9c 89       	ldd	r25, Y+20	; 0x14
-    3028:	98 8b       	std	Y+16, r25	; 0x10
-    302a:	8f 87       	std	Y+15, r24	; 0x0f
-    302c:	8f 85       	ldd	r24, Y+15	; 0x0f
-    302e:	98 89       	ldd	r25, Y+16	; 0x10
-    3030:	01 97       	sbiw	r24, 0x01	; 1
-    3032:	f1 f7       	brne	.-4      	; 0x3030 <App_SystemInit+0x266>
-    3034:	98 8b       	std	Y+16, r25	; 0x10
-    3036:	8f 87       	std	Y+15, r24	; 0x0f
+    33ec:	6d 89       	ldd	r22, Y+21	; 0x15
+    33ee:	7e 89       	ldd	r23, Y+22	; 0x16
+    33f0:	8f 89       	ldd	r24, Y+23	; 0x17
+    33f2:	98 8d       	ldd	r25, Y+24	; 0x18
+    33f4:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    33f8:	dc 01       	movw	r26, r24
+    33fa:	cb 01       	movw	r24, r22
+    33fc:	9c 8b       	std	Y+20, r25	; 0x14
+    33fe:	8b 8b       	std	Y+19, r24	; 0x13
+    3400:	8b 89       	ldd	r24, Y+19	; 0x13
+    3402:	9c 89       	ldd	r25, Y+20	; 0x14
+    3404:	98 8b       	std	Y+16, r25	; 0x10
+    3406:	8f 87       	std	Y+15, r24	; 0x0f
+    3408:	8f 85       	ldd	r24, Y+15	; 0x0f
+    340a:	98 89       	ldd	r25, Y+16	; 0x10
+    340c:	01 97       	sbiw	r24, 0x01	; 1
+    340e:	f1 f7       	brne	.-4      	; 0x340c <App_SystemInit+0x2ca>
+    3410:	98 8b       	std	Y+16, r25	; 0x10
+    3412:	8f 87       	std	Y+15, r24	; 0x0f
 	_delay_ms(1);
-	if(app_u8TempSetPoint == 255)
-    3038:	80 91 68 01 	lds	r24, 0x0168
-    303c:	8f 3f       	cpi	r24, 0xFF	; 255
-    303e:	09 f0       	breq	.+2      	; 0x3042 <App_SystemInit+0x278>
-    3040:	7a c0       	rjmp	.+244    	; 0x3136 <App_SystemInit+0x36c>
+	if(App_u8TempSetPoint == 255)
+    3414:	80 91 68 01 	lds	r24, 0x0168
+    3418:	8f 3f       	cpi	r24, 0xFF	; 255
+    341a:	09 f0       	breq	.+2      	; 0x341e <App_SystemInit+0x2dc>
+    341c:	7a c0       	rjmp	.+244    	; 0x3512 <App_SystemInit+0x3d0>
 	{
-		app_u8TempSetPoint = TEMP_INITIAL_SET_POINT;
-    3042:	8c e3       	ldi	r24, 0x3C	; 60
-    3044:	80 93 68 01 	sts	0x0168, r24
+		App_u8TempSetPoint = TEMP_INITIAL_SET_POINT;
+    341e:	8c e3       	ldi	r24, 0x3C	; 60
+    3420:	80 93 68 01 	sts	0x0168, r24
 		EEPROM_voidWriteByte(TEMP_INITIAL_SET_POINT, 0, 0);
-    3048:	8c e3       	ldi	r24, 0x3C	; 60
-    304a:	60 e0       	ldi	r22, 0x00	; 0
-    304c:	40 e0       	ldi	r20, 0x00	; 0
-    304e:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
-    3052:	80 e0       	ldi	r24, 0x00	; 0
-    3054:	90 e0       	ldi	r25, 0x00	; 0
-    3056:	a0 e8       	ldi	r26, 0x80	; 128
-    3058:	bf e3       	ldi	r27, 0x3F	; 63
-    305a:	8b 87       	std	Y+11, r24	; 0x0b
-    305c:	9c 87       	std	Y+12, r25	; 0x0c
-    305e:	ad 87       	std	Y+13, r26	; 0x0d
-    3060:	be 87       	std	Y+14, r27	; 0x0e
+    3424:	8c e3       	ldi	r24, 0x3C	; 60
+    3426:	60 e0       	ldi	r22, 0x00	; 0
+    3428:	40 e0       	ldi	r20, 0x00	; 0
+    342a:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
+    342e:	80 e0       	ldi	r24, 0x00	; 0
+    3430:	90 e0       	ldi	r25, 0x00	; 0
+    3432:	a0 e8       	ldi	r26, 0x80	; 128
+    3434:	bf e3       	ldi	r27, 0x3F	; 63
+    3436:	8b 87       	std	Y+11, r24	; 0x0b
+    3438:	9c 87       	std	Y+12, r25	; 0x0c
+    343a:	ad 87       	std	Y+13, r26	; 0x0d
+    343c:	be 87       	std	Y+14, r27	; 0x0e
  */
 void
 _delay_ms(double __ms)
 {
 	uint16_t __ticks;
 	double __tmp = ((F_CPU) / 4e3) * __ms;
-    3062:	6b 85       	ldd	r22, Y+11	; 0x0b
-    3064:	7c 85       	ldd	r23, Y+12	; 0x0c
-    3066:	8d 85       	ldd	r24, Y+13	; 0x0d
-    3068:	9e 85       	ldd	r25, Y+14	; 0x0e
-    306a:	20 e0       	ldi	r18, 0x00	; 0
-    306c:	30 e0       	ldi	r19, 0x00	; 0
-    306e:	4a e7       	ldi	r20, 0x7A	; 122
-    3070:	55 e4       	ldi	r21, 0x45	; 69
-    3072:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    3076:	dc 01       	movw	r26, r24
-    3078:	cb 01       	movw	r24, r22
-    307a:	8f 83       	std	Y+7, r24	; 0x07
-    307c:	98 87       	std	Y+8, r25	; 0x08
-    307e:	a9 87       	std	Y+9, r26	; 0x09
-    3080:	ba 87       	std	Y+10, r27	; 0x0a
+    343e:	6b 85       	ldd	r22, Y+11	; 0x0b
+    3440:	7c 85       	ldd	r23, Y+12	; 0x0c
+    3442:	8d 85       	ldd	r24, Y+13	; 0x0d
+    3444:	9e 85       	ldd	r25, Y+14	; 0x0e
+    3446:	20 e0       	ldi	r18, 0x00	; 0
+    3448:	30 e0       	ldi	r19, 0x00	; 0
+    344a:	4a e7       	ldi	r20, 0x7A	; 122
+    344c:	55 e4       	ldi	r21, 0x45	; 69
+    344e:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    3452:	dc 01       	movw	r26, r24
+    3454:	cb 01       	movw	r24, r22
+    3456:	8f 83       	std	Y+7, r24	; 0x07
+    3458:	98 87       	std	Y+8, r25	; 0x08
+    345a:	a9 87       	std	Y+9, r26	; 0x09
+    345c:	ba 87       	std	Y+10, r27	; 0x0a
 	if (__tmp < 1.0)
-    3082:	6f 81       	ldd	r22, Y+7	; 0x07
-    3084:	78 85       	ldd	r23, Y+8	; 0x08
-    3086:	89 85       	ldd	r24, Y+9	; 0x09
-    3088:	9a 85       	ldd	r25, Y+10	; 0x0a
-    308a:	20 e0       	ldi	r18, 0x00	; 0
-    308c:	30 e0       	ldi	r19, 0x00	; 0
-    308e:	40 e8       	ldi	r20, 0x80	; 128
-    3090:	5f e3       	ldi	r21, 0x3F	; 63
-    3092:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
-    3096:	88 23       	and	r24, r24
-    3098:	2c f4       	brge	.+10     	; 0x30a4 <App_SystemInit+0x2da>
+    345e:	6f 81       	ldd	r22, Y+7	; 0x07
+    3460:	78 85       	ldd	r23, Y+8	; 0x08
+    3462:	89 85       	ldd	r24, Y+9	; 0x09
+    3464:	9a 85       	ldd	r25, Y+10	; 0x0a
+    3466:	20 e0       	ldi	r18, 0x00	; 0
+    3468:	30 e0       	ldi	r19, 0x00	; 0
+    346a:	40 e8       	ldi	r20, 0x80	; 128
+    346c:	5f e3       	ldi	r21, 0x3F	; 63
+    346e:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
+    3472:	88 23       	and	r24, r24
+    3474:	2c f4       	brge	.+10     	; 0x3480 <App_SystemInit+0x33e>
 		__ticks = 1;
-    309a:	81 e0       	ldi	r24, 0x01	; 1
-    309c:	90 e0       	ldi	r25, 0x00	; 0
-    309e:	9e 83       	std	Y+6, r25	; 0x06
-    30a0:	8d 83       	std	Y+5, r24	; 0x05
-    30a2:	3f c0       	rjmp	.+126    	; 0x3122 <App_SystemInit+0x358>
+    3476:	81 e0       	ldi	r24, 0x01	; 1
+    3478:	90 e0       	ldi	r25, 0x00	; 0
+    347a:	9e 83       	std	Y+6, r25	; 0x06
+    347c:	8d 83       	std	Y+5, r24	; 0x05
+    347e:	3f c0       	rjmp	.+126    	; 0x34fe <App_SystemInit+0x3bc>
 	else if (__tmp > 65535)
-    30a4:	6f 81       	ldd	r22, Y+7	; 0x07
-    30a6:	78 85       	ldd	r23, Y+8	; 0x08
-    30a8:	89 85       	ldd	r24, Y+9	; 0x09
-    30aa:	9a 85       	ldd	r25, Y+10	; 0x0a
-    30ac:	20 e0       	ldi	r18, 0x00	; 0
-    30ae:	3f ef       	ldi	r19, 0xFF	; 255
-    30b0:	4f e7       	ldi	r20, 0x7F	; 127
-    30b2:	57 e4       	ldi	r21, 0x47	; 71
-    30b4:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
-    30b8:	18 16       	cp	r1, r24
-    30ba:	4c f5       	brge	.+82     	; 0x310e <App_SystemInit+0x344>
+    3480:	6f 81       	ldd	r22, Y+7	; 0x07
+    3482:	78 85       	ldd	r23, Y+8	; 0x08
+    3484:	89 85       	ldd	r24, Y+9	; 0x09
+    3486:	9a 85       	ldd	r25, Y+10	; 0x0a
+    3488:	20 e0       	ldi	r18, 0x00	; 0
+    348a:	3f ef       	ldi	r19, 0xFF	; 255
+    348c:	4f e7       	ldi	r20, 0x7F	; 127
+    348e:	57 e4       	ldi	r21, 0x47	; 71
+    3490:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
+    3494:	18 16       	cp	r1, r24
+    3496:	4c f5       	brge	.+82     	; 0x34ea <App_SystemInit+0x3a8>
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
-    30bc:	6b 85       	ldd	r22, Y+11	; 0x0b
-    30be:	7c 85       	ldd	r23, Y+12	; 0x0c
-    30c0:	8d 85       	ldd	r24, Y+13	; 0x0d
-    30c2:	9e 85       	ldd	r25, Y+14	; 0x0e
-    30c4:	20 e0       	ldi	r18, 0x00	; 0
-    30c6:	30 e0       	ldi	r19, 0x00	; 0
-    30c8:	40 e2       	ldi	r20, 0x20	; 32
-    30ca:	51 e4       	ldi	r21, 0x41	; 65
-    30cc:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
-    30d0:	dc 01       	movw	r26, r24
-    30d2:	cb 01       	movw	r24, r22
-    30d4:	bc 01       	movw	r22, r24
-    30d6:	cd 01       	movw	r24, r26
-    30d8:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    30dc:	dc 01       	movw	r26, r24
-    30de:	cb 01       	movw	r24, r22
-    30e0:	9e 83       	std	Y+6, r25	; 0x06
-    30e2:	8d 83       	std	Y+5, r24	; 0x05
-    30e4:	0f c0       	rjmp	.+30     	; 0x3104 <App_SystemInit+0x33a>
-    30e6:	80 e9       	ldi	r24, 0x90	; 144
-    30e8:	91 e0       	ldi	r25, 0x01	; 1
-    30ea:	9c 83       	std	Y+4, r25	; 0x04
-    30ec:	8b 83       	std	Y+3, r24	; 0x03
-    30ee:	8b 81       	ldd	r24, Y+3	; 0x03
-    30f0:	9c 81       	ldd	r25, Y+4	; 0x04
-    30f2:	01 97       	sbiw	r24, 0x01	; 1
-    30f4:	f1 f7       	brne	.-4      	; 0x30f2 <App_SystemInit+0x328>
-    30f6:	9c 83       	std	Y+4, r25	; 0x04
-    30f8:	8b 83       	std	Y+3, r24	; 0x03
+    3498:	6b 85       	ldd	r22, Y+11	; 0x0b
+    349a:	7c 85       	ldd	r23, Y+12	; 0x0c
+    349c:	8d 85       	ldd	r24, Y+13	; 0x0d
+    349e:	9e 85       	ldd	r25, Y+14	; 0x0e
+    34a0:	20 e0       	ldi	r18, 0x00	; 0
+    34a2:	30 e0       	ldi	r19, 0x00	; 0
+    34a4:	40 e2       	ldi	r20, 0x20	; 32
+    34a6:	51 e4       	ldi	r21, 0x41	; 65
+    34a8:	0e 94 1f 02 	call	0x43e	; 0x43e <__mulsf3>
+    34ac:	dc 01       	movw	r26, r24
+    34ae:	cb 01       	movw	r24, r22
+    34b0:	bc 01       	movw	r22, r24
+    34b2:	cd 01       	movw	r24, r26
+    34b4:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    34b8:	dc 01       	movw	r26, r24
+    34ba:	cb 01       	movw	r24, r22
+    34bc:	9e 83       	std	Y+6, r25	; 0x06
+    34be:	8d 83       	std	Y+5, r24	; 0x05
+    34c0:	0f c0       	rjmp	.+30     	; 0x34e0 <App_SystemInit+0x39e>
+    34c2:	80 e9       	ldi	r24, 0x90	; 144
+    34c4:	91 e0       	ldi	r25, 0x01	; 1
+    34c6:	9c 83       	std	Y+4, r25	; 0x04
+    34c8:	8b 83       	std	Y+3, r24	; 0x03
+    34ca:	8b 81       	ldd	r24, Y+3	; 0x03
+    34cc:	9c 81       	ldd	r25, Y+4	; 0x04
+    34ce:	01 97       	sbiw	r24, 0x01	; 1
+    34d0:	f1 f7       	brne	.-4      	; 0x34ce <App_SystemInit+0x38c>
+    34d2:	9c 83       	std	Y+4, r25	; 0x04
+    34d4:	8b 83       	std	Y+3, r24	; 0x03
 		while(__ticks)
 		{
 			// wait 1/10 ms
 			_delay_loop_2(((F_CPU) / 4e3) / 10);
 			__ticks --;
-    30fa:	8d 81       	ldd	r24, Y+5	; 0x05
-    30fc:	9e 81       	ldd	r25, Y+6	; 0x06
-    30fe:	01 97       	sbiw	r24, 0x01	; 1
-    3100:	9e 83       	std	Y+6, r25	; 0x06
-    3102:	8d 83       	std	Y+5, r24	; 0x05
+    34d6:	8d 81       	ldd	r24, Y+5	; 0x05
+    34d8:	9e 81       	ldd	r25, Y+6	; 0x06
+    34da:	01 97       	sbiw	r24, 0x01	; 1
+    34dc:	9e 83       	std	Y+6, r25	; 0x06
+    34de:	8d 83       	std	Y+5, r24	; 0x05
 		__ticks = 1;
 	else if (__tmp > 65535)
 	{
 		//	__ticks = requested delay in 1/10 ms
 		__ticks = (uint16_t) (__ms * 10.0);
 		while(__ticks)
-    3104:	8d 81       	ldd	r24, Y+5	; 0x05
-    3106:	9e 81       	ldd	r25, Y+6	; 0x06
-    3108:	00 97       	sbiw	r24, 0x00	; 0
-    310a:	69 f7       	brne	.-38     	; 0x30e6 <App_SystemInit+0x31c>
-    310c:	14 c0       	rjmp	.+40     	; 0x3136 <App_SystemInit+0x36c>
+    34e0:	8d 81       	ldd	r24, Y+5	; 0x05
+    34e2:	9e 81       	ldd	r25, Y+6	; 0x06
+    34e4:	00 97       	sbiw	r24, 0x00	; 0
+    34e6:	69 f7       	brne	.-38     	; 0x34c2 <App_SystemInit+0x380>
+    34e8:	14 c0       	rjmp	.+40     	; 0x3512 <App_SystemInit+0x3d0>
 			__ticks --;
 		}
 		return;
 	}
 	else
 		__ticks = (uint16_t)__tmp;
-    310e:	6f 81       	ldd	r22, Y+7	; 0x07
-    3110:	78 85       	ldd	r23, Y+8	; 0x08
-    3112:	89 85       	ldd	r24, Y+9	; 0x09
-    3114:	9a 85       	ldd	r25, Y+10	; 0x0a
-    3116:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
-    311a:	dc 01       	movw	r26, r24
-    311c:	cb 01       	movw	r24, r22
-    311e:	9e 83       	std	Y+6, r25	; 0x06
-    3120:	8d 83       	std	Y+5, r24	; 0x05
-    3122:	8d 81       	ldd	r24, Y+5	; 0x05
-    3124:	9e 81       	ldd	r25, Y+6	; 0x06
-    3126:	9a 83       	std	Y+2, r25	; 0x02
-    3128:	89 83       	std	Y+1, r24	; 0x01
-    312a:	89 81       	ldd	r24, Y+1	; 0x01
-    312c:	9a 81       	ldd	r25, Y+2	; 0x02
-    312e:	01 97       	sbiw	r24, 0x01	; 1
-    3130:	f1 f7       	brne	.-4      	; 0x312e <App_SystemInit+0x364>
-    3132:	9a 83       	std	Y+2, r25	; 0x02
-    3134:	89 83       	std	Y+1, r24	; 0x01
+    34ea:	6f 81       	ldd	r22, Y+7	; 0x07
+    34ec:	78 85       	ldd	r23, Y+8	; 0x08
+    34ee:	89 85       	ldd	r24, Y+9	; 0x09
+    34f0:	9a 85       	ldd	r25, Y+10	; 0x0a
+    34f2:	0e 94 49 00 	call	0x92	; 0x92 <__fixunssfsi>
+    34f6:	dc 01       	movw	r26, r24
+    34f8:	cb 01       	movw	r24, r22
+    34fa:	9e 83       	std	Y+6, r25	; 0x06
+    34fc:	8d 83       	std	Y+5, r24	; 0x05
+    34fe:	8d 81       	ldd	r24, Y+5	; 0x05
+    3500:	9e 81       	ldd	r25, Y+6	; 0x06
+    3502:	9a 83       	std	Y+2, r25	; 0x02
+    3504:	89 83       	std	Y+1, r24	; 0x01
+    3506:	89 81       	ldd	r24, Y+1	; 0x01
+    3508:	9a 81       	ldd	r25, Y+2	; 0x02
+    350a:	01 97       	sbiw	r24, 0x01	; 1
+    350c:	f1 f7       	brne	.-4      	; 0x350a <App_SystemInit+0x3c8>
+    350e:	9a 83       	std	Y+2, r25	; 0x02
+    3510:	89 83       	std	Y+1, r24	; 0x01
 		_delay_ms(1);
 	}
 }
-    3136:	ab 96       	adiw	r28, 0x2b	; 43
-    3138:	0f b6       	in	r0, 0x3f	; 63
-    313a:	f8 94       	cli
-    313c:	de bf       	out	0x3e, r29	; 62
-    313e:	0f be       	out	0x3f, r0	; 63
-    3140:	cd bf       	out	0x3d, r28	; 61
-    3142:	cf 91       	pop	r28
-    3144:	df 91       	pop	r29
-    3146:	08 95       	ret
+    3512:	ab 96       	adiw	r28, 0x2b	; 43
+    3514:	0f b6       	in	r0, 0x3f	; 63
+    3516:	f8 94       	cli
+    3518:	de bf       	out	0x3e, r29	; 62
+    351a:	0f be       	out	0x3f, r0	; 63
+    351c:	cd bf       	out	0x3d, r28	; 61
+    351e:	cf 91       	pop	r28
+    3520:	df 91       	pop	r29
+    3522:	08 95       	ret
 
-00003148 <App_IncreaseTempSetPoint>:
+00003524 <App_SetOnOffBtnHandler>:
 
+/*=====================================================================================================================================*/
 
-
-void App_IncreaseTempSetPoint()
+void App_SetOnOffBtnHandler(void (*onOffBtnCallBack) (void))
 {
-    3148:	df 93       	push	r29
-    314a:	cf 93       	push	r28
-    314c:	cd b7       	in	r28, 0x3d	; 61
-    314e:	de b7       	in	r29, 0x3e	; 62
-	/// make sure that set point is still lower than maximum allowable set point
-	if((app_u8TempSetPoint < TEMP_MAX_SET_POINT) && (app_u8SettingModeState == SETTING_MODE_EN))
-    3150:	80 91 68 01 	lds	r24, 0x0168
-    3154:	8b 34       	cpi	r24, 0x4B	; 75
-    3156:	08 f5       	brcc	.+66     	; 0x319a <App_IncreaseTempSetPoint+0x52>
-    3158:	80 91 8e 01 	lds	r24, 0x018E
-    315c:	81 30       	cpi	r24, 0x01	; 1
-    315e:	e9 f4       	brne	.+58     	; 0x319a <App_IncreaseTempSetPoint+0x52>
-	{
-		/// If OK then, Increase temperature set point by 5
-		app_u8TempSetPoint += TEMP_ON_CHANGE_VALUE;
-    3160:	80 91 68 01 	lds	r24, 0x0168
-    3164:	8b 5f       	subi	r24, 0xFB	; 251
-    3166:	80 93 68 01 	sts	0x0168, r24
-
-		/// Disable push buttons to make sure that value of set point is written into EEPROM and not interrupted
-		PushBtn_voidDisable(BTN_ON_OFF);
-    316a:	86 e1       	ldi	r24, 0x16	; 22
-    316c:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-		PushBtn_voidDisable(BTN_UP_CTRL);
-    3170:	8a e2       	ldi	r24, 0x2A	; 42
-    3172:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-		PushBtn_voidDisable(BTN_DOWN_CTRL);
-    3176:	8b e2       	ldi	r24, 0x2B	; 43
-    3178:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-
-		/// Writing into EEPROM the current set point value in page 0 in address 0
-		EEPROM_voidWriteByte(app_u8TempSetPoint, 0, 0);
-    317c:	80 91 68 01 	lds	r24, 0x0168
-    3180:	60 e0       	ldi	r22, 0x00	; 0
-    3182:	40 e0       	ldi	r20, 0x00	; 0
-    3184:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
-
-		/// Enable buttons again after writing into EEPROM
-		PushBtn_voidEnable(BTN_ON_OFF);
-    3188:	86 e1       	ldi	r24, 0x16	; 22
-    318a:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-		PushBtn_voidEnable(BTN_UP_CTRL);
-    318e:	8a e2       	ldi	r24, 0x2A	; 42
-    3190:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-		PushBtn_voidEnable(BTN_DOWN_CTRL);
-    3194:	8b e2       	ldi	r24, 0x2B	; 43
-    3196:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-	}
-
-	/// Enabling setting mode and clear its timer
-	app_u8SettingModeState = SETTING_MODE_EN;
-    319a:	81 e0       	ldi	r24, 0x01	; 1
-    319c:	80 93 8e 01 	sts	0x018E, r24
-	app_u16SetModeTimerCounter = 0;
-    31a0:	10 92 91 01 	sts	0x0191, r1
-    31a4:	10 92 90 01 	sts	0x0190, r1
+    3524:	df 93       	push	r29
+    3526:	cf 93       	push	r28
+    3528:	00 d0       	rcall	.+0      	; 0x352a <App_SetOnOffBtnHandler+0x6>
+    352a:	cd b7       	in	r28, 0x3d	; 61
+    352c:	de b7       	in	r29, 0x3e	; 62
+    352e:	9a 83       	std	Y+2, r25	; 0x02
+    3530:	89 83       	std	Y+1, r24	; 0x01
+	if(onOffBtnCallBack != NULL) App_ptrOnOffBtnHandler = onOffBtnCallBack;
+    3532:	89 81       	ldd	r24, Y+1	; 0x01
+    3534:	9a 81       	ldd	r25, Y+2	; 0x02
+    3536:	00 97       	sbiw	r24, 0x00	; 0
+    3538:	31 f0       	breq	.+12     	; 0x3546 <App_SetOnOffBtnHandler+0x22>
+    353a:	89 81       	ldd	r24, Y+1	; 0x01
+    353c:	9a 81       	ldd	r25, Y+2	; 0x02
+    353e:	90 93 93 01 	sts	0x0193, r25
+    3542:	80 93 92 01 	sts	0x0192, r24
 }
-    31a8:	cf 91       	pop	r28
-    31aa:	df 91       	pop	r29
-    31ac:	08 95       	ret
+    3546:	0f 90       	pop	r0
+    3548:	0f 90       	pop	r0
+    354a:	cf 91       	pop	r28
+    354c:	df 91       	pop	r29
+    354e:	08 95       	ret
 
-000031ae <App_DecreaseTempSetPoint>:
+00003550 <App_SetUpBtnHandler>:
 
+/*=====================================================================================================================================*/
 
-
-void App_DecreaseTempSetPoint()
+void App_SetUpBtnHandler(void (*upBtnCallBack) (void))
 {
-    31ae:	df 93       	push	r29
-    31b0:	cf 93       	push	r28
-    31b2:	cd b7       	in	r28, 0x3d	; 61
-    31b4:	de b7       	in	r29, 0x3e	; 62
-	/// make sure that set point is still greater than minimum allowable set point
-	if((app_u8TempSetPoint > TEMP_MIN_SET_POINT) && (app_u8SettingModeState == SETTING_MODE_EN))
-    31b6:	80 91 68 01 	lds	r24, 0x0168
-    31ba:	84 32       	cpi	r24, 0x24	; 36
-    31bc:	08 f1       	brcs	.+66     	; 0x3200 <App_DecreaseTempSetPoint+0x52>
-    31be:	80 91 8e 01 	lds	r24, 0x018E
-    31c2:	81 30       	cpi	r24, 0x01	; 1
-    31c4:	e9 f4       	brne	.+58     	; 0x3200 <App_DecreaseTempSetPoint+0x52>
-	{
-		/// If OK then, Decrease temperature set point by 5
-		app_u8TempSetPoint -= TEMP_ON_CHANGE_VALUE;
-    31c6:	80 91 68 01 	lds	r24, 0x0168
-    31ca:	85 50       	subi	r24, 0x05	; 5
-    31cc:	80 93 68 01 	sts	0x0168, r24
-
-		/// Disable push buttons to make sure value of set point is written into EEPROM to be not interrupted
-		PushBtn_voidDisable(BTN_ON_OFF);
-    31d0:	86 e1       	ldi	r24, 0x16	; 22
-    31d2:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-		PushBtn_voidDisable(BTN_UP_CTRL);
-    31d6:	8a e2       	ldi	r24, 0x2A	; 42
-    31d8:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-		PushBtn_voidDisable(BTN_DOWN_CTRL);
-    31dc:	8b e2       	ldi	r24, 0x2B	; 43
-    31de:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-
-		/// Writing into EEPROM the current set point value in page 0 in address 0
-		EEPROM_voidWriteByte(app_u8TempSetPoint, 0, 0);
-    31e2:	80 91 68 01 	lds	r24, 0x0168
-    31e6:	60 e0       	ldi	r22, 0x00	; 0
-    31e8:	40 e0       	ldi	r20, 0x00	; 0
-    31ea:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
-
-		/// Enable buttons again after writing into EEPROM
-		PushBtn_voidEnable(BTN_ON_OFF);
-    31ee:	86 e1       	ldi	r24, 0x16	; 22
-    31f0:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-		PushBtn_voidEnable(BTN_UP_CTRL);
-    31f4:	8a e2       	ldi	r24, 0x2A	; 42
-    31f6:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-		PushBtn_voidEnable(BTN_DOWN_CTRL);
-    31fa:	8b e2       	ldi	r24, 0x2B	; 43
-    31fc:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-	}
-
-	/// Enabling setting mode and clear its timer
-	app_u8SettingModeState = SETTING_MODE_EN;
-    3200:	81 e0       	ldi	r24, 0x01	; 1
-    3202:	80 93 8e 01 	sts	0x018E, r24
-	app_u16SetModeTimerCounter = 0;
-    3206:	10 92 91 01 	sts	0x0191, r1
-    320a:	10 92 90 01 	sts	0x0190, r1
+    3550:	df 93       	push	r29
+    3552:	cf 93       	push	r28
+    3554:	00 d0       	rcall	.+0      	; 0x3556 <App_SetUpBtnHandler+0x6>
+    3556:	cd b7       	in	r28, 0x3d	; 61
+    3558:	de b7       	in	r29, 0x3e	; 62
+    355a:	9a 83       	std	Y+2, r25	; 0x02
+    355c:	89 83       	std	Y+1, r24	; 0x01
+	if(upBtnCallBack != NULL) App_ptrUpBtnHandler = upBtnCallBack;
+    355e:	89 81       	ldd	r24, Y+1	; 0x01
+    3560:	9a 81       	ldd	r25, Y+2	; 0x02
+    3562:	00 97       	sbiw	r24, 0x00	; 0
+    3564:	31 f0       	breq	.+12     	; 0x3572 <App_SetUpBtnHandler+0x22>
+    3566:	89 81       	ldd	r24, Y+1	; 0x01
+    3568:	9a 81       	ldd	r25, Y+2	; 0x02
+    356a:	90 93 95 01 	sts	0x0195, r25
+    356e:	80 93 94 01 	sts	0x0194, r24
 }
-    320e:	cf 91       	pop	r28
-    3210:	df 91       	pop	r29
-    3212:	08 95       	ret
+    3572:	0f 90       	pop	r0
+    3574:	0f 90       	pop	r0
+    3576:	cf 91       	pop	r28
+    3578:	df 91       	pop	r29
+    357a:	08 95       	ret
 
-00003214 <App_SysOnOff>:
+0000357c <App_SetDownBtnHandler>:
 
+/*=====================================================================================================================================*/
 
-
-void App_SysOnOff()
+void App_SetDownBtnHandler(void (*downBtnCallBack) (void))
 {
-    3214:	df 93       	push	r29
-    3216:	cf 93       	push	r28
-    3218:	cd b7       	in	r28, 0x3d	; 61
-    321a:	de b7       	in	r29, 0x3e	; 62
-	/// If ON/OFF button is released and system is running then, stop system and disable all
-	if(app_u8SystemState == SYSTEM_RUNNING)
-    321c:	80 91 8c 01 	lds	r24, 0x018C
-    3220:	81 30       	cpi	r24, 0x01	; 1
-    3222:	f1 f4       	brne	.+60     	; 0x3260 <App_SysOnOff+0x4c>
-	{
-		/// Stop the system
-		app_u8SystemState = SYSTEM_STOPPED;
-    3224:	10 92 8c 01 	sts	0x018C, r1
-
-		/// Disable setting mode
-		app_u8SettingModeState = SETTING_MODE_DIS;
-    3228:	10 92 8e 01 	sts	0x018E, r1
-
-		/// clear timer counter for temperature and setting mode
-		app_u16SetModeTimerCounter = 0;
-    322c:	10 92 91 01 	sts	0x0191, r1
-    3230:	10 92 90 01 	sts	0x0190, r1
-		app_u8TempTimerCounter = 0;
-    3234:	10 92 8f 01 	sts	0x018F, r1
-
-		/// stop system timer
-		App_TimerStop();
-    3238:	0e 94 65 19 	call	0x32ca	; 0x32ca <App_TimerStop>
-
-		/// disable 7segment display
-		DSSD_voidDisableAll();
-    323c:	0e 94 4f 14 	call	0x289e	; 0x289e <DSSD_voidDisableAll>
-
-		/// turn off heater, cooler and LED
-		Heater_voidTurnOff(HEATER_RELAY_PIN);
-    3240:	81 e2       	ldi	r24, 0x21	; 33
-    3242:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
-		Cooler_voidTurnOff(COOLER_RELAY_PIN);
-    3246:	83 e2       	ldi	r24, 0x23	; 35
-    3248:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
-		LED_voidTurnOff(LED_C_H);
-    324c:	82 e2       	ldi	r24, 0x22	; 34
-    324e:	0e 94 36 13 	call	0x266c	; 0x266c <LED_voidTurnOff>
-
-		/// disable UP and DOWN buttons
-		PushBtn_voidDisable(BTN_UP_CTRL);
-    3252:	8a e2       	ldi	r24, 0x2A	; 42
-    3254:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-		PushBtn_voidDisable(BTN_DOWN_CTRL);
-    3258:	8b e2       	ldi	r24, 0x2B	; 43
-    325a:	0e 94 d6 12 	call	0x25ac	; 0x25ac <PushBtn_voidDisable>
-    325e:	0b c0       	rjmp	.+22     	; 0x3276 <App_SysOnOff+0x62>
-
-	/// If ON/OFF button is released and system is stopped then, run the system
-	else
-	{
-		/// run the system
-		app_u8SystemState = SYSTEM_RUNNING;
-    3260:	81 e0       	ldi	r24, 0x01	; 1
-    3262:	80 93 8c 01 	sts	0x018C, r24
-
-		/// start system timer
-		App_TimerBegin();
-    3266:	0e 94 5c 19 	call	0x32b8	; 0x32b8 <App_TimerBegin>
-
-		/// enable UP and DOWN buttons
-		PushBtn_voidEnable(BTN_UP_CTRL);
-    326a:	8a e2       	ldi	r24, 0x2A	; 42
-    326c:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-		PushBtn_voidEnable(BTN_DOWN_CTRL);
-    3270:	8b e2       	ldi	r24, 0x2B	; 43
-    3272:	0e 94 ac 12 	call	0x2558	; 0x2558 <PushBtn_voidEnable>
-	}
+    357c:	df 93       	push	r29
+    357e:	cf 93       	push	r28
+    3580:	00 d0       	rcall	.+0      	; 0x3582 <App_SetDownBtnHandler+0x6>
+    3582:	cd b7       	in	r28, 0x3d	; 61
+    3584:	de b7       	in	r29, 0x3e	; 62
+    3586:	9a 83       	std	Y+2, r25	; 0x02
+    3588:	89 83       	std	Y+1, r24	; 0x01
+	if(downBtnCallBack != NULL) App_ptrDownBtnHandler = downBtnCallBack;
+    358a:	89 81       	ldd	r24, Y+1	; 0x01
+    358c:	9a 81       	ldd	r25, Y+2	; 0x02
+    358e:	00 97       	sbiw	r24, 0x00	; 0
+    3590:	31 f0       	breq	.+12     	; 0x359e <App_SetDownBtnHandler+0x22>
+    3592:	89 81       	ldd	r24, Y+1	; 0x01
+    3594:	9a 81       	ldd	r25, Y+2	; 0x02
+    3596:	90 93 97 01 	sts	0x0197, r25
+    359a:	80 93 96 01 	sts	0x0196, r24
 }
-    3276:	cf 91       	pop	r28
-    3278:	df 91       	pop	r29
-    327a:	08 95       	ret
+    359e:	0f 90       	pop	r0
+    35a0:	0f 90       	pop	r0
+    35a2:	cf 91       	pop	r28
+    35a4:	df 91       	pop	r29
+    35a6:	08 95       	ret
 
-0000327c <App_TimerInit>:
+000035a8 <App_SetTimerHandler>:
 
+/*=====================================================================================================================================*/
 
-
-
-void App_TimerInit(u8 local_u8Timer, void (*ptr_callBack) (void))
+void App_SetTimerHandler(void (*timerCallBack) (void))
 {
-    327c:	df 93       	push	r29
-    327e:	cf 93       	push	r28
-    3280:	00 d0       	rcall	.+0      	; 0x3282 <App_TimerInit+0x6>
-    3282:	0f 92       	push	r0
-    3284:	cd b7       	in	r28, 0x3d	; 61
-    3286:	de b7       	in	r29, 0x3e	; 62
-    3288:	89 83       	std	Y+1, r24	; 0x01
-    328a:	7b 83       	std	Y+3, r23	; 0x03
-    328c:	6a 83       	std	Y+2, r22	; 0x02
-	/// timer 0 Init
-	Timer0_voidInit();
-    328e:	0e 94 c9 06 	call	0xd92	; 0xd92 <Timer0_voidInit>
-
-	/// setting timer period
-	Timer0_voidSetTime(local_u8Timer);
-    3292:	89 81       	ldd	r24, Y+1	; 0x01
-    3294:	88 2f       	mov	r24, r24
-    3296:	90 e0       	ldi	r25, 0x00	; 0
-    3298:	a0 e0       	ldi	r26, 0x00	; 0
-    329a:	b0 e0       	ldi	r27, 0x00	; 0
-    329c:	bc 01       	movw	r22, r24
-    329e:	cd 01       	movw	r24, r26
-    32a0:	0e 94 e5 06 	call	0xdca	; 0xdca <Timer0_voidSetTime>
-
-	/// setting timer call back
-	Timer0_voidSetCallBack(ptr_callBack);
-    32a4:	8a 81       	ldd	r24, Y+2	; 0x02
-    32a6:	9b 81       	ldd	r25, Y+3	; 0x03
-    32a8:	0e 94 71 07 	call	0xee2	; 0xee2 <Timer0_voidSetCallBack>
+    35a8:	df 93       	push	r29
+    35aa:	cf 93       	push	r28
+    35ac:	00 d0       	rcall	.+0      	; 0x35ae <App_SetTimerHandler+0x6>
+    35ae:	cd b7       	in	r28, 0x3d	; 61
+    35b0:	de b7       	in	r29, 0x3e	; 62
+    35b2:	9a 83       	std	Y+2, r25	; 0x02
+    35b4:	89 83       	std	Y+1, r24	; 0x01
+	if(timerCallBack != NULL) App_ptrTimerHandler = timerCallBack;
+    35b6:	89 81       	ldd	r24, Y+1	; 0x01
+    35b8:	9a 81       	ldd	r25, Y+2	; 0x02
+    35ba:	00 97       	sbiw	r24, 0x00	; 0
+    35bc:	31 f0       	breq	.+12     	; 0x35ca <App_SetTimerHandler+0x22>
+    35be:	89 81       	ldd	r24, Y+1	; 0x01
+    35c0:	9a 81       	ldd	r25, Y+2	; 0x02
+    35c2:	90 93 99 01 	sts	0x0199, r25
+    35c6:	80 93 98 01 	sts	0x0198, r24
 }
-    32ac:	0f 90       	pop	r0
-    32ae:	0f 90       	pop	r0
-    32b0:	0f 90       	pop	r0
-    32b2:	cf 91       	pop	r28
-    32b4:	df 91       	pop	r29
-    32b6:	08 95       	ret
+    35ca:	0f 90       	pop	r0
+    35cc:	0f 90       	pop	r0
+    35ce:	cf 91       	pop	r28
+    35d0:	df 91       	pop	r29
+    35d2:	08 95       	ret
 
-000032b8 <App_TimerBegin>:
+000035d4 <main>:
+#include "Drivers/LIB/StdTypes.h"
+#include "App.h"
 
 
-
-void App_TimerBegin()
+int main()
 {
-    32b8:	df 93       	push	r29
-    32ba:	cf 93       	push	r28
-    32bc:	cd b7       	in	r28, 0x3d	; 61
-    32be:	de b7       	in	r29, 0x3e	; 62
-	/// start timer 0
-	Timer0_voidStart();
-    32c0:	0e 94 54 07 	call	0xea8	; 0xea8 <Timer0_voidStart>
-}
-    32c4:	cf 91       	pop	r28
-    32c6:	df 91       	pop	r29
-    32c8:	08 95       	ret
-
-000032ca <App_TimerStop>:
-
-
-
-void App_TimerStop()
-{
-    32ca:	df 93       	push	r29
-    32cc:	cf 93       	push	r28
-    32ce:	cd b7       	in	r28, 0x3d	; 61
-    32d0:	de b7       	in	r29, 0x3e	; 62
-	/// stop timer 0
-	Timer0_voidStop();
-    32d2:	0e 94 63 07 	call	0xec6	; 0xec6 <Timer0_voidStop>
-}
-    32d6:	cf 91       	pop	r28
-    32d8:	df 91       	pop	r29
-    32da:	08 95       	ret
-
-000032dc <App_TimerCallBack>:
+    35d4:	df 93       	push	r29
+    35d6:	cf 93       	push	r28
+    35d8:	cd b7       	in	r28, 0x3d	; 61
+    35da:	de b7       	in	r29, 0x3e	; 62
+	/// setting handlers
+	App_SetOnOffBtnHandler(NULL);
+    35dc:	80 e0       	ldi	r24, 0x00	; 0
+    35de:	90 e0       	ldi	r25, 0x00	; 0
+    35e0:	0e 94 92 1a 	call	0x3524	; 0x3524 <App_SetOnOffBtnHandler>
+	App_SetUpBtnHandler(NULL);
+    35e4:	80 e0       	ldi	r24, 0x00	; 0
+    35e6:	90 e0       	ldi	r25, 0x00	; 0
+    35e8:	0e 94 a8 1a 	call	0x3550	; 0x3550 <App_SetUpBtnHandler>
+	App_SetDownBtnHandler(NULL);
+    35ec:	80 e0       	ldi	r24, 0x00	; 0
+    35ee:	90 e0       	ldi	r25, 0x00	; 0
+    35f0:	0e 94 be 1a 	call	0x357c	; 0x357c <App_SetDownBtnHandler>
+	App_SetTimerHandler(NULL);
+    35f4:	80 e0       	ldi	r24, 0x00	; 0
+    35f6:	90 e0       	ldi	r25, 0x00	; 0
+    35f8:	0e 94 d4 1a 	call	0x35a8	; 0x35a8 <App_SetTimerHandler>
 
 
+	/// System Initialise
+	App_SystemInit();
+    35fc:	0e 94 a1 18 	call	0x3142	; 0x3142 <App_SystemInit>
+    3600:	ff cf       	rjmp	.-2      	; 0x3600 <main+0x2c>
 
-void App_TimerCallBack()
-{
-    32dc:	ef 92       	push	r14
-    32de:	ff 92       	push	r15
-    32e0:	0f 93       	push	r16
-    32e2:	1f 93       	push	r17
-    32e4:	df 93       	push	r29
-    32e6:	cf 93       	push	r28
-    32e8:	00 d0       	rcall	.+0      	; 0x32ea <App_TimerCallBack+0xe>
-    32ea:	cd b7       	in	r28, 0x3d	; 61
-    32ec:	de b7       	in	r29, 0x3e	; 62
-	/// Temperature setting
-	app_u8TempTimerCounter++;
-    32ee:	80 91 8f 01 	lds	r24, 0x018F
-    32f2:	8f 5f       	subi	r24, 0xFF	; 255
-    32f4:	80 93 8f 01 	sts	0x018F, r24
+00003602 <__mulsi3>:
+    3602:	62 9f       	mul	r22, r18
+    3604:	d0 01       	movw	r26, r0
+    3606:	73 9f       	mul	r23, r19
+    3608:	f0 01       	movw	r30, r0
+    360a:	82 9f       	mul	r24, r18
+    360c:	e0 0d       	add	r30, r0
+    360e:	f1 1d       	adc	r31, r1
+    3610:	64 9f       	mul	r22, r20
+    3612:	e0 0d       	add	r30, r0
+    3614:	f1 1d       	adc	r31, r1
+    3616:	92 9f       	mul	r25, r18
+    3618:	f0 0d       	add	r31, r0
+    361a:	83 9f       	mul	r24, r19
+    361c:	f0 0d       	add	r31, r0
+    361e:	74 9f       	mul	r23, r20
+    3620:	f0 0d       	add	r31, r0
+    3622:	65 9f       	mul	r22, r21
+    3624:	f0 0d       	add	r31, r0
+    3626:	99 27       	eor	r25, r25
+    3628:	72 9f       	mul	r23, r18
+    362a:	b0 0d       	add	r27, r0
+    362c:	e1 1d       	adc	r30, r1
+    362e:	f9 1f       	adc	r31, r25
+    3630:	63 9f       	mul	r22, r19
+    3632:	b0 0d       	add	r27, r0
+    3634:	e1 1d       	adc	r30, r1
+    3636:	f9 1f       	adc	r31, r25
+    3638:	bd 01       	movw	r22, r26
+    363a:	cf 01       	movw	r24, r30
+    363c:	11 24       	eor	r1, r1
+    363e:	08 95       	ret
 
-	/// Get temperature value each 100 msec and assign it into array of the last 10 readings
-	if(app_u8TempTimerCounter % 10 == 0)
-    32f8:	80 91 8f 01 	lds	r24, 0x018F
-    32fc:	9a e0       	ldi	r25, 0x0A	; 10
-    32fe:	69 2f       	mov	r22, r25
-    3300:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
-    3304:	89 2f       	mov	r24, r25
-    3306:	88 23       	and	r24, r24
-    3308:	09 f0       	breq	.+2      	; 0x330c <App_TimerCallBack+0x30>
-    330a:	a4 c0       	rjmp	.+328    	; 0x3454 <App_TimerCallBack+0x178>
-	{
-		app_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
-    330c:	81 e1       	ldi	r24, 0x11	; 17
-    330e:	0e 94 3d 12 	call	0x247a	; 0x247a <SensorLM35_u16ReadTemp>
-    3312:	80 93 7f 01 	sts	0x017F, r24
-		app_u8TempAverage[(app_u8TempTimerCounter / 10) - 1] = app_u8CurrentTemp;
-    3316:	80 91 8f 01 	lds	r24, 0x018F
-    331a:	9a e0       	ldi	r25, 0x0A	; 10
-    331c:	69 2f       	mov	r22, r25
-    331e:	0e 94 b3 1a 	call	0x3566	; 0x3566 <__udivmodqi4>
-    3322:	88 2f       	mov	r24, r24
-    3324:	90 e0       	ldi	r25, 0x00	; 0
-    3326:	01 97       	sbiw	r24, 0x01	; 1
-    3328:	20 91 7f 01 	lds	r18, 0x017F
-    332c:	fc 01       	movw	r30, r24
-    332e:	e0 58       	subi	r30, 0x80	; 128
-    3330:	fe 4f       	sbci	r31, 0xFE	; 254
-    3332:	20 83       	st	Z, r18
+00003640 <__udivmodqi4>:
+    3640:	99 1b       	sub	r25, r25
+    3642:	79 e0       	ldi	r23, 0x09	; 9
+    3644:	04 c0       	rjmp	.+8      	; 0x364e <__udivmodqi4_ep>
 
-		/// Get the average of the last 10 readings
-		for(u8 i = 0; i < 10; i++)
-    3334:	19 82       	std	Y+1, r1	; 0x01
-    3336:	16 c0       	rjmp	.+44     	; 0x3364 <App_TimerCallBack+0x88>
-		{
-			app_u16TempAverageCalc += app_u8TempAverage[i];
-    3338:	89 81       	ldd	r24, Y+1	; 0x01
-    333a:	88 2f       	mov	r24, r24
-    333c:	90 e0       	ldi	r25, 0x00	; 0
-    333e:	fc 01       	movw	r30, r24
-    3340:	e0 58       	subi	r30, 0x80	; 128
-    3342:	fe 4f       	sbci	r31, 0xFE	; 254
-    3344:	80 81       	ld	r24, Z
-    3346:	28 2f       	mov	r18, r24
-    3348:	30 e0       	ldi	r19, 0x00	; 0
-    334a:	80 91 8a 01 	lds	r24, 0x018A
-    334e:	90 91 8b 01 	lds	r25, 0x018B
-    3352:	82 0f       	add	r24, r18
-    3354:	93 1f       	adc	r25, r19
-    3356:	90 93 8b 01 	sts	0x018B, r25
-    335a:	80 93 8a 01 	sts	0x018A, r24
-	{
-		app_u8CurrentTemp = SensorLM35_u16ReadTemp(LM35_PIN);
-		app_u8TempAverage[(app_u8TempTimerCounter / 10) - 1] = app_u8CurrentTemp;
+00003646 <__udivmodqi4_loop>:
+    3646:	99 1f       	adc	r25, r25
+    3648:	96 17       	cp	r25, r22
+    364a:	08 f0       	brcs	.+2      	; 0x364e <__udivmodqi4_ep>
+    364c:	96 1b       	sub	r25, r22
 
-		/// Get the average of the last 10 readings
-		for(u8 i = 0; i < 10; i++)
-    335e:	89 81       	ldd	r24, Y+1	; 0x01
-    3360:	8f 5f       	subi	r24, 0xFF	; 255
-    3362:	89 83       	std	Y+1, r24	; 0x01
-    3364:	89 81       	ldd	r24, Y+1	; 0x01
-    3366:	8a 30       	cpi	r24, 0x0A	; 10
-    3368:	38 f3       	brcs	.-50     	; 0x3338 <App_TimerCallBack+0x5c>
-			app_u16TempAverageCalc += app_u8TempAverage[i];
-		}
-		//app_u16TempAverageCalc /= 10;
-
-		/// Check if the average is greater than temperature set point plus tolerance 5 degrees
-		if(((f32)(app_u16TempAverageCalc / 10)) > ((f32)(app_u8TempSetPoint + TEMP_TOLERANCE)))
-    336a:	80 91 8a 01 	lds	r24, 0x018A
-    336e:	90 91 8b 01 	lds	r25, 0x018B
-    3372:	2a e0       	ldi	r18, 0x0A	; 10
-    3374:	30 e0       	ldi	r19, 0x00	; 0
-    3376:	b9 01       	movw	r22, r18
-    3378:	0e 94 bf 1a 	call	0x357e	; 0x357e <__udivmodhi4>
-    337c:	cb 01       	movw	r24, r22
-    337e:	cc 01       	movw	r24, r24
-    3380:	a0 e0       	ldi	r26, 0x00	; 0
-    3382:	b0 e0       	ldi	r27, 0x00	; 0
-    3384:	bc 01       	movw	r22, r24
-    3386:	cd 01       	movw	r24, r26
-    3388:	0e 94 5b 04 	call	0x8b6	; 0x8b6 <__floatunsisf>
-    338c:	7b 01       	movw	r14, r22
-    338e:	8c 01       	movw	r16, r24
-    3390:	80 91 68 01 	lds	r24, 0x0168
-    3394:	88 2f       	mov	r24, r24
-    3396:	90 e0       	ldi	r25, 0x00	; 0
-    3398:	05 96       	adiw	r24, 0x05	; 5
-    339a:	aa 27       	eor	r26, r26
-    339c:	97 fd       	sbrc	r25, 7
-    339e:	a0 95       	com	r26
-    33a0:	ba 2f       	mov	r27, r26
-    33a2:	bc 01       	movw	r22, r24
-    33a4:	cd 01       	movw	r24, r26
-    33a6:	0e 94 a9 03 	call	0x752	; 0x752 <__floatsisf>
-    33aa:	9b 01       	movw	r18, r22
-    33ac:	ac 01       	movw	r20, r24
-    33ae:	c8 01       	movw	r24, r16
-    33b0:	b7 01       	movw	r22, r14
-    33b2:	0e 94 19 03 	call	0x632	; 0x632 <__gtsf2>
-    33b6:	18 16       	cp	r1, r24
-    33b8:	54 f4       	brge	.+20     	; 0x33ce <App_TimerCallBack+0xf2>
-		{
-			/// If greater, turn on the cooler, turn off the heater and turn on the LED
-			Cooler_voidTurnOn(COOLER_RELAY_PIN);
-    33ba:	83 e2       	ldi	r24, 0x23	; 35
-    33bc:	0e 94 c4 16 	call	0x2d88	; 0x2d88 <Cooler_voidTurnOn>
-			Heater_voidTurnOff(HEATER_RELAY_PIN);
-    33c0:	81 e2       	ldi	r24, 0x21	; 33
-    33c2:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
-			LED_voidTurnOn(LED_C_H);
-    33c6:	82 e2       	ldi	r24, 0x22	; 34
-    33c8:	0e 94 28 13 	call	0x2650	; 0x2650 <LED_voidTurnOn>
-    33cc:	3f c0       	rjmp	.+126    	; 0x344c <App_TimerCallBack+0x170>
-		}
-
-		/// Check if else the average is lower than temperature set point minus tolerance 5 degrees
-		else if(((f32)(app_u16TempAverageCalc / 10)) < ((f32)(app_u8TempSetPoint - TEMP_TOLERANCE)))
-    33ce:	80 91 8a 01 	lds	r24, 0x018A
-    33d2:	90 91 8b 01 	lds	r25, 0x018B
-    33d6:	2a e0       	ldi	r18, 0x0A	; 10
-    33d8:	30 e0       	ldi	r19, 0x00	; 0
-    33da:	b9 01       	movw	r22, r18
-    33dc:	0e 94 bf 1a 	call	0x357e	; 0x357e <__udivmodhi4>
-    33e0:	cb 01       	movw	r24, r22
-    33e2:	cc 01       	movw	r24, r24
-    33e4:	a0 e0       	ldi	r26, 0x00	; 0
-    33e6:	b0 e0       	ldi	r27, 0x00	; 0
-    33e8:	bc 01       	movw	r22, r24
-    33ea:	cd 01       	movw	r24, r26
-    33ec:	0e 94 5b 04 	call	0x8b6	; 0x8b6 <__floatunsisf>
-    33f0:	7b 01       	movw	r14, r22
-    33f2:	8c 01       	movw	r16, r24
-    33f4:	80 91 68 01 	lds	r24, 0x0168
-    33f8:	88 2f       	mov	r24, r24
-    33fa:	90 e0       	ldi	r25, 0x00	; 0
-    33fc:	05 97       	sbiw	r24, 0x05	; 5
-    33fe:	aa 27       	eor	r26, r26
-    3400:	97 fd       	sbrc	r25, 7
-    3402:	a0 95       	com	r26
-    3404:	ba 2f       	mov	r27, r26
-    3406:	bc 01       	movw	r22, r24
-    3408:	cd 01       	movw	r24, r26
-    340a:	0e 94 a9 03 	call	0x752	; 0x752 <__floatsisf>
-    340e:	9b 01       	movw	r18, r22
-    3410:	ac 01       	movw	r20, r24
-    3412:	c8 01       	movw	r24, r16
-    3414:	b7 01       	movw	r22, r14
-    3416:	0e 94 79 03 	call	0x6f2	; 0x6f2 <__ltsf2>
-    341a:	88 23       	and	r24, r24
-    341c:	74 f4       	brge	.+28     	; 0x343a <App_TimerCallBack+0x15e>
-		{
-			/// If lower, turn of the cooler, turn on the heater and blink the LED each 1 sec
-			Heater_voidTurnOn(HEATER_RELAY_PIN);
-    341e:	81 e2       	ldi	r24, 0x21	; 33
-    3420:	0e 94 5f 13 	call	0x26be	; 0x26be <Heater_voidTurnOn>
-			Cooler_voidTurnOff(COOLER_RELAY_PIN);
-    3424:	83 e2       	ldi	r24, 0x23	; 35
-    3426:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
-			if(app_u8TempTimerCounter >= 100) LED_voidToggle(LED_C_H);
-    342a:	80 91 8f 01 	lds	r24, 0x018F
-    342e:	84 36       	cpi	r24, 0x64	; 100
-    3430:	68 f0       	brcs	.+26     	; 0x344c <App_TimerCallBack+0x170>
-    3432:	82 e2       	ldi	r24, 0x22	; 34
-    3434:	0e 94 44 13 	call	0x2688	; 0x2688 <LED_voidToggle>
-    3438:	09 c0       	rjmp	.+18     	; 0x344c <App_TimerCallBack+0x170>
-		}
-
-		/// otherwise, turn off cooler, heater and LED
-		else
-		{
-			Heater_voidTurnOff(HEATER_RELAY_PIN);
-    343a:	81 e2       	ldi	r24, 0x21	; 33
-    343c:	0e 94 6c 13 	call	0x26d8	; 0x26d8 <Heater_voidTurnOff>
-			Cooler_voidTurnOff(COOLER_RELAY_PIN);
-    3440:	83 e2       	ldi	r24, 0x23	; 35
-    3442:	0e 94 d1 16 	call	0x2da2	; 0x2da2 <Cooler_voidTurnOff>
-			LED_voidTurnOff(LED_C_H);
-    3446:	82 e2       	ldi	r24, 0x22	; 34
-    3448:	0e 94 36 13 	call	0x266c	; 0x266c <LED_voidTurnOff>
-		}
-
-		/// clear the temperature average buffer
-		app_u16TempAverageCalc = 0;
-    344c:	10 92 8b 01 	sts	0x018B, r1
-    3450:	10 92 8a 01 	sts	0x018A, r1
-	}
-
-	/// clear temperature timer counter each 10 cycles
-	if(app_u8TempTimerCounter >= 100)
-    3454:	80 91 8f 01 	lds	r24, 0x018F
-    3458:	84 36       	cpi	r24, 0x64	; 100
-    345a:	10 f0       	brcs	.+4      	; 0x3460 <App_TimerCallBack+0x184>
-	{
-		app_u8TempTimerCounter = 0;
-    345c:	10 92 8f 01 	sts	0x018F, r1
-	}
-
-	/// 7 segment display setting
-	/// In case setting mode is ON
-	if(app_u8SettingModeState == SETTING_MODE_EN)
-    3460:	80 91 8e 01 	lds	r24, 0x018E
-    3464:	81 30       	cpi	r24, 0x01	; 1
-    3466:	09 f0       	breq	.+2      	; 0x346a <App_TimerCallBack+0x18e>
-    3468:	41 c0       	rjmp	.+130    	; 0x34ec <App_TimerCallBack+0x210>
-	{
-		app_u16SetModeTimerCounter++;
-    346a:	80 91 90 01 	lds	r24, 0x0190
-    346e:	90 91 91 01 	lds	r25, 0x0191
-    3472:	01 96       	adiw	r24, 0x01	; 1
-    3474:	90 93 91 01 	sts	0x0191, r25
-    3478:	80 93 90 01 	sts	0x0190, r24
-		/// check DSSD state each 1 sec to be blinked
-		if(app_u16SetModeTimerCounter % 100 == 0)
-    347c:	80 91 90 01 	lds	r24, 0x0190
-    3480:	90 91 91 01 	lds	r25, 0x0191
-    3484:	24 e6       	ldi	r18, 0x64	; 100
-    3486:	30 e0       	ldi	r19, 0x00	; 0
-    3488:	b9 01       	movw	r22, r18
-    348a:	0e 94 bf 1a 	call	0x357e	; 0x357e <__udivmodhi4>
-    348e:	00 97       	sbiw	r24, 0x00	; 0
-    3490:	69 f4       	brne	.+26     	; 0x34ac <App_TimerCallBack+0x1d0>
-		{
-			if(DSSD_u8Status() == DSSD_ON)
-    3492:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
-    3496:	81 30       	cpi	r24, 0x01	; 1
-    3498:	19 f4       	brne	.+6      	; 0x34a0 <App_TimerCallBack+0x1c4>
-			{
-				DSSD_voidDisableAll();
-    349a:	0e 94 4f 14 	call	0x289e	; 0x289e <DSSD_voidDisableAll>
-    349e:	06 c0       	rjmp	.+12     	; 0x34ac <App_TimerCallBack+0x1d0>
-			}
-
-			else if(DSSD_u8Status() == DSSD_OFF)
-    34a0:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
-    34a4:	88 23       	and	r24, r24
-    34a6:	11 f4       	brne	.+4      	; 0x34ac <App_TimerCallBack+0x1d0>
-			{
-				DSSD_voidEN1();
-    34a8:	0e 94 35 14 	call	0x286a	; 0x286a <DSSD_voidEN1>
-			}
-		}
-
-		/// in case DSSD in ON, display current set point
-		if(DSSD_u8Status() == DSSD_ON)
-    34ac:	0e 94 b9 14 	call	0x2972	; 0x2972 <DSSD_u8Status>
-    34b0:	81 30       	cpi	r24, 0x01	; 1
-    34b2:	39 f4       	brne	.+14     	; 0x34c2 <App_TimerCallBack+0x1e6>
-		{
-			DSSD_voidDisplay(app_u8TempSetPoint, app_u8SevenSegDigit);
-    34b4:	80 91 68 01 	lds	r24, 0x0168
-    34b8:	90 91 8d 01 	lds	r25, 0x018D
-    34bc:	69 2f       	mov	r22, r25
-    34be:	0e 94 94 14 	call	0x2928	; 0x2928 <DSSD_voidDisplay>
-		}
-
-		/// If Up or DOWN buttons not pressed for 5 sec
-		if(app_u16SetModeTimerCounter >= 500)
-    34c2:	80 91 90 01 	lds	r24, 0x0190
-    34c6:	90 91 91 01 	lds	r25, 0x0191
-    34ca:	21 e0       	ldi	r18, 0x01	; 1
-    34cc:	84 3f       	cpi	r24, 0xF4	; 244
-    34ce:	92 07       	cpc	r25, r18
-    34d0:	c0 f0       	brcs	.+48     	; 0x3502 <App_TimerCallBack+0x226>
-		{
-			/// then, disable setting mode
-			app_u8SettingModeState = SETTING_MODE_DIS;
-    34d2:	10 92 8e 01 	sts	0x018E, r1
-
-			/// clear setting mode timer counter
-			app_u16SetModeTimerCounter = 0;
-    34d6:	10 92 91 01 	sts	0x0191, r1
-    34da:	10 92 90 01 	sts	0x0190, r1
-
-			/// write set point value into EEPROM
-			EEPROM_voidWriteByte(app_u8TempSetPoint, 0, 0);
-    34de:	80 91 68 01 	lds	r24, 0x0168
-    34e2:	60 e0       	ldi	r22, 0x00	; 0
-    34e4:	40 e0       	ldi	r20, 0x00	; 0
-    34e6:	0e 94 82 13 	call	0x2704	; 0x2704 <EEPROM_voidWriteByte>
-    34ea:	0b c0       	rjmp	.+22     	; 0x3502 <App_TimerCallBack+0x226>
-		}
-	}
-
-	/// In case setting mode is OFF
-	else if(app_u8SettingModeState == SETTING_MODE_DIS)
-    34ec:	80 91 8e 01 	lds	r24, 0x018E
-    34f0:	88 23       	and	r24, r24
-    34f2:	39 f4       	brne	.+14     	; 0x3502 <App_TimerCallBack+0x226>
-	{
-		/// Display current temperature value
-		DSSD_voidDisplay(app_u8CurrentTemp, app_u8SevenSegDigit);
-    34f4:	80 91 7f 01 	lds	r24, 0x017F
-    34f8:	90 91 8d 01 	lds	r25, 0x018D
-    34fc:	69 2f       	mov	r22, r25
-    34fe:	0e 94 94 14 	call	0x2928	; 0x2928 <DSSD_voidDisplay>
-	}
-
-	/// Change the desired digit of the 7seg for the next timer period
-	app_u8SevenSegDigit = app_u8SevenSegDigit == DSSD_DISPLAY_ONES ? DSSD_DISPLAY_TENS : DSSD_DISPLAY_ONES;
-    3502:	80 91 8d 01 	lds	r24, 0x018D
-    3506:	1a 82       	std	Y+2, r1	; 0x02
-    3508:	88 23       	and	r24, r24
-    350a:	11 f4       	brne	.+4      	; 0x3510 <App_TimerCallBack+0x234>
-    350c:	81 e0       	ldi	r24, 0x01	; 1
-    350e:	8a 83       	std	Y+2, r24	; 0x02
-    3510:	2a 81       	ldd	r18, Y+2	; 0x02
-    3512:	20 93 8d 01 	sts	0x018D, r18
-}
-    3516:	0f 90       	pop	r0
-    3518:	0f 90       	pop	r0
-    351a:	cf 91       	pop	r28
-    351c:	df 91       	pop	r29
-    351e:	1f 91       	pop	r17
-    3520:	0f 91       	pop	r16
-    3522:	ff 90       	pop	r15
-    3524:	ef 90       	pop	r14
-    3526:	08 95       	ret
-
-00003528 <__mulsi3>:
-    3528:	62 9f       	mul	r22, r18
-    352a:	d0 01       	movw	r26, r0
-    352c:	73 9f       	mul	r23, r19
-    352e:	f0 01       	movw	r30, r0
-    3530:	82 9f       	mul	r24, r18
-    3532:	e0 0d       	add	r30, r0
-    3534:	f1 1d       	adc	r31, r1
-    3536:	64 9f       	mul	r22, r20
-    3538:	e0 0d       	add	r30, r0
-    353a:	f1 1d       	adc	r31, r1
-    353c:	92 9f       	mul	r25, r18
-    353e:	f0 0d       	add	r31, r0
-    3540:	83 9f       	mul	r24, r19
-    3542:	f0 0d       	add	r31, r0
-    3544:	74 9f       	mul	r23, r20
-    3546:	f0 0d       	add	r31, r0
-    3548:	65 9f       	mul	r22, r21
-    354a:	f0 0d       	add	r31, r0
-    354c:	99 27       	eor	r25, r25
-    354e:	72 9f       	mul	r23, r18
-    3550:	b0 0d       	add	r27, r0
-    3552:	e1 1d       	adc	r30, r1
-    3554:	f9 1f       	adc	r31, r25
-    3556:	63 9f       	mul	r22, r19
-    3558:	b0 0d       	add	r27, r0
-    355a:	e1 1d       	adc	r30, r1
-    355c:	f9 1f       	adc	r31, r25
-    355e:	bd 01       	movw	r22, r26
-    3560:	cf 01       	movw	r24, r30
-    3562:	11 24       	eor	r1, r1
-    3564:	08 95       	ret
-
-00003566 <__udivmodqi4>:
-    3566:	99 1b       	sub	r25, r25
-    3568:	79 e0       	ldi	r23, 0x09	; 9
-    356a:	04 c0       	rjmp	.+8      	; 0x3574 <__udivmodqi4_ep>
-
-0000356c <__udivmodqi4_loop>:
-    356c:	99 1f       	adc	r25, r25
-    356e:	96 17       	cp	r25, r22
-    3570:	08 f0       	brcs	.+2      	; 0x3574 <__udivmodqi4_ep>
-    3572:	96 1b       	sub	r25, r22
-
-00003574 <__udivmodqi4_ep>:
-    3574:	88 1f       	adc	r24, r24
-    3576:	7a 95       	dec	r23
-    3578:	c9 f7       	brne	.-14     	; 0x356c <__udivmodqi4_loop>
-    357a:	80 95       	com	r24
-    357c:	08 95       	ret
-
-0000357e <__udivmodhi4>:
-    357e:	aa 1b       	sub	r26, r26
-    3580:	bb 1b       	sub	r27, r27
-    3582:	51 e1       	ldi	r21, 0x11	; 17
-    3584:	07 c0       	rjmp	.+14     	; 0x3594 <__udivmodhi4_ep>
-
-00003586 <__udivmodhi4_loop>:
-    3586:	aa 1f       	adc	r26, r26
-    3588:	bb 1f       	adc	r27, r27
-    358a:	a6 17       	cp	r26, r22
-    358c:	b7 07       	cpc	r27, r23
-    358e:	10 f0       	brcs	.+4      	; 0x3594 <__udivmodhi4_ep>
-    3590:	a6 1b       	sub	r26, r22
-    3592:	b7 0b       	sbc	r27, r23
-
-00003594 <__udivmodhi4_ep>:
-    3594:	88 1f       	adc	r24, r24
-    3596:	99 1f       	adc	r25, r25
-    3598:	5a 95       	dec	r21
-    359a:	a9 f7       	brne	.-22     	; 0x3586 <__udivmodhi4_loop>
-    359c:	80 95       	com	r24
-    359e:	90 95       	com	r25
-    35a0:	bc 01       	movw	r22, r24
-    35a2:	cd 01       	movw	r24, r26
-    35a4:	08 95       	ret
-
-000035a6 <__udivmodsi4>:
-    35a6:	a1 e2       	ldi	r26, 0x21	; 33
-    35a8:	1a 2e       	mov	r1, r26
-    35aa:	aa 1b       	sub	r26, r26
-    35ac:	bb 1b       	sub	r27, r27
-    35ae:	fd 01       	movw	r30, r26
-    35b0:	0d c0       	rjmp	.+26     	; 0x35cc <__udivmodsi4_ep>
-
-000035b2 <__udivmodsi4_loop>:
-    35b2:	aa 1f       	adc	r26, r26
-    35b4:	bb 1f       	adc	r27, r27
-    35b6:	ee 1f       	adc	r30, r30
-    35b8:	ff 1f       	adc	r31, r31
-    35ba:	a2 17       	cp	r26, r18
-    35bc:	b3 07       	cpc	r27, r19
-    35be:	e4 07       	cpc	r30, r20
-    35c0:	f5 07       	cpc	r31, r21
-    35c2:	20 f0       	brcs	.+8      	; 0x35cc <__udivmodsi4_ep>
-    35c4:	a2 1b       	sub	r26, r18
-    35c6:	b3 0b       	sbc	r27, r19
-    35c8:	e4 0b       	sbc	r30, r20
-    35ca:	f5 0b       	sbc	r31, r21
-
-000035cc <__udivmodsi4_ep>:
-    35cc:	66 1f       	adc	r22, r22
-    35ce:	77 1f       	adc	r23, r23
-    35d0:	88 1f       	adc	r24, r24
-    35d2:	99 1f       	adc	r25, r25
-    35d4:	1a 94       	dec	r1
-    35d6:	69 f7       	brne	.-38     	; 0x35b2 <__udivmodsi4_loop>
-    35d8:	60 95       	com	r22
-    35da:	70 95       	com	r23
-    35dc:	80 95       	com	r24
-    35de:	90 95       	com	r25
-    35e0:	9b 01       	movw	r18, r22
-    35e2:	ac 01       	movw	r20, r24
-    35e4:	bd 01       	movw	r22, r26
-    35e6:	cf 01       	movw	r24, r30
-    35e8:	08 95       	ret
-
-000035ea <__prologue_saves__>:
-    35ea:	2f 92       	push	r2
-    35ec:	3f 92       	push	r3
-    35ee:	4f 92       	push	r4
-    35f0:	5f 92       	push	r5
-    35f2:	6f 92       	push	r6
-    35f4:	7f 92       	push	r7
-    35f6:	8f 92       	push	r8
-    35f8:	9f 92       	push	r9
-    35fa:	af 92       	push	r10
-    35fc:	bf 92       	push	r11
-    35fe:	cf 92       	push	r12
-    3600:	df 92       	push	r13
-    3602:	ef 92       	push	r14
-    3604:	ff 92       	push	r15
-    3606:	0f 93       	push	r16
-    3608:	1f 93       	push	r17
-    360a:	cf 93       	push	r28
-    360c:	df 93       	push	r29
-    360e:	cd b7       	in	r28, 0x3d	; 61
-    3610:	de b7       	in	r29, 0x3e	; 62
-    3612:	ca 1b       	sub	r28, r26
-    3614:	db 0b       	sbc	r29, r27
-    3616:	0f b6       	in	r0, 0x3f	; 63
-    3618:	f8 94       	cli
-    361a:	de bf       	out	0x3e, r29	; 62
-    361c:	0f be       	out	0x3f, r0	; 63
-    361e:	cd bf       	out	0x3d, r28	; 61
-    3620:	09 94       	ijmp
-
-00003622 <__epilogue_restores__>:
-    3622:	2a 88       	ldd	r2, Y+18	; 0x12
-    3624:	39 88       	ldd	r3, Y+17	; 0x11
-    3626:	48 88       	ldd	r4, Y+16	; 0x10
-    3628:	5f 84       	ldd	r5, Y+15	; 0x0f
-    362a:	6e 84       	ldd	r6, Y+14	; 0x0e
-    362c:	7d 84       	ldd	r7, Y+13	; 0x0d
-    362e:	8c 84       	ldd	r8, Y+12	; 0x0c
-    3630:	9b 84       	ldd	r9, Y+11	; 0x0b
-    3632:	aa 84       	ldd	r10, Y+10	; 0x0a
-    3634:	b9 84       	ldd	r11, Y+9	; 0x09
-    3636:	c8 84       	ldd	r12, Y+8	; 0x08
-    3638:	df 80       	ldd	r13, Y+7	; 0x07
-    363a:	ee 80       	ldd	r14, Y+6	; 0x06
-    363c:	fd 80       	ldd	r15, Y+5	; 0x05
-    363e:	0c 81       	ldd	r16, Y+4	; 0x04
-    3640:	1b 81       	ldd	r17, Y+3	; 0x03
-    3642:	aa 81       	ldd	r26, Y+2	; 0x02
-    3644:	b9 81       	ldd	r27, Y+1	; 0x01
-    3646:	ce 0f       	add	r28, r30
-    3648:	d1 1d       	adc	r29, r1
-    364a:	0f b6       	in	r0, 0x3f	; 63
-    364c:	f8 94       	cli
-    364e:	de bf       	out	0x3e, r29	; 62
-    3650:	0f be       	out	0x3f, r0	; 63
-    3652:	cd bf       	out	0x3d, r28	; 61
-    3654:	ed 01       	movw	r28, r26
+0000364e <__udivmodqi4_ep>:
+    364e:	88 1f       	adc	r24, r24
+    3650:	7a 95       	dec	r23
+    3652:	c9 f7       	brne	.-14     	; 0x3646 <__udivmodqi4_loop>
+    3654:	80 95       	com	r24
     3656:	08 95       	ret
 
-00003658 <_exit>:
-    3658:	f8 94       	cli
+00003658 <__udivmodhi4>:
+    3658:	aa 1b       	sub	r26, r26
+    365a:	bb 1b       	sub	r27, r27
+    365c:	51 e1       	ldi	r21, 0x11	; 17
+    365e:	07 c0       	rjmp	.+14     	; 0x366e <__udivmodhi4_ep>
 
-0000365a <__stop_program>:
-    365a:	ff cf       	rjmp	.-2      	; 0x365a <__stop_program>
+00003660 <__udivmodhi4_loop>:
+    3660:	aa 1f       	adc	r26, r26
+    3662:	bb 1f       	adc	r27, r27
+    3664:	a6 17       	cp	r26, r22
+    3666:	b7 07       	cpc	r27, r23
+    3668:	10 f0       	brcs	.+4      	; 0x366e <__udivmodhi4_ep>
+    366a:	a6 1b       	sub	r26, r22
+    366c:	b7 0b       	sbc	r27, r23
+
+0000366e <__udivmodhi4_ep>:
+    366e:	88 1f       	adc	r24, r24
+    3670:	99 1f       	adc	r25, r25
+    3672:	5a 95       	dec	r21
+    3674:	a9 f7       	brne	.-22     	; 0x3660 <__udivmodhi4_loop>
+    3676:	80 95       	com	r24
+    3678:	90 95       	com	r25
+    367a:	bc 01       	movw	r22, r24
+    367c:	cd 01       	movw	r24, r26
+    367e:	08 95       	ret
+
+00003680 <__udivmodsi4>:
+    3680:	a1 e2       	ldi	r26, 0x21	; 33
+    3682:	1a 2e       	mov	r1, r26
+    3684:	aa 1b       	sub	r26, r26
+    3686:	bb 1b       	sub	r27, r27
+    3688:	fd 01       	movw	r30, r26
+    368a:	0d c0       	rjmp	.+26     	; 0x36a6 <__udivmodsi4_ep>
+
+0000368c <__udivmodsi4_loop>:
+    368c:	aa 1f       	adc	r26, r26
+    368e:	bb 1f       	adc	r27, r27
+    3690:	ee 1f       	adc	r30, r30
+    3692:	ff 1f       	adc	r31, r31
+    3694:	a2 17       	cp	r26, r18
+    3696:	b3 07       	cpc	r27, r19
+    3698:	e4 07       	cpc	r30, r20
+    369a:	f5 07       	cpc	r31, r21
+    369c:	20 f0       	brcs	.+8      	; 0x36a6 <__udivmodsi4_ep>
+    369e:	a2 1b       	sub	r26, r18
+    36a0:	b3 0b       	sbc	r27, r19
+    36a2:	e4 0b       	sbc	r30, r20
+    36a4:	f5 0b       	sbc	r31, r21
+
+000036a6 <__udivmodsi4_ep>:
+    36a6:	66 1f       	adc	r22, r22
+    36a8:	77 1f       	adc	r23, r23
+    36aa:	88 1f       	adc	r24, r24
+    36ac:	99 1f       	adc	r25, r25
+    36ae:	1a 94       	dec	r1
+    36b0:	69 f7       	brne	.-38     	; 0x368c <__udivmodsi4_loop>
+    36b2:	60 95       	com	r22
+    36b4:	70 95       	com	r23
+    36b6:	80 95       	com	r24
+    36b8:	90 95       	com	r25
+    36ba:	9b 01       	movw	r18, r22
+    36bc:	ac 01       	movw	r20, r24
+    36be:	bd 01       	movw	r22, r26
+    36c0:	cf 01       	movw	r24, r30
+    36c2:	08 95       	ret
+
+000036c4 <__prologue_saves__>:
+    36c4:	2f 92       	push	r2
+    36c6:	3f 92       	push	r3
+    36c8:	4f 92       	push	r4
+    36ca:	5f 92       	push	r5
+    36cc:	6f 92       	push	r6
+    36ce:	7f 92       	push	r7
+    36d0:	8f 92       	push	r8
+    36d2:	9f 92       	push	r9
+    36d4:	af 92       	push	r10
+    36d6:	bf 92       	push	r11
+    36d8:	cf 92       	push	r12
+    36da:	df 92       	push	r13
+    36dc:	ef 92       	push	r14
+    36de:	ff 92       	push	r15
+    36e0:	0f 93       	push	r16
+    36e2:	1f 93       	push	r17
+    36e4:	cf 93       	push	r28
+    36e6:	df 93       	push	r29
+    36e8:	cd b7       	in	r28, 0x3d	; 61
+    36ea:	de b7       	in	r29, 0x3e	; 62
+    36ec:	ca 1b       	sub	r28, r26
+    36ee:	db 0b       	sbc	r29, r27
+    36f0:	0f b6       	in	r0, 0x3f	; 63
+    36f2:	f8 94       	cli
+    36f4:	de bf       	out	0x3e, r29	; 62
+    36f6:	0f be       	out	0x3f, r0	; 63
+    36f8:	cd bf       	out	0x3d, r28	; 61
+    36fa:	09 94       	ijmp
+
+000036fc <__epilogue_restores__>:
+    36fc:	2a 88       	ldd	r2, Y+18	; 0x12
+    36fe:	39 88       	ldd	r3, Y+17	; 0x11
+    3700:	48 88       	ldd	r4, Y+16	; 0x10
+    3702:	5f 84       	ldd	r5, Y+15	; 0x0f
+    3704:	6e 84       	ldd	r6, Y+14	; 0x0e
+    3706:	7d 84       	ldd	r7, Y+13	; 0x0d
+    3708:	8c 84       	ldd	r8, Y+12	; 0x0c
+    370a:	9b 84       	ldd	r9, Y+11	; 0x0b
+    370c:	aa 84       	ldd	r10, Y+10	; 0x0a
+    370e:	b9 84       	ldd	r11, Y+9	; 0x09
+    3710:	c8 84       	ldd	r12, Y+8	; 0x08
+    3712:	df 80       	ldd	r13, Y+7	; 0x07
+    3714:	ee 80       	ldd	r14, Y+6	; 0x06
+    3716:	fd 80       	ldd	r15, Y+5	; 0x05
+    3718:	0c 81       	ldd	r16, Y+4	; 0x04
+    371a:	1b 81       	ldd	r17, Y+3	; 0x03
+    371c:	aa 81       	ldd	r26, Y+2	; 0x02
+    371e:	b9 81       	ldd	r27, Y+1	; 0x01
+    3720:	ce 0f       	add	r28, r30
+    3722:	d1 1d       	adc	r29, r1
+    3724:	0f b6       	in	r0, 0x3f	; 63
+    3726:	f8 94       	cli
+    3728:	de bf       	out	0x3e, r29	; 62
+    372a:	0f be       	out	0x3f, r0	; 63
+    372c:	cd bf       	out	0x3d, r28	; 61
+    372e:	ed 01       	movw	r28, r26
+    3730:	08 95       	ret
+
+00003732 <_exit>:
+    3732:	f8 94       	cli
+
+00003734 <__stop_program>:
+    3734:	ff cf       	rjmp	.-2      	; 0x3734 <__stop_program>

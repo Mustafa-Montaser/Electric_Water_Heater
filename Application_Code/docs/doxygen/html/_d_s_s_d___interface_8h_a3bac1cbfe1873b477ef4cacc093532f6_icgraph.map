@@ -1,0 +1,8 @@
+<map id="DSSD_voidEN2" name="DSSD_voidEN2">
+<area shape="rect" id="node1" title="Enable EN2 to display the left digit." alt="" coords="868,5,980,31"/>
+<area shape="rect" id="node2" href="$_d_s_s_d___program_8c.html#a142e619d95b2b6afebaaf1fc3a9c1880" title="display left digit" alt="" coords="661,5,820,31"/>
+<area shape="rect" id="node3" href="$_d_s_s_d___program_8c.html#a3ff716dcf68a7e8b413932e87799fe2f" title="Display Number from 2 digits." alt="" coords="483,5,613,31"/>
+<area shape="rect" id="node4" href="$_app_8c.html#ad4e9e0ff63dcbdbed5ae0de430a8554b" title="Default timer handler." alt="" coords="267,5,435,31"/>
+<area shape="rect" id="node5" href="$_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" id="node6" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
+</map>

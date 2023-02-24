@@ -8,7 +8,7 @@
  * \addtogroup PushButton
  * PushButton module driver
  * @{
- * \file BushBtn_Program.c
+ * \file PushBtn_Program.c
  * \brief this file contains contains implementation for the PushButton module
  * \author Mustafa M.Montaser
  * \version v1.0.0

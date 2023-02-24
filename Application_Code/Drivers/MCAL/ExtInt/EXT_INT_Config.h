@@ -8,7 +8,7 @@
  * \addtogroup External_Interrupt
  * External_Interrupt module driver
  * @{
- * \file EXt_INT_Config.h
+ * \file EXT_INT_Config.h
  * \brief this file contains macros configuration for the External Interrupt module
  * \author Mustafa M.Montaser
  * \version v1.0.0

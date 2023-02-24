@@ -1,6 +1,6 @@
 <map id="IIC_voidInit" name="IIC_voidInit">
 <area shape="rect" id="node1" title="Initialise IIC module." alt="" coords="440,5,523,31"/>
 <area shape="rect" id="node2" href="$_e_e_p_r_o_m___program_8c.html#ac3248a040030218bd91f2cf6b1fe5094" title="Initialise EEPROM." alt="" coords="267,5,392,31"/>
-<area shape="rect" id="node3" href="$main_8c.html#aa2da75d369de1aee331c7a5bb56a6bfd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
-<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="node3" href="$_app_8c.html#a56447caf00c479a0d2b7dfb812bd43fd" title="Initialise the system and all peripherals." alt="" coords="104,5,219,31"/>
+<area shape="rect" id="node4" href="$main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,31"/>
 </map>
