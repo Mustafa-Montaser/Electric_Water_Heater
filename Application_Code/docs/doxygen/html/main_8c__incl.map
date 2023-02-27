@@ -1,5 +1,5 @@
-<map id="E:/1&#45;ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/main.c" name="E:/1&#45;ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/main.c">
-<area shape="rect" id="node1" title="main application" alt="" coords="41,5,252,75"/>
-<area shape="rect" id="node2" href="$_std_types_8h.html" title="this file contains standard types" alt="" coords="5,123,160,148"/>
-<area shape="rect" id="node3" href="$_app_8h.html" title="functions prototype for application" alt="" coords="184,123,240,148"/>
+<map id="main.c" name="main.c">
+<area shape="rect" id="node1" title="main application" alt="" coords="116,5,177,31"/>
+<area shape="rect" id="node2" href="$_std_types_8h.html" title="this file contains standard types" alt="" coords="5,79,160,104"/>
+<area shape="rect" id="node3" href="$_app_8h.html" title="functions prototype for application" alt="" coords="184,79,240,104"/>
 </map>

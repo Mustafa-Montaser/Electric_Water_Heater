@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Electric Water heater: E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/App.h File Reference</title>
+<title>Electric Water Heater: App.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Electric Water heater<span id="projectnumber">&#160;2.4.0</span>
+   <div id="projectname">Electric Water Heater<span id="projectnumber">&#160;2.4.0</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('_app_8h.html',''); initResizable(); })
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">E:/1-ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/App.h File Reference<div class="ingroups"><a class="el" href="group___a_p_p.html">APP</a></div></div></div>
+  <div class="headertitle"><div class="title">App.h File Reference<div class="ingroups"><a class="el" href="group___a_p_p.html">APP</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -100,11 +100,11 @@ $(document).ready(function(){initNavTree('_app_8h.html',''); initResizable(); })
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_app_8h__dep__incl.png" border="0" usemap="#a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_app_8hdep" alt=""/></div>
-<map name="a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_app_8hdep" id="a_e_1_21-_e_n_g_i_n_e_e_r_i_n_g_2_p_r_o_j_e_c_t_s_2_embedded___systems_2_electric___water___heater_2_application___code_2_app_8hdep">
-<area shape="rect" title="functions prototype for application" alt="" coords="123,5,333,75"/>
-<area shape="rect" href="_app_8c.html" title="functions implementation for application" alt="" coords="5,123,216,192"/>
-<area shape="rect" href="main_8c.html" title="main application" alt="" coords="240,123,451,192"/>
+<div class="center"><img src="_app_8h__dep__incl.png" border="0" usemap="#a_app_8hdep" alt=""/></div>
+<map name="a_app_8hdep" id="a_app_8hdep">
+<area shape="rect" title="functions prototype for application" alt="" coords="47,5,103,31"/>
+<area shape="rect" href="_app_8c.html" title="functions implementation for application" alt="" coords="5,79,61,104"/>
+<area shape="rect" href="main_8c.html" title="main application" alt="" coords="85,79,147,104"/>
 </map>
 </div>
 </div>
@@ -153,7 +153,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set DOWN button handler. </p>
-<dl class="section note"><dt>Note</dt><dd>If not used, application will use default DOWN button handler </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If not used, application will use default DOWN button handler </dd>
+<dd>
+If used, must be called before system initialise </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">downBtnCallBack</td><td>Pointer to function takes void and return void </td></tr>
@@ -192,7 +194,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set ON/OFF button handler. </p>
-<dl class="section note"><dt>Note</dt><dd>If not used, application will use default ON/OFF button handler </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If not used, application will use default ON/OFF button handler </dd>
+<dd>
+If used, must be called before system initialise </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">onOffBtnCallBack</td><td>Pointer to function takes void and return void </td></tr>
@@ -231,7 +235,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set timer handler. </p>
-<dl class="section note"><dt>Note</dt><dd>If not used, application will use default timer handler </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If not used, application will use default timer handler </dd>
+<dd>
+If used, must be called before system initialise </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timerCallBack</td><td>Pointer to function takes void and return void </td></tr>
@@ -270,7 +276,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set UP button handler. </p>
-<dl class="section note"><dt>Note</dt><dd>If not used, application will use default UP button handler </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If not used, application will use default UP button handler </dd>
+<dd>
+If used, must be called before system initialise </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">upBtnCallBack</td><td>Pointer to function takes void and return void </td></tr>

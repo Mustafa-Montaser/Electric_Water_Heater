@@ -1,5 +1,5 @@
-<map id="E:/1&#45;ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/GIE/GIE_Interface.h" name="E:/1&#45;ENGINEERING/PROJECTS/Embedded_Systems/Electric_Water_Heater/Application_Code/Drivers/MCAL/GIE/GIE_Interface.h">
-<area shape="rect" id="node1" title="this file contains function prototypes for the GIE module" alt="" coords="123,5,333,89"/>
-<area shape="rect" id="node2" href="$_app_8c.html" title="functions implementation for application" alt="" coords="5,145,216,214"/>
-<area shape="rect" id="node3" href="$_g_i_e___program_8c.html" title="this file contains contains implementation for the GIE module" alt="" coords="240,137,451,221"/>
+<map id="Drivers/MCAL/GIE/GIE_Interface.h" name="Drivers/MCAL/GIE/GIE_Interface.h">
+<area shape="rect" id="node1" title="this file contains function prototypes for the GIE module" alt="" coords="21,5,174,45"/>
+<area shape="rect" id="node2" href="$_app_8c.html" title="functions implementation for application" alt="" coords="5,101,61,126"/>
+<area shape="rect" id="node3" href="$_g_i_e___program_8c.html" title="this file contains contains implementation for the GIE module" alt="" coords="86,93,239,133"/>
 </map>

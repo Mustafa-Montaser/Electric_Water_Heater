@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Electric Water heater", "index.html", [
+  [ "Electric Water Heater", "index.html", [
     [ "Modules", "modules.html", "modules" ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
